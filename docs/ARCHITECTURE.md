@@ -4,7 +4,7 @@
 
 The first edition uses browser-native JavaScript modules and static assets. No service is needed for searching, comparisons, notes, requirement reviews or email drafts. This makes the pilot inexpensive to host and easy for contributors to run.
 
-`programs.json` is the repository of record. `core.js` contains pure business rules, with an injected date for availability tests. `app.js` owns browser views and state. `map.js` consumes the same filtered records, so the list and geography remain consistent. The build copies the source into `dist/`; hosting serves that directory.
+`programs.json` is the repository of record. `core.js` contains pure business rules, with an injected date for availability tests. `app.js` owns browser views and state. `map.js` consumes the same filtered records, so the list and geography remain consistent. `geography.js` shares a single asset request between the introductory canvas globe and the SVG map. The camera interpolates position and zoom, and cancels its animation on manual pan or view teardown. `experience.js` renders the welcome and map interfaces; workspace routes open a panel over the map. Reduced-motion preferences stop globe rotation and bypass camera and entrance animations. The build copies the source into `dist/`; hosting serves that directory.
 
 ## Persistence and safety boundaries
 

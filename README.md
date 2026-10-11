@@ -8,7 +8,9 @@ The first edition contains **16 manually researched programmes across 11 countri
 
 ## What works today
 
-- Interactive geographic map with clustering, zoom, pan and a Europe view.
+- A calm animated welcome screen with a rotating geographic globe, followed by a full-screen world map.
+- Floating search and filters, a compact workspace rail, and programme lists/details that open on demand.
+- Smooth map travel, clustering, scroll/keyboard zoom, pan and a Europe view, with reduced-motion support.
 - Search by programme, university, location and research keyword; filter by field, country, verified application availability and recorded tuition-free status.
 - Programme details with requirements, applicant-category notes, official links and last-review dates.
 - Profile reviews for recorded grade and IELTS thresholds. Different grade systems always require official equivalency; the app never predicts admission probability.
@@ -42,6 +44,8 @@ npm run preview
 
 The production build is a static `dist/` directory. It can be hosted by any static host that serves JavaScript modules and JSON. `scripts/serve.mjs` is a loopback-only development server, not a production server.
 
+The default route opens the welcome screen. `#explore` links directly to the map. Shortlist, comparison, studio and methodology routes open a workspace panel over the map.
+
 ## Structure
 
 ```text
@@ -50,7 +54,11 @@ src/
   styles.css          Responsive design and motion preferences
   app.js              Navigation, views and browser workspace
   core.js             Filtering, requirement review, validation and export logic
-  map.js              Geographic rendering, clustering and interaction
+  map.js              Geographic rendering, animated camera and interaction
+  geography.js        Shared geographic data and coordinate projection
+  globe.js            Animated orthographic canvas globe
+  experience.js       Welcome and map-interface templates
+  atlas.css           Map workspace, panels and entrance transitions
   data/programs.json  Curated programme catalogue
   assets/world.json   Simplified Natural Earth map paths
 scripts/              Build, development server and data validation
