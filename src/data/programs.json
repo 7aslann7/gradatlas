@@ -1,0 +1,809 @@
+[
+  {
+    "id": "saarland-cyber",
+    "title": "Cybersecurity",
+    "university": "Saarland University",
+    "country": "Germany",
+    "city": "Saarbrücken",
+    "lat": 49.255,
+    "lon": 7.042,
+    "fields": [
+      "Cybersecurity",
+      "Computer Science"
+    ],
+    "tags": [
+      "Cryptography",
+      "Systems security",
+      "CISPA"
+    ],
+    "summary": "A research-oriented degree in security, privacy and cryptography, with courses connected to the CISPA research ecosystem.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded. Subject knowledge and the full application require review.",
+    "requirements": [
+      "Computer science or a related bachelor’s degree",
+      "C1 English; medium-of-instruction evidence alone is not accepted",
+      "Mathematics, theoretical and practical computer science",
+      "Supporting documents and two academic references"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.uni-saarland.de/en/study/programmes/master/cybersecurity.html"
+      },
+      {
+        "label": "Official cybersecurity overview",
+        "url": "https://cysec.uni-saarland.de/master/cybersecurity/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "No tuition · semester fees extra",
+      "free": true
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Computer Science master’s office",
+      "email": "master@cs.uni-saarland.de",
+      "source": "https://www.uni-saarland.de/en/study/programmes/master/cybersecurity.html"
+    },
+    "research": {
+      "label": "Cybersecurity research & curriculum",
+      "url": "https://cysec.uni-saarland.de/master/cybersecurity/"
+    },
+    "scheduleNote": "Published annual late deadlines: 15 May (winter) and 15 November (summer). Confirm the current cycle and any early deadline."
+  },
+  {
+    "id": "twente-cyber",
+    "title": "Computer Science · Cyber Security",
+    "university": "University of Twente",
+    "country": "Netherlands",
+    "city": "Enschede",
+    "lat": 52.239,
+    "lon": 6.857,
+    "fields": [
+      "Cybersecurity",
+      "Computer Science"
+    ],
+    "tags": [
+      "Network security",
+      "Cryptography",
+      "Privacy"
+    ],
+    "summary": "Study secure systems, cryptography and internet security in the Cyber Security specialisation of the Computer Science master’s.",
+    "gradeNote": "International degree equivalency is assessed individually. Use the university’s official eligibility check.",
+    "requirements": [
+      "Relevant research-university bachelor’s degree",
+      "Academic IELTS 6.5 overall; component scores and validity also apply",
+      "Check country-specific degree and grade requirements",
+      "Additional testing requirements may apply"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.utwente.nl/en/education/master/programmes/computer-science/specialisation/cyber-security/"
+      },
+      {
+        "label": "International admission requirements",
+        "url": "https://www.utwente.nl/en/education/master/programmes/computer-science/admission/admission-international/"
+      },
+      {
+        "label": "Official mentor contact & curriculum",
+        "url": "https://www.utwente.nl/en/cs/programme/specialisations/cyber-security/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "contact": {
+      "name": "Dr Florian Hahn · programme mentor",
+      "email": "f.w.hahn@utwente.nl",
+      "source": "https://www.utwente.nl/en/cs/programme/specialisations/cyber-security/"
+    },
+    "research": {
+      "label": "Cyber Security curriculum & mentor",
+      "url": "https://www.utwente.nl/en/cs/programme/specialisations/cyber-security/"
+    },
+    "scheduleNote": "February and September intakes. Deadlines vary by nationality and applicant category."
+  },
+  {
+    "id": "radboud-cyber",
+    "title": "Computing Science · Cyber Security",
+    "university": "Radboud University",
+    "country": "Netherlands",
+    "city": "Nijmegen",
+    "lat": 51.818,
+    "lon": 5.867,
+    "fields": [
+      "Cybersecurity",
+      "Computer Science"
+    ],
+    "tags": [
+      "Security research",
+      "Cryptography",
+      "Pre-master route"
+    ],
+    "summary": "A Computing Science specialisation in cyber security, with prerequisite-course assessment and possible tailored pre-master routes.",
+    "gradeNote": "Degree content, research preparation and equivalency require admissions review. No universal numerical cutoff recorded.",
+    "requirements": [
+      "Relevant degree or an equivalent qualification",
+      "Review mathematics, programming and other computing prerequisites",
+      "Bachelor’s final project and research preparation",
+      "Language proof as specified in the admission decision"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.ru.nl/en/education/masters/cyber-security/admission-and-application"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Admissions office",
+      "email": "admissions@ru.nl",
+      "source": "https://www.ru.nl/en/education/masters/cyber-security/admission-and-application"
+    },
+    "research": null,
+    "scheduleNote": "The page lists different deadlines by education and nationality. Select your category before using a date."
+  },
+  {
+    "id": "tuebingen-ml",
+    "title": "Machine Learning",
+    "university": "University of Tübingen",
+    "country": "Germany",
+    "city": "Tübingen",
+    "lat": 48.521,
+    "lon": 9.057,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Deep learning",
+      "Mathematics",
+      "Research"
+    ],
+    "summary": "An international programme focused on the mathematical and computational foundations of machine learning.",
+    "gradeNote": "German grade 2.0 or better (1 is best). International grades need official equivalency; no automatic conversion is applied.",
+    "requirements": [
+      "CS, mathematics, physics or a related bachelor’s degree",
+      "At least 27 ECTS mathematics and 18 ECTS computer science",
+      "At least 6 ECTS algorithms and data structures",
+      "IELTS overall 7.0 or another accepted proof"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://uni-tuebingen.de/en/study/finding-a-course/degree-programs-available/detail/course/machine-learning-master/"
+      },
+      {
+        "label": "Official programme contact",
+        "url": "https://uni-tuebingen.de/en/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/studium/studierende/lehre-studienorganisation/studiengaenge/machine-learning/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": {
+      "value": 2.0,
+      "scale": "german",
+      "direction": "lower",
+      "type": "required",
+      "text": "German grade 2.0 or better",
+      "source": "https://uni-tuebingen.de/en/study/finding-a-course/degree-programs-available/detail/course/machine-learning-master/"
+    },
+    "ielts": 7.0,
+    "contact": {
+      "name": "Machine Learning programme team",
+      "email": "ml-master@inf.uni-tuebingen.de",
+      "source": "https://uni-tuebingen.de/en/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/studium/studierende/lehre-studienorganisation/studiengaenge/machine-learning/"
+    },
+    "research": null,
+    "scheduleNote": "Published annual application deadline: 30 April. Confirm the current cycle."
+  },
+  {
+    "id": "tum-informatics",
+    "title": "Informatics",
+    "university": "Technical University of Munich",
+    "country": "Germany",
+    "city": "Garching",
+    "lat": 48.262,
+    "lon": 11.668,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Artificial intelligence",
+      "Systems",
+      "Aptitude assessment"
+    ],
+    "summary": "A broad Informatics degree with an aptitude assessment and opportunities to build an individual technical focus.",
+    "gradeNote": "Admission uses degree-content analysis and aptitude assessment. GPA alone does not establish eligibility.",
+    "requirements": [
+      "A bachelor’s equivalent to TUM Informatics",
+      "Check programme-specific aptitude assessment",
+      "International degree holders may need a uni-assist VPD",
+      "Accepted proof of English and programme documents"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.tum.de/en/studies/degree-programs/detail/informatics-master-of-science-msc"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "€6,000 / semester · non-EU category",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Published annual application windows: 1 February–31 May (winter), 1 October–30 November (summer). Confirm the cycle and applicant category."
+  },
+  {
+    "id": "delft-leiden-quantum",
+    "title": "Quantum Information Science & Technology",
+    "university": "TU Delft & Leiden University",
+    "country": "Netherlands",
+    "city": "Delft / Leiden",
+    "lat": 52.002,
+    "lon": 4.374,
+    "fields": [
+      "Quantum Computing"
+    ],
+    "tags": [
+      "Quantum algorithms",
+      "Quantum networks",
+      "Joint degree"
+    ],
+    "summary": "A joint master’s connecting computer science, physics, mathematics and electrical engineering for quantum technologies.",
+    "gradeNote": "Programme-specific and international-degree admission requirements need checking on the current admissions page.",
+    "requirements": [
+      "Physics, mathematics, electrical engineering, computer science or astronomy bachelor’s background; detailed equivalency requires review",
+      "Check quantum, mathematics and computing prerequisites",
+      "Follow the joint programme’s official application process",
+      "Check language requirements and international grade equivalency"
+    ],
+    "sources": [
+      {
+        "label": "Official joint programme overview",
+        "url": "https://www.tudelft.nl/en/education/programmes/masters/qist/msc-quantum-information-science-technology"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": {
+      "label": "Current programme website",
+      "url": "https://www.tudelft.nl/en/education/programmes/masters/qist/msc-quantum-information-science-technology"
+    },
+    "dataNote": "Programme scope and accepted bachelor’s disciplines checked. Detailed admissions, fees and current deadlines need verification."
+  },
+  {
+    "id": "eth-data",
+    "title": "Data Science",
+    "university": "ETH Zürich",
+    "country": "Switzerland",
+    "city": "Zürich",
+    "lat": 47.376,
+    "lon": 8.548,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Data science",
+      "Statistics",
+      "Research"
+    ],
+    "summary": "An interdisciplinary Data Science programme with programme-specific application documents and academic review.",
+    "gradeNote": "The full academic record and programme requirement profile are assessed. No comparable numeric threshold recorded.",
+    "requirements": [
+      "Check the official Data Science requirement profile",
+      "Prepare degree-specific application documents",
+      "A programme-specific motivation letter is required",
+      "Check language and any GRE requirements for your degree"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://ethz.ch/en/studies/master/application/master-datascience.html"
+      },
+      {
+        "label": "Autumn 2027 application dates",
+        "url": "https://ethz.ch/en/studies/master/application/dates.html"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-11-01",
+      "closes": "2026-11-30",
+      "source": "https://ethz.ch/en/studies/master/application/dates.html",
+      "category": "International bachelor’s degree · autumn 2027"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Recorded window is for applicants with an international bachelor’s degree, for autumn 2027."
+  },
+  {
+    "id": "kth-ml",
+    "title": "Machine Learning",
+    "university": "KTH Royal Institute of Technology",
+    "country": "Sweden",
+    "city": "Stockholm",
+    "lat": 59.349,
+    "lon": 18.07,
+    "fields": [
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Machine learning",
+      "Algorithms",
+      "Statistics"
+    ],
+    "summary": "A Machine Learning degree built on mathematics, algorithms and computer science, with programme-specific selection.",
+    "gradeNote": "Selection considers grades, relevant previous studies and motivation. No universal numeric GPA cutoff recorded.",
+    "requirements": [
+      "A relevant bachelor’s degree equivalent to 180 ECTS",
+      "Linear algebra, calculus, probability and programming prerequisites",
+      "IELTS 6.5 overall or accepted equivalent; component rules apply",
+      "Motivation letter, two references and programme summary sheet"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.kth.se/en/studies/master/machine-learning/entry-requirements-machine-learning-1.48539"
+      },
+      {
+        "label": "Official application process & timeline",
+        "url": "https://www.kth.se/en/studies/master/programmes/2.1749/how-to-apply-for-masters-studies-1.68487"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-10-16",
+      "closes": "2027-01-15",
+      "source": "https://www.kth.se/en/studies/master/programmes/2.1749/how-to-apply-for-masters-studies-1.68487",
+      "category": "Autumn 2027 standard application"
+    },
+    "gpa": null,
+    "ielts": 6.5,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "The autumn 2027 application opens 16 October 2026. Check the official timeline for submission and document deadlines."
+  },
+  {
+    "id": "aalto-cs",
+    "title": "Computer Science",
+    "university": "Aalto University",
+    "country": "Finland",
+    "city": "Espoo",
+    "lat": 60.185,
+    "lon": 24.828,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Algorithms",
+      "Distributed systems",
+      "Software engineering"
+    ],
+    "summary": "A Computer Science major covering computing foundations and advanced systems, with several study tracks.",
+    "gradeNote": "Excellent academic performance is expected. International GPA interpretation depends on country and institution.",
+    "requirements": [
+      "A relevant bachelor’s degree and substantial CS foundations",
+      "Strong mathematics, programming and systems background",
+      "CV, motivation letter and required AI-use declaration",
+      "Check official language and document requirements"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.aalto.fi/en/study-options/computer-science-master-of-science-technology"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "€17,000 / year · non-EU/EEA category",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-12-07",
+      "closes": "2027-01-05",
+      "source": "https://www.aalto.fi/en/study-options/computer-science-master-of-science-technology",
+      "category": "Master’s admission 2027"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null
+  },
+  {
+    "id": "ucl-urban",
+    "title": "Sustainable Urbanism",
+    "university": "University College London",
+    "country": "United Kingdom",
+    "city": "London",
+    "lat": 51.524,
+    "lon": -0.134,
+    "fields": [
+      "Architecture & Planning",
+      "Environment"
+    ],
+    "tags": [
+      "Urban sustainability",
+      "Planning",
+      "Policy"
+    ],
+    "summary": "An interdisciplinary planning degree connecting urban sustainability, policy and design.",
+    "gradeNote": "Normally a UK upper second-class degree or an international equivalent. Professional experience can be considered in specified cases.",
+    "requirements": [
+      "A recognised bachelor’s degree or qualifying experience",
+      "No particular bachelor’s subject requirement",
+      "UCL English language Level 2",
+      "Personal statement and two references"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/sustainable-urbanism-msc"
+      }
+    ],
+    "duration": "1 year · full time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "£39,200 · overseas, 2026/27 full time",
+      "free": false
+    },
+    "window": {
+      "opens": "2025-10-20",
+      "closes": "2026-06-26",
+      "source": "https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/sustainable-urbanism-msc",
+      "category": "Visa-requiring applicants · September 2026"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "The recorded September 2026 cycle has closed. Next-cycle dates need checking."
+  },
+  {
+    "id": "ubc-policy",
+    "title": "Public Policy & Global Affairs",
+    "university": "University of British Columbia",
+    "country": "Canada",
+    "city": "Vancouver",
+    "lat": 49.26,
+    "lon": -123.246,
+    "fields": [
+      "Public Policy"
+    ],
+    "tags": [
+      "Global affairs",
+      "Policy analysis",
+      "Interdisciplinary"
+    ],
+    "summary": "A professional public-policy programme welcoming applicants from a wide range of academic backgrounds.",
+    "gradeNote": "Normally B+ (76% at UBC) in upper-year courses or specified alternative academic standing. International equivalency requires review.",
+    "requirements": [
+      "Equivalent of a four-year bachelor’s degree",
+      "Check academic standing and country-specific equivalency",
+      "Prepare programme-specific supporting documents",
+      "Check language requirements and reference deadlines"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://sppga.ubc.ca/master-public-policy-global-affairs/admissions/"
+      }
+    ],
+    "duration": "See programme structure",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-10-05",
+      "closes": "2027-01-26",
+      "source": "https://sppga.ubc.ca/master-public-policy-global-affairs/admissions/",
+      "category": "Primary application · September 2027"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Recorded primary timeline is eligible for entrance-scholarship consideration. Reference deadline is 2 February 2027."
+  },
+  {
+    "id": "wur-environment",
+    "title": "Environmental Sciences",
+    "university": "Wageningen University & Research",
+    "country": "Netherlands",
+    "city": "Wageningen",
+    "lat": 51.985,
+    "lon": 5.666,
+    "fields": [
+      "Environment"
+    ],
+    "tags": [
+      "Environmental policy",
+      "Natural sciences",
+      "Sustainability"
+    ],
+    "summary": "A programme spanning environmental science, engineering and policy, with individually assessed academic preparation.",
+    "gradeNote": "Equivalent Environmental Sciences preparation is assessed. Dutch GPA 7.0 is discussed for compensating gaps; it is not a universal international cutoff.",
+    "requirements": [
+      "Relevant environmental, engineering, natural or social-science knowledge",
+      "Calculus and basic statistics",
+      "Transcript and relevant academic experience",
+      "Personal statement and programme-specific assessment"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.wur.nl/en/education/master/masters-environmental-sciences"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null
+  },
+  {
+    "id": "nus-computing",
+    "title": "Computing · General Track",
+    "university": "National University of Singapore",
+    "country": "Singapore",
+    "city": "Singapore",
+    "lat": 1.295,
+    "lon": 103.773,
+    "fields": [
+      "Computer Science"
+    ],
+    "tags": [
+      "Career conversion",
+      "Computing foundations",
+      "Coursework"
+    ],
+    "summary": "A computing conversion programme designed for graduates from diverse, including non-computing, backgrounds.",
+    "gradeNote": "A good honours degree or equivalent is required. Admission is competitive and relevant IT experience is preferred.",
+    "requirements": [
+      "Good honours degree or equivalent in any discipline",
+      "GRE/GMAT evidence as specified by the programme",
+      "IELTS overall 6.0 or accepted alternative when required",
+      "Check test validity and programme-specific requirements"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.comp.nus.edu.sg/programmes/pg/mcomp-gen/admissions/"
+      }
+    ],
+    "duration": "See study plan",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.0,
+    "contact": null,
+    "research": null
+  },
+  {
+    "id": "melbourne-env",
+    "title": "Environment",
+    "university": "University of Melbourne",
+    "country": "Australia",
+    "city": "Melbourne",
+    "lat": -37.797,
+    "lon": 144.961,
+    "fields": [
+      "Environment"
+    ],
+    "tags": [
+      "Sustainability",
+      "Environmental policy",
+      "Interdisciplinary"
+    ],
+    "summary": "An interdisciplinary Environment degree with pathways through policy, science and business.",
+    "gradeNote": "Prior-study grades are assessed by the university, with institution and grading context considered. Check the applicable international admissions category.",
+    "requirements": [
+      "Check the current international admission criteria",
+      "Review prior studies and any advanced-standing pathways",
+      "IELTS overall 6.5 with 6.0 in each component, or accepted evidence",
+      "Academic performance and relevant experience are considered"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/master-of-environment/entry-requirements/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "contact": null,
+    "research": null
+  },
+  {
+    "id": "metu-cs",
+    "title": "Computer Engineering",
+    "university": "Middle East Technical University",
+    "country": "Türkiye",
+    "city": "Ankara",
+    "lat": 39.891,
+    "lon": 32.785,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Artificial intelligence",
+      "Software engineering",
+      "Thesis"
+    ],
+    "summary": "Graduate study in Computer Engineering with research areas including AI, algorithms, systems and natural-language processing.",
+    "gradeNote": "Current department and graduate-school admission thresholds need verification. No numerical cutoff recorded.",
+    "requirements": [
+      "Review current Graduate School of Natural and Applied Sciences announcements",
+      "Check department-specific exam and language requirements",
+      "Prepare transcript and programme documents",
+      "Review research areas and faculty before contacting"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://ceng.metu.edu.tr/en/general-information-0"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Programme existence and research areas checked. Current admissions dates, grade thresholds and fees remain unverified."
+  },
+  {
+    "id": "gatech-omscs",
+    "title": "Computer Science · OMSCS",
+    "university": "Georgia Institute of Technology",
+    "country": "United States",
+    "city": "Atlanta · online",
+    "lat": 33.775,
+    "lon": -84.396,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Online study",
+      "Computer science",
+      "Flexible learning"
+    ],
+    "summary": "An online Computer Science master’s with multiple specialisations and a year-round application process.",
+    "gradeNote": "Check the official academic preparation criteria. A numeric GPA cutoff is not used by this dataset.",
+    "requirements": [
+      "Relevant academic preparation and degree recognition",
+      "CV, transcripts and supplemental questions",
+      "Three recommendations",
+      "Language evidence for international applicants when required"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://omscs.gatech.edu/deadlines-decisions-requirements-and-guidelines"
+      }
+    ],
+    "duration": "Flexible · see study plan",
+    "language": "English",
+    "mode": "Online",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Applications accepted year-round. Annual cutoffs: 1 March for fall, 15 August for spring. Confirm the intended intake."
+  }
+]

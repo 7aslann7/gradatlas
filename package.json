@@ -1,0 +1,16 @@
+{
+  "name": "gradatlas",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "An open-source master's discovery and application workspace with official-source provenance.",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check src/app.js && node --check src/core.js && node --check src/map.js && node scripts/validate-data.mjs",
+    "preview": "node scripts/serve.mjs dist"
+  }
+}
