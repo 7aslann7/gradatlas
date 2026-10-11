@@ -2,9 +2,9 @@
 
 ## Authority and provenance
 
-Use official university programme pages, admission regulations, fees pages and application portals as primary sources. Programme summaries must be original short descriptions, not copied pages. Store official links and a review date. Numeric grade rules and application windows also point directly to their supporting source.
+Use official university programme pages, admission regulations, fees pages and application portals as primary sources. Programme summaries must be original short descriptions, not copied pages. Store official links and a review date. Use subject groups from `FIELDS` in `core.js`; retain stable IDs as the catalogue grows. Programme and explicitly named specialisation records may coexist, but do not duplicate a joint degree under each teaching institution. Numeric grade rules and application windows also point directly to their supporting source.
 
-An official programme page may confirm programme scope while leaving the admission cycle unknown. A record's review date describes when its stated information was checked; it does not mean every potential field is complete. Use `dataNote` to explain partial verification.
+An official programme page may confirm programme scope while leaving the admission cycle unknown. A record's review date describes when its stated information was checked; it does not mean every potential field is complete. Use `dataNote` to explain partial verification. Teaching language, duration and delivery mode are facts to verify, not assumptions from the webpage language. Unknown delivery mode is `Not verified`; use `Hybrid` for verified blended delivery and explain any attendance ambiguity. Country/region labels describe catalogue destinations and include Hong Kong as a separate admissions jurisdiction.
 
 ## Dates
 
@@ -16,7 +16,7 @@ Availability is evaluated on calendar dates in Europe/Istanbul. The interface al
 
 Keep the original grading system. Never convert a Turkish 4-point GPA into a Dutch or German grade without an institution-authorised method and its applicability conditions. Distinguish a hard threshold, an expectation, a preference and an individual review process.
 
-IELTS overall thresholds are an incomplete screen. The university may also require component scores, accepted test versions, validity periods or an exemption. A gap badge describes a recorded comparison, not an admission decision.
+Numeric IELTS additions must include `ieltsSource` pointing to a listed official source. IELTS overall thresholds are an incomplete screen. The university may also require component scores, accepted test versions, validity periods or an exemption. A gap badge describes a recorded comparison, not an admission decision.
 
 ## Fees and funding
 

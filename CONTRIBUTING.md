@@ -23,3 +23,5 @@ Public reviews and programme submissions are planned, not currently available. W
 ## Reporting corrections
 
 Provide the programme ID, field to correct, official source, relevant applicant category and date of review. Do not include your passport, transcript, personal email or private admissions correspondence in a public issue.
+
+Use the subject groups exported from `src/core.js`, canonical delivery modes (`On campus`, `Online`, `Hybrid`, `Not verified`) and stable programme IDs. A specialisation must be named explicitly. Include the exact applicant category with every dated window, and `ieltsSource` for newly recorded numeric language thresholds. Every contact and research URL must appear in the record’s official source list.

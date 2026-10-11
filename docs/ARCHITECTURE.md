@@ -4,7 +4,7 @@
 
 The first edition uses browser-native JavaScript modules and static assets. No service is needed for searching, comparisons, notes, requirement reviews or email drafts. This makes the pilot inexpensive to host and easy for contributors to run.
 
-`programs.json` is the repository of record. `core.js` contains pure business rules, with an injected date for availability tests. `app.js` owns browser views and state. `map.js` uses the vendored MapLibre GL JS 6.14.0 renderer and a local country GeoJSON source. No remote tile service, glyph service or map API key is required. The map shares the filtered records with the list and omits back-of-globe locations from visible clusters.
+`programs.json` is the repository of record. `core.js` contains pure business rules, with an injected date for availability tests. `app.js` owns browser views and state. `map.js` uses the vendored MapLibre GL JS 6.14.0 renderer and a local country GeoJSON source. No remote tile service, glyph service or map API key is required. The map shares the filtered records with the list and omits back-of-globe locations from visible clusters. Closely located programmes open a scoped selection list instead of repeatedly zooming into coincident campus markers. Catalogue destination names are mapped to Natural Earth feature aliases where needed.
 
 `map-input.js` separates normal wheel translation from browser Ctrl+wheel pinch zoom and computes Safari gesture scale/rotation relative to the gesture-start camera. Native MapLibre handlers support touch, drag, keyboard and rotation. Manual wheel movement cancels camera animation, and normal wheel translation preserves the current zoom. Reduced-motion preferences bypass camera and panel animations.
 

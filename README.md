@@ -4,14 +4,14 @@
 
 GradAtlas is a free, open-source master's discovery and application workspace. It brings official programme information, an interactive world map, comparisons and preparation tools into one calm interface.
 
-The first edition contains **16 manually researched programmes across 11 countries**, with an initial emphasis on computer science, cybersecurity, machine learning and quantum computing in Germany and the Netherlands. It also includes environmental science, urban planning and public policy. This is a curated pilot, not a comprehensive catalogue or university ranking.
+The current catalogue contains **81 source-backed programme and specialisation records across 34 countries and regions and 17 subject groups**. This first global expansion covers computing, engineering, business, law, health, life sciences, education, social sciences and humanities alongside the original Germany/Netherlands focus. It remains a curated discovery catalogue, with partial admissions information explicitly labelled; it is not an exhaustive global directory or a university ranking.
 
 ## What works today
 
 - A full-screen, directly interactive world map with one search bar and a small menu.
 - Filters, programme lists, details and application tools open only when requested.
 - Drag and two-finger pan, pinch zoom, globe rotation, keyboard controls and visible zoom/compass buttons.
-- Local MapLibre rendering, programme clustering and reduced-motion support; no map API key or remote tiles.
+- Local MapLibre rendering, programme clustering and selection between degrees at the same campus and reduced-motion support; no map API key or remote tiles.
 - Search by programme, university, location and research keyword; filter by field, country, verified application availability and recorded tuition-free status.
 - Programme details with requirements, applicant-category notes, official links and last-review dates.
 - Profile reviews for recorded grade and IELTS thresholds. Different grade systems always require official equivalency; the app never predicts admission probability.
@@ -83,7 +83,7 @@ The website can help organise research. The university's official process determ
 - Many records have partial admissions information. Check the notes and official sources for your category.
 - A local profile's degree label provides context; course-level eligibility is still reviewed manually.
 
-See [the roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [data policy](docs/DATA_POLICY.md) and [contribution guide](CONTRIBUTING.md).
+See [catalogue coverage](docs/CATALOGUE_COVERAGE.md), [the roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [data policy](docs/DATA_POLICY.md) and [contribution guide](CONTRIBUTING.md).
 
 ## GitHub and release
 

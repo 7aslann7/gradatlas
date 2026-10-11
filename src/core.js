@@ -1,4 +1,4 @@
-export const FIELDS = ['Computer Science', 'Cybersecurity', 'AI & Machine Learning', 'Quantum Computing', 'Environment', 'Architecture & Planning', 'Public Policy'];
+export const FIELDS = ['AI & Machine Learning', 'Architecture & Planning', 'Arts & Humanities', 'Business & Management', 'Computer Science', 'Cybersecurity', 'Economics & Finance', 'Education', 'Engineering', 'Environment', 'Law', 'Life Sciences', 'Medicine & Public Health', 'Physics & Mathematics', 'Public Policy', 'Quantum Computing', 'Social Sciences'];
 export const CHECKLIST = ['Check degree and course prerequisites', 'Confirm official grade equivalency', 'Prepare transcript and degree certificate', 'Check language tests and exemptions', 'Prepare CV and programme-specific statement', 'Arrange references if required', 'Check fees, funding and visa costs', 'Verify deadline and submit on the official portal'];
 export function normalizeWorkspace(raw) {
   if (!raw || typeof raw !== 'object' || !Array.isArray(raw.saved) || !Array.isArray(raw.compare)) throw Error('Invalid workspace');

@@ -27,7 +27,8 @@ test('a published preference is not treated as a hard rejection',()=>{
   assert.equal(assess(advisory,{gpa:2.82,scale:'4'}).key,'review');
 });
 test('search, country and field filters intersect, including research keywords',()=>{
-  const result=filterPrograms(programs,{query:'cryptography',country:'Germany',field:'Cybersecurity'},null,'2026-10-12');
+  const sample=programs.filter(p=>['saarland-cyber','twente-cyber','tuebingen-ml'].includes(p.id));
+  const result=filterPrograms(sample,{query:'cryptography',country:'Germany',field:'Cybersecurity'},null,'2026-10-12');
   assert.deepEqual(result.map(p=>p.id),['saarland-cyber']);
   assert.ok(filterPrograms(programs,{open:true},null,'2026-10-12').every(p=>p.window));
 });
@@ -53,7 +54,13 @@ test('workspace import rejects malformed scores and checklist records before rep
   assert.equal(normalizeWorkspace({...raw,untrustedUrl:'https://example.com'}).untrustedUrl,undefined);
 });
 test('deadline sorting prioritises remaining windows over closed cycles',()=>{
-  const list=filterPrograms(programs,{sort:'deadline'},null,'2026-10-12');
-  assert.equal(list[0].id,'eth-data');
-  assert.ok(list.findIndex(p=>p.id==='ucl-urban')>list.findIndex(p=>p.id==='ubc-policy'));
+  const sample=[
+    {...p,id:'later',window:{...p.window,closes:'2026-11-30'}},
+    {...p,id:'expired',window:{...p.window,opens:'2026-08-01',closes:'2026-09-30'}},
+    {...p,id:'earlier',window:{...p.window,opens:'2026-10-01',closes:'2026-10-20'}},
+    {...p,id:'undated',window:null}
+  ];
+  const list=filterPrograms(sample,{sort:'deadline'},null,'2026-10-12');
+  assert.deepEqual(list.slice(0,2).map(p=>p.id),['earlier','later']);
+  assert.deepEqual(new Set(list.slice(2).map(p=>p.id)),new Set(['expired','undated']));
 });

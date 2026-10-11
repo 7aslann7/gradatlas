@@ -375,7 +375,7 @@
     "ielts": null,
     "contact": null,
     "research": null,
-    "scheduleNote": "Recorded window is for applicants with an international bachelor’s degree, for autumn 2027."
+    "scheduleNote": "International bachelor’s degree · autumn 2027. The source publishes a cutoff of 30 November 2026 at 11:59 AM CET; verify this time with admissions before submitting."
   },
   {
     "id": "kth-ml",
@@ -805,5 +805,3728 @@
     "contact": null,
     "research": null,
     "scheduleNote": "Applications accepted year-round. Annual cutoffs: 1 March for fall, 15 August for spring. Confirm the intended intake."
+  },
+  {
+    "id": "bonn-cs",
+    "title": "Computer Science",
+    "university": "University of Bonn",
+    "country": "Germany",
+    "city": "Bonn",
+    "lat": 50.7276,
+    "lon": 7.0867,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Algorithms",
+      "Intelligent systems",
+      "Research thesis"
+    ],
+    "summary": "A research-focused degree with options in algorithmics, intelligent systems, graphics and information management.",
+    "gradeNote": "The programme uses a selection procedure; meeting subject requirements does not guarantee a place.",
+    "requirements": [
+      "Relevant recognised bachelor’s degree",
+      "At least 18 ECTS mathematics, 14 ECTS algorithm/complexity/formal-language theory and 18 ECTS programming/software/information systems",
+      "Scientific bachelor’s thesis of at least 12 ECTS; software documentation alone is insufficient",
+      "C1 English; Academic IELTS 7.0 is one accepted route"
+    ],
+    "sources": [
+      {
+        "label": "Official programme",
+        "url": "https://www.uni-bonn.de/en/studying/degree-programs/degree-programs-a-z/computer-science-msc"
+      },
+      {
+        "label": "Official curriculum",
+        "url": "https://www.informatik.uni-bonn.de/en/studies/master-programs/master-computer-science"
+      },
+      {
+        "label": "Official admissions and language requirements",
+        "url": "https://www.informatik.uni-bonn.de/en/studies/master-programs/master-program-application"
+      }
+    ],
+    "duration": "4 semesters",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7,
+    "contact": {
+      "name": "Computer Science admissions office",
+      "email": "application@informatik.uni-bonn.de",
+      "source": "https://www.informatik.uni-bonn.de/en/studies/master-programs/master-program-application"
+    },
+    "research": {
+      "label": "Computer Science curriculum",
+      "url": "https://www.informatik.uni-bonn.de/en/studies/master-programs/master-computer-science"
+    },
+    "ieltsSource": "https://www.informatik.uni-bonn.de/en/studies/master-programs/master-program-application",
+    "scheduleNote": "Winter and summer starts. Deadlines depend on applicant category; check the departmental deadlines linked in the admissions guide.",
+    "dataNote": "Selection rules include EEA and non-EEA applicant categories. No acceptance estimate or foreign-grade conversion is provided."
+  },
+  {
+    "id": "bonn-cyber",
+    "title": "Cyber Security",
+    "university": "University of Bonn",
+    "country": "Germany",
+    "city": "Bonn",
+    "lat": 50.7276,
+    "lon": 7.0867,
+    "fields": [
+      "Cybersecurity",
+      "Computer Science"
+    ],
+    "tags": [
+      "Security foundations",
+      "Human-computer interaction",
+      "Research thesis"
+    ],
+    "summary": "A security degree linking technical and interdisciplinary research, with an entirely English route available.",
+    "gradeNote": "Selection assesses preparation and application category; no comparable GPA threshold has been recorded.",
+    "requirements": [
+      "Relevant recognised bachelor’s degree",
+      "At least 24 ECTS IT-security foundations, 18 ECTS mathematics, 9 ECTS theoretical computing and 18 ECTS programming/software/information systems",
+      "Scientific thesis of at least 12 ECTS",
+      "C1 English; Academic IELTS 7.0 is one accepted route"
+    ],
+    "sources": [
+      {
+        "label": "Official programme",
+        "url": "https://www.uni-bonn.de/en/studying/degree-programs/degree-programs-a-z/cyber-security-msc"
+      },
+      {
+        "label": "English route and curriculum",
+        "url": "https://www.informatik.uni-bonn.de/en/studies/master-programs/master-cyber-security"
+      },
+      {
+        "label": "Official admissions and language requirements",
+        "url": "https://www.informatik.uni-bonn.de/en/studies/master-programs/master-program-application"
+      }
+    ],
+    "duration": "4 semesters",
+    "language": "English route available; German optional",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7,
+    "contact": {
+      "name": "Computer Science admissions office",
+      "email": "application@informatik.uni-bonn.de",
+      "source": "https://www.informatik.uni-bonn.de/en/studies/master-programs/master-program-application"
+    },
+    "research": {
+      "label": "Cyber Security curriculum",
+      "url": "https://www.informatik.uni-bonn.de/en/studies/master-programs/master-cyber-security"
+    },
+    "ieltsSource": "https://www.informatik.uni-bonn.de/en/studies/master-programs/master-program-application",
+    "scheduleNote": "Winter and summer starts. Check the deadlines for your personal application category.",
+    "dataNote": "The security-credit requirement is substantial. Verify which transcript modules count; professional experience does not replace academic prerequisites."
+  },
+  {
+    "id": "saarland-cs",
+    "title": "Computer Science",
+    "university": "Saarland University",
+    "country": "Germany",
+    "city": "Saarbrücken",
+    "lat": 49.255,
+    "lon": 7.042,
+    "fields": [
+      "Computer Science"
+    ],
+    "tags": [
+      "Theoretical computing",
+      "Research",
+      "Flexible curriculum"
+    ],
+    "summary": "A flexible research degree covering theoretical and practical computing in the Saarbrücken campus research environment.",
+    "gradeNote": "Academic merit is reviewed with the full dossier; no universal numerical cutoff is recorded.",
+    "requirements": [
+      "Computer science or related bachelor’s degree, or equivalent academic preparation",
+      "C1 English; medium-of-instruction letters alone are not accepted",
+      "Personal statement and two academic references",
+      "Academic records and relevant work or international experience"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, admissions and fees",
+        "url": "https://www.uni-saarland.de/en/study/programmes/master/informatics.html"
+      }
+    ],
+    "duration": "4 semesters",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "No tuition · semester fees extra",
+      "free": true
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Computer Science study coordination",
+      "email": "master@cs.uni-saarland.de",
+      "source": "https://www.uni-saarland.de/en/study/programmes/master/informatics.html"
+    },
+    "research": {
+      "label": "Research areas and curriculum",
+      "url": "https://www.uni-saarland.de/en/study/programmes/master/informatics.html"
+    },
+    "scheduleNote": "Winter and summer starts. Published late deadlines are 15 May for winter and 15 November for summer; early consideration is also offered. Confirm the current cycle."
+  },
+  {
+    "id": "saarland-dsai",
+    "title": "Data Science and Artificial Intelligence",
+    "university": "Saarland University",
+    "country": "Germany",
+    "city": "Saarbrücken",
+    "lat": 49.255,
+    "lon": 7.042,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Machine learning",
+      "Big data",
+      "Statistics"
+    ],
+    "summary": "A degree combining mathematical and statistical foundations with machine learning, data management and application projects.",
+    "gradeNote": "Equivalent subject knowledge and the complete academic dossier are reviewed; no comparable numeric GPA cutoff is recorded.",
+    "requirements": [
+      "Computer science or related bachelor’s degree equivalent to at least 180 credits",
+      "Strong mathematics, theoretical and practical computing, machine learning, AI and data-mining preparation",
+      "C1 English; medium-of-instruction letters alone are not accepted",
+      "Personal statement and two academic recommendations"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, admissions and fees",
+        "url": "https://www.uni-saarland.de/en/study/programmes/master/data-science.html"
+      }
+    ],
+    "duration": "4 semesters",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "No tuition · semester fees extra",
+      "free": true
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Computer Science study coordination",
+      "email": "master@cs.uni-saarland.de",
+      "source": "https://www.uni-saarland.de/en/study/programmes/master/data-science.html"
+    },
+    "research": {
+      "label": "DSAI curriculum and research context",
+      "url": "https://www.uni-saarland.de/en/study/programmes/master/data-science.html"
+    },
+    "scheduleNote": "Winter and summer starts. The page lists late deadlines of 15 May and 15 November, plus earlier consideration. Confirm the applicable intake."
+  },
+  {
+    "id": "passau-cs",
+    "title": "Computer Science",
+    "university": "University of Passau",
+    "country": "Germany",
+    "city": "Passau",
+    "lat": 48.5652,
+    "lon": 13.4535,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning",
+      "Cybersecurity"
+    ],
+    "tags": [
+      "Intelligent systems",
+      "IT security",
+      "Algorithms"
+    ],
+    "summary": "Choose computing modules spanning algorithms, software systems, intelligent technical systems and IT security.",
+    "gradeNote": "German final grade 2.7 or better, or placement in the best 70% of the cohort. The university assesses foreign grades; this is not a 4-point GPA cutoff.",
+    "requirements": [
+      "At least a three-year relevant degree with 110 ECTS in computer science",
+      "Thesis abstract or research paper demonstrating independent scientific work",
+      "English B2; IELTS 5.5 is one accepted certificate",
+      "German A1 is required by the end of the first year for the English route"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, admissions, contacts and fees",
+        "url": "https://www.uni-passau.de/en/msc-computer-science"
+      }
+    ],
+    "duration": "4 semesters",
+    "language": "English route available; German optional",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "No tuition · semester fees extra",
+      "free": true
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 5.5,
+    "contact": {
+      "name": "Faculty international coordinator",
+      "email": "masters@fim.uni-passau.de",
+      "source": "https://www.uni-passau.de/en/msc-computer-science"
+    },
+    "research": {
+      "label": "Subject areas and module catalogue",
+      "url": "https://www.uni-passau.de/en/msc-computer-science"
+    },
+    "ieltsSource": "https://www.uni-passau.de/en/msc-computer-science",
+    "scheduleNote": "April and October starts. Published recurring deadlines are 31 May for winter and 15 December for summer; application routes have different opening dates."
+  },
+  {
+    "id": "hildesheim-data",
+    "title": "Data Analytics",
+    "university": "University of Hildesheim",
+    "country": "Germany",
+    "city": "Hildesheim",
+    "lat": 52.1317,
+    "lon": 9.9737,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Machine learning",
+      "Data analytics",
+      "Application projects"
+    ],
+    "summary": "Study machine learning and analytical methods alongside application electives and an independent thesis.",
+    "gradeNote": "Selection weights the bachelor’s grade, relevant coursework, research and practical experience. No single GPA cutoff is recorded.",
+    "requirements": [
+      "Bachelor’s in computing, IT, mathematics, statistics, data science, AI or a related field",
+      "Strong mathematics, statistics, analytical and programming preparation",
+      "IELTS 6.0 or accepted equivalent; a stamped, signed certificate of an entirely English degree can be accepted",
+      "Transcript, degree documents, CV and applicable APS certificate"
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.uni-hildesheim.de/en/studium/studieninteressierte/studiengaenge/masterstudium/data-analytics-msc/"
+      }
+    ],
+    "duration": "4 semesters",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "No tuition · semester fees extra",
+      "free": true
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6,
+    "contact": null,
+    "research": {
+      "label": "Data Analytics curriculum",
+      "url": "https://www.uni-hildesheim.de/en/studium/studieninteressierte/studiengaenge/masterstudium/data-analytics-msc/"
+    },
+    "ieltsSource": "https://www.uni-hildesheim.de/en/studium/studieninteressierte/studiengaenge/masterstudium/data-analytics-msc/",
+    "scheduleNote": "Summer and winter starts. Check the Faculty 4 application portal for the currently dated intake and applicant deadlines."
+  },
+  {
+    "id": "fau-ai",
+    "title": "Artificial Intelligence",
+    "university": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+    "country": "Germany",
+    "city": "Erlangen",
+    "lat": 49.5734,
+    "lon": 11.0296,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Symbolic AI",
+      "Deep learning",
+      "AI systems"
+    ],
+    "summary": "Build an AI profile through symbolic methods, machine learning, neural networks and project work.",
+    "gradeNote": "The programme FAQ states that admission is not restricted by grade alone; a qualification assessment still applies.",
+    "requirements": [
+      "Relevant computing, mathematical or technical degree, with a 12 ECTS thesis or equivalent achievement",
+      "At least 20 ECTS programming/algorithmics, 15 theoretical computing/logic, 5 databases, 20 computing mathematics and 10 software engineering",
+      "English B2 or equivalent; proof of an entirely English bachelor’s degree can be accepted",
+      "Online screening test; review the nationality-dependent GRE/GATE rules in the 2026/27 admissions guide"
+    ],
+    "sources": [
+      {
+        "label": "Official programme and duration",
+        "url": "https://www.tf.fau.eu/degree-program/artificial-intelligence-ai-m-sc/"
+      },
+      {
+        "label": "Current programme application guide",
+        "url": "https://www.ai.study.fau.eu/prospective-students/master-ai/application-master/"
+      },
+      {
+        "label": "Official admissions FAQ and contact",
+        "url": "https://www.ai.study.fau.eu/prospective-students/master-ai/faq/"
+      }
+    ],
+    "duration": "4 semesters",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "AI master’s study advisor",
+      "email": "study-ai-master@fau.de",
+      "source": "https://www.ai.study.fau.eu/prospective-students/master-ai/faq/"
+    },
+    "research": {
+      "label": "AI curriculum and projects",
+      "url": "https://www.tf.fau.eu/degree-program/artificial-intelligence-ai-m-sc/"
+    },
+    "scheduleNote": "From winter 2026/27, regular applications are for the winter semester only. Check the next dated cycle; exceptional reapplications differ.",
+    "dataNote": "The application guide includes a €100 processing fee for non-EU applications from winter 2026/27. Its standardized-test wording distinguishes non-EU applicants and Lisbon Convention nationality; confirm which category applies. Tuition has not been verified."
+  },
+  {
+    "id": "paderborn-cs",
+    "title": "Computer Science",
+    "university": "Paderborn University",
+    "country": "Germany",
+    "city": "Paderborn",
+    "lat": 51.7093,
+    "lon": 8.7737,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Algorithms",
+      "Intelligence and data",
+      "Project group"
+    ],
+    "summary": "A flexible computing degree with focus areas including algorithms, software, systems and intelligence, plus a research project group.",
+    "gradeNote": "The international admissions page requires a German grade below 3.0; equivalence is assessed separately. No 4-point GPA conversion is provided.",
+    "requirements": [
+      "Comparable computing bachelor’s with 20 credits software engineering, 20 theoretical computing, 15 computer engineering and 15 computing mathematics",
+      "GRE quantitative 157 and analytical writing 4.0, or dMat Computer Science at least 50%; exemption only for a German grade strictly below 1.8",
+      "IELTS 6.5 or accepted equivalent; an English-medium letter alone is insufficient",
+      "Check the applicable uni-assist route and current examination regulations"
+    ],
+    "sources": [
+      {
+        "label": "Official international admissions and contact",
+        "url": "https://cs.uni-paderborn.de/en/studies/getting-started/information-for-international-students"
+      },
+      {
+        "label": "Official programme brochure",
+        "url": "https://cs.uni-paderborn.de/fileadmin/informatik/Studium/Einstieg_ins_Studium/Infomaterial/CS_EN_Master1.pdf"
+      },
+      {
+        "label": "Current programme page",
+        "url": "https://www.uni-paderborn.de/en/studyoffer/course_of_study/computer-science-master"
+      },
+      {
+        "label": "Official project groups",
+        "url": "https://cs.uni-paderborn.de/en/studies/project-groups"
+      }
+    ],
+    "duration": "4 semesters",
+    "language": "English route available; German optional",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "contact": {
+      "name": "Computer Science study office",
+      "email": "studienbuero-informatik@uni-paderborn.de",
+      "source": "https://cs.uni-paderborn.de/en/studies/getting-started/information-for-international-students"
+    },
+    "research": {
+      "label": "Project groups",
+      "url": "https://cs.uni-paderborn.de/en/studies/project-groups"
+    },
+    "ieltsSource": "https://cs.uni-paderborn.de/en/studies/getting-started/information-for-international-students",
+    "scheduleNote": "International page lists winter deadline 31 May and summer deadline 30 November. Confirm the current intake and route.",
+    "dataNote": "Four-semester duration and curriculum outline are supported by the official brochure; admission details use the current international applicants page. The general admissions page uses different grade-boundary wording, so confirm borderline German grades with the study office."
+  },
+  {
+    "id": "darmstadt-cs",
+    "title": "Computer Science",
+    "university": "TU Darmstadt",
+    "country": "Germany",
+    "city": "Darmstadt",
+    "lat": 49.877,
+    "lon": 8.654,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Data science",
+      "Visual computing",
+      "Distributed computing"
+    ],
+    "summary": "Specialise in data science and engineering, visual computing or distributed computing in a research-oriented degree.",
+    "gradeNote": "No numerical admission cap applies when academic and formal prerequisites are met; curriculum equivalence must still be established.",
+    "requirements": [
+      "Equivalent computing degree; at least 60 ECTS must match the reference bachelor’s core competencies",
+      "C1 English; programme can be completed by selecting English-taught modules",
+      "An on-campus 90-minute exam may be required when prior competencies cannot be verified",
+      "Qualifying GRE/GATE scores may exempt applicants from that exam"
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.tu-darmstadt.de/studieren/studieninteressierte/studienangebot_studiengaenge/studiengang_334656.en.jsp"
+      }
+    ],
+    "duration": "4 semesters",
+    "language": "English route available; German optional",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": {
+      "label": "Specialisations and programme information",
+      "url": "https://www.tu-darmstadt.de/studieren/studieninteressierte/studienangebot_studiengaenge/studiengang_334656.en.jsp"
+    },
+    "scheduleNote": "Winter and summer starts. Use the university’s current application portal and deadline page.",
+    "dataNote": "Only one of Computer Science, Artificial Intelligence and Machine Learning, or IT Security may be applied for in each admission period. Fees and numeric English test alternatives are not yet recorded for this entry."
+  },
+  {
+    "id": "darmstadt-aim",
+    "title": "Artificial Intelligence and Machine Learning",
+    "university": "TU Darmstadt",
+    "country": "Germany",
+    "city": "Darmstadt",
+    "lat": 49.877,
+    "lon": 8.654,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "AI foundations",
+      "Machine learning",
+      "Integrated projects"
+    ],
+    "summary": "A research degree combining AI foundations, models, systems and applications with projects and a thesis.",
+    "gradeNote": "Curriculum equivalence and entrance competencies determine eligibility; no comparable numeric GPA cutoff is recorded.",
+    "requirements": [
+      "Relevant degree with at least 180 ECTS; 60 ECTS must align with reference computing competencies",
+      "English C1; IELTS 7.0 is a published accepted route",
+      "An on-campus 90-minute written entrance exam may be required when competencies cannot be verified",
+      "The current exam guidance lists GRE/GATE-based exemptions; consult the required thresholds"
+    ],
+    "sources": [
+      {
+        "label": "Official programme and current admissions",
+        "url": "https://www.tu-darmstadt.de/studieren/studieninteressierte/studienangebot_studiengaenge/studiengang_334592.en.jsp"
+      },
+      {
+        "label": "Departmental curriculum and language requirements",
+        "url": "https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/aim_msc.en.jsp"
+      }
+    ],
+    "duration": "4 semesters",
+    "language": "English route available; German optional",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7,
+    "contact": null,
+    "research": {
+      "label": "AI and Machine Learning curriculum",
+      "url": "https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/aim_msc.en.jsp"
+    },
+    "ieltsSource": "https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/aim_msc.en.jsp",
+    "scheduleNote": "Winter and summer starts. Use the current application calendar rather than assuming recurring dates.",
+    "dataNote": "Only one of Computer Science, Artificial Intelligence and Machine Learning, or IT Security may be applied for in an admission period. Check current submission instructions: the departmental guide contains historical postal-process details."
+  },
+  {
+    "id": "stuttgart-cs",
+    "title": "Computer Science",
+    "university": "University of Stuttgart",
+    "country": "Germany",
+    "city": "Stuttgart",
+    "lat": 48.7455,
+    "lon": 9.1065,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Autonomous systems",
+      "Visual computing",
+      "Service engineering"
+    ],
+    "summary": "Choose a major in autonomous systems, visual computing or service technology and engineering, with additional electives.",
+    "gradeNote": "Academic suitability is assessed under the programme admission regulations; no comparable numeric GPA cutoff is recorded.",
+    "requirements": [
+      "Bachelor’s equivalent to at least six semesters in computer science, software engineering or a closely related subject",
+      "English C1; no German language proof is required",
+      "Select the application labelled Computer Science (in English)",
+      "Review the programme-specific academic suitability criteria and required documents"
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.uni-stuttgart.de/en/study/study-programs/Computer-Science-M.Sc-00002./"
+      }
+    ],
+    "duration": "4 semesters",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": {
+      "label": "Majors and course structure",
+      "url": "https://www.uni-stuttgart.de/en/study/study-programs/Computer-Science-M.Sc-00002./"
+    },
+    "scheduleNote": "Winter and summer starts; the university advises applying roughly nine months in advance. Confirm the dates for the selected start term.",
+    "dataNote": "Fee status has not been verified for applicant categories. Do not assume tuition-free study in Baden-Württemberg."
+  },
+  {
+    "id": "freiburg-cs",
+    "title": "Computer Science",
+    "university": "University of Freiburg",
+    "country": "Germany",
+    "city": "Freiburg",
+    "lat": 48.013,
+    "lon": 7.834,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Artificial intelligence",
+      "Deep learning",
+      "Cyber-physical systems"
+    ],
+    "summary": "Use an open curriculum or specialise in AI or cyber-physical systems, with options in learning, robotics and verification.",
+    "gradeNote": "Subject-specific eligibility is reviewed under the current admissions regulations; no comparable numeric GPA cutoff is recorded.",
+    "requirements": [
+      "Computer science, mathematics or closely related bachelor’s degree",
+      "Strong mathematics and theoretical computing, including formal languages, complexity and logic",
+      "C1 English; Academic IELTS 7.0 is one accepted route",
+      "Medium-of-instruction letters alone are insufficient; review country-based language exemptions and APS rules"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, admissions and fees",
+        "url": "https://www.tf.uni-freiburg.de/en/study-programs/computer-science/m-sc-computer-science"
+      }
+    ],
+    "duration": "4 semesters",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Non-EU tuition €1,500/semester · semester charges extra; check exemptions",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7,
+    "contact": null,
+    "research": {
+      "label": "AI and cyber-physical curriculum",
+      "url": "https://www.tf.uni-freiburg.de/en/study-programs/computer-science/m-sc-computer-science"
+    },
+    "ieltsSource": "https://www.tf.uni-freiburg.de/en/study-programs/computer-science/m-sc-computer-science",
+    "scheduleNote": "October and April starts. Published deadlines differ for EU and non-EU applicants; select your category before using a date.",
+    "dataNote": "The programme page lists non-EU tuition. Confirm exemptions and the latest semester charges before budgeting."
+  },
+  {
+    "id": "uva-ai",
+    "title": "Artificial Intelligence",
+    "university": "University of Amsterdam",
+    "country": "Netherlands",
+    "city": "Amsterdam",
+    "lat": 52.3544,
+    "lon": 4.9552,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Deep learning",
+      "Foundation models",
+      "Selective admission"
+    ],
+    "summary": "A technical AI degree at Amsterdam Science Park, covering machine learning, deep learning and foundation models with opportunities for specialisation.",
+    "gradeNote": "The published minimum is equivalent to Dutch 6.5, American 3.0 or British upper second class. International equivalency must be assessed; this record does not compare a Turkish 4-point GPA directly with the American threshold. Meeting minimum requirements does not guarantee selection.",
+    "requirements": [
+      "Research-university degree comparable to Artificial Intelligence or Computer Science",
+      "At least 12 EC computer science and 12 EC programming; 6 EC each in calculus, linear algebra, and probability/statistics",
+      "Selective ranking; motivation, academic record, AI preparation and references are assessed",
+      "IELTS Academic 7.0 overall with at least 6.5 in each component, or accepted evidence"
+    ],
+    "sources": [
+      {
+        "label": "Official programme",
+        "url": "https://www.uva.nl/shared-content/programmas/en/masters/artificial-intelligence/artificial-intelligence.html"
+      },
+      {
+        "label": "International admission requirements",
+        "url": "https://www.uva.nl/shared-content/programmas/en/masters/artificial-intelligence/application-and-admission/international-prior-education/international-prior-education-foldout-menu.html"
+      },
+      {
+        "label": "Official English requirements",
+        "url": "https://www.uva.nl/shared-content/programmas/en/masters/artificial-intelligence/application-and-admission/international-prior-education/english-language-requirements.html"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7.0,
+    "ieltsSource": "https://www.uva.nl/shared-content/programmas/en/masters/artificial-intelligence/application-and-admission/international-prior-education/english-language-requirements.html",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "September intake. Published annual deadlines: 31 January for most non-EU/EEA applicants; 30 April for EU/EEA applicants. Confirm the cycle and exceptions.",
+    "dataNote": "Programme and international entry criteria checked. Tuition not recorded. Coordinates approximate Science Park; current-cycle window not inferred from annual guidance."
+  },
+  {
+    "id": "vu-ai",
+    "title": "Artificial Intelligence",
+    "university": "Vrije Universiteit Amsterdam",
+    "country": "Netherlands",
+    "city": "Amsterdam",
+    "lat": 52.3345,
+    "lon": 4.8665,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Hybrid intelligence",
+      "Cognitive science",
+      "AI for health"
+    ],
+    "summary": "A human-centred AI programme combining technical AI foundations with cognition and collaboration between people and intelligent systems. Cognitive Science and AI for Health are available specialisations.",
+    "gradeNote": "The admissions board assesses research-university degree equivalency and academic preparation. No universal numerical GPA cutoff is recorded on the reviewed programme admissions page.",
+    "requirements": [
+      "Bachelor’s degree equivalent to a Dutch research-university degree",
+      "AI, computer science or a related background with at least 18 ECTS in relevant AI areas",
+      "Programming preparation; applicants without an AI or CS bachelor’s may need a Python test",
+      "Accepted English proficiency evidence; verify the current programme-specific score table"
+    ],
+    "sources": [
+      {
+        "label": "Official programme",
+        "url": "https://vu.nl/en/education/master/artificial-intelligence"
+      },
+      {
+        "label": "Official admissions and contacts",
+        "url": "https://vu.nl/en/education/master/artificial-intelligence/admissions"
+      },
+      {
+        "label": "Official English requirements",
+        "url": "https://vu.nl/en/education/more-about/language-proficiency-requirements-master"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Kevin Luck · programme questions",
+      "email": "k.s.luck@vu.nl",
+      "source": "https://vu.nl/en/education/master/artificial-intelligence/admissions"
+    },
+    "research": null,
+    "scheduleNote": "Use VU’s international application procedure for nationality-specific deadlines. Programme questions may be sent with the subject AI-Master-Info.",
+    "dataNote": "Programme and international academic criteria checked. Programme-specific English score table, tuition and dated application cycle remain unrecorded. Coordinates approximate VU Campus."
+  },
+  {
+    "id": "uva-vu-cs",
+    "title": "Computer Science · joint degree",
+    "university": "University of Amsterdam & Vrije Universiteit Amsterdam",
+    "country": "Netherlands",
+    "city": "Amsterdam",
+    "lat": 52.3544,
+    "lon": 4.9552,
+    "fields": [
+      "Computer Science"
+    ],
+    "tags": [
+      "Joint degree",
+      "Computer systems",
+      "Big data engineering"
+    ],
+    "summary": "A joint degree covering systems, software and computing foundations, with teaching at both Amsterdam Science Park and VU Campus. Application and registration are handled through VU.",
+    "gradeNote": "Admission depends on research-university equivalency and subject preparation. No universal numerical GPA threshold is recorded from the reviewed admissions page.",
+    "requirements": [
+      "Research-university Computer Science bachelor’s degree or a closely related qualification",
+      "At least 120 ECTS in CS subjects, including 90 ECTS in the listed core areas",
+      "Core preparation in mathematics, computing foundations, software, systems and data/information systems",
+      "Apply through VU and submit accepted English evidence"
+    ],
+    "sources": [
+      {
+        "label": "Official joint programme",
+        "url": "https://www.uva.nl/shared-content/programmas/en/masters/computer-science/computer-science.html"
+      },
+      {
+        "label": "Official joint registration process",
+        "url": "https://www.uva.nl/shared-content/programmas/en/masters/computer-science/application-and-admission/application-and-admission.html"
+      },
+      {
+        "label": "VU international admissions",
+        "url": "https://vu.nl/en/education/master/computer-science-joint-degree-vu-uva/admissions"
+      },
+      {
+        "label": "Official English requirements",
+        "url": "https://vu.nl/en/education/more-about/language-proficiency-requirements-master"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Faculty of Science international student advisors",
+      "email": "masters.fs@vu.nl",
+      "source": "https://vu.nl/en/education/master/computer-science-joint-degree-vu-uva/admissions"
+    },
+    "research": null,
+    "scheduleNote": "September intake. Check VU’s current deadline for your international qualification and nationality.",
+    "dataNote": "A single record represents the joint degree. Reviewed UvA and VU pages show differing general deadline information, so no dated window is entered. IELTS score table and tuition remain unrecorded. Marker represents Science Park; teaching also occurs at VU."
+  },
+  {
+    "id": "utrecht-ai",
+    "title": "Artificial Intelligence",
+    "university": "Utrecht University",
+    "country": "Netherlands",
+    "city": "Utrecht",
+    "lat": 52.0854,
+    "lon": 5.1745,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Logic",
+      "Intelligent systems",
+      "Selective research master’s"
+    ],
+    "summary": "A research master’s in the design of intelligent systems, bringing together AI algorithms, reasoning and disciplines such as cognition and language.",
+    "gradeNote": "A selective programme: the committee reviews degree equivalency, course preparation, grades, motivation and references. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "Bachelor’s degree equivalent to a Dutch research-university degree",
+      "Relevant background with logic, programming, mathematics, AI and machine learning; cognitive and linguistic preparation is also reviewed",
+      "Motivation statement, CV, two referees and required course-description templates",
+      "EMI-experienced English: IELTS Academic 6.5 overall and 6.0 per component, or accepted evidence"
+    ],
+    "sources": [
+      {
+        "label": "Official programme",
+        "url": "https://www.uu.nl/en/masters/artificial-intelligence"
+      },
+      {
+        "label": "International admissions",
+        "url": "https://www.uu.nl/en/masters/artificial-intelligence/application-and-admission/degree-from-a-non-dutch-university"
+      },
+      {
+        "label": "EMI-experienced language requirements",
+        "url": "https://www.uu.nl/en/masters/general-information/application-and-admission/english-language-requirements/emi-experienced"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "€25,306 / year · non-EU/EEA, 2026/27",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://www.uu.nl/en/masters/general-information/application-and-admission/english-language-requirements/emi-experienced",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "February and September intakes. Annual September deadlines: 1 April non-EU passport holders, 1 June EU; February deadlines: 1 September non-EU, 15 October EU. Scholarship dates can be earlier.",
+    "dataNote": "Published fee applies to 2026/27 and may change for later intakes. No current-cycle window inferred from annual guidance. Coordinates approximate Utrecht Science Park."
+  },
+  {
+    "id": "utrecht-computing",
+    "title": "Computing Science",
+    "university": "Utrecht University",
+    "country": "Netherlands",
+    "city": "Utrecht",
+    "lat": 52.0854,
+    "lon": 5.1745,
+    "fields": [
+      "Computer Science"
+    ],
+    "tags": [
+      "Algorithms",
+      "Software verification",
+      "Operations research"
+    ],
+    "summary": "A research degree in efficient algorithms, correct software and computational decision-making, with tracks in programming technology, algorithm design and operations research.",
+    "gradeNote": "Selection considers a suitable research-university degree, preparation, English and motivation. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "Research-university degree with a substantial computing background",
+      "Programming experience, software construction, algorithms and data structures, and formal reasoning",
+      "Track-specific preparation: functional programming or algorithm design as appropriate",
+      "IELTS Academic 6.5 overall and 6.0 in each component, or accepted EMI-experienced evidence"
+    ],
+    "sources": [
+      {
+        "label": "Official programme",
+        "url": "https://www.uu.nl/en/masters/computing-science"
+      },
+      {
+        "label": "International admission requirements",
+        "url": "https://www.uu.nl/en/masters/computing-science/application-and-admission/degree-from-a-non-dutch-university"
+      },
+      {
+        "label": "EMI-experienced language requirements",
+        "url": "https://www.uu.nl/en/masters/general-information/application-and-admission/english-language-requirements/emi-experienced"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "€25,306 / year · non-EU/EEA, 2026/27",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://www.uu.nl/en/masters/general-information/application-and-admission/english-language-requirements/emi-experienced",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "February and September intakes. Annual September deadlines: 1 April non-EU passport holders, 1 June EU; February deadlines: 1 September non-EU, 15 October EU. Confirm the cycle.",
+    "dataNote": "Fee is for 2026/27; later fees and a dated application window are not recorded. Coordinates approximate Utrecht Science Park."
+  },
+  {
+    "id": "groningen-ai",
+    "title": "Artificial Intelligence",
+    "university": "University of Groningen",
+    "country": "Netherlands",
+    "city": "Groningen",
+    "lat": 53.24,
+    "lon": 6.536,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Machine learning",
+      "Robotics",
+      "Multi-agent systems"
+    ],
+    "summary": "A selective AI degree with specialisations in machine learning, hybrid intelligence, robotics, multi-agent systems and AI engineering.",
+    "gradeNote": "Selection considers academic performance and motivation after subject eligibility is assessed. No numerical GPA threshold is recorded.",
+    "requirements": [
+      "Academic bachelor’s in AI or a related field",
+      "Calculus, linear algebra, probability/statistics, advanced programming, machine learning, logic, neural networks and research methods",
+      "Complete the AI checklist, motivation and academic writing evidence",
+      "IELTS Academic 6.5 overall and 6.5 in every component, or accepted evidence"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, requirements, fees and deadlines",
+        "url": "https://www.rug.nl/masters/artificial-intelligence/?lang=en"
+      },
+      {
+        "label": "Faculty English language requirements",
+        "url": "https://www.rug.nl/fse/education/admission-and-application/apply-msc/language-requirements-msc?lang=en"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "€24,900 / year · non-EU/EEA, 2027/28",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://www.rug.nl/fse/education/admission-and-application/apply-msc/language-requirements-msc?lang=en",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Published application deadline: 1 May 2027 for the 1 September 2027 start. Earlier complete-application dates allow earlier decisions; application opening date is not recorded.",
+    "dataNote": "A closing date alone is not represented as an open window. Coordinates approximate Zernike Campus."
+  },
+  {
+    "id": "maastricht-ai",
+    "title": "Artificial Intelligence",
+    "university": "Maastricht University · transnational University of Limburg",
+    "country": "Netherlands",
+    "city": "Maastricht",
+    "lat": 50.8344,
+    "lon": 5.6852,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Machine learning",
+      "Data mining",
+      "Pre-master assessment"
+    ],
+    "summary": "A two-year AI degree with machine learning and data-mining study, practical projects and elective interests including quantum computing.",
+    "gradeNote": "For international applicants, Nuffic equivalency, university context, grades and subject competences are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "Degree equivalent to a Dutch research-university bachelor’s",
+      "Software development, data structures/algorithms and object-oriented programming",
+      "Calculus, linear algebra, probability and statistics",
+      "Transcript, CV, motivation, course information and accepted English evidence; a tailored pre-master may be offered"
+    ],
+    "sources": [
+      {
+        "label": "Official programme",
+        "url": "https://www.maastrichtuniversity.nl/education/master/programmes/artificial-intelligence"
+      },
+      {
+        "label": "2027 admissions, application dates and contact",
+        "url": "https://www.maastrichtuniversity.nl/education/master/programmes/artificial-intelligence/admission-requirements"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-10-01",
+      "closes": "2027-05-01",
+      "source": "https://www.maastrichtuniversity.nl/education/master/programmes/artificial-intelligence/admission-requirements",
+      "category": "Non-EU/EEA nationality · September 2027 intake"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Department of Advanced Computing Sciences admissions",
+      "email": "dacs-admissions@maastrichtuniversity.nl",
+      "source": "https://www.maastrichtuniversity.nl/education/master/programmes/artificial-intelligence/admission-requirements"
+    },
+    "research": null,
+    "scheduleNote": "Recorded window is for non-EU/EEA September 2027 applicants. EU/EEA/Swiss deadline: 1 June 2027. A February 2027 intake also exists; non-EU/EEA deadline 1 November 2026.",
+    "dataNote": "Studielink lists this Maastricht-taught degree under transnational University of Limburg (tUL). Language questionnaire scores and tuition remain unrecorded. Coordinates approximate Randwyck."
+  },
+  {
+    "id": "maastricht-dsdm",
+    "title": "Data Science for Decision Making",
+    "university": "Maastricht University · transnational University of Limburg",
+    "country": "Netherlands",
+    "city": "Maastricht",
+    "lat": 50.8344,
+    "lon": 5.6852,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Data science",
+      "Decision making",
+      "Mathematical modelling"
+    ],
+    "summary": "A data-science degree concerned with analysing information and supporting decisions, combining mathematical preparation with programming and practical projects.",
+    "gradeNote": "International applicants are assessed for research-university degree equivalency, grades and relevant preparation. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "Research-university bachelor’s or equivalent in a relevant quantitative discipline",
+      "Strong calculus, linear algebra, discrete mathematics, probability and statistics",
+      "Data structures, algorithms and programming experience",
+      "Transcript, CV, motivation, course information and accepted English proof; pre-master assessment may apply"
+    ],
+    "sources": [
+      {
+        "label": "Official programme",
+        "url": "https://www.maastrichtuniversity.nl/education/master/programmes/data-science-decision-making"
+      },
+      {
+        "label": "Official admissions and dated deadlines",
+        "url": "https://www.maastrichtuniversity.nl/education/master/programmes/data-science-decision-making/admission-requirements"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-07-01",
+      "closes": "2026-11-01",
+      "source": "https://www.maastrichtuniversity.nl/education/master/programmes/data-science-decision-making/admission-requirements",
+      "category": "Non-EU/EEA nationality · February 2027 intake"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Department of Advanced Computing Sciences admissions",
+      "email": "dacs-admissions@maastrichtuniversity.nl",
+      "source": "https://www.maastrichtuniversity.nl/education/master/programmes/data-science-decision-making/admission-requirements"
+    },
+    "research": null,
+    "scheduleNote": "Recorded window is for the February 2027 non-EU/EEA intake; teaching starts 25 January 2027. The dated September 2027 non-EU/EEA deadline is 1 May 2027; confirm that cycle’s opening information with admissions.",
+    "dataNote": "The official page contains conflicting academic-year labels around its September opening and a visa-note inconsistency. Only the clearly dated February admission window is entered. Tuition and English scores unrecorded. Approximate Randwyck marker."
+  },
+  {
+    "id": "radboud-ai-mlnc",
+    "title": "Artificial Intelligence · Machine Learning and Neural Computing",
+    "university": "Radboud University",
+    "country": "Netherlands",
+    "city": "Nijmegen",
+    "lat": 51.8203,
+    "lon": 5.8639,
+    "fields": [
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Neural computing",
+      "Machine learning",
+      "Brain-inspired AI"
+    ],
+    "summary": "An Artificial Intelligence specialisation with Machine Learning and Neural Computing tracks, linking modern AI methods to computational neuroscience and brain-inspired technologies.",
+    "gradeNote": "The admissions committee assesses research-university equivalency and subject content. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "Research-university bachelor’s in AI or a related area",
+      "For other backgrounds: approximately 15–24 EC computing, 18–24 EC cognition/advanced AI, 12 EC mathematics and 12–18 EC core AI",
+      "Detailed course descriptions, transcript and programme application documents",
+      "IELTS Academic 7.0 overall with 6.5 subscores, or another accepted certificate"
+    ],
+    "sources": [
+      {
+        "label": "Official specialisation and research overview",
+        "url": "https://www.ru.nl/en/education/masters/machine-learning-and-neural-computing"
+      },
+      {
+        "label": "Official international admissions and language requirements",
+        "url": "https://www.ru.nl/en/education/masters/machine-learning-and-neural-computing/admission-and-application"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7.0,
+    "ieltsSource": "https://www.ru.nl/en/education/masters/machine-learning-and-neural-computing/admission-and-application",
+    "contact": null,
+    "research": {
+      "label": "Programme research at the Donders Institute",
+      "url": "https://www.ru.nl/en/education/masters/machine-learning-and-neural-computing"
+    },
+    "scheduleNote": "September intake. The official page varies application periods by nationality and prior education; select your category before using a deadline.",
+    "dataNote": "Represents one specialisation within the AI degree, separate from the Computing Science cyber-security specialisation. Tuition and category-specific dated window unrecorded. Coordinates approximate campus."
+  },
+  {
+    "id": "leiden-cs",
+    "title": "Computer Science",
+    "university": "Leiden University",
+    "country": "Netherlands",
+    "city": "Leiden",
+    "lat": 52.1676,
+    "lon": 4.4592,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Artificial intelligence",
+      "Data science",
+      "Computing foundations"
+    ],
+    "summary": "A research-oriented Computer Science degree with options including Artificial Intelligence, Data Science, Advanced Computing and Systems, and Foundations of Computing.",
+    "gradeNote": "Foreign degree level and computing-course content are assessed by the admissions board. A separate Dutch applied-sciences grade rule is not treated as a universal international GPA threshold.",
+    "requirements": [
+      "CS, AI or a related degree from a foreign research university comparable to a Dutch university",
+      "At least 90 EC or equivalent in computing courses/projects for the direct international route",
+      "An approved pre-master may be required for an alternative eligible background",
+      "IELTS Academic 6.5 overall with at least 6.0 per component, or accepted evidence"
+    ],
+    "sources": [
+      {
+        "label": "Official programme and programme contact",
+        "url": "https://www.universiteitleiden.nl/en/education/study-programmes/master/computer-science"
+      },
+      {
+        "label": "Official international admission and language requirements",
+        "url": "https://www.universiteitleiden.nl/en/education/study-programmes/master/computer-science/admission-and-application/admission-requirements"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English · education specialisation also requires Dutch",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://www.universiteitleiden.nl/en/education/study-programmes/master/computer-science/admission-and-application/admission-requirements",
+    "contact": {
+      "name": "LIACS Education Office · programme questions, except admissions",
+      "email": "mastercs@liacs.leidenuniv.nl",
+      "source": "https://www.universiteitleiden.nl/en/education/study-programmes/master/computer-science"
+    },
+    "research": null,
+    "scheduleNote": "Programme overview lists September and February starts. Check the chosen specialisation and applicant-specific deadline.",
+    "dataNote": "One record represents the degree and its computing specialisations. Tuition and dated application window not recorded. Coordinates approximate Leiden Bio Science Park."
+  },
+  {
+    "id": "uva-security-network",
+    "title": "Security and Network Engineering",
+    "university": "University of Amsterdam",
+    "country": "Netherlands",
+    "city": "Amsterdam",
+    "lat": 52.3544,
+    "lon": 4.9552,
+    "fields": [
+      "Cybersecurity",
+      "Computer Science"
+    ],
+    "tags": [
+      "Network security",
+      "Unix",
+      "Intake exams"
+    ],
+    "summary": "An intensive degree in security and networking that combines theoretical study with practical work. Offered as one year full time or two years part time.",
+    "gradeNote": "No fixed minimum GPA is stated. The page advises American 3.0 or equivalent, but this is guidance rather than an automatic rejection rule; international equivalency and the selection procedure still apply.",
+    "requirements": [
+      "CS, technical informatics or a closely related bachelor’s, including eligible applied-sciences degrees",
+      "Selection exams in discrete mathematics, Unix, networking and academic reading/writing",
+      "Intake interview about exam results, bachelor’s project and motivation",
+      "IELTS Academic 6.5 overall with 6.0 in each component, or accepted evidence"
+    ],
+    "sources": [
+      {
+        "label": "Official programme",
+        "url": "https://www.uva.nl/shared-content/programmas/en/masters/security-and-network-engineering/security-and-network-engineering.html"
+      },
+      {
+        "label": "International admissions and selection",
+        "url": "https://www.uva.nl/shared-content/programmas/en/masters/security-and-network-engineering/application-and-admission/international-prior-education/international-prior-education-foldout-menu.html"
+      },
+      {
+        "label": "Official English requirements",
+        "url": "https://www.uva.nl/shared-content/programmas/en/masters/artificial-intelligence/application-and-admission/international-prior-education/english-language-requirements.html"
+      }
+    ],
+    "duration": "1 year full time · 2 years part time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://www.uva.nl/shared-content/programmas/en/masters/artificial-intelligence/application-and-admission/international-prior-education/english-language-requirements.html",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "September intake. Published annual deadlines: 31 January for most non-EU/EEA applicants, 30 June for EU/EEA applicants. Confirm the cycle and exceptions.",
+    "dataNote": "Selection and language rules checked. Fees and dated current-cycle window unrecorded. Approximate Science Park marker."
+  },
+  {
+    "id": "uva-quantum-cs",
+    "title": "Quantum Computer Science",
+    "university": "University of Amsterdam",
+    "country": "Netherlands",
+    "city": "Amsterdam",
+    "lat": 52.3544,
+    "lon": 4.9552,
+    "fields": [
+      "Quantum Computing",
+      "Computer Science"
+    ],
+    "tags": [
+      "Quantum information",
+      "Mathematical proofs",
+      "QuSoft"
+    ],
+    "summary": "A research degree grounded in computer science and mathematics, with teaching connected to QuSoft’s quantum-computing and quantum-information research.",
+    "gradeNote": "There is no fixed minimum GPA. The programme advises American 3.0 or equivalent and evaluates overall performance. This is not a direct conversion or cutoff for a Turkish 4-point GPA.",
+    "requirements": [
+      "Research-university degree in physics, mathematics, CS or a closely related field",
+      "Strong linear algebra and ability to understand and write formal proofs",
+      "Demonstrate mathematical maturity through a mathematics degree/minor, at least 24 ECTS of proving courses or equivalent preparation",
+      "IELTS Academic 7.0 overall with at least 6.5 in every component, or accepted evidence"
+    ],
+    "sources": [
+      {
+        "label": "Official programme",
+        "url": "https://www.uva.nl/shared-content/programmas/en/masters/quantum-computer-science/quantum-computer-science.html"
+      },
+      {
+        "label": "International academic requirements",
+        "url": "https://www.uva.nl/shared-content/programmas/en/masters/quantum-computer-science/application-and-admission/international-prior-education-foldout/international-prior-education-foldout-menu-kopie.html"
+      },
+      {
+        "label": "Official English requirements",
+        "url": "https://www.uva.nl/shared-content/programmas/en/masters/artificial-intelligence/application-and-admission/international-prior-education/english-language-requirements.html"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7.0,
+    "ieltsSource": "https://www.uva.nl/shared-content/programmas/en/masters/artificial-intelligence/application-and-admission/international-prior-education/english-language-requirements.html",
+    "contact": null,
+    "research": {
+      "label": "Programme and QuSoft research connection",
+      "url": "https://www.uva.nl/shared-content/programmas/en/masters/quantum-computer-science/quantum-computer-science.html"
+    },
+    "scheduleNote": "September intake. Published annual deadlines: 31 January for most non-EU/EEA applicants, 30 April for EU/EEA applicants. Confirm the intended cycle.",
+    "dataNote": "A separate UvA degree, distinct from TU Delft/Leiden QIST. Tuition and dated application cycle unrecorded. Approximate Science Park marker."
+  },
+  {
+    "id": "tum-lmu-quantum",
+    "title": "Quantum Science & Technology",
+    "university": "Technical University of Munich & LMU Munich",
+    "country": "Germany",
+    "city": "Garching / Munich",
+    "lat": 48.262,
+    "lon": 11.668,
+    "fields": [
+      "Quantum Computing"
+    ],
+    "tags": [
+      "Quantum algorithms",
+      "Quantum simulation",
+      "Joint degree"
+    ],
+    "summary": "An interdisciplinary joint degree offering experimental, theoretical and quantum-computing specialisations, with courses at both Munich universities.",
+    "gradeNote": "Admission combines curriculum, grades and motivation in an aptitude assessment. The grade-scoring formula is not a standalone GPA cutoff.",
+    "requirements": [
+      "A six-semester bachelor’s in physics or a suitable engineering or natural-science discipline",
+      "A passed quantum-mechanics course equivalent to TUM PH0007 is required",
+      "Curricular assessment requires at least 57 points before aptitude assessment",
+      "Accepted English proof, motivation letter, CV and curriculum analysis; international degrees generally need a uni-assist VPD"
+    ],
+    "sources": [
+      {
+        "label": "Official joint programme overview",
+        "url": "https://www.tum.de/en/studies/degree-programs/detail/quantum-science-technology-master-of-science-msc"
+      },
+      {
+        "label": "Official programme admission procedure",
+        "url": "https://academics.nat.tum.de/en/msc/qst/apply"
+      },
+      {
+        "label": "Programme curriculum & academic adviser",
+        "url": "https://academics.nat.tum.de/en/msc/qst"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Quantum Science & Technology academic advising",
+      "email": "study@nat.tum.de",
+      "source": "https://academics.nat.tum.de/en/msc/qst"
+    },
+    "research": {
+      "label": "Specialisation areas & programme curriculum",
+      "url": "https://academics.nat.tum.de/en/msc/qst"
+    },
+    "scheduleNote": "Published annual winter-entry application period: 1 January–31 May. Complete applications by 15 March may receive early review. Confirm the current cycle.",
+    "dataNote": "A computer-science degree alone does not establish eligibility: quantum-mechanics evidence and physics/mathematics curriculum review are essential. Current fees and detailed English-test thresholds need checking."
+  },
+  {
+    "id": "saarland-quantum",
+    "title": "Quantum Engineering",
+    "university": "Saarland University",
+    "country": "Germany",
+    "city": "Saarbrücken",
+    "lat": 49.255,
+    "lon": 7.042,
+    "fields": [
+      "Quantum Computing"
+    ],
+    "tags": [
+      "Quantum physics",
+      "Systems engineering",
+      "Laboratory research"
+    ],
+    "summary": "A physics and systems-engineering degree focused on developing quantum technologies, with theoretical, experimental and applied study choices.",
+    "gradeNote": "German overall grade 2.5 or better is required. International equivalency is determined by the university; no automatic conversion is applied.",
+    "requirements": [
+      "Quantum engineering or a related bachelor’s with German-equivalent grade 2.5 or better",
+      "36 CP physics, 12 CP electrical/measurement/sensor foundations and 8 CP electrodynamics or theoretical electrical engineering",
+      "10 CP electronics/circuit design, 20 CP mathematics and 12 CP physics/engineering practical courses",
+      "English at CEFR B2 or equivalent"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admission requirements",
+        "url": "https://www.uni-saarland.de/en/study/programmes/master/quantum-engineering.html"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "No tuition · semester fees extra",
+      "free": true
+    },
+    "window": null,
+    "gpa": {
+      "value": 2.5,
+      "scale": "german",
+      "direction": "lower",
+      "type": "required",
+      "text": "German grade 2.5 or better",
+      "source": "https://www.uni-saarland.de/en/study/programmes/master/quantum-engineering.html"
+    },
+    "ielts": null,
+    "contact": {
+      "name": "Quantum Engineering programme coordination",
+      "email": "studium-se@uni-saarland.de",
+      "source": "https://www.uni-saarland.de/en/study/programmes/master/quantum-engineering.html"
+    },
+    "research": null,
+    "scheduleNote": "Published recurring application periods: mid-June–1 September for winter, mid-December–1 March for summer. Confirm the current cycle.",
+    "dataNote": "The extensive physics, electronics and laboratory prerequisites may exclude a typical computer-science transcript. Detailed accepted English certificates need checking."
+  },
+  {
+    "id": "ulm-quantum",
+    "title": "Quantum Engineering",
+    "university": "Ulm University",
+    "country": "Germany",
+    "city": "Ulm",
+    "lat": 48.423,
+    "lon": 9.956,
+    "fields": [
+      "Quantum Computing"
+    ],
+    "tags": [
+      "Quantum devices",
+      "Electrical engineering",
+      "Research project"
+    ],
+    "summary": "A research-oriented degree joining quantum physics and electrical engineering, with background-adjustment courses and an independent project or external internship.",
+    "gradeNote": "German overall or provisional average grade 2.7 or better is required. International equivalency requires official review.",
+    "requirements": [
+      "Physics, electrical engineering, nanotechnology, quantum technology, aerospace engineering or a related bachelor’s",
+      "German-equivalent overall or provisional grade 2.7 or better",
+      "At least 20 ECTS mathematics and 100 ECTS physics/electrical engineering",
+      "A physics/electrical-engineering thesis or equivalent scientific work worth 10 ECTS; English CEFR B2",
+      "Additional interview rules apply to some degrees obtained outside the European Higher Education Area"
+    ],
+    "sources": [
+      {
+        "label": "Official programme overview & curriculum",
+        "url": "https://www.uni-ulm.de/en/nawi/school-of-chemistry/studies/study-courses/study-course/course/quantum-engineering-master/"
+      },
+      {
+        "label": "Official entrance requirements & application routes",
+        "url": "https://www.uni-ulm.de/en/study/application-and-enrolment/masters-programmes/quantum-engineering/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": {
+      "value": 2.7,
+      "scale": "german",
+      "direction": "lower",
+      "type": "required",
+      "text": "German grade 2.7 or better",
+      "source": "https://www.uni-ulm.de/en/study/application-and-enrolment/masters-programmes/quantum-engineering/"
+    },
+    "ielts": null,
+    "contact": {
+      "name": "Admission Office",
+      "email": "studium@uni-ulm.de",
+      "source": "https://www.uni-ulm.de/en/study/application-and-enrolment/masters-programmes/quantum-engineering/"
+    },
+    "research": {
+      "label": "Quantum Engineering course structure",
+      "url": "https://www.uni-ulm.de/en/nawi/school-of-chemistry/studies/study-courses/study-course/course/quantum-engineering-master/"
+    },
+    "scheduleNote": "For foreign-degree applicants using uni-assist, recurring periods are 1 April–15 July (winter) and 15 October–15 January (summer). Domestic-degree routes have different periods. Confirm the current cycle.",
+    "dataNote": "Computer-science graduates need substantial physics/electrical-engineering credits; the title alone does not make this a computing conversion degree. Fees and accepted English-test scores need checking."
+  },
+  {
+    "id": "wuerzburg-quantum",
+    "title": "Quantum Engineering",
+    "university": "University of Würzburg",
+    "country": "Germany",
+    "city": "Würzburg",
+    "lat": 49.785,
+    "lon": 9.971,
+    "fields": [
+      "Quantum Computing"
+    ],
+    "tags": [
+      "Nanoscience",
+      "Quantum technology",
+      "GRE Physics"
+    ],
+    "summary": "An English-taught research degree emphasising nanoscience and quantum technology, followed by a research project and thesis in a faculty group.",
+    "gradeNote": "Academic eligibility is demonstrated through subject competencies and a GRE Physics score; no standalone numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A bachelor’s equivalent to 180 ECTS and GRE Subject Test in Physics score of at least 600",
+      "29 ECTS nanoscience, 27 ECTS chemistry and 27 ECTS experimental physics",
+      "12 ECTS theoretical physics, 18 ECTS mathematics and 18 ECTS physics/engineering labs or industrial internships",
+      "A 10 ECTS thesis using nanoscience methods",
+      "IELTS 6.0 or accepted equivalent, motivation statement and a recommendation"
+    ],
+    "sources": [
+      {
+        "label": "Official international programme overview",
+        "url": "https://www.physik.uni-wuerzburg.de/en/international/quantum-engineering/"
+      },
+      {
+        "label": "Official academic & language requirements",
+        "url": "https://www.physik.uni-wuerzburg.de/en/international/international-master/admission-and-requirements/"
+      },
+      {
+        "label": "International application procedure",
+        "url": "https://www.physik.uni-wuerzburg.de/international/apply-now/"
+      },
+      {
+        "label": "Faculty application deadlines",
+        "url": "https://www.physik.uni-wuerzburg.de/en/study/study-organization/application-deadlines/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "No tuition · semester contribution extra",
+      "free": true
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.0,
+    "ieltsSource": "https://www.physik.uni-wuerzburg.de/en/international/international-master/admission-and-requirements/",
+    "contact": {
+      "name": "International master’s programme office",
+      "email": "international@physik.uni-wuerzburg.de",
+      "source": "https://www.physik.uni-wuerzburg.de/international/apply-now/"
+    },
+    "research": null,
+    "scheduleNote": "The international programme publishes 15 March (winter) and 31 October (summer), while a faculty page lists 15 July and 15 January. Confirm the correct applicant route with the programme office before relying on a date.",
+    "dataNote": "These chemistry, physics and nanoscience prerequisites are substantial and generally require more than a typical CS degree. Conflicting official deadline pages prevent a verified application window."
+  },
+  {
+    "id": "hannover-quantum",
+    "title": "Quantum Engineering",
+    "university": "Leibniz University Hannover & TU Braunschweig",
+    "country": "Germany",
+    "city": "Hannover / Braunschweig",
+    "lat": 52.387,
+    "lon": 9.714,
+    "fields": [
+      "Quantum Computing"
+    ],
+    "tags": [
+      "Quantum communication",
+      "Quantum sensors",
+      "Quantum simulation"
+    ],
+    "summary": "A programme covering quantum communication, simulation, sensing and computing, with engineering teaching offered in cooperation with TU Braunschweig.",
+    "gradeNote": "Admission depends on a relevant degree and subject prerequisites. No standalone numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A related degree such as physics or electrical engineering/information technology, or an accepted comparable qualification",
+      "20 ECTS mathematics and 8 ECTS quantum mechanics",
+      "5 ECTS wave optics or 5 ECTS electrodynamics",
+      "International applicants need English CEFR C1; non-EU applicants require uni-assist VPD",
+      "Check the admission regulations for exact equivalency and possible conditions"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admission overview",
+        "url": "https://www.uni-hannover.de/en/studium/studienangebot/info/studiengang/detail/quantum-engineering-1"
+      },
+      {
+        "label": "Faculty programme information & advising",
+        "url": "https://www.maphy.uni-hannover.de/studium/im-studium/quantum-engineering"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Quantum Engineering subject advising",
+      "email": "quantumengineering@quest.uni-hannover.de",
+      "source": "https://www.maphy.uni-hannover.de/studium/im-studium/quantum-engineering"
+    },
+    "research": null,
+    "scheduleNote": "Recurring non-EU first-year periods: 15 April–31 May (winter) and 15 October–30 November in the preceding year (summer). Germany/EU periods differ. Confirm the current cycle.",
+    "dataNote": "The required quantum-mechanics and optics/electrodynamics background must be assessed separately for CS graduates. Some courses may require travel to Braunschweig. Fees and detailed language-certificate rules need checking."
+  },
+  {
+    "id": "jena-quantum",
+    "title": "Quantum Science and Technology",
+    "university": "Friedrich Schiller University Jena",
+    "country": "Germany",
+    "city": "Jena",
+    "lat": 50.923,
+    "lon": 11.573,
+    "fields": [
+      "Quantum Computing"
+    ],
+    "tags": [
+      "Quantum information",
+      "Quantum photonics",
+      "Industrial internship"
+    ],
+    "summary": "An English-taught degree covering quantum information, computing, communication and sensing, with adjustment courses, laboratory work and research training.",
+    "gradeNote": "A German-equivalent grade 2.0 or better is required; admission and degree equivalency are decided by the selection committee.",
+    "requirements": [
+      "Physics or a comparable bachelor’s with German-equivalent overall grade 2.0 or better",
+      "At least 12 CP mathematics, including analysis, linear algebra and numerical methods",
+      "8 CP quantum physics or related areas, or accepted evidence of equivalent prior skills",
+      "English CEFR B2; IELTS 6.5 or another recognised proof"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, admissions & contact",
+        "url": "https://www.uni-jena.de/en/237358/m-sc-quantum-science-and-technology"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "No tuition · semester contribution extra",
+      "free": true
+    },
+    "window": null,
+    "gpa": {
+      "value": 2.0,
+      "scale": "german",
+      "direction": "lower",
+      "type": "required",
+      "text": "German grade 2.0 or better",
+      "source": "https://www.uni-jena.de/en/237358/m-sc-quantum-science-and-technology"
+    },
+    "ielts": 6.5,
+    "ieltsSource": "https://www.uni-jena.de/en/237358/m-sc-quantum-science-and-technology",
+    "contact": {
+      "name": "Abbe School of Photonics study advice",
+      "email": "master-asp@uni-jena.de",
+      "source": "https://www.uni-jena.de/en/237358/m-sc-quantum-science-and-technology"
+    },
+    "research": null,
+    "scheduleNote": "Winter entry. Select nationality and programme semester on the official page to obtain the applicable deadline.",
+    "dataNote": "A CS degree must be judged comparable and satisfy quantum-physics preparation; adjustment courses do not remove entry requirements. Exact current application dates remain unrecorded."
+  },
+  {
+    "id": "siegen-quantum",
+    "title": "Quantum Science",
+    "university": "University of Siegen",
+    "country": "Germany",
+    "city": "Siegen",
+    "lat": 50.913,
+    "lon": 8.027,
+    "fields": [
+      "Quantum Computing",
+      "Computer Science"
+    ],
+    "tags": [
+      "Quantum information",
+      "Quantum algorithms",
+      "CS entry route"
+    ],
+    "summary": "An interdisciplinary quantum-science degree with routes for students with or without prior quantum mechanics, including research in information theory and algorithms.",
+    "gradeNote": "A qualified relevant bachelor’s and transcript review are required. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "Physics, mathematics, computer science or electrical-engineering bachelor’s; related degrees are assessed individually",
+      "CS applicants should know discrete mathematics, theoretical CS, linear algebra and differential equations",
+      "Summer entry requires physics preparation; CS/mathematics/electrical-engineering applicants need 15 ECTS quantum-physics lectures",
+      "IELTS 6.5, CEFR B2 or accepted equivalent; recognised prior English instruction can qualify",
+      "CV, short motivation text, transcript and two academic recommendations; an interview may be requested"
+    ],
+    "sources": [
+      {
+        "label": "Official programme overview & teaching language",
+        "url": "https://www.uni-siegen.de/en/study/master/quantum-science"
+      },
+      {
+        "label": "Official curriculum, admissions & contacts",
+        "url": "https://www.uni-siegen.de/en/studentsstudyprogram/m-sc-quantum-science"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "No tuition · semester fees extra",
+      "free": true
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://www.uni-siegen.de/en/studentsstudyprogram/m-sc-quantum-science",
+    "contact": {
+      "name": "Quantum Science programme coordinators",
+      "email": "quantumscience@uni-siegen.de",
+      "source": "https://www.uni-siegen.de/en/studentsstudyprogram/m-sc-quantum-science"
+    },
+    "research": {
+      "label": "Quantum Science specialisations & research curriculum",
+      "url": "https://www.uni-siegen.de/en/studentsstudyprogram/m-sc-quantum-science"
+    },
+    "scheduleNote": "Published recurring general/non-EU periods: 1 January–30 April (winter) and 1 August–31 October in the preceding year (summer). EU periods differ. Confirm the applicable current cycle.",
+    "dataNote": "The no-prior-quantum-mechanics route is relevant to winter-entry CS applicants; summer-entry conditions are stricter. Degree relevance and preparation still require review."
+  },
+  {
+    "id": "harvard-mba",
+    "title": "Master of Business Administration",
+    "university": "Harvard University · Harvard Business School",
+    "country": "United States",
+    "city": "Boston",
+    "lat": 42.3668,
+    "lon": -71.1221,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "General management",
+      "Case method",
+      "Leadership"
+    ],
+    "summary": "A full-time general-management degree built around business cases, practical experience and electives.",
+    "gradeNote": "The complete application is reviewed; no numeric GPA threshold has been recorded.",
+    "requirements": [
+      "Undergraduate degree equivalent to a US bachelor’s; equivalent international three-year degrees can qualify",
+      "Valid GMAT or GRE, transcripts, essays and recommendations",
+      "English test if prior undergraduate instruction was not solely English; review exemptions",
+      "Full-time work experience is expected; the school recommends at least two years before enrolment"
+    ],
+    "sources": [
+      {
+        "label": "Official MBA programme",
+        "url": "https://www.hbs.edu/mba"
+      },
+      {
+        "label": "Official application requirements",
+        "url": "https://www.hbs.edu/mba/admissions/application-process"
+      },
+      {
+        "label": "International degree and English requirements",
+        "url": "https://www.hbs.edu/mba/admissions/application-process/international-applicants"
+      },
+      {
+        "label": "Official admissions FAQ",
+        "url": "https://apply.hbs.edu/register/ContactMBAAdmissions"
+      },
+      {
+        "label": "Official academic experience",
+        "url": "https://www.hbs.edu/mba/academic-experience"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": {
+      "label": "MBA academic experience",
+      "url": "https://www.hbs.edu/mba/academic-experience"
+    },
+    "scheduleNote": "Admissions operate in application rounds. Check the dated calendar for the next class; the 2+2 deferred route has separate eligibility.",
+    "dataNote": "IELTS 7.5 is guidance from the admissions board, not a formal minimum, so no numeric IELTS requirement is stored."
+  },
+  {
+    "id": "harvard-mph-hsb45",
+    "title": "Public Health · Health and Social Behavior (MPH-45)",
+    "university": "Harvard University · T.H. Chan School of Public Health",
+    "country": "United States",
+    "city": "Boston",
+    "lat": 42.3359,
+    "lon": -71.1023,
+    "fields": [
+      "Medicine & Public Health",
+      "Social Sciences"
+    ],
+    "tags": [
+      "Health equity",
+      "Social determinants",
+      "Applied practice"
+    ],
+    "summary": "Study health disparities and design social and behavioural interventions through coursework and applied public-health practice.",
+    "gradeNote": "The programme reviews the whole application; no comparable numeric GPA threshold is recorded.",
+    "requirements": [
+      "Bachelor’s plus at least five years of relevant health experience; or qualifying advanced-degree/clinical-study route",
+      "Health-related master’s route requires at least two years of relevant health experience",
+      "Statement, three references, CV and post-secondary transcripts",
+      "English proficiency evidence when applicable; review credential evaluation requirements for overseas degrees"
+    ],
+    "sources": [
+      {
+        "label": "Official MPH field, eligibility and curriculum",
+        "url": "https://hsph.harvard.edu/program/mph-health-social-behavior/"
+      }
+    ],
+    "duration": "1 year full-time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "MPH programme office",
+      "email": "mph@hsph.harvard.edu",
+      "source": "https://hsph.harvard.edu/program/mph-health-social-behavior/"
+    },
+    "research": {
+      "label": "Health and Social Behavior curriculum",
+      "url": "https://hsph.harvard.edu/program/mph-health-social-behavior/"
+    },
+    "scheduleNote": "Fall start. The page publishes a recurring 1 December application deadline; confirm the dated cycle before submitting.",
+    "dataNote": "This entry covers the 45-credit route. The separate 65-credit route has different experience requirements and duration."
+  },
+  {
+    "id": "ubc-economics",
+    "title": "Economics (MA)",
+    "university": "University of British Columbia",
+    "country": "Canada",
+    "city": "Vancouver",
+    "lat": 49.264,
+    "lon": -123.254,
+    "fields": [
+      "Economics & Finance",
+      "Social Sciences"
+    ],
+    "tags": [
+      "Econometrics",
+      "Microeconomics",
+      "Macroeconomics"
+    ],
+    "summary": "An economics degree combining theoretical and applied training, with an optional thesis path.",
+    "gradeNote": "UBC’s general graduate minimum is normally B+ (76% at UBC); programme and country-specific requirements also apply. No foreign GPA conversion is provided.",
+    "requirements": [
+      "Check the department’s prior-degree and economics preparation requirements",
+      "Academic IELTS 6.5 overall, at least 6.0 in each component, when English proof is required",
+      "Two references and all post-secondary transcripts",
+      "GRE is required for some applicants; check the programme rule for your category"
+    ],
+    "sources": [
+      {
+        "label": "Official programme and September 2027 dates",
+        "url": "https://www.grad.ubc.ca/prospective-students/graduate-degree-programs/master-of-arts-economics"
+      },
+      {
+        "label": "Official economics academic calendar",
+        "url": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-graduate-and-postdoctoral-studies/degree-programs/economics"
+      }
+    ],
+    "duration": "12 months",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-10-15",
+      "closes": "2026-12-15",
+      "source": "https://www.grad.ubc.ca/prospective-students/graduate-degree-programs/master-of-arts-economics",
+      "category": "Canadian and international applicants · September 2027 intake"
+    },
+    "gpa": null,
+    "ielts": 6.5,
+    "contact": {
+      "name": "Economics graduate office",
+      "email": "econ.grad@ubc.ca",
+      "source": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-graduate-and-postdoctoral-studies/degree-programs/economics"
+    },
+    "research": {
+      "label": "Economics coursework and thesis option",
+      "url": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-graduate-and-postdoctoral-studies/degree-programs/economics"
+    },
+    "ieltsSource": "https://www.grad.ubc.ca/prospective-students/graduate-degree-programs/master-of-arts-economics",
+    "scheduleNote": "September 2027 application deadline: 15 December 2026 for Canadian and international applicants. Transcript and referee deadlines: 12 January 2027. Check the exact submission time.",
+    "dataNote": "Optional thesis supervision is arranged after coursework; applicants need not contact faculty before applying. Tuition depends on applicant status and is not stored as a single amount."
+  },
+  {
+    "id": "toronto-civil-meng",
+    "title": "Civil Engineering (MEng)",
+    "university": "University of Toronto",
+    "country": "Canada",
+    "city": "Toronto",
+    "lat": 43.6603,
+    "lon": -79.3957,
+    "fields": [
+      "Engineering",
+      "Environment",
+      "Architecture & Planning"
+    ],
+    "tags": [
+      "Infrastructure",
+      "Structural engineering",
+      "Optional project"
+    ],
+    "summary": "A course-based engineering degree with optional project work and emphases such as structures, water, transport and sustainable systems.",
+    "gradeNote": "The calendar specifies a mid-B final-year average (3.0/4.0 or 75%). This applies to the final year, so it is not used as an overall-GPA comparison.",
+    "requirements": [
+      "Undergraduate degree equivalent to a four-year University of Toronto programme",
+      "Meet the department’s final-year academic average requirement",
+      "English proof when previous instruction and examinations were not in English",
+      "Complete the graduate application and verify requirements for the chosen full-time, extended or part-time route"
+    ],
+    "sources": [
+      {
+        "label": "Official 2026–27 calendar and programme requirements",
+        "url": "https://sgs.calendar.utoronto.ca/degree/Civil-and-Mineral-Engineering"
+      },
+      {
+        "label": "Official programme overview",
+        "url": "https://www.sgs.utoronto.ca/programs/civil-engineering/"
+      },
+      {
+        "label": "Registrar confirmation of English instruction",
+        "url": "https://www.registrar.utoronto.ca/wp-content/uploads/2025/07/University-of-Toronto-Letter-for-English-and-mode-of-delivery.pdf"
+      }
+    ],
+    "duration": "3 sessions (fall, winter, summer) full-time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Civil and Mineral Engineering admissions",
+      "email": "admissions.civmin@utoronto.ca",
+      "source": "https://sgs.calendar.utoronto.ca/degree/Civil-and-Mineral-Engineering"
+    },
+    "research": {
+      "label": "Civil Engineering course options and emphases",
+      "url": "https://sgs.calendar.utoronto.ca/degree/Civil-and-Mineral-Engineering"
+    },
+    "scheduleNote": "Use the department’s application deadlines for the selected start term. Extended full-time and co-op options have different lengths.",
+    "dataNote": "This entry covers the ordinary full-time MEng; it is a professional coursework degree, distinct from the research MASc."
+  },
+  {
+    "id": "unam-literary",
+    "title": "Literary Studies (Maestría en Letras)",
+    "university": "Universidad Nacional Autónoma de México",
+    "country": "Mexico",
+    "city": "Mexico City",
+    "lat": 19.312,
+    "lon": -99.182,
+    "fields": [
+      "Arts & Humanities"
+    ],
+    "tags": [
+      "Literary criticism",
+      "Comparative literature",
+      "Philology"
+    ],
+    "summary": "Develop original literary research through theoretical seminars, textual analysis and supervised thesis work.",
+    "gradeNote": "The programme page lists an 8/10 undergraduate average for related literary degrees; exceptional applicants from other disciplines require 9/10 and strong preparation. Official equivalency must be checked.",
+    "requirements": [
+      "Relevant literature bachelor’s degree and programme-specific academic preparation",
+      "Research proposal, academic motivation letter, CV and academic documents",
+      "Admission examinations, interview and preparatory course",
+      "Spanish proficiency proof for non-native speakers, plus foreign-language skills appropriate to the chosen field"
+    ],
+    "sources": [
+      {
+        "label": "Official master’s curriculum and admissions",
+        "url": "https://posgrado.unam.mx/letras/maestria/"
+      },
+      {
+        "label": "Official 2027-1 admission call",
+        "url": "https://posgrado.unam.mx/letras/2025/11/convocatoria-de-ingreso-a-la-maestria-2027-1/"
+      }
+    ],
+    "duration": "4 semesters full-time; 6 part-time",
+    "language": "Spanish; additional languages depend on field",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": {
+      "label": "Literary fields and curriculum",
+      "url": "https://posgrado.unam.mx/letras/maestria/"
+    },
+    "scheduleNote": "Use the current programme call. UNAM’s academic-semester label 2027-1 refers to a term beginning in 2026, not automatically to admission during calendar year 2027.",
+    "dataNote": "This is a discovery record with verified programme requirements; a current future application window, fees and programme contact are not yet recorded."
+  },
+  {
+    "id": "uc-chile-education",
+    "title": "Education · Teaching and Learning Across Disciplines",
+    "university": "Pontificia Universidad Católica de Chile",
+    "country": "Chile",
+    "city": "Santiago",
+    "lat": -33.497,
+    "lon": -70.614,
+    "fields": [
+      "Education"
+    ],
+    "tags": [
+      "Interdisciplinary teaching",
+      "Educational improvement",
+      "Professional practice"
+    ],
+    "summary": "A professional education master’s specialisation focused on interdisciplinary teaching, innovation and investigation of practice.",
+    "gradeNote": "Academic documents and graduation ranking form part of the application; no comparable GPA cutoff has been recorded.",
+    "requirements": [
+      "Licenciatura-equivalent academic degree or eligible professional qualification",
+      "Degree records, transcripts and graduation-ranking certificate; foreign records require legalisation and Spanish translation",
+      "CV, statement of intent, two recommendations and interview",
+      "English reading at B1/ALTE 2 or the programme diagnostic test"
+    ],
+    "sources": [
+      {
+        "label": "Official programme duration and 2027 intake categories",
+        "url": "https://educacion.uc.cl/carreras-y-programas/programas-de-postgrado/magister-en-educacion/"
+      },
+      {
+        "label": "Official specialisation and admissions",
+        "url": "https://admision.uc.cl/postgrado/magister/magister-en-educacion-mencion-ensenanza-y-aprendizaje-a-traves-de-las-disciplinas/"
+      }
+    ],
+    "duration": "18 months · 3 semesters",
+    "language": "Spanish (teaching-language confirmation pending)",
+    "mode": "Hybrid",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": {
+      "label": "Specialisation curriculum",
+      "url": "https://admision.uc.cl/postgrado/magister/magister-en-educacion-mencion-ensenanza-y-aprendizaje-a-traves-de-las-disciplinas/"
+    },
+    "scheduleNote": "For 2027, regular applicants residing in Chile: 1 October–23 November 2026. Foreign applicants residing outside Chile had a separate 1–30 September 2026 window.",
+    "dataNote": "Scope and duration are verified. Programme pages use Spanish, but an explicit statement of teaching language was not located; confirm it with the programme. No universal open-window label is assigned because residence categories differ."
+  },
+  {
+    "id": "fgv-people-management",
+    "title": "Management for Competitiveness · People Management",
+    "university": "Fundação Getulio Vargas · EAESP",
+    "country": "Brazil",
+    "city": "São Paulo",
+    "lat": -23.5605,
+    "lon": -46.653,
+    "fields": [
+      "Business & Management",
+      "Social Sciences"
+    ],
+    "tags": [
+      "People management",
+      "Leadership",
+      "Applied research"
+    ],
+    "summary": "A professional management master’s combining organisational research, leadership studies and an applied scientific paper.",
+    "gradeNote": "Selection reviews academic and professional documents and may include an interview; no numeric GPA threshold is recorded.",
+    "requirements": [
+      "Undergraduate or postgraduate qualification in administration or a related management subject",
+      "The people-management profile targets professionals with at least five years of relevant experience",
+      "Strong English reading and comprehension",
+      "Document review and interview under the current selection notice"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, language, duration and admissions",
+        "url": "https://eaesp.fgv.br/en/courses/professional-masters-management-for-competitiveness-people-management"
+      }
+    ],
+    "duration": "18 months",
+    "language": "Portuguese",
+    "mode": "Hybrid",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Specialised master’s programme office",
+      "email": "mestradosespecializados@fgv.br",
+      "source": "https://eaesp.fgv.br/en/courses/professional-masters-management-for-competitiveness-people-management"
+    },
+    "research": {
+      "label": "People Management curriculum and faculty",
+      "url": "https://eaesp.fgv.br/en/courses/professional-masters-management-for-competitiveness-people-management"
+    },
+    "scheduleNote": "Check the 2027.1 selection notice linked on the programme page for exact dates and conditions.",
+    "dataNote": "This is a recognised professional master’s, not a short MBA certificate. Fees apply; verify the current total and scholarship terms. The general MPGC experience range differs by specialisation."
+  },
+  {
+    "id": "uba-conflict-management",
+    "title": "Participatory Conflict Management, Negotiation, Mediation and Arbitration",
+    "university": "Universidad de Buenos Aires",
+    "country": "Argentina",
+    "city": "Buenos Aires",
+    "lat": -34.583,
+    "lon": -58.392,
+    "fields": [
+      "Law",
+      "Social Sciences"
+    ],
+    "tags": [
+      "Mediation",
+      "Negotiation",
+      "Conflict resolution"
+    ],
+    "summary": "Study participatory conflict resolution, negotiation and mediation through online modules and a thesis.",
+    "gradeNote": "Admission reviews the qualifying degree and application; no comparable GPA cutoff has been recorded.",
+    "requirements": [
+      "University degree from a programme lasting at least four years; exceptional professional/research-background routes need approval",
+      "Degree certificate, CV and identification; foreign qualifications require legalisation or apostille",
+      "Programme coordination may request an admissions interview",
+      "Attend mandatory synchronous Zoom blocks scheduled in Argentina time"
+    ],
+    "sources": [
+      {
+        "label": "Official master’s scope, 2026 cohort and duration",
+        "url": "https://www.derecho.uba.ar/academica/posgrados/mae_gestion_participativa_de_conflictos.php"
+      },
+      {
+        "label": "Official admission requirements",
+        "url": "https://www.derecho.uba.ar/academica/posgrados/mae_gestion_participativa_de_conflictos_requisitos.php"
+      }
+    ],
+    "duration": "2 years of online coursework + thesis",
+    "language": "Spanish (teaching-language confirmation pending)",
+    "mode": "Online",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Conflict Management master’s coordination",
+      "email": "maestriagestionconflictos@derecho.uba.ar",
+      "source": "https://www.derecho.uba.ar/academica/posgrados/mae_gestion_participativa_de_conflictos.php"
+    },
+    "research": {
+      "label": "Curriculum and teaching team",
+      "url": "https://www.derecho.uba.ar/academica/posgrados/mae_gestion_participativa_de_conflictos.php"
+    },
+    "scheduleNote": "The page identifies a cohort beginning 6 April 2026. A future intake window is not yet verified.",
+    "dataNote": "The master’s and online course structure are verified. The official pages are in Spanish but do not explicitly identify the teaching language; confirm it. Thesis arrangements and current fees require review."
+  },
+  {
+    "id": "oxford-child-education",
+    "title": "Education · Child Development and Education",
+    "university": "University of Oxford",
+    "country": "United Kingdom",
+    "city": "Oxford",
+    "lat": 51.764,
+    "lon": -1.26,
+    "fields": [
+      "Education",
+      "Social Sciences"
+    ],
+    "tags": [
+      "Child development",
+      "Educational research",
+      "Research methods"
+    ],
+    "summary": "A taught MSc examining child development and education through research methods, seminars and a dissertation based on fieldwork or secondary analysis.",
+    "gradeNote": "A UK first-class or strong upper second-class honours degree, or an international equivalent, is required. Country-specific grade guidance applies.",
+    "requirements": [
+      "A strong relevant honours degree, preferably in the social sciences",
+      "IELTS Academic 7.5 overall with at least 7.0 in every component, or accepted higher-level proof",
+      "Three referees, official transcripts and programme-specific written application materials",
+      "Shortlisted applicants normally attend an interview; check current document specifications"
+    ],
+    "sources": [
+      {
+        "label": "Official course, 2027 entry requirements & fees",
+        "url": "https://www.ox.ac.uk/admissions/graduate/courses/msc-education-child-development-and-education?wssl=1"
+      }
+    ],
+    "duration": "1 year · full time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "£43,150 · overseas, 2027/28",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7.5,
+    "ieltsSource": "https://www.ox.ac.uk/admissions/graduate/courses/msc-education-child-development-and-education?wssl=1",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "2027/28 deadlines: 7 January 2027 at noon UK time for Oxford scholarship consideration; 2 March 2027 at noon is the expected final application deadline. The opening date is not recorded.",
+    "dataNote": "The published USA-degree GPA threshold is category-specific and is not stored as a universal cutoff. Exact international equivalency and application-document limits require the current course page."
+  },
+  {
+    "id": "sciencespo-human-rights",
+    "title": "Human Rights and Humanitarian Action",
+    "university": "Sciences Po",
+    "country": "France",
+    "city": "Paris",
+    "lat": 48.855,
+    "lon": 2.329,
+    "fields": [
+      "Law",
+      "Social Sciences",
+      "Public Policy"
+    ],
+    "tags": [
+      "International law",
+      "Humanitarian action",
+      "Human rights"
+    ],
+    "summary": "A two-year interdisciplinary master’s combining human-rights and humanitarian analysis with international law, institutions and advocacy skills.",
+    "gradeNote": "International admission has country-specific minimum undergraduate averages. Falling below the applicable minimum makes an application inadmissible; meeting it does not guarantee selection.",
+    "requirements": [
+      "A qualifying bachelor’s or equivalent 180 ECTS qualification; choose the domestic or international route based on the degree",
+      "Meet the minimum average applicable to the country of the undergraduate qualification",
+      "Academic references and a programme-specific motivation statement",
+      "Check current PSIA language-proof and document requirements before applying"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, curriculum & academic contact",
+        "url": "https://www.sciencespo.fr/psia/academics/masters/master-human-rights-humanitarian-action/"
+      },
+      {
+        "label": "Graduate eligibility & application routes",
+        "url": "https://www.sciencespo.fr/admissions/en/graduate/international-admissions/eligibility-criteria/"
+      },
+      {
+        "label": "International graduate selection criteria",
+        "url": "https://www.sciencespo.fr/admissions/en/graduate/international-admissions/selection-criteria/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Anastasia Apukhtina · academic adviser",
+      "email": "anastasia.apukhtina@sciencespo.fr",
+      "source": "https://www.sciencespo.fr/psia/academics/masters/master-human-rights-humanitarian-action/"
+    },
+    "research": {
+      "label": "Human Rights and Humanitarian Action curriculum",
+      "url": "https://www.sciencespo.fr/psia/academics/masters/master-human-rights-humanitarian-action/"
+    },
+    "scheduleNote": "Deadlines vary by admissions route and programme. Current cycle dates are not recorded.",
+    "dataNote": "This interdisciplinary degree includes legal study. Practising-law careers require a prior qualifying law course. Exact grade thresholds, English-test scores and current fees remain unrecorded."
+  },
+  {
+    "id": "uc3m-management",
+    "title": "Management",
+    "university": "Universidad Carlos III de Madrid",
+    "country": "Spain",
+    "city": "Madrid",
+    "lat": 40.407,
+    "lon": -3.713,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "International management",
+      "Innovation management",
+      "Early career"
+    ],
+    "summary": "An official English-taught management master’s for early-career graduates, with international and innovation management electives and compulsory preparatory courses.",
+    "gradeNote": "The academic committee reviews the transcript, CV, motivation and interview. No standalone numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A recognised bachelor’s equivalent to at least three years of university study; final-year applications are conditional",
+      "Business/economics backgrounds have priority; other applicants should show relevant knowledge and motivation",
+      "IELTS 6.5 overall, CEFR B2 or another accepted English proof",
+      "CV, statement of purpose and two references; GRE/GMAT is recommended",
+      "Commit to the two-week pre-master courses; professional experience is not required"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, admissions & fee categories",
+        "url": "https://www.uc3m.es/master/management"
+      }
+    ],
+    "duration": "1 year · 60 ECTS",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check updated EU/non-EU fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://www.uc3m.es/master/management",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "The programme page currently marks applications closed. Admission normally proceeds in waves until places fill. Confirm the next cycle.",
+    "dataNote": "The page’s fee amounts are labelled 2025/26 and pending approval for 2026/27, so no current amount is asserted. Internships are optional and many Madrid employers require Spanish."
+  },
+  {
+    "id": "bologna-econometrics",
+    "title": "Economics and Econometrics",
+    "university": "University of Bologna",
+    "country": "Italy",
+    "city": "Bologna",
+    "lat": 44.495,
+    "lon": 11.351,
+    "fields": [
+      "Economics & Finance"
+    ],
+    "tags": [
+      "Econometrics",
+      "Economic forecasting",
+      "Quantitative economics"
+    ],
+    "summary": "A two-year economics master’s developing analytical and econometric methods for economic research, forecasting and policy or business decisions.",
+    "gradeNote": "The 2026/27 call requires at least 60/100 in the committee’s academic-merit and CV assessment. This is an admissions score, not a GPA cutoff.",
+    "requirements": [
+      "An eligible first-cycle qualification or a foreign degree judged equivalent",
+      "Accepted backgrounds include economics, business, political science, statistics, engineering, physics, computer science and mathematics",
+      "English CEFR B2; the 2026/27 call accepts IELTS 5.5 or specified alternatives",
+      "Transcript and CV assessment must show suitable economic-theory and quantitative preparation"
+    ],
+    "sources": [
+      {
+        "label": "Official programme overview",
+        "url": "https://corsi.unibo.it/2cycle/lmec"
+      },
+      {
+        "label": "Programme enrolment & degree equivalency",
+        "url": "https://corsi.unibo.it/2cycle/lmec/how-to-enrol"
+      },
+      {
+        "label": "Official 2026/27 admission call · English translation",
+        "url": "https://corsi.unibo.it/s/3394/p/en/enrolling-lmec/call-lmec-2026-27-englishversion.pdf/@@download/file/Call%20LMEC%202026-27%20EnglishVersion.pdf"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Income/category-based fees · check official schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 5.5,
+    "ieltsSource": "https://corsi.unibo.it/s/3394/p/en/enrolling-lmec/call-lmec-2026-27-englishversion.pdf/@@download/file/Call%20LMEC%202026-27%20EnglishVersion.pdf",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "The 2026/27 admission call is marked expired. Next-cycle dates need checking; application and matriculation deadlines are different.",
+    "dataNote": "Open access means there is no enrolment cap for the recorded cycle, while curricular and personal-preparation assessment still apply. Language-score details are tied to the 2026/27 call."
+  },
+  {
+    "id": "karolinska-global-health",
+    "title": "Global Health",
+    "university": "Karolinska Institutet",
+    "country": "Sweden",
+    "city": "Solna / Stockholm",
+    "lat": 59.35,
+    "lon": 18.023,
+    "fields": [
+      "Medicine & Public Health"
+    ],
+    "tags": [
+      "Health systems",
+      "Global health policy",
+      "Public health research"
+    ],
+    "summary": "A two-year Master of Medical Science addressing global health through systems, policy, qualitative and quantitative research, applied projects and a thesis.",
+    "gradeNote": "Selection considers previous education, documented work or research experience and a statement of intent. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A bachelor’s or professional degree equivalent to a Swedish bachelor’s of at least 180 credits",
+      "English 6/English level 2: IELTS Academic 6.5 overall with no section below 5.5, or accepted equivalent",
+      "Complete the KI CV form and certify the experiences used in selection",
+      "Submit programme and qualification documents; recommendation letters are not required"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, 2027 admissions & fees",
+        "url": "https://education.ki.se/bachelors-masters-studies/programmes-and-courses/masters-programme-in-global-health"
+      },
+      {
+        "label": "Official Swedish English-language requirements",
+        "url": "https://www.universityadmissions.se/en/entry-requirements/english-language-requirements/"
+      },
+      {
+        "label": "Official autumn 2027 first-round timeline",
+        "url": "https://www.universityadmissions.se/en/key-dates-and-deadlines/autumn-semester-dates/"
+      }
+    ],
+    "duration": "2 years · 120 credits",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "SEK 360,000 total · fee-paying category, 2027",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-10-16",
+      "closes": "2027-01-15",
+      "source": "https://www.universityadmissions.se/en/key-dates-and-deadlines/autumn-semester-dates/",
+      "category": "Autumn 2027 · first international admissions round"
+    },
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://www.universityadmissions.se/en/entry-requirements/english-language-requirements/",
+    "contact": {
+      "name": "Lena Björk · programme officer",
+      "email": "lena.bjork@ki.se",
+      "source": "https://education.ki.se/bachelors-masters-studies/programmes-and-courses/masters-programme-in-global-health"
+    },
+    "research": null,
+    "scheduleNote": "Autumn 2027 first-round application closes 15 January; supporting documents are due 1 February 2027. Citizenship-based fee exemptions apply.",
+    "dataNote": "The current programme is 120 credits with four semesters. Earlier one-year listings do not describe this curriculum. EU/EEA/Swiss citizens are exempt from tuition under the published category rules."
+  },
+  {
+    "id": "eth-biology",
+    "title": "Biology",
+    "university": "ETH Zürich",
+    "country": "Switzerland",
+    "city": "Zürich",
+    "lat": 47.408,
+    "lon": 8.507,
+    "fields": [
+      "Life Sciences"
+    ],
+    "tags": [
+      "Molecular biology",
+      "Experimental research",
+      "Systems biology"
+    ],
+    "summary": "A research-focused Biology MSc with two laboratory research projects and a thesis, offering specialisations from ecology to molecular and systems biology.",
+    "gradeNote": "Academic preparation and the chosen majors are assessed individually. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A qualifying degree meeting the Biology MSc requirement profile",
+      "Broad natural-science preparation and experimental-work experience",
+      "English CEFR C1 proof by the application deadline",
+      "GRE is required for bachelor’s degrees obtained outside EU/EFTA countries under the listed international route",
+      "Course-content summaries, two major preferences, motivation and route-specific academic recommendations"
+    ],
+    "sources": [
+      {
+        "label": "Official programme scope, duration & advising",
+        "url": "https://ethz.ch/en/studies/master/degree-programmes/natural-sciences-and-mathematics/biology.html"
+      },
+      {
+        "label": "Biology-specific application requirements",
+        "url": "https://ethz.ch/en/studies/master/application/master-biologie.html"
+      },
+      {
+        "label": "Official autumn 2027 application dates",
+        "url": "https://ethz.ch/en/studies/master/application/dates.html"
+      }
+    ],
+    "duration": "1.5 years · 90 ECTS",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-11-01",
+      "closes": "2026-11-30",
+      "source": "https://ethz.ch/en/studies/master/application/dates.html",
+      "category": "International bachelor’s degree · autumn 2027"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Biology study administration",
+      "email": "studies@biol.ethz.ch",
+      "source": "https://ethz.ch/en/studies/master/degree-programmes/natural-sciences-and-mathematics/biology.html"
+    },
+    "research": null,
+    "scheduleNote": "International bachelor’s applicants use 1–30 November 2026 for autumn 2027. The published deadline time is 11:59 AM CET on 30 November; the date-only calendar does not capture that time.",
+    "dataNote": "Detailed academic prerequisites, major-specific conditions, exact English-test scores and applicable fees need checking. Applicants with Swiss bachelor’s degrees have a different later window."
+  },
+  {
+    "id": "jagiellonian-european-studies",
+    "title": "European Studies",
+    "university": "Jagiellonian University",
+    "country": "Poland",
+    "city": "Kraków",
+    "lat": 50.065,
+    "lon": 19.922,
+    "fields": [
+      "Social Sciences",
+      "Arts & Humanities"
+    ],
+    "tags": [
+      "EU studies",
+      "Central and Eastern Europe",
+      "Culture and heritage"
+    ],
+    "summary": "An English-taught MA examining European politics, economics and culture, with EU studies, Central/Eastern Europe and culture/heritage study tracks.",
+    "gradeNote": "Admission uses document assessment covering transcripts, programme relevance, experience, languages and motivation. No standalone numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A recognised bachelor’s or equivalent first-cycle degree permitting second-cycle study",
+      "Relevant prior study is preferred, but applicants from any field with demonstrated interest can apply",
+      "Documented English CEFR B2; citizenship and diploma-country rules affect accepted enrolment evidence",
+      "Submit the transcript, experience evidence and programme-specific motivation through IRK",
+      "Check legalisation, translation and any required NAWA qualification statement"
+    ],
+    "sources": [
+      {
+        "label": "Official MA programme, tracks & contact",
+        "url": "https://ces.uj.edu.pl/en/programmes/graduate/ma-in-european-studies"
+      },
+      {
+        "label": "2026/27 international MA admissions & fees",
+        "url": "https://irk.uj.edu.pl/en-gb/offer/II_C_26/programme/europe.stud_s2s_C_en/"
+      }
+    ],
+    "duration": "2 years · 120 ECTS",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "€4,500 / year · international route, 2026/27",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "European Studies MA programme office",
+      "email": "maprogramme@uj.edu.pl",
+      "source": "https://ces.uj.edu.pl/en/programmes/graduate/ma-in-european-studies"
+    },
+    "research": null,
+    "scheduleNote": "The 2026/27 international MA rounds have closed; the last listed round ended 2 September 2026. Next-cycle dates need checking.",
+    "dataNote": "The recorded fee concerns the listed international route; individual exemptions can apply. Joint/double-degree consortium routes have separate applications. Exact English certificates require current category-specific review."
+  },
+  {
+    "id": "trinity-literary-translation",
+    "title": "Literary Translation · M.Phil.",
+    "university": "Trinity College Dublin",
+    "country": "Ireland",
+    "city": "Dublin",
+    "lat": 53.344,
+    "lon": -6.255,
+    "fields": [
+      "Arts & Humanities"
+    ],
+    "tags": [
+      "Translation studies",
+      "Creative practice",
+      "Literary research"
+    ],
+    "summary": "A taught M.Phil. combining translation theory and creative practice, a translation portfolio and a research or experimental-translation dissertation.",
+    "gradeNote": "An Irish 2.1 honours degree or an accepted international equivalent is required; no universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "At least an Irish upper-second-class honours degree or international equivalent",
+      "Demonstrable working knowledge of two or more languages",
+      "Band C English: IELTS Academic 7.0 overall with 6.5 in each component, or accepted equivalent",
+      "Programme form with motivation and sample translation, academic writing sample, degree records and two references"
+    ],
+    "sources": [
+      {
+        "label": "Official M.Phil. programme, admissions & contact",
+        "url": "https://www.tcd.ie/courses/postgraduate/courses/literary-translation-mphil/"
+      },
+      {
+        "label": "Official Band C English-language requirements",
+        "url": "https://www.tcd.ie/study/english-language-requirements/"
+      }
+    ],
+    "duration": "1 year · full time, 90 ECTS",
+    "language": "English · translation languages vary",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7.0,
+    "ieltsSource": "https://www.tcd.ie/study/english-language-requirements/",
+    "contact": {
+      "name": "Dr James Hadley · course director",
+      "email": "hadleyj@tcd.ie",
+      "source": "https://www.tcd.ie/courses/postgraduate/courses/literary-translation-mphil/"
+    },
+    "research": null,
+    "scheduleNote": "The programme page still lists September 2026 intake and a closed 30 June 2026 deadline. Obtain the next intake’s dates before planning an application.",
+    "dataNote": "This record describes the full M.Phil., rather than the certificate or diploma routes. The page specifies Band C, which adds a 7.0 overall IELTS requirement to its 6.5-per-component wording. Current fees need checking."
+  },
+  {
+    "id": "tokyo-mpp-international",
+    "title": "Public Policy · International Program",
+    "university": "The University of Tokyo",
+    "country": "Japan",
+    "city": "Tokyo",
+    "lat": 35.7126,
+    "lon": 139.7618,
+    "fields": [
+      "Public Policy",
+      "Social Sciences",
+      "Economics & Finance"
+    ],
+    "tags": [
+      "Economic policy",
+      "International relations",
+      "Professional master’s"
+    ],
+    "summary": "A public-policy degree combining economics, law and politics, with streams in Economic Policy, Finance and Development, and Public Management and International Relations.",
+    "gradeNote": "Academic preparation and application evidence are reviewed. No fixed numerical GPA threshold is recorded.",
+    "requirements": [
+      "Bachelor’s degree or equivalent completed before enrolment",
+      "Preparation for study in law, politics and economics",
+      "Statement of purpose, two references, official academic documents and English test evidence unless exempt",
+      "Check current GRE submission guidance; IELTS 7.0 is recommended, not a stated minimum"
+    ],
+    "sources": [
+      {
+        "label": "Official programme description",
+        "url": "https://www.pp.u-tokyo.ac.jp/en/mppip/why-mppip/program-description/"
+      },
+      {
+        "label": "Official 2027 admissions and fees",
+        "url": "https://www.pp.u-tokyo.ac.jp/en/mppip/admissions/general-information/"
+      },
+      {
+        "label": "Official application documents",
+        "url": "https://www.pp.u-tokyo.ac.jp/en/mppip/admissions/app-procedures/"
+      },
+      {
+        "label": "Official language and test FAQ",
+        "url": "https://www.pp.u-tokyo.ac.jp/en/faq/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "JPY 535,800 / year · AY2026 published rate",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-11-01",
+      "closes": "2026-12-01",
+      "source": "https://www.pp.u-tokyo.ac.jp/en/mppip/admissions/general-information/",
+      "category": "MPP/IP AY2027 · international application"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Application submission: 1 November–1 December 2026, closing at 17:00 JST. Web information entry opens 1 October. Standard international enrolment: October 2027; April eligibility is restricted.",
+    "dataNote": "English recommendation is not encoded as a required IELTS cutoff. Published tuition excludes admission and application fees and is subject to change. Approximate Hongo Campus marker."
+  },
+  {
+    "id": "kdi-development-policy",
+    "title": "Development Policy",
+    "university": "KDI School of Public Policy and Management",
+    "country": "South Korea",
+    "city": "Sejong",
+    "lat": 36.4798,
+    "lon": 127.2973,
+    "fields": [
+      "Public Policy",
+      "Social Sciences",
+      "Economics & Finance"
+    ],
+    "tags": [
+      "Development policy",
+      "Economic development",
+      "Graduation research project"
+    ],
+    "summary": "A development-policy master’s concerned with designing and implementing development strategies. Coursework and a graduation research project form part of the degree.",
+    "gradeNote": "The reviewed international guideline requests the complete academic record without a universal numerical admission GPA cutoff. Scholarship decisions are separate.",
+    "requirements": [
+      "Accredited bachelor’s degree representing at least three years of study, or recognised equivalent",
+      "Official graduation evidence before application, with limited country-specific exceptions",
+      "Statement of purpose, two recommendations, transcript and prescribed document authentication",
+      "IELTS 6.0 or another accepted English test unless exempt; a medium-of-instruction certificate alone is not accepted"
+    ],
+    "sources": [
+      {
+        "label": "Official MDP curriculum",
+        "url": "https://kdischool.ac.kr/menu.es?mid=a10208020200"
+      },
+      {
+        "label": "Spring 2027 international application guideline",
+        "url": "https://www.kdischool.ac.kr/boardDownload.es?bid=ATT&list_no=19840&seq=1"
+      },
+      {
+        "label": "Current international admissions page",
+        "url": "https://www.kdischool.ac.kr/menu.es?mid=a40900000000"
+      },
+      {
+        "label": "Official programme and English-class overview",
+        "url": "https://www.kdischool.ac.kr/index.es?sid=a5"
+      }
+    ],
+    "duration": "Approximately 1.5 years full time · 2 years part time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check fee schedule and scholarship decision",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-08-05",
+      "closes": "2026-08-14",
+      "source": "https://www.kdischool.ac.kr/boardDownload.es?bid=ATT&list_no=19840&seq=1",
+      "category": "International general admissions · Spring 2027"
+    },
+    "gpa": null,
+    "ielts": 6.0,
+    "ieltsSource": "https://www.kdischool.ac.kr/boardDownload.es?bid=ATT&list_no=19840&seq=1",
+    "contact": {
+      "name": "International Admissions Office",
+      "email": "intladm@kdischool.ac.kr",
+      "source": "https://www.kdischool.ac.kr/boardDownload.es?bid=ATT&list_no=19840&seq=1"
+    },
+    "research": null,
+    "scheduleNote": "Recorded Spring 2027 international window has closed; it ended 14 August 2026 at 18:00 KST. The Korean-applicant October window is a different category. Check the next international cycle.",
+    "dataNote": "The 2027 guideline requires 36 credits and separates general admissions from MIPD. Internal scholarship consideration does not establish unconditional tuition-free admission. Approximate Sejong Campus marker. Published delivery note: On campus · research project may be completed in home country."
+  },
+  {
+    "id": "nus-public-health",
+    "title": "Public Health",
+    "university": "National University of Singapore",
+    "country": "Singapore",
+    "city": "Singapore",
+    "lat": 1.2994,
+    "lon": 103.7813,
+    "fields": [
+      "Medicine & Public Health",
+      "Public Policy"
+    ],
+    "tags": [
+      "Epidemiology",
+      "Population health",
+      "Practicum"
+    ],
+    "summary": "An interdisciplinary public-health degree with core training, electives and a compulsory practicum. Optional specialisations include epidemiology, global health and health policy.",
+    "gradeNote": "Admission is holistic. The programme describes preferred academic and professional profiles and may consider applicants with other relevant preparation; meeting the profile does not guarantee admission.",
+    "requirements": [
+      "Preferred non-medical profile: good honours degree and two years of relevant public-health work",
+      "Medically qualified applicants have a separate clinical/professional profile",
+      "Other academic or professional backgrounds may be assessed with relevant exposure and motivation",
+      "IELTS Academic 6.0 or accepted TOEFL evidence unless an official exemption applies"
+    ],
+    "sources": [
+      {
+        "label": "Official programme",
+        "url": "https://sph.nus.edu.sg/education/mph/"
+      },
+      {
+        "label": "Official admissions and English requirements",
+        "url": "https://sph.nus.edu.sg/education/mph/admission-requirements/"
+      },
+      {
+        "label": "Official curriculum and candidature periods",
+        "url": "https://sph.nus.edu.sg/education/mph/curriculum"
+      },
+      {
+        "label": "Official study-duration FAQ",
+        "url": "https://sph.nus.edu.sg/education/mph/faqs/"
+      }
+    ],
+    "duration": "Typically 1 year full time · 2 years part time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee and subsidy category",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.0,
+    "ieltsSource": "https://sph.nus.edu.sg/education/mph/admission-requirements/",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "The study plan normally runs from August. A fully dated next application window is not recorded; consult current school admissions instructions.",
+    "dataNote": "Minimum/maximum candidature and subsidised-fee normal-duration rules are separate from typical completion time; review the curriculum page before budgeting. Fees remain unrecorded. Approximate Kent Ridge marker."
+  },
+  {
+    "id": "hku-llm-competition",
+    "title": "Laws · Competition Law and Policy",
+    "university": "The University of Hong Kong",
+    "country": "Hong Kong",
+    "city": "Hong Kong",
+    "lat": 22.2829,
+    "lon": 114.1345,
+    "fields": [
+      "Law"
+    ],
+    "tags": [
+      "Competition law",
+      "Competition policy",
+      "LLM specialisation"
+    ],
+    "summary": "A specialisation within HKU’s Master of Laws, focusing on competition law and policy through advanced legal study in an English-taught programme.",
+    "gradeNote": "Normally a law qualification at second-class honours level or equivalent. The Competition Law and Policy route also lists a qualifying non-law degree plus relevant experience/professional qualifications. Equivalency and selection remain individual.",
+    "requirements": [
+      "Qualifying law degree or accepted professional conversion route",
+      "Alternative Competition Law and Policy route: second-class honours or equivalent non-law bachelor’s and at least two years of relevant experience/professional qualifications",
+      "IELTS Academic 7.0 or accepted TOEFL proof if prior teaching/examination was not in English",
+      "Review the current specialisation’s document and language-validity rules"
+    ],
+    "sources": [
+      {
+        "label": "Official LLM programme, specialisations and admissions",
+        "url": "https://llm.law.hku.hk/llm/"
+      },
+      {
+        "label": "Official postgraduate law admissions FAQ",
+        "url": "https://llm.law.hku.hk/faqs/"
+      }
+    ],
+    "duration": "1 year full time · 2 years part time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "HK$240,000 / year · full time, 2026/27",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7.0,
+    "ieltsSource": "https://llm.law.hku.hk/llm/",
+    "contact": {
+      "name": "Postgraduate Law programme office",
+      "email": "lawpgs@hku.hk",
+      "source": "https://llm.law.hku.hk/llm/"
+    },
+    "research": null,
+    "scheduleNote": "September 2027 applications open in early November 2026, without an exact opening day. Main deadline: 4 December 2026 at noon GMT+8; clearing deadline: 26 February 2027 at noon GMT+8.",
+    "dataNote": "One LLM specialisation record; this is not a separate duplicate of the general degree. Exact opening date and 2027/28 fee are unrecorded. Published fee is for 2026/27. Approximate HKU Main Campus marker."
+  },
+  {
+    "id": "tsinghua-global-mba",
+    "title": "Global MBA",
+    "university": "Tsinghua University",
+    "country": "China",
+    "city": "Beijing",
+    "lat": 40.0033,
+    "lon": 116.3268,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "Business administration",
+      "Management",
+      "Experienced professionals"
+    ],
+    "summary": "A full-time MBA based in Beijing, delivered in English with optional Chinese-language electives and a management curriculum connected to Tsinghua’s collaboration with MIT Sloan.",
+    "gradeNote": "Academic record, experience and application evidence are assessed. No fixed numerical GPA threshold is recorded.",
+    "requirements": [
+      "Bachelor’s degree or higher with required recognition/authentication",
+      "International route requires eligible foreign-national status",
+      "At least three years of post-bachelor work experience, or two years after a master’s/doctorate",
+      "Accepted GMAT/GRE or Tsinghua MBA entrance exam; IELTS 6.5 or other accepted English proof when required"
+    ],
+    "sources": [
+      {
+        "label": "Official 2027 international admissions, programme and costs",
+        "url": "https://gmba.sem.tsinghua.edu.cn/Admissions/International/Admissions_Calendar___Criteria.htm"
+      },
+      {
+        "label": "Official programme overview",
+        "url": "https://gmba.sem.tsinghua.edu.cn/info/1080/2833.htm"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English · Chinese elective courses available",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "RMB 198,000 / programme · 2027 international guide",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://gmba.sem.tsinghua.edu.cn/Admissions/International/Admissions_Calendar___Criteria.htm",
+    "contact": {
+      "name": "International MBA admissions",
+      "email": "intlmbaadm@sem.tsinghua.edu.cn",
+      "source": "https://gmba.sem.tsinghua.edu.cn/Admissions/International/Admissions_Calendar___Criteria.htm"
+    },
+    "research": null,
+    "scheduleNote": "2027 international rounds close 19 October 2026, 14 December 2026, 22 February 2027 and 31 March 2027. The portal opening is described as mid-September; no exact opening day is recorded.",
+    "dataNote": "This is the full-time Global MBA; Chinese-language part-time MBA options are distinct. Tuition excludes application, insurance and living costs. Approximate Beijing campus marker."
+  },
+  {
+    "id": "sydney-architecture",
+    "title": "Architecture",
+    "university": "The University of Sydney",
+    "country": "Australia",
+    "city": "Sydney",
+    "lat": -33.8899,
+    "lon": 151.1915,
+    "fields": [
+      "Architecture & Planning"
+    ],
+    "tags": [
+      "Architectural design",
+      "Design studios",
+      "Thesis"
+    ],
+    "summary": "A postgraduate architecture degree combining core architectural study with studio and thesis options. The full-time plan requires 96 credit points over two years.",
+    "gradeNote": "Applicants with an equivalent architecture degree from another university normally need a credit average of 65% or equivalent over the final two years. International equivalency is assessed; no GPA conversion is performed.",
+    "requirements": [
+      "Eligible undergraduate architecture degree; prior-degree routes have different conditions",
+      "For the equivalent-degree route, portfolio of work and/or evidence of practical experience",
+      "Portfolio guidance includes a single PDF under 10 MB and at most 15 digital A3/A4 pages",
+      "Accepted English proficiency evidence; check the course-specific score requirement"
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admission requirements",
+        "url": "https://www.sydney.edu.au/courses/courses/pc/master-of-architecture.html"
+      },
+      {
+        "label": "Official 2026 degree study plan",
+        "url": "https://www.sydney.edu.au/handbooks/architecture/postgraduate/m-architecture/enrolment-planner.html"
+      },
+      {
+        "label": "Official English requirements",
+        "url": "https://www.sydney.edu.au/study/applying/how-to-apply/international-students/english-language-requirements.html"
+      }
+    ],
+    "duration": "2 years full time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Use the course page to choose the intended intake and international/domestic category; scholarship deadlines may differ.",
+    "dataNote": "Academic route and portfolio guidance checked from official indexed programme content; the live page’s text extraction is incomplete. Course-specific IELTS score, tuition and dated window remain unrecorded. Approximate Darlington Campus marker."
+  },
+  {
+    "id": "auckland-education",
+    "title": "Education",
+    "university": "University of Auckland",
+    "country": "New Zealand",
+    "city": "Auckland",
+    "lat": -36.8523,
+    "lon": 174.7691,
+    "fields": [
+      "Education",
+      "Social Sciences"
+    ],
+    "tags": [
+      "Educational research",
+      "Inclusive education",
+      "Early childhood"
+    ],
+    "summary": "A master’s with research and taught options, including Early Childhood and Inclusive Education specialisations. Prior qualifications determine the 120- or 180-point pathway.",
+    "gradeNote": "Published international entry guidance uses Auckland Grade Point Equivalent 5.0 and individual assessment. This is not a raw 4-point GPA cutoff; recognised equivalency and alternative pathways must be reviewed.",
+    "requirements": [
+      "180-point route: recognised undergraduate education qualification or eligible teacher-registration qualification",
+      "120-point research route: appropriate prior postgraduate education study and research-methods preparation",
+      "IELTS Academic 6.5 overall with no band below 6.0, or accepted evidence",
+      "Review the chosen research/taught specialisation’s prerequisites and alternative entry routes"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, international entry and fees",
+        "url": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-education-med.html"
+      },
+      {
+        "label": "Official teaching-language information",
+        "url": "https://uoa.custhelp.com/app/answers/detail/a_id/7483/~/are-all-courses-taught-in-english"
+      }
+    ],
+    "duration": "Approximately 1–1.5 years full time · pathway dependent",
+    "language": "English · Māori-language courses are exceptions",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "NZ$43,674 / year indicative · international, 2026",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://www.auckland.ac.nz/en/study/study-options/find-a-study-option/master-of-education-med.html",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "2027 Semester One deadline: 8 December 2026, for a 1 March 2027 start. Semester Two deadline: 4 July 2027, for a 19 July start. Application opening date is not recorded.",
+    "dataNote": "The displayed programme duration is 18 months; shorter completion depends on eligible 120-point prior-study entry. Indicative tuition excludes student services and other costs; 2027 fees unrecorded. Approximate City Campus marker."
+  },
+  {
+    "id": "queensland-molecular-biology",
+    "title": "Molecular Biology",
+    "university": "The University of Queensland",
+    "country": "Australia",
+    "city": "Brisbane",
+    "lat": -27.4975,
+    "lon": 153.0137,
+    "fields": [
+      "Life Sciences"
+    ],
+    "tags": [
+      "Molecular biology",
+      "Biotechnology",
+      "Laboratory science"
+    ],
+    "summary": "A molecular-biology master’s for advanced scientific study and research or industry practice, with one-, one-and-a-half- and two-year entry pathways.",
+    "gradeNote": "The published requirement is UQ GPA 5.0 on a 7-point scale. UQ calculates international equivalency; this catalogue does not convert or compare it with other GPA systems.",
+    "requirements": [
+      "Two-year route: bachelor’s with at least one chemistry or biology course, or an eligible alternative",
+      "Shorter routes require a relevant degree or honours qualification; approved partner pathways also exist",
+      "UQ GPA 5.0/7 or assessed equivalent",
+      "IELTS overall 6.5 with at least 6.0 per component, or accepted evidence"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, pathways, English requirements and fees",
+        "url": "https://study.uq.edu.au/study-options/programs/master-molecular-biology-5600"
+      },
+      {
+        "label": "Official medium-of-instruction policy",
+        "url": "https://policies.uq.edu.au/download.php?id=152&version=1"
+      }
+    ],
+    "duration": "1, 1.5 or 2 years full time · prior qualification dependent",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "A$56,800 / year indicative · international, 2027",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://study.uq.edu.au/study-options/programs/master-molecular-biology-5600",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Programme lists starts on 22 February and 26 July 2027. Applicant-specific application opening and closing dates are not recorded.",
+    "dataNote": "Programme 5600; the Research Extensive degree is a different option. Fee is indicative for a standard annual load and varies by selected courses. Numeric 7-point GPA is left null because the profile UI lacks that grading context. Approximate St Lucia Campus marker."
+  },
+  {
+    "id": "uct-geotechnical",
+    "title": "Geotechnical Engineering (MSc in Engineering)",
+    "university": "University of Cape Town",
+    "country": "South Africa",
+    "city": "Cape Town",
+    "lat": -33.957,
+    "lon": 18.461,
+    "fields": [
+      "Engineering",
+      "Environment"
+    ],
+    "tags": [
+      "Soil mechanics",
+      "Foundation design",
+      "Research dissertation"
+    ],
+    "summary": "Develop geotechnical expertise in soil behaviour, site investigation and foundation design through taught modules and a research dissertation.",
+    "gradeNote": "No programme-specific numeric academic cutoff is recorded; the department reviews equivalent qualifying degrees.",
+    "requirements": [
+      "Normally an honours-equivalent qualification or four-year engineering degree",
+      "Civil engineering or geoscience preparation relevant to the geotechnical curriculum",
+      "Confirm programme-specific subject prerequisites and required admissions documents",
+      "Agree the dissertation research subject with an appropriate academic supervisor"
+    ],
+    "sources": [
+      {
+        "label": "Official MSc curriculum and duration",
+        "url": "https://ebe.uct.ac.za/geotechnics/programmes-offered/msc-programme"
+      },
+      {
+        "label": "Departmental degrees and entry preparation",
+        "url": "https://ebe.uct.ac.za/department-civil-engineering/degrees-and-funding"
+      },
+      {
+        "label": "University teaching-language statement",
+        "url": "https://ched.uct.ac.za/"
+      }
+    ],
+    "duration": "Minimum 2 academic years full-time; typically over 36 months part-time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": {
+      "label": "Geotechnical curriculum and dissertation",
+      "url": "https://ebe.uct.ac.za/geotechnics/programmes-offered/msc-programme"
+    },
+    "scheduleNote": "A current dated application window has not been recorded. Confirm intake and application deadlines with the department.",
+    "dataNote": "Duration is the published minimum, not a guaranteed completion time. Numeric grade/language-test requirements and fees remain unverified."
+  },
+  {
+    "id": "ghana-mph",
+    "title": "Public Health (MPH)",
+    "university": "University of Ghana",
+    "country": "Ghana",
+    "city": "Accra",
+    "lat": 5.65,
+    "lon": -0.187,
+    "fields": [
+      "Medicine & Public Health",
+      "Social Sciences"
+    ],
+    "tags": [
+      "Epidemiology",
+      "Health policy",
+      "Health behaviour"
+    ],
+    "summary": "A public-health degree with specialisations spanning epidemiology, health policy, environmental health and social and behavioural sciences.",
+    "gradeNote": "A good first degree in a relevant subject is required. No comparable numeric GPA threshold is recorded.",
+    "requirements": [
+      "Good first degree in a relevant discipline",
+      "At least three years of health-sector experience is an advantage, rather than a universal mandatory requirement",
+      "Applicants may be asked to take an aptitude test and attend an interview",
+      "Confirm current graduate application documents and language-proof requirements"
+    ],
+    "sources": [
+      {
+        "label": "Official MPH scope and duration",
+        "url": "https://publichealth.ug.edu.gh/node/73"
+      },
+      {
+        "label": "Official school admissions",
+        "url": "https://publichealth.ug.edu.gh/admission"
+      },
+      {
+        "label": "Official institutional language report",
+        "url": "https://ipo.ug.edu.gh/sites/ipo.ug.edu.gh/files/u8/IAU-ISAS-UG%20final%20Report.pdf"
+      }
+    ],
+    "duration": "1 year full-time",
+    "language": "English (institution-level evidence)",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "School of Public Health office",
+      "email": "sph@ug.edu.gh",
+      "source": "https://publichealth.ug.edu.gh/node/73"
+    },
+    "research": {
+      "label": "MPH specialisations",
+      "url": "https://publichealth.ug.edu.gh/node/73"
+    },
+    "scheduleNote": "The school describes an annual postgraduate admission process. Use the current graduate admissions call for exact dates.",
+    "dataNote": "English instruction is supported by an older official institutional report; current programme-specific language-test rules, attendance format and fees are not yet verified. Coordinates mark the approximate university area."
+  },
+  {
+    "id": "nairobi-economics",
+    "title": "Economics (MA)",
+    "university": "University of Nairobi",
+    "country": "Kenya",
+    "city": "Nairobi",
+    "lat": -1.28,
+    "lon": 36.817,
+    "fields": [
+      "Economics & Finance",
+      "Social Sciences"
+    ],
+    "tags": [
+      "Economic theory",
+      "Econometrics",
+      "Research project"
+    ],
+    "summary": "Study economic theory, applied analysis and econometric methods, followed by an independently supervised project paper.",
+    "gradeNote": "Current programme-specific academic entry criteria have not been fully verified; contact departmental admissions.",
+    "requirements": [
+      "Confirm the qualifying degree, grade and subject requirements with the department",
+      "Check the current teaching language and any required proficiency evidence",
+      "Verify the attendance format and evening-class commitments before applying"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, curriculum, format and contact",
+        "url": "https://economics.uonbi.ac.ke/index.php/programs-content-type/master-arts-economics"
+      }
+    ],
+    "duration": "2 years full-time",
+    "language": "Not yet verified",
+    "mode": "Hybrid",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Economics and Development Studies department",
+      "email": "economics@uonbi.ac.ke",
+      "source": "https://economics.uonbi.ac.ke/index.php/programs-content-type/master-arts-economics"
+    },
+    "research": {
+      "label": "Economics curriculum and project paper",
+      "url": "https://economics.uonbi.ac.ke/index.php/programs-content-type/master-arts-economics"
+    },
+    "scheduleNote": "The page describes an annual September intake. Exact dates for a current application cycle are not recorded.",
+    "dataNote": "This is a programme-discovery record: scope and duration are verified; detailed admissions and teaching language remain unverified. The page describes blended teaching but also says current classes are online, so confirm the format. Published fees need current-cycle confirmation. Confirm the current balance of online and campus attendance."
+  },
+  {
+    "id": "kaust-bioscience",
+    "title": "Bioscience (MS)",
+    "university": "King Abdullah University of Science and Technology",
+    "country": "Saudi Arabia",
+    "city": "Thuwal",
+    "lat": 22.309,
+    "lon": 39.104,
+    "fields": [
+      "Life Sciences",
+      "Medicine & Public Health"
+    ],
+    "tags": [
+      "Molecular biology",
+      "Biophysics",
+      "Lab rotation"
+    ],
+    "summary": "Explore living systems through cell and molecular biology, biophysics, bioimaging and laboratory research, with thesis and non-thesis routes.",
+    "gradeNote": "Current admissions minimum: 3.0 on a 4-point scale or equivalent. Equivalency is assessed by KAUST; no foreign-grade conversion is supplied.",
+    "requirements": [
+      "Relevant bachelor’s degree from a recognised institution; at least 18 years old on entry",
+      "Academic IELTS 7.0 overall with at least 6.5 in every component, or accepted equivalent",
+      "Transcripts, CV, statement of purpose and contact details for three referees",
+      "Medium-of-instruction certificates alone are not accepted; review specific country/campus-based test exemptions"
+    ],
+    "sources": [
+      {
+        "label": "Official Bioscience degree and duration",
+        "url": "https://www.kaust.edu.sa/en/study/biomed/bioscience"
+      },
+      {
+        "label": "Current entry and English requirements",
+        "url": "https://admissions.kaust.edu.sa/how-to-apply/entry-requirements"
+      },
+      {
+        "label": "Official fellowship and costs FAQ",
+        "url": "https://admissions.kaust.edu.sa/info-and-contact/faqs"
+      }
+    ],
+    "duration": "1.5–2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Standard KAUST Fellowship covers tuition · sponsorship exceptions apply",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7,
+    "contact": {
+      "name": "Ameen Ghawanmeh · graduate programme coordinator",
+      "email": "Ameen.Ghawanmeh@kaust.edu.sa",
+      "source": "https://www.kaust.edu.sa/en/study/biomed/bioscience"
+    },
+    "research": {
+      "label": "Bioscience curriculum and research",
+      "url": "https://www.kaust.edu.sa/en/study/biomed/bioscience"
+    },
+    "ieltsSource": "https://admissions.kaust.edu.sa/how-to-apply/entry-requirements",
+    "scheduleNote": "Use the current admissions timeline for the selected intake; no dated application window is recorded here.",
+    "dataNote": "The current central admissions requirement takes precedence over older faculty IELTS 6.0 guidance. Standard admitted students automatically receive fellowship tuition coverage; partnership or external sponsorship terms can differ. This is funded tuition, not a verified zero-fee policy."
+  },
+  {
+    "id": "hbku-sustainable-energy",
+    "title": "Sustainable Energy (MS)",
+    "university": "Hamad Bin Khalifa University",
+    "country": "Qatar",
+    "city": "Doha",
+    "lat": 25.314,
+    "lon": 51.439,
+    "fields": [
+      "Engineering",
+      "Environment",
+      "Public Policy"
+    ],
+    "tags": [
+      "Renewable energy",
+      "Energy systems",
+      "Sustainability policy"
+    ],
+    "summary": "A multidisciplinary energy degree covering technology, environmental impacts and policy, with guided research or an applied project.",
+    "gradeNote": "The programme publishes a minimum 3.0/4.0 GPA. The university must assess equivalency; no conversion or admission prediction is provided.",
+    "requirements": [
+      "Relevant bachelor’s degree; engineering and science preferred",
+      "Applicants from architecture, planning, business, economics, policy or social sciences can be considered with strong analytical preparation",
+      "IELTS 6.5 or accepted equivalent; review exemption criteria",
+      "Confirm current standardized-test and document rules through CSE admissions"
+    ],
+    "sources": [
+      {
+        "label": "Official English programme and admissions",
+        "url": "https://www.hbku.edu.qa/en/cse/ms-sustainable-energy"
+      },
+      {
+        "label": "Official Arabic programme and financial information",
+        "url": "https://www.hbku.edu.qa/ar/cse/ms-sustainable-energy"
+      }
+    ],
+    "duration": "2 years · 33 credits",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Tuition amount needs confirmation · official pages disagree",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "contact": {
+      "name": "Dr Yusuf Bicer · programme coordinator",
+      "email": "ybicer@hbku.edu.qa",
+      "source": "https://www.hbku.edu.qa/ar/cse/ms-sustainable-energy"
+    },
+    "research": {
+      "label": "Sustainable Energy curriculum",
+      "url": "https://www.hbku.edu.qa/en/cse/ms-sustainable-energy"
+    },
+    "ieltsSource": "https://www.hbku.edu.qa/en/cse/ms-sustainable-energy",
+    "scheduleNote": "Use the current HBKU admissions calendar; a dated programme-specific window is not recorded.",
+    "dataNote": "Official English and Arabic pages list conflicting programme tuition totals: QAR 132,000 and QAR 182,500. Do not budget from either without confirmation. Standardized-test wording also varies between programme materials; verify the current CSE rule."
+  },
+  {
+    "id": "uaeu-education",
+    "title": "Education (MEd)",
+    "university": "United Arab Emirates University",
+    "country": "United Arab Emirates",
+    "city": "Al Ain",
+    "lat": 24.2,
+    "lon": 55.683,
+    "fields": [
+      "Education"
+    ],
+    "tags": [
+      "Educational leadership",
+      "Special education",
+      "Early childhood"
+    ],
+    "summary": "A practice-focused education degree with concentrations in leadership, special education, early childhood, and curriculum and instruction.",
+    "gradeNote": "No verified programme-specific numeric grade threshold is recorded.",
+    "requirements": [
+      "The programme is designed for applicants with an education background, including teachers and education professionals",
+      "Confirm the qualifying degree, admissions documents and academic threshold",
+      "Confirm teaching language and any language-test requirements for the chosen concentration"
+    ],
+    "sources": [
+      {
+        "label": "Official degree scope, concentrations and credits",
+        "url": "https://www.uaeu.ac.ae/en/cedu/programs/graduate/master-of-education.shtml"
+      }
+    ],
+    "duration": "Minimum 36 credits · calendar duration to verify",
+    "language": "Not yet verified",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": {
+      "label": "MEd concentration requirements",
+      "url": "https://www.uaeu.ac.ae/en/cedu/programs/graduate/master-of-education.shtml"
+    },
+    "scheduleNote": "Check the university’s current graduate admissions cycle; no verified dates are stored.",
+    "dataNote": "This is a programme-discovery record. Degree scope and 36-credit requirement are verified, while admissions, teaching language, calendar duration, format and fees remain unverified. The linked detailed programme page was unavailable. English/Arabic subject tracks do not establish the degree’s teaching language."
+  },
+  {
+    "id": "aub-mph",
+    "title": "Public Health (MPH)",
+    "university": "American University of Beirut",
+    "country": "Lebanon",
+    "city": "Beirut",
+    "lat": 33.901,
+    "lon": 35.483,
+    "fields": [
+      "Medicine & Public Health",
+      "Public Policy"
+    ],
+    "tags": [
+      "Community health",
+      "Epidemiology",
+      "Health management"
+    ],
+    "summary": "An interdisciplinary professional degree with concentrations in epidemiology and biostatistics, community health, and health management and policy.",
+    "gradeNote": "Entry routes combine cumulative and major-field GPA. The ordinary bachelor’s route specifies cumulative 3.0 and major-field 3.3; probation and case-by-case routes differ, so no single scalar cutoff is stored.",
+    "requirements": [
+      "Recognised bachelor’s or qualifying graduate degree, assessed under the applicable admissions category",
+      "Select the intended concentration and review its selection process",
+      "Personal statement, recommendations, experience and interview may affect assessment",
+      "Confirm the applicable English test and formal application document requirements"
+    ],
+    "sources": [
+      {
+        "label": "Official 2026–27 MPH catalogue and admission categories",
+        "url": "https://www.aub.edu.lb/Registrar/catalogue2026-27/gr/Pages/fhs-mph.aspx"
+      },
+      {
+        "label": "Official MPH programme and contact",
+        "url": "https://www.aub.edu.lb/fhs/Pages/mph.aspx"
+      }
+    ],
+    "duration": "42 credits · calendar duration to verify",
+    "language": "English (university’s main teaching language)",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Graduate Public Health Programme office",
+      "email": "gphp@aub.edu.lb",
+      "source": "https://www.aub.edu.lb/fhs/Pages/mph.aspx"
+    },
+    "research": {
+      "label": "MPH concentrations and practicum",
+      "url": "https://www.aub.edu.lb/Registrar/catalogue2026-27/gr/Pages/fhs-mph.aspx"
+    },
+    "scheduleNote": "Mid-year admission is considered only case by case, where places are available, and admitted students register part-time. Check the current regular intake calendar.",
+    "dataNote": "The verified degree requires 42 credits and a public-health practicum. A normal calendar duration, tuition and programme-specific English test score are not recorded. Non-degree special-student admission is not treated as degree admission."
+  },
+  {
+    "id": "auc-economics",
+    "title": "Economics (MA)",
+    "university": "The American University in Cairo",
+    "country": "Egypt",
+    "city": "New Cairo",
+    "lat": 30.018,
+    "lon": 31.5,
+    "fields": [
+      "Economics & Finance",
+      "Social Sciences"
+    ],
+    "tags": [
+      "Econometrics",
+      "Development economics",
+      "Thesis option"
+    ],
+    "summary": "An economics degree offering research preparation through a thesis route or non-thesis concentrations in development, strategy, international economics and finance.",
+    "gradeNote": "No verified programme-specific numeric academic threshold is recorded.",
+    "requirements": [
+      "Confirm the current AUC academic and programme-specific admission requirements",
+      "Check expected economics and quantitative preparation",
+      "Confirm application documents and English-language proof requirements"
+    ],
+    "sources": [
+      {
+        "label": "Official MA programme and concentration routes",
+        "url": "https://www.aucegypt.edu/academics/graduate-programs/economics"
+      },
+      {
+        "label": "Official university English-medium statement",
+        "url": "https://library.aucegypt.edu/collection-development-policy"
+      }
+    ],
+    "duration": "Calendar duration not yet verified",
+    "language": "English",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": {
+      "label": "Economics thesis and concentration pathways",
+      "url": "https://www.aucegypt.edu/academics/graduate-programs/economics"
+    },
+    "scheduleNote": "A dated application cycle has not yet been recorded; use the university’s official graduate admissions calendar.",
+    "dataNote": "This is a programme-discovery record. Degree scope and institutional English instruction are verified; duration, detailed admissions, format, fees and numeric test requirements remain unverified."
+  },
+  {
+    "id": "nu-political-science",
+    "title": "Political Science and International Relations (MA)",
+    "university": "Nazarbayev University",
+    "country": "Kazakhstan",
+    "city": "Astana",
+    "lat": 51.09,
+    "lon": 71.399,
+    "fields": [
+      "Social Sciences",
+      "Public Policy"
+    ],
+    "tags": [
+      "Political theory",
+      "International relations",
+      "Research design"
+    ],
+    "summary": "Study political theories, institutions and international relations while developing research design, analytical writing and independent inquiry skills.",
+    "gradeNote": "The school admissions page publishes a minimum CGPA of 2.5/4.0; official equivalency must be checked rather than converted in this catalogue.",
+    "requirements": [
+      "Bachelor’s degree or equivalent; final-year transcripts can be considered during the application period",
+      "Academic IELTS 6.0 overall, writing 6.0 and reading/listening/speaking 5.5, or accepted TOEFL equivalent",
+      "English-medium or qualifying country-based exemptions require admissions-committee approval",
+      "Statement of purpose, two confidential recommendations, academic records and CV; GRE is optional"
+    ],
+    "sources": [
+      {
+        "label": "Official degree language, duration and mode",
+        "url": "https://nu.edu.kz/sprogram/master-of-arts-in-political-science-and-international-relations/"
+      },
+      {
+        "label": "Official programme curriculum",
+        "url": "https://ssh.nu.edu.kz/mapsirgr"
+      },
+      {
+        "label": "Official school admissions requirements and dated cycle",
+        "url": "https://ssh.nu.edu.kz/ru/mapsirgr"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6,
+    "contact": null,
+    "research": {
+      "label": "Political Science and International Relations curriculum",
+      "url": "https://ssh.nu.edu.kz/mapsirgr"
+    },
+    "ieltsSource": "https://ssh.nu.edu.kz/ru/mapsirgr",
+    "scheduleNote": "The Russian programme page still lists the 2026–27 cycle, whose February, June and July 2026 deadlines have passed. Confirm the next cycle with admissions.",
+    "dataNote": "Published 2026 dates are not projected forward and are not an open window. Tuition and scholarship status depend on the applicant route and are not treated as tuition-free."
+  },
+  {
+    "id": "nu-physics",
+    "title": "Physics (MSc)",
+    "university": "Nazarbayev University",
+    "country": "Kazakhstan",
+    "city": "Astana",
+    "lat": 51.09,
+    "lon": 71.399,
+    "fields": [
+      "Physics & Mathematics"
+    ],
+    "tags": [
+      "Mathematical physics",
+      "Experimental physics",
+      "Computational modelling"
+    ],
+    "summary": "Combine advanced physics courses, mathematical and computational methods, laboratory research and a supervised master’s thesis.",
+    "gradeNote": "The current school page publishes CGPA 2.5/4.0 or equivalent. The university determines equivalency; no foreign-grade conversion is supplied.",
+    "requirements": [
+      "Bachelor’s degree or equivalent; final-year applicants may submit a current official transcript",
+      "Academic IELTS 6.0 overall, writing 6.0 and reading/listening/speaking 5.5, or accepted TOEFL equivalent",
+      "High English proficiency; qualifying exemptions require admissions-committee approval",
+      "Degree records, valid official language results, identity document and CV; GRE is optional"
+    ],
+    "sources": [
+      {
+        "label": "Official Physics degree, language, duration and mode",
+        "url": "https://nu.edu.kz/sprogram/master-of-science-in-physics/"
+      },
+      {
+        "label": "Current Physics curriculum and admission requirements",
+        "url": "https://www.ssh.nu.edu.kz/mscphysics"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6,
+    "contact": null,
+    "research": {
+      "label": "Physics courses, laboratory and thesis",
+      "url": "https://www.ssh.nu.edu.kz/mscphysics"
+    },
+    "ieltsSource": "https://www.ssh.nu.edu.kz/mscphysics",
+    "scheduleNote": "The school page provides month-level 2027–28 guidance: grant applications October–February and fee-paying routes October/November–July or August, depending on applicant category. Exact dates must be checked.",
+    "dataNote": "Month ranges do not establish precise opening or closing dates, so no live application window is assigned. Fees and scholarships depend on applicant category and need confirmation."
   }
 ]

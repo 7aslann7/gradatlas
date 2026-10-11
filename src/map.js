@@ -1,9 +1,9 @@
 import {Map,Marker,setWorkerUrl} from './vendor/maplibre/maplibre-gl.mjs';
 import {wheelIntent,gestureCamera} from './map-input.js';
 setWorkerUrl(new URL('./vendor/maplibre/maplibre-gl-worker.mjs',import.meta.url).href);
-const ALIASES={'Türkiye':'Turkey','United States':'United States of America'};
+const ALIASES={'Türkiye':'Turkey','United States':'United States of America','Hong Kong':'Hong Kong S.A.R.'};
 
-export async function createMap(container,programmes,onSelect) {
+export async function createMap(container,programmes,onSelect,onCluster) {
   const canvas=container.querySelector('.map-canvas'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let items=programmes,selected=null,markers=[],destroyed=false,gesture=null;
   const initialZoom=Math.max(.4,Math.log2(Math.min(canvas.clientWidth,canvas.clientHeight)*.88*Math.PI/512));
@@ -28,12 +28,14 @@ export async function createMap(container,programmes,onSelect) {
     if(destroyed)return;
     markers.forEach(marker=>marker.remove());markers=[];
     for(const group of groups()){
-      const multi=group.items.length>1,p=group.items[0],button=document.createElement('button');button.className='atlas-pin'+(multi?' cluster':'')+(group.items.some(p=>p.id===selected)?' selected':'');
-      button.setAttribute('aria-label',multi?`Zoom to ${group.items.length} programmes: ${group.items.map(p=>p.university).join(', ')}`:`View ${p.title} at ${p.university}`);
+      const multi=group.items.length>1,p=group.items[0],button=document.createElement('button');
+      const span=Math.max(...group.items.map(p=>p.lon))-Math.min(...group.items.map(p=>p.lon))+Math.max(...group.items.map(p=>p.lat))-Math.min(...group.items.map(p=>p.lat));
+      const choose=multi&&(span<.05||map.getZoom()>=7);button.className='atlas-pin'+(multi?' cluster':'')+(group.items.some(p=>p.id===selected)?' selected':'');
+      button.setAttribute('aria-label',multi?`${choose?'Choose from':'Zoom to'} ${group.items.length} programmes: ${[...new Set(group.items.map(p=>p.university))].join(', ')}`:`View ${p.title} at ${p.university}`);
       const dot=document.createElement('span');dot.className='pin-dot';dot.textContent=multi?group.items.length:'';button.append(dot);
       const label=document.createElement('span');label.className='pin-label';label.textContent=multi?`${group.items.length} programmes`:p.university;button.append(label);
       const lng=group.items.reduce((s,p)=>s+p.lon,0)/group.items.length,lat=group.items.reduce((s,p)=>s+p.lat,0)/group.items.length;
-      button.onclick=()=>{if(multi)move({center:[lng,lat],zoom:Math.min(12,map.getZoom()+1.6)});else{selected=p.id;onSelect(p.id);}};
+      button.onclick=()=>{if(choose)onCluster?.(group.items);else if(multi)move({center:[lng,lat],zoom:Math.min(12,map.getZoom()+1.6)});else{selected=p.id;onSelect(p.id);}};
       markers.push(new Marker({element:button,anchor:'center',locationOccludedOpacity:0}).setLngLat([lng,lat]).addTo(map));
     }
   }
