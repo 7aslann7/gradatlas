@@ -1,6 +1,6 @@
 # GradAtlas
 
-**Find your next chapter. Make it a world of possibilities.**
+**Master’s programmes, mapped.**
 
 GradAtlas is a free, open-source master's discovery and application workspace. It brings official programme information, an interactive world map, comparisons and preparation tools into one calm interface.
 
@@ -8,9 +8,10 @@ The first edition contains **16 manually researched programmes across 11 countri
 
 ## What works today
 
-- A calm animated welcome screen with a rotating geographic globe, followed by a full-screen world map.
-- Floating search and filters, a compact workspace rail, and programme lists/details that open on demand.
-- Smooth map travel, clustering, scroll/keyboard zoom, pan and a Europe view, with reduced-motion support.
+- A full-screen, directly interactive world map with one search bar and a small menu.
+- Filters, programme lists, details and application tools open only when requested.
+- Drag and two-finger pan, pinch zoom, globe rotation, keyboard controls and visible zoom/compass buttons.
+- Local MapLibre rendering, programme clustering and reduced-motion support; no map API key or remote tiles.
 - Search by programme, university, location and research keyword; filter by field, country, verified application availability and recorded tuition-free status.
 - Programme details with requirements, applicant-category notes, official links and last-review dates.
 - Profile reviews for recorded grade and IELTS thresholds. Different grade systems always require official equivalency; the app never predicts admission probability.
@@ -23,7 +24,7 @@ The first edition contains **16 manually researched programmes across 11 countri
 
 ## Run locally
 
-Requires Node.js 20 or later. There are no runtime package dependencies and no installation step.
+Requires Node.js 20 or later. MapLibre GL JS 6.14.0 is vendored locally; there is no package installation step.
 
 ```sh
 npm run dev
@@ -44,7 +45,7 @@ npm run preview
 
 The production build is a static `dist/` directory. It can be hosted by any static host that serves JavaScript modules and JSON. `scripts/serve.mjs` is a loopback-only development server, not a production server.
 
-The default route opens the welcome screen. `#explore` links directly to the map. Shortlist, comparison, studio and methodology routes open a workspace panel over the map.
+The default route and `#explore` open directly on the map. The legacy `#welcome` route also opens the map. Shortlist, comparison, studio and methodology routes open a workspace panel over the map.
 
 ## Structure
 
@@ -55,12 +56,12 @@ src/
   app.js              Navigation, views and browser workspace
   core.js             Filtering, requirement review, validation and export logic
   map.js              Geographic rendering, animated camera and interaction
-  geography.js        Shared geographic data and coordinate projection
-  globe.js            Animated orthographic canvas globe
-  experience.js       Welcome and map-interface templates
-  atlas.css           Map workspace, panels and entrance transitions
+  map-input.js        Trackpad/pinch routing and Safari gesture math
+  experience.js       Minimal map-interface templates
+  atlas.css           Map workspace, panels and restrained transitions
+  vendor/maplibre/    Locally served MapLibre renderer, worker and licence
   data/programs.json  Curated programme catalogue
-  assets/world.json   Simplified Natural Earth map paths
+  assets/countries.geojson  Simplified Natural Earth country boundaries
 scripts/              Build, development server and data validation
 tests/                Requirement, date, search and export regression tests
 docs/                 Product, architecture and data policy
@@ -70,7 +71,7 @@ docs/                 Product, architecture and data policy
 
 Every catalogue record has official sources and a review date. Unknown fees, admissions criteria and dates are visibly unknown. Recurring annual dates are shown as guidance rather than converted into an assumed application cycle. Records older than 90 days need rechecking. Deadline reminders are all-day reminders, not institutional cutoff times.
 
-The workspace is stored in this browser's local storage. It does not sync across devices or origins. Export a backup before changing devices or clearing browser data. Email drafts remain in memory; no server receives them. The application includes no analytics, login, paid features or bulk mailing. Google Fonts may be requested for typography; map and catalogue assets are served locally.
+The workspace is stored in this browser's local storage. It does not sync across devices or origins. Export a backup before changing devices or clearing browser data. Email drafts remain in memory; no server receives them. The application includes no analytics, login, paid features or bulk mailing. Google Fonts may be requested for typography; map, renderer, worker and catalogue assets are served locally. WebGL is required for the map; the programme list remains available when it cannot initialise.
 
 The website can help organise research. The university's official process determines eligibility and admission. A programme-specific language exemption, course equivalency or exceptional admission route may change how a recorded threshold applies.
 
@@ -88,4 +89,4 @@ See [the roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [data 
 
 The source is prepared for a private GitHub repository followed by a public release. The included CI workflow validates catalogue records, runs tests and builds the site. Remove account-specific hosting configuration in `.openai/hosting.json` when forking for an independent host; replace it with your own Site identity if using Sites.
 
-Code is licensed under MIT. Original university content and referenced pages retain their own ownership and terms. Do not contribute copied university pages, personal applicant records or unpublished contact details.
+Project code is licensed under MIT. MapLibre retains its BSD-3-Clause licence; see [third-party notices](THIRD_PARTY_NOTICES.md). Original university content and referenced pages retain their own ownership and terms. Do not contribute copied university pages, personal applicant records or unpublished contact details.

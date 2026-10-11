@@ -4,7 +4,11 @@
 
 The first edition uses browser-native JavaScript modules and static assets. No service is needed for searching, comparisons, notes, requirement reviews or email drafts. This makes the pilot inexpensive to host and easy for contributors to run.
 
-`programs.json` is the repository of record. `core.js` contains pure business rules, with an injected date for availability tests. `app.js` owns browser views and state. `map.js` consumes the same filtered records, so the list and geography remain consistent. `geography.js` shares a single asset request between the introductory canvas globe and the SVG map. The camera interpolates position and zoom, and cancels its animation on manual pan or view teardown. `experience.js` renders the welcome and map interfaces; workspace routes open a panel over the map. Reduced-motion preferences stop globe rotation and bypass camera and entrance animations. The build copies the source into `dist/`; hosting serves that directory.
+`programs.json` is the repository of record. `core.js` contains pure business rules, with an injected date for availability tests. `app.js` owns browser views and state. `map.js` uses the vendored MapLibre GL JS 6.14.0 renderer and a local country GeoJSON source. No remote tile service, glyph service or map API key is required. The map shares the filtered records with the list and omits back-of-globe locations from visible clusters.
+
+`map-input.js` separates normal wheel translation from browser Ctrl+wheel pinch zoom and computes Safari gesture scale/rotation relative to the gesture-start camera. Native MapLibre handlers support touch, drag, keyboard and rotation. Manual wheel movement cancels camera animation, and normal wheel translation preserves the current zoom. Reduced-motion preferences bypass camera and panel animations.
+
+`experience.js` renders the search, hidden filters and hidden results. The default view opens directly on the map; the legacy welcome route aliases it. Workspace routes open a panel over the existing map, preserving its camera when returning. Personal data continues to use the original local-storage schema. The build copies the source into `dist/`; hosting serves that directory. WebGL initialisation failure leaves the search/list workflow available.
 
 ## Persistence and safety boundaries
 
