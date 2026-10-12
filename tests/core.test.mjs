@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {applicationStatus,assess,filterPrograms,todayKey,calendarEvent,makeEmail,escapeHTML,normalizeWorkspace} from '../src/core.js';
+import {applicationStatus,assess,filterPrograms,todayKey,calendarEvent,makeEmail,escapeHTML,normalizeWorkspace,reviewDraft} from '../src/core.js';
 const programs=JSON.parse(await readFile(new URL('../src/data/programs.json',import.meta.url),'utf8'));
 const p={...programs[0],checkedAt:'2026-10-12',window:{opens:'2026-11-01',closes:'2026-11-30',source:'https://example.edu/admissions'}};
 test('application availability includes boundary days and never fabricates missing windows',()=>{
@@ -43,6 +43,21 @@ test('email drafts preserve user facts and leave unknown information as placehol
   const draft=makeEmail(p,{name:'Alex',degree:'BSc Computer Engineering',recipient:'Dr Smith',interest:'network security',question:'Are my courses sufficient?'});
   assert.match(draft.body,/Dear Dr Smith/);assert.match(draft.body,/network security/);assert.match(draft.body,/Are my courses sufficient\?/);
   assert.ok(!draft.body.includes('publication')&&!draft.body.includes('excellent GPA'));
+});
+test('enquiry templates do not invent a completed qualification, page review or research experience',()=>{
+  const draft=makeEmail(p,{purpose:'research',name:'Alex',degree:'Current BSc student',interest:'privacy-preserving learning',question:'Does your group consider master’s research enquiries?'});
+  assert.match(draft.subject,/Research supervision/);
+  assert.match(draft.body,/Current BSc student/);
+  assert.ok(!draft.body.includes('I have reviewed')&&!draft.body.includes('completed'));
+  assert.ok(reviewDraft(draft.subject,draft.body).issues.some(s=>s.includes('placeholder')));
+});
+test('workspace backups preserve locally saved drafts and migrate older backups safely',()=>{
+  const old={profile:null,saved:[],compare:[],notes:{},tasks:{},tracking:{}};
+  assert.deepEqual(normalizeWorkspace(old).drafts,{});
+  const drafts={'saarland-cyber':{subject:'Programme question',body:'My own enquiry',purpose:'admissions',recipientEmail:'team@example.edu',fields:{name:'Alex',question:'My own question'}}};
+  assert.deepEqual(normalizeWorkspace({...old,drafts}).drafts,drafts);
+  assert.throws(()=>normalizeWorkspace({...old,drafts:{'saarland-cyber':{...drafts['saarland-cyber'],body:{html:'unsafe'}}}}));
+  assert.throws(()=>normalizeWorkspace({...old,drafts:{'saarland-cyber':{...drafts['saarland-cyber'],purpose:'unsupported'}}}));
 });
 test('user and source text is escaped before HTML rendering',()=>assert.equal(escapeHTML('<script>"x"&\'</script>'),'&lt;script&gt;&quot;x&quot;&amp;&#39;&lt;/script&gt;'));
 test('workspace import rejects malformed scores and checklist records before replacement',()=>{

@@ -2,7 +2,7 @@
 
 ## Authority and provenance
 
-Use official university programme pages, admission regulations, fees pages and application portals as primary sources. Programme summaries must be original short descriptions, not copied pages. Store official links and a review date. Use subject groups from `FIELDS` in `core.js`; retain stable IDs as the catalogue grows. Programme and explicitly named specialisation records may coexist, but do not duplicate a joint degree under each teaching institution. Numeric grade rules and application windows also point directly to their supporting source.
+Use official university programme pages, admission regulations, fees pages and application portals as primary sources. Programme summaries must be original short descriptions, not copied pages. Store official links and a review date. Use subject groups from `FIELDS` in `core.js`; retain stable IDs as the catalogue grows. Programme and explicitly named specialisation records may coexist, but do not duplicate a joint degree under each teaching institution. Numeric grade rules, IELTS values, no-tuition claims and application windows must point directly to their supporting source. `evidence` stores individually reviewed degree, teaching-language, duration and delivery sources with dates. Every evidence URL must belong to the record's source list. Unknown fields cannot be labelled as confirmed evidence.
 
 An official programme page may confirm programme scope while leaving the admission cycle unknown. A record's review date describes when its stated information was checked; it does not mean every potential field is complete. Use `dataNote` to explain partial verification. Teaching language, duration and delivery mode are facts to verify, not assumptions from the webpage language. Unknown delivery mode is `Not verified`; use `Hybrid` for verified blended delivery and explain any attendance ambiguity. Country/region labels describe catalogue destinations and include Hong Kong as a separate admissions jurisdiction.
 
@@ -10,7 +10,7 @@ An official programme page may confirm programme scope while leaving the admissi
 
 Only record a window when its year, opening date, closing date and applicant category are supported. Keep annual recurring guidance in `scheduleNote`. Do not infer a new-year deadline from a previous cycle. Calendar files are all-day reminders to verify the recorded deadline, not a claim about a university's exact cutoff time.
 
-Availability is evaluated on calendar dates in Europe/Istanbul. The interface always asks applicants to check the official cutoff time and time zone. Data older than 90 days is stale; this is a backstop, not a guarantee that a source cannot change sooner.
+Recorded date-window status is evaluated on calendar dates in Europe/Istanbul. The label “Within recorded dates” describes date coverage, not a live check of the application portal. The interface always asks applicants to check the official cutoff time and time zone. Data older than 90 days is stale; this is a backstop, not a guarantee that a source cannot change sooner.
 
 ## Academic and language requirements
 

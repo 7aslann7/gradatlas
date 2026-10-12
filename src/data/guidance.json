@@ -1,0 +1,58 @@
+[
+  {
+    "id": "personal-statement-ucl",
+    "title": "Explain your preparation and programme fit",
+    "summary": "Connect your academic interests, relevant study and experience, and future plans to the specific course. Answer any programme-specific questions and follow its length and submission rules. UCL's general limits apply to its own application routes.",
+    "scope": "UCL postgraduate taught applications; a required statement must follow the course instructions. These limits are not universal.",
+    "url": "https://www.ucl.ac.uk/study/prospective-students/graduate/how-apply/writing-your-personal-statement"
+  },
+  {
+    "id": "cv-oxford",
+    "title": "Prepare a focused academic CV when requested",
+    "summary": "Highlight qualifications, relevant research or project experience, publications and achievements that support the course application. Oxford normally asks applicants to enter experience in its form; upload a separate CV only when the course requests one.",
+    "scope": "Oxford graduate applications; a separate CV is conditional on the course, not mandatory for every master's.",
+    "url": "https://www.ox.ac.uk/admissions/graduate/application-guide/supporting-documents/cv-resume"
+  },
+  {
+    "id": "documents-oxford",
+    "title": "Build the document checklist from the course page",
+    "summary": "Check the exact required files, word limits, format and translation rules before submitting. Oxford requires translated transcripts to include their original-language version, and may remove documents outside the requested specifications. Application writing must remain your own work.",
+    "scope": "Oxford graduate supporting documents; taught and research courses have different lists. Do not treat an optional or unrequested document as mandatory.",
+    "url": "https://www.ox.ac.uk/admissions/graduate/application-guide/supporting-documents/supporting-documents-requirements"
+  },
+  {
+    "id": "references-ubc",
+    "title": "Ask referees early and give them useful context",
+    "summary": "Choose people who know your academic or relevant professional work. Ask for their agreement before entering their details, ideally four to six weeks ahead. Share your transcript, CV, programme details and deadlines, while checking the required number and submission method.",
+    "scope": "UBC graduate reference guidance; use the programme's own rules for referee type, number and mandatory references.",
+    "url": "https://www.grad.ubc.ca/about-us/newsletters/top-tip-requesting-letters-reference"
+  },
+  {
+    "id": "research-supervisor-ubc",
+    "title": "Contact a potential research supervisor with a specific question",
+    "summary": "For a research master's, first check whether prior supervisor contact or commitment is expected. Read the academic's work, write a brief message explaining the research fit and your preparation, and ask about prospective supervision. A published profile does not prove current availability.",
+    "scope": "UBC research-based master's and doctoral applications; prior contact is programme-dependent. This is not a requirement for every taught master's.",
+    "url": "https://www.grad.ubc.ca/gradprospect/2023/11/top-tip"
+  },
+  {
+    "id": "programme-documents-kth",
+    "title": "Follow the programme's own document and form instructions",
+    "summary": "KTH Machine Learning requires its own motivation letter, two recommendations and a summary sheet alongside qualification documents. Its summary sheet uses a separate submission link. Check country-specific evidence rules and avoid uploading documents the programme has not requested.",
+    "scope": "KTH MSc Machine Learning; these programme documents are required here, not universal Swedish master's requirements.",
+    "url": "https://www.kth.se/en/studies/master/machine-learning/entry-requirements-machine-learning-1.48539"
+  },
+  {
+    "id": "cv-form-karolinska",
+    "title": "Use required CV forms and certify selected experience",
+    "summary": "Karolinska's Global Health programme requires the KI CV form and supporting certification for experience used in selection. Recommendation letters are not required. This illustrates why a generic checklist should be replaced by the degree's published document rules.",
+    "scope": "Karolinska Institutet Master's Programme in Global Health; mandatory CV form and experience certification, no required recommendation letters.",
+    "url": "https://education.ki.se/bachelors-masters-studies/programmes-and-courses/masters-programme-in-global-health"
+  },
+  {
+    "id": "optional-thesis-supervision-ubc",
+    "title": "Check whether supervision is arranged after admission",
+    "summary": "UBC's Economics MA has an optional thesis, and supervision is decided later for students who choose it. Applicants do not need to contact faculty before applying. Check the equivalent instruction for your own programme before drafting supervisor emails.",
+    "scope": "UBC MA Economics; prior supervisor contact is not necessary for this specific optional-thesis route. Other research degrees may differ.",
+    "url": "https://www.grad.ubc.ca/prospective-students/graduate-degree-programs/master-of-arts-economics"
+  }
+]

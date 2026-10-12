@@ -1,5 +1,5 @@
 export const FIELDS = ['AI & Machine Learning', 'Architecture & Planning', 'Arts & Humanities', 'Business & Management', 'Computer Science', 'Cybersecurity', 'Economics & Finance', 'Education', 'Engineering', 'Environment', 'Law', 'Life Sciences', 'Medicine & Public Health', 'Physics & Mathematics', 'Public Policy', 'Quantum Computing', 'Social Sciences'];
-export const CHECKLIST = ['Check degree and course prerequisites', 'Confirm official grade equivalency', 'Prepare transcript and degree certificate', 'Check language tests and exemptions', 'Prepare CV and programme-specific statement', 'Arrange references if required', 'Check fees, funding and visa costs', 'Verify deadline and submit on the official portal'];
+export const CHECKLIST = ['Check degree and course prerequisites', 'Confirm official grade equivalency', 'Prepare transcript and degree certificate', 'Check language tests and exemptions', 'Check whether a CV and programme-specific statement are required', 'Arrange references if required', 'Check fees, funding and visa costs', 'Verify deadline and submit on the official portal'];
 export function normalizeWorkspace(raw) {
   if (!raw || typeof raw !== 'object' || !Array.isArray(raw.saved) || !Array.isArray(raw.compare)) throw Error('Invalid workspace');
   const ids = list => {if(list.length>500||list.some(id=>typeof id!=='string'||id.length>100))throw Error('Invalid programme IDs');return [...new Set(list)];};
@@ -15,7 +15,14 @@ export function normalizeWorkspace(raw) {
     const number=(value,max,min=0)=>{if(value===''||value==null)return '';const n=Number(value);if(!Number.isFinite(n)||n<min||n>max)throw Error('Invalid score');return String(n);};
     profile={degree:p.degree,name:'',scale:p.scale,gpa:number(p.gpa,p.scale==='german'?4:Number(p.scale),p.scale==='german'?1:0),ielts:number(p.ielts,9)};
   }
-  return {profile,saved:ids(raw.saved),compare:ids(raw.compare).slice(0,3),tracking,notes,tasks};
+  const drafts=Object.fromEntries(Object.entries(dict(raw.drafts===undefined?{}:raw.drafts)).map(([k,v])=>{
+    if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(k)||!v||typeof v!=='object'||typeof v.subject!=='string'||v.subject.length>300||typeof v.body!=='string'||v.body.length>10000||!['admissions','research'].includes(v.purpose))throw Error('Invalid enquiry draft');
+    if(v.recipientEmail!=null&&(typeof v.recipientEmail!=='string'||v.recipientEmail.length>320))throw Error('Invalid draft recipient');
+    const fields={};
+    if(v.fields!=null){dict(v.fields);for(const [field,limit] of Object.entries({name:100,recipient:100,recipientEmail:320,degree:250,interest:1000,question:1500})){if(v.fields[field]==null)continue;if(typeof v.fields[field]!=='string'||v.fields[field].length>limit)throw Error('Invalid draft field');fields[field]=v.fields[field];}}
+    return [k,{subject:v.subject,body:v.body,purpose:v.purpose,recipientEmail:v.recipientEmail||'',fields}];
+  }));
+  return {profile,saved:ids(raw.saved),compare:ids(raw.compare).slice(0,3),tracking,notes,tasks,drafts};
 }
 export function escapeHTML(value = '') {
   return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -32,7 +39,7 @@ export function applicationStatus(p, now = todayKey()) {
   if (!w) return {key:'unknown', label:'Check application dates'};
   if (now < w.opens) return {key:'upcoming',label:'Opens '+formatDate(w.opens)};
   if (now > w.closes) return {key:'closed',label:'Recorded cycle closed'};
-  return {key:'open', label:'Applications open'};
+  return {key:'open', label:'Within recorded dates'};
 }
 export function formatDate(value) {
   return new Date(value+'T12:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'});
@@ -73,12 +80,21 @@ export function filterPrograms(programs, filters, profile, now=todayKey()) {
   return result;
 }
 export function makeEmail(p, fields) {
-  const name=fields.name.trim()||'[Your name]';
-  const degree=fields.degree.trim()||'[Your degree and university]';
-  const interest=fields.interest.trim()||'[A specific research topic or paper you have read]';
-  const question=fields.question.trim()||'Could you advise whether my academic background meets the programme prerequisites, and whether there are additional steps I should take before applying?';
-  const salutation=fields.recipient.trim()||'Admissions team';
-  return {subject:`Prospective master's applicant — ${p.title}`,body:`Dear ${salutation},\n\nMy name is ${name}, and I am studying / have completed ${degree}. I am interested in applying to ${p.title} at ${p.university}.\n\nMy academic interests include ${interest}. I have reviewed the official programme information and would appreciate clarification on the following:\n\n${question}\n\nThank you for your time and guidance. I would be happy to provide my transcript and CV if helpful.\n\nBest regards,\n${name}`};
+  const name=(fields.name||'').trim()||'[Your name]',degree=(fields.degree||'').trim()||'[Your degree and university]';
+  const interest=(fields.interest||'').trim(),question=(fields.question||'').trim()||'[Your specific question after checking the programme instructions]';
+  const research=fields.purpose==='research',salutation=(fields.recipient||'').trim()||(research?'[Recipient name]':'Admissions team');
+  const context=research?`My research interests include ${interest||'[A specific research topic and its connection to the recipient’s work]'}.\n\nI would appreciate clarification on the following:`:`${interest?'My academic interests include '+interest+'.\n\n':''}I would appreciate clarification on the following:`;
+  return {subject:`${research?'Research supervision':'Master’s application'} enquiry — ${p.title}`,body:`Dear ${salutation},\n\nMy name is ${name}. My academic background is ${degree}. I am interested in ${p.title} at ${p.university}.\n\n${context}\n\n${question}\n\nThank you for your time and guidance.\n\nBest regards,\n${name}`};
+}
+
+export function reviewDraft(subject,body) {
+  const issues=[];
+  if(!subject.trim())issues.push('Add a specific subject.');
+  if(!body.trim())issues.push('Write the enquiry.');
+  if(/\[[^\]\n]+\]/.test(subject+'\n'+body))issues.push('Replace the remaining placeholders with your own details.');
+  const words=body.trim()?body.trim().split(/\s+/).length:0;
+  if(words>300)issues.push('Consider shortening the message to one focused enquiry. This is a writing suggestion, not an admissions rule.');
+  return {issues,words};
 }
 export function calendarEvent(p) {
   if(!p.window) return null;

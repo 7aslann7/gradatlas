@@ -1,46 +1,33 @@
-# Roadmap
+# Development roadmap
 
-## 0.1 — Working private pilot (implemented)
+## Implemented through v0.6
 
-- Source-backed programme discovery, map and filters.
-- Local profile, explicit requirement gaps and individual-review labels.
-- Shortlist, comparisons, checklist, notes, enquiry drafts and calendar exports.
-- Data policy, contribution guide, tests and portable static build.
+- A restrained interactive globe and full-screen flat map, native geographic clusters, viewport zoom/pan limits, trackpad/touch controls and keyboard-accessible location actions.
+- A 251-record, 88-destination catalogue across 17 subject groups, with field-specific evidence, explicit unknowns and targeted audits of dates, grade thresholds, language proof and tuition.
+- Optional browser-local profile, shortlist, comparisons, notes and preparation steps.
+- Application Studio preparation plans, locally saved editable enquiries, placeholder review and eight scoped official university guides.
+- Version 2 private workspace backups, backward-compatible imports and a portable static build.
 
-## 0.2 — Useful coverage before scale
+## Next: a maintained catalogue
 
-- Expand Germany and the Netherlands in cybersecurity, ML/deep learning and quantum computing.
-- Verify current intake, international-degree equivalency, tuition and scholarships per applicant category.
-- Add official application portal links distinct from programme information pages.
-- Record programme-specific prerequisite courses and ECTS evidence.
-- Test with applicants from at least three different academic backgrounds.
-- Add field-level provenance, correction reports and documented change history.
+Move from hand-reviewed JSON to separate university, programme, intake, applicant category, requirement, fee and evidence entities. Keep current stable IDs and the static catalogue export. Do not treat campus count, programme count and specialisation count as interchangeable.
 
-Exit criterion: applicants can use the catalogue to construct a sourced shortlist without confusing missing information with eligibility.
+Start with permitted structured official sources. Fetching should produce a review proposal rather than directly replace published requirements. Attach a reviewed source, timestamp, applicant scope and cycle to every mutable fact. Detect broken links and changed source content, then route changes to maintainers. Preserve a correction history and expose stale or unavailable evidence to visitors.
 
-## 0.3 — Maintained information
+Prioritise exact cutoff times, international-degree recognition, prerequisite courses and credit requirements, current tuition categories and programme-specific documents. Keep unavailable facts unknown. Link checking confirms availability of a page, not correctness of its admissions contents.
 
-- Add an ingestion/review service and durable data model.
-- Detect broken sources, missing facts and changed admission conditions.
-- Create review queues and maintainers' audit history.
-- Add verified faculty/research-group profiles with research tags and contact provenance.
-- Keep unknown supervision availability explicitly unknown.
+Exit criterion: applicants can build a shortlist and see what is supported, what is missing, and what needs reconfirmation. Maintainers can approve or reject a source change with an audit trail.
 
-Exit criterion: source changes reach a human review queue and approved records reach users with traceable evidence.
+## Then: public pilot and contribution workflow
 
-## 0.4 — Community and portability
+Publish an English contributor guide and reviewed dataset changes through a private GitHub repository before opening it. Test the product with applicants from different degree backgrounds, countries and accessibility needs. Give users a way to submit a correction with the affected field and an official source. Moderate submissions before publication; separate applicant experiences from institutional rules.
 
-- Add optional cross-device workspaces without gating discovery.
-- Add moderated correction submissions and clearly separated applicant experiences.
-- Improve accessible geographic navigation and add broader regional coverage.
-- Add localisation infrastructure after the English experience is stable.
+Confirm repository and site visibility as a release decision. Keep applicant workspaces out of source control. Free discovery and preparation should remain available without a profile or paid tier.
 
-## Public open-source release
+## Optional: account sync
 
-- Create the private GitHub repository and enable CI.
-- Test data import/export, browser storage limits and keyboard workflows with real users.
-- Review every published requirement, contact and licence attribution.
-- Publish contribution and moderation policies and nominate maintainers.
-- Change repository and site visibility deliberately, preserving personal data outside the public source.
+Keep the current local workflow. Add cross-device sync only as an explicit opt-in feature, with per-user data isolation, export/deletion, conflict handling and a reviewed migration from browser backups. Hosting access accounts must not be mistaken for application workspace accounts. See [workspace privacy](WORKSPACE_PRIVACY.md).
 
-Global coverage, supervisor availability and community ratings are future work. The private pilot does not claim them today.
+## Later: richer research discovery
+
+Add verified research groups and professional contacts with subject tags and source history. Supervisor availability requires its own dated evidence; a biography or published email does not establish availability. Consider moderated community experiences after the catalogue correction workflow is reliable.

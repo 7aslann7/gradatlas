@@ -1,33 +1,36 @@
 # Catalogue coverage
 
-Reviewed: **12 October 2026**. Current release: **171 programme and explicitly named specialisation records**, across **80 countries/regions** and **17 broad subject groups**. This release adds **90 records and 46 destinations** to the previous 81-record global catalogue.
+Reviewed: **12 October 2026**. Current release: **251 programme and explicitly named specialisation records**, across **88 countries/regions** and **17 broad subject groups**. This release adds 80 records to the previous 171-record catalogue and introduces field-specific evidence receipts.
 
-The catalogue is curated, with uneven geographic and subject coverage. It is not a complete list of universities, a ranking, or a count of all available degrees. Joint degrees are recorded once. A specialisation is identified in its title. Hong Kong and Taiwan are separate catalogue destinations; map locations are approximate host campuses. Some professional master's routes require prior work experience or a medical qualification, as stated in their requirements.
+Coverage is curated and uneven. Joint degrees are counted once, specialisations are named explicitly, and some professional routes require an earlier medical degree or professional experience. Campus coordinates are approximate. Hong Kong and Taiwan are separate discovery destinations.
 
-Each record links to official university information. 18 records have a source-backed, fully dated application window; this includes closed and future cycles. 73 records include a published professional contact. Missing dates, language thresholds, fees, degree equivalency and attendance information remain explicit. A review date confirms the stated facts were checked, rather than every possible admissions criterion being complete. Source limitations and archived evidence are identified in each affected record and in the [expansion research notes](research/2026-10-12-global-expansion.md).
+There are 26 fully dated application windows, including closed and future cycles, and 91 published professional contacts. A linked source is traceable evidence; programme-specific eligibility and current availability still require applicant review. Missing teaching language, fees, delivery details and dates remain visible.
+
+The v0.6 targeted [reliability audit](research/2026-10-12-reliability-audit.md) rechecked all previously recorded date windows, four numeric grade rules, nine no-tuition claims and five legacy IELTS citations. It removed UCL's outdated cycle. A separate [fee audit](research/2026-10-12-v6-fee-patches.md) repaired 15 fee citations and corrected NTU's older total. This audit does not re-verify every fact in every record. The new [Americas/Africa](research/2026-10-12-v6-americas-africa.md) and [Asia/Pacific](research/2026-10-12-v6-asia-pacific.md) batches include detailed evidence limitations.
 
 ## Countries and regions
 
 | Destination | Records |
 | --- | ---: |
-| Argentina | 1 |
+| Argentina | 2 |
 | Armenia | 3 |
-| Australia | 3 |
+| Australia | 15 |
 | Austria | 2 |
 | Bahrain | 2 |
 | Bangladesh | 2 |
 | Belgium | 2 |
 | Botswana | 1 |
-| Brazil | 1 |
-| Canada | 6 |
-| Chile | 1 |
-| China | 1 |
-| Colombia | 2 |
-| Costa Rica | 3 |
+| Brazil | 2 |
+| Cameroon | 1 |
+| Canada | 14 |
+| Chile | 2 |
+| China | 6 |
+| Colombia | 3 |
+| Costa Rica | 4 |
 | Croatia | 1 |
 | Czechia | 2 |
 | Denmark | 2 |
-| Ecuador | 2 |
+| Ecuador | 3 |
 | Egypt | 1 |
 | Estonia | 1 |
 | Ethiopia | 2 |
@@ -35,28 +38,33 @@ Each record links to official university information. 18 records have a source-b
 | France | 1 |
 | Georgia | 1 |
 | Germany | 22 |
-| Ghana | 1 |
+| Ghana | 2 |
 | Greece | 1 |
-| Hong Kong | 1 |
+| Hong Kong | 3 |
 | Hungary | 1 |
 | Iceland | 1 |
 | India | 3 |
 | Indonesia | 1 |
 | Ireland | 1 |
 | Italy | 3 |
-| Japan | 1 |
+| Jamaica | 1 |
+| Japan | 7 |
+| Jordan | 1 |
 | Kazakhstan | 2 |
-| Kenya | 1 |
+| Kenya | 2 |
 | Kuwait | 1 |
 | Latvia | 1 |
 | Lebanon | 1 |
 | Lithuania | 1 |
+| Malawi | 1 |
 | Malaysia | 3 |
 | Mauritius | 1 |
-| Mexico | 1 |
+| Mexico | 2 |
 | Morocco | 1 |
+| Namibia | 1 |
+| Nepal | 1 |
 | Netherlands | 16 |
-| New Zealand | 1 |
+| New Zealand | 7 |
 | Nigeria | 1 |
 | Norway | 1 |
 | Oman | 3 |
@@ -71,11 +79,12 @@ Each record links to official university information. 18 records have a source-b
 | Saudi Arabia | 1 |
 | Senegal | 1 |
 | Serbia | 1 |
-| Singapore | 2 |
+| Singapore | 3 |
 | Slovenia | 1 |
-| South Africa | 1 |
-| South Korea | 1 |
+| South Africa | 5 |
+| South Korea | 5 |
 | Spain | 2 |
+| Sri Lanka | 2 |
 | Sweden | 2 |
 | Switzerland | 3 |
 | Taiwan | 2 |
@@ -83,37 +92,38 @@ Each record links to official university information. 18 records have a source-b
 | Thailand | 3 |
 | Tunisia | 1 |
 | Türkiye | 1 |
-| Uganda | 1 |
+| Uganda | 2 |
 | United Arab Emirates | 1 |
 | United Kingdom | 7 |
-| United States | 8 |
-| Uruguay | 2 |
+| United States | 20 |
+| Uruguay | 3 |
 | Uzbekistan | 1 |
 | Vietnam | 3 |
+| Zambia | 1 |
 
 ## Subject groups
 
-A record can belong to more than one subject group, so the counts below do not sum to 171.
+Records may belong to more than one group; counts therefore do not sum to 251.
 
 | Subject group | Records |
 | --- | ---: |
-| AI & Machine Learning | 31 |
-| Architecture & Planning | 11 |
-| Arts & Humanities | 10 |
-| Business & Management | 15 |
-| Computer Science | 46 |
-| Cybersecurity | 7 |
-| Economics & Finance | 17 |
-| Education | 10 |
-| Engineering | 14 |
-| Environment | 23 |
-| Law | 4 |
-| Life Sciences | 12 |
-| Medicine & Public Health | 16 |
-| Physics & Mathematics | 8 |
-| Public Policy | 26 |
-| Quantum Computing | 9 |
-| Social Sciences | 26 |
+| AI & Machine Learning | 35 |
+| Architecture & Planning | 18 |
+| Arts & Humanities | 21 |
+| Business & Management | 20 |
+| Computer Science | 56 |
+| Cybersecurity | 9 |
+| Economics & Finance | 22 |
+| Education | 15 |
+| Engineering | 24 |
+| Environment | 31 |
+| Law | 10 |
+| Life Sciences | 18 |
+| Medicine & Public Health | 20 |
+| Physics & Mathematics | 14 |
+| Public Policy | 38 |
+| Quantum Computing | 10 |
+| Social Sciences | 37 |
 
 ## Admission interpretation
 

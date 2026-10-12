@@ -8,6 +8,21 @@ export function clusterCenter(points) {
 }
 
 // Small geographic patches cover the sphere without a polygon crossing the date line.
+export function minimumFlatZoom(width,height,bearing=0) {
+  const angle=bearing*Math.PI/180,c=Math.abs(Math.cos(angle)),s=Math.abs(Math.sin(angle));
+  return Math.log2(Math.max(1,width*c+height*s,height*c+width*s)/512);
+}
+
+export function flatViewportCamera(center,zoom,{width,height,bearing=0}) {
+  const z=Math.max(minimumFlatZoom(width,height,bearing),Math.min(12,zoom));
+  const angle=bearing*Math.PI/180,c=Math.abs(Math.cos(angle)),s=Math.abs(Math.sin(angle));
+  const world=512*2**z,halfX=(width*c+height*s)/world/2,halfY=(height*c+width*s)/world/2;
+  const lngLimit=Math.max(0,180-halfX*360),lat=Math.max(-85.05112878,Math.min(85.05112878,center.lat));
+  const y=(1-Math.log(Math.tan(Math.PI/4+lat*Math.PI/360))/Math.PI)/2;
+  const cy=Math.max(halfY,Math.min(1-halfY,y));
+  return {zoom:z,center:{lng:Math.max(-lngLimit,Math.min(lngLimit,center.lng)),lat:Math.atan(Math.sinh(Math.PI*(1-2*cy)))*180/Math.PI}};
+}
+
 export function oceanSurface() {
   const features=[];
   for(let lon=-180;lon<180;lon+=30)for(let lat=-90;lat<90;lat+=30){

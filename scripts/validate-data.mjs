@@ -24,10 +24,23 @@ for(const p of data){
   assert.ok(Number.isFinite(p.lat)&&Number.isFinite(p.lon)&&p.lat>=-90&&p.lat<=90&&p.lon>=-180&&p.lon<=180,`${context}: invalid location`);
   assert.ok(nonempty(p.tuition?.label)&&typeof p.tuition.free==='boolean',`${context}: tuition label and recorded-free flag required`);
   if(p.tuition.source){url(p.tuition.source);assert.ok(sourced(p.tuition.source),`${context}: fee source absent from provenance`);}
+  if(p.tuition.free)assert.ok(p.tuition.source,`${context}: no-tuition claim needs a fee source`);
+  if(p.applicationURL){url(p.applicationURL);assert.ok(sourced(p.applicationURL),`${context}: application route absent from provenance`);}
+  for(const [field,proof] of Object.entries(p.evidence||{})){
+    assert.ok(['degree','language','duration','mode'].includes(field),`${context}: unsupported evidence field`);
+    assert.ok(proof&&date(proof.checkedAt)&&proof.checkedAt<=todayKey(),`${context}: invalid evidence review date`);
+    url(proof.source);assert.ok(sourced(proof.source),`${context}: field evidence absent from provenance`);
+    assert.ok(field==='degree'||!/^Not verified/i.test(p[field]),`${context}: unknown field cannot have confirmed evidence`);
+  }
   if(p.window){assert.ok(date(p.window.opens)&&date(p.window.closes)&&p.window.opens<=p.window.closes,`${context}: invalid application window`);assert.ok(nonempty(p.window.category)&&sourced(p.window.source),`${context}: applicant category and deadline source required`);}
   if(p.gpa){assert.ok(['required','preferred'].includes(p.gpa.type)&&['4','5','10','100','german'].includes(p.gpa.scale),`${context}: grade context required`);const max=p.gpa.scale==='german'?4:Number(p.gpa.scale);assert.ok(Number.isFinite(p.gpa.value)&&p.gpa.value>=(p.gpa.scale==='german'?1:0)&&p.gpa.value<=max,`${context}: invalid grade`);assert.equal(p.gpa.direction,p.gpa.scale==='german'?'lower':'higher',`${context}: grade direction conflicts with scale`);assert.ok(nonempty(p.gpa.text)&&sourced(p.gpa.source),`${context}: grade evidence required`);}
-  if(p.ielts!=null){assert.ok(Number.isFinite(p.ielts)&&p.ielts>0&&p.ielts<=9,`${context}: invalid IELTS score`);if(p.ieltsSource)assert.ok(sourced(p.ieltsSource),`${context}: language source absent from provenance`);}
+  if(p.ielts!=null){assert.ok(Number.isFinite(p.ielts)&&p.ielts>0&&p.ielts<=9,`${context}: invalid IELTS score`);assert.ok(p.ieltsSource&&sourced(p.ieltsSource),`${context}: language source absent from provenance`);}
   if(p.contact){assert.ok(nonempty(p.contact.name)&&sourced(p.contact.source),`${context}: professional contact provenance required`);assert.match(p.contact.email,/^[^\s@]+@[^\s@]+\.[^\s@]+$/,`${context}: invalid contact email`);}
   if(p.research){assert.ok(nonempty(p.research.label),`${context}: research label required`);url(p.research.url);assert.ok(sourced(p.research.url),`${context}: research link absent from provenance`);}
 }
 console.log(`Validated ${data.length} source-backed records across ${new Set(data.map(p=>p.country)).size} countries/regions and ${new Set(data.flatMap(p=>p.fields)).size} subject groups.`);
+const guidance=JSON.parse(await readFile('src/data/guidance.json','utf8'));
+assert.ok(Array.isArray(guidance)&&guidance.length,'Official guidance required');
+assert.equal(new Set(guidance.map(g=>g.id)).size,guidance.length,'Duplicate guidance ID');
+for(const g of guidance){for(const field of ['id','title','summary','scope'])assert.ok(nonempty(g[field]),`Guidance ${g.id}: missing ${field}`);url(g.url);}
+console.log(`Validated ${guidance.length} scoped official application guides.`);
