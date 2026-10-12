@@ -11,9 +11,10 @@ test('browser pinch zooms independently of trackpad translation and respects cam
   assert.equal(wheelIntent({deltaY:10000,deltaMode:0,ctrlKey:true},3).zoom,.4);
   assert.equal(wheelIntent({deltaY:-10000,deltaMode:0,ctrlKey:true},3).zoom,12);
 });
-test('Safari pinch and rotation remain relative to the gesture-start camera',()=>{
-  assert.deepEqual(gestureCamera({zoom:2,bearing:15},{scale:2,rotation:30}),{zoom:3,bearing:45});
-  assert.deepEqual(gestureCamera({zoom:2,bearing:15},{scale:.5,rotation:-20}),{zoom:1,bearing:-5});
+test('Safari finger twists rotate geography in the same direction while preserving relative pinch zoom',()=>{
+  assert.deepEqual(gestureCamera({zoom:2,bearing:15},{scale:2,rotation:30}),{zoom:3,bearing:-15});
+  assert.deepEqual(gestureCamera({zoom:2,bearing:15},{scale:.5,rotation:-20}),{zoom:1,bearing:35});
+  assert.deepEqual(gestureCamera({zoom:2,bearing:15},{scale:1,rotation:0}),{zoom:2,bearing:15});
 });
 test('both pinch paths can zoom out far enough for a full world on a portrait screen',()=>{
   const bounds={minZoom:-2,maxZoom:12};

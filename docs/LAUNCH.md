@@ -7,7 +7,7 @@
 - Feedback: [corrections, bugs and feature proposals](https://github.com/7aslann7/gradatlas/issues/new/choose)
 - Private security reports: [GitHub advisories](https://github.com/7aslann7/gradatlas/security/advisories/new)
 
-The official public URL uses GitHub Pages: `https://7aslann7.github.io/gradatlas/`. This is a free GitHub project-site address, not an independently owned domain. A user/organization site at `gradatlas.github.io` would require the corresponding GitHub account/organization name. The original Sites origin, `https://gradatlas.decentcloud16.chatgpt.site/`, remains available. Browser workspaces belong to their origin: use the recovery backup in Data & methodology to move saved work between these sites.
+The single official public URL uses GitHub Pages: `https://7aslann7.github.io/gradatlas/`. This is a free GitHub project-site address, not an independently owned domain. A user/organization site at `gradatlas.github.io` would require the corresponding GitHub account/organization name. The original Sites prototype address redirects to the official website and is not a second application entry point. Browser workspaces belong to their origin; a redirect does not synchronise previously saved data.
 
 No independently owned GradAtlas domain is connected yet. If a custom domain is selected and owned later, configure GitHub Pages DNS/TLS, verify anonymous access, then update the GitHub homepage, README, canonical/social metadata and outreach copy together. [GitHub Pages site types and URL formats](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
 
@@ -37,6 +37,6 @@ Start with one relevant community that permits project feedback. Read its curren
 
 Respond to concrete feedback and track actionable problems through the issue templates. Data corrections need official sources, applicant scope and maintainer review before publication. Use synthetic examples for bugs. Give credit to accepted contributors.
 
-Initial progress can be assessed from substantive feedback, reproducible bugs, reviewed data corrections and repeat interest. There is no analytics integration or download counter in this release; do not imply that traffic or conversion metrics are already collected.
+Initial progress can be assessed from substantive feedback, reproducible bugs, reviewed data corrections and repeat interest. Cloudflare Web Analytics measures the official site's aggregate visits, page views, referring hosts and performance from the 0.10.1 deployment onward. It does not count shortlist actions, searches, exports or admissions conversions. GitHub repository traffic and Reddit post views are separate measurements. Previous unmeasured website visits cannot be reconstructed.
 
-This file is a draft and release plan. No Reddit post, advertisement or external message has been sent.
+The owner published tailored announcements to r/SideProject, r/WebApps, r/IMadeThis and r/foss on 12 October 2026 through the same existing Reddit account. Private outreach records and the feedback ledger remain outside this public repository. No paid advertisement or direct message has been sent.

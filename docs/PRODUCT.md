@@ -31,7 +31,7 @@ Help an applicant discover plausible programmes, understand what still needs ver
 
 ## Early measures of usefulness
 
-Track these through voluntary usability sessions before introducing any analytics: whether applicants can find an official source, understand an unknown requirement, create a useful shortlist and prepare an unanswered question. Also measure correction turnaround and the share of records that remain current.
+Track these through voluntary usability sessions: whether applicants can find an official source, understand an unknown requirement, create a useful shortlist and prepare an unanswered question. Aggregate visitor/performance analytics does not measure these tasks or collect profile fields. Also measure correction turnaround and the share of records that remain current.
 
 ## Sustainability
 

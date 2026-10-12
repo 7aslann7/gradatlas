@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.10.1 — 12 October 2026
+
+- Make Safari's two-finger twist rotate visible geography in the finger direction, preserving pinch scale and gesture-start-relative angles.
+- Use GitHub Pages as the single official address and redirect the original Sites prototype there.
+- Add Cloudflare Web Analytics only to the official GitHub Pages project. Exclude the old prototype, local previews, forks and unrelated GitHub project paths; disable automatic workspace route measurement.
+- Explain aggregate visitor/performance measurement in workspace privacy and methodology. Personal profiles, searches, notes and enquiry contents are not sent as custom events.
+
 ## 0.10.0 — 12 October 2026
 
 - Search programmes and institutions from one query, retain country/subject filters when switching result types, and show linked catalogue programmes on institution cards and details.

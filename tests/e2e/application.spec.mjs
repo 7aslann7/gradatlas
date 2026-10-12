@@ -328,6 +328,27 @@ test('map projection, zoom bounds and clustering stay stable when only list orde
   await expect.poll(async()=>Number(await canvas.getAttribute('data-country-label-count'))).toBeGreaterThan(0);
 });
 
+test('two-finger twist follows the fingers without accumulating rotation or changing pan',async({page})=>{
+  await open(page);const canvas=page.locator('.map-canvas');await expect(canvas).toHaveClass(/map-ready/);
+  const originalZoom=Number(await canvas.getAttribute('data-zoom'));
+  const originalCenter=await canvas.getAttribute('data-center');
+  const gesture=(type,rotation=0,scale=1)=>canvas.evaluate((element,values)=>{
+    const event=new Event(values.type,{bubbles:true,cancelable:true});
+    Object.assign(event,{rotation:values.rotation,scale:values.scale});element.dispatchEvent(event);
+  },{type,rotation,scale});
+  await gesture('gesturestart');await gesture('gesturechange',30,2);
+  await expect(canvas).toHaveAttribute('data-bearing','-30.00');
+  expect(Number(await canvas.getAttribute('data-zoom'))).toBeCloseTo(originalZoom+1,2);
+  await gesture('gesturechange',15);
+  await expect(canvas).toHaveAttribute('data-bearing','-15.00');
+  expect(Number(await canvas.getAttribute('data-zoom'))).toBeCloseTo(originalZoom,2);
+  await gesture('gesturechange',-20);
+  await expect(canvas).toHaveAttribute('data-bearing','20.00');
+  await expect(canvas).toHaveAttribute('data-center',originalCenter);
+  await gesture('gestureend');await gesture('gesturechange',90,2);
+  await expect(canvas).toHaveAttribute('data-bearing','20.00');
+});
+
 test('keyboard navigation and compact layouts expose visible usable controls', async ({page}, testInfo) => {
   await open(page); await page.keyboard.press('/'); await expect(page.locator('#search')).toBeFocused();
   await page.keyboard.press('Escape'); await expect(page.locator('#map-results')).not.toBeVisible();
