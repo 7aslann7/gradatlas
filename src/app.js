@@ -7,6 +7,7 @@ import {workspaceWorkbook} from './workspace-export.js';
 import {programmeRoute,catalogueSummary,programmeExport} from './catalogue.js';
 import {comparisonRows,comparisonWorkbook} from './comparison.js';
 import {filterInstitutions,institutionCard,institutionDetail,institutionExport} from './institutions.js';
+import {createDiscoveryIndex,relatedTopics,matchProgramme,sameCountry,countryDisplay} from './search.js';
 const $=s=>document.querySelector(s);
 const ICONS={filter:'<path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="2" fill="white"/><circle cx="15" cy="17" r="2" fill="white"/>',globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/>',bookmark:'<path d="M6 3h12v18l-6-4-6 4V3Z"/>',compare:'<path d="M4 5h6v14H4zM14 5h6v14h-6zM10 9h4M10 15h4"/>',mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/>',shield:'<path d="m12 3 8 3v6c0 4-5 8-8 9-3-1-8-5-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/>',home:'<path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/>',search:'<circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/>',pin:'<path d="M19 10c0 6-7 11-7 11S5 16 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2"/>',arrow:'<path d="M5 12h14m-5-5 5 5-5 5"/>',external:'<path d="M14 3h7v7m0-7L10 14M10 3H4v17h17v-7"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',check:'<path d="m5 12 4 4L19 6"/>',list:'<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>',plus:'<path d="M5 12h14M12 5v14"/>',minus:'<path d="M5 12h14"/>',reset:'<path d="M3 11a9 9 0 1 1 2 7M3 4v7h7"/>',close:'<path d="m6 6 12 12M6 18 18 6"/>',download:'<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/>',copy:'<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/>',leaf:'<path d="M20 3C8 2 2 7 5 15s16 5 15-12Z"/><path d="M3 21 16 8"/>',code:'<path d="m7 6-5 6 5 6m10-12 5 6-5 6M14 3l-4 18"/>',book:'<path d="M12 5c-4-3-8-2-10-1v15c3-1 6-1 10 1 4-2 7-2 10-1V4c-2-1-6-2-10 1Zm0 0v15"/>',calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 11h18"/>'};
 const icon=n=>`<svg class="icon" viewBox="0 0 24 24" aria-hidden="true">${ICONS[n]||ICONS.globe}</svg>`;
@@ -17,6 +18,7 @@ try {const raw=localStorage.getItem(KEY);if(raw){try{storage=normalizeWorkspace(
 let programs=[],institutions=[],institutionManifest=null,registryManifest=null,institutionPromise=null,catalogueMode='programmes',resultsLimit=50,modeRevision=0,page='explore',map=null,resultsOpen=false,clusterIds=null,detailId=null,detailTab='overview',draft=null,guidance=[],studioId=null,studioTab='preparation';
 const filters={query:'',field:'',country:'',open:false,free:false,fit:'',sort:'name'};
 let resultsData=[],resultsKey='',resultsObserver=null;
+let discovery=null,searchSnapshot=null,searchSnapshotKey='',searchTimer=null,directorySearchState='idle';
 const names={welcome:'Welcome to GradAtlas',explore:'Explore programmes',shortlist:'My shortlist',compare:'Compare programmes',workspace:'Application studio',sources:'Data & methodology'};
 const labels={explore:['globe','Map'],shortlist:['bookmark','My shortlist'],compare:['compare','Compare programmes'],workspace:['mail','Application studio'],sources:['shield','Data & methodology']};
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(storage));persistent=true;return true;}catch{if(persistent)toast('Browser storage is unavailable. Changes will last for this session.');persistent=false;return false;}}
@@ -60,12 +62,32 @@ function renderPage(rebuild=false){
 }
 function setResults(open){if(open&&$('#filter-panel')&&!$('#filter-panel').hidden)return;if(!open){clusterIds=null;resultsObserver?.disconnect();}resultsOpen=open;const drawer=$('#map-results');if(!drawer)return;drawer.hidden=!open;document.body.classList.toggle('results-open',open);const button=$('.browse-button');button?.setAttribute('aria-expanded',open);if(open)updateResults();}
 const activeCatalogue=()=>catalogueMode==='institutions'?institutions:programs;
-const filteredLocations=()=>catalogueMode==='institutions'?filterInstitutions(institutions,filters):filterPrograms(programs,filters,storage.profile);
+function searchContext(){
+  const key=JSON.stringify([filters,storage.profile,!!discovery]);
+  if(key!==searchSnapshotKey||!searchSnapshot){
+    const matched=filterPrograms(programs,filters,storage.profile),matching=discovery?.group(matched)||new Map();
+    searchSnapshot={programmes:matched,matching};
+    searchSnapshot.institutions=institutions.length?filterInstitutions(institutions,filters,searchSnapshot):[];
+    searchSnapshotKey=key;
+  }
+  return searchSnapshot;
+}
+const filteredLocations=()=>searchContext()[catalogueMode];
 async function loadInstitutionIndex(){
   institutionPromise??=fetch('data/institutions.json').then(r=>{if(!r.ok)throw Error('Directory unavailable');return r.json();}).catch(error=>{institutionPromise=null;throw error;});
-  institutions=await institutionPromise;return institutions;
+  institutions=await institutionPromise;
+  if(!discovery){discovery=createDiscoveryIndex(programs,institutions);searchSnapshot=null;}
+  directorySearchState='ready';return institutions;
+}
+async function loadSearchDirectory(){
+  if(discovery||directorySearchState==='loading'||directorySearchState==='error')return;
+  if(!institutionManifest){directorySearchState='error';updateResults();return;}
+  directorySearchState='loading';updateResults();
+  try{await loadInstitutionIndex();}catch{directorySearchState='error';}
+  if(page==='explore')updateResults();
 }
 async function setCatalogueMode(mode){
+  if(mode===catalogueMode){setResults(true);return;}
   const revision=++modeRevision,select=$('#catalogue-mode');select.disabled=true;
   try{
     if(mode==='institutions'&&!institutionManifest)throw Error('Directory manifest unavailable');
@@ -75,15 +97,16 @@ async function setCatalogueMode(mode){
     }
     if(revision!==modeRevision)return;
     catalogueMode=mode;clusterIds=null;resultsLimit=50;
-    Object.assign(filters,{query:'',country:'',field:'',open:false,free:false,fit:'',sort:'name'});
-    $('#country').innerHTML='<option value="">All countries & regions</option>'+[...new Set(activeCatalogue().map(p=>p.country))].sort().map(country=>`<option>${e(country)}</option>`).join('');
+    Object.assign(filters,{open:false,free:false,fit:''});
+    if(filters.sort==='deadline'&&mode==='institutions')filters.sort=filters.query.trim()?'relevance':'name';
+    $('#country').innerHTML='<option value="">All countries & regions</option>'+[...new Set([...programs,...institutions].map(p=>countryDisplay(p.country)))].sort().map(country=>`<option>${e(country)}</option>`).join('');
     syncFilters();updateResults();
   }catch{syncFilters();toast('The directory could not load. Programme discovery remains available.');}
   finally{select.disabled=false;}
 }
 function openInstitution(id){
   const p=institutions.find(p=>p.id===id);if(!p||!institutionManifest)return;
-  detailId=id;const d=$('#detail-dialog');d.innerHTML=institutionDetail(p,institutionManifest,icon);if(!d.open)d.show();document.body.classList.add('detail-open');d.scrollTop=0;
+  detailId=id;const d=$('#detail-dialog');d.innerHTML=institutionDetail(p,institutionManifest,icon,discovery?.byInstitution.get(id)||[]);if(!d.open)d.show();document.body.classList.add('detail-open');d.scrollTop=0;
   if(page==='explore')map?.focus(p);d.querySelector('.dialog-close').focus({preventScroll:true});
 }
 function renderExplore(){
@@ -91,9 +114,13 @@ function renderExplore(){
   $('#screen').innerHTML=atlasTemplate(programs,filters,storage.profile,icon);
   $('#results').addEventListener('scroll',()=>{const list=$('#results');if(list.scrollTop+list.clientHeight>=list.scrollHeight-120)loadNextResults();},{passive:true});
   $('#search').addEventListener('focus',()=>{clusterIds=null;setPopover('',false);$('#detail-dialog').close();setResults(true);});
-  $('#search').addEventListener('input',ev=>{filters.query=ev.target.value;clusterIds=null;resultsLimit=50;setResults(true);updateResults();});
-  $('#field').onchange=ev=>{filters.field=ev.target.value;clusterIds=null;resultsLimit=50;setResults(true);syncFilters();updateResults();};
-  $('#country').onchange=ev=>{filters.country=ev.target.value;clusterIds=null;resultsLimit=50;setResults(true);updateResults();if(filters.country)map?.focusCountry(activeCatalogue().filter(p=>p.country===filters.country));};
+  $('#search').addEventListener('input',ev=>{
+    const hadQuery=!!filters.query.trim();filters.query=ev.target.value;clusterIds=null;
+    if(!hadQuery&&filters.query.trim())filters.sort='relevance';else if(!filters.query.trim()&&filters.sort==='relevance')filters.sort='name';
+    clearTimeout(searchTimer);searchTimer=setTimeout(()=>{if(page!=='explore')return;syncFilters();setResults(true);if(filters.query.trim())loadSearchDirectory();},160);
+  });
+  $('#field').onchange=ev=>{filters.field=ev.target.value;clusterIds=null;resultsLimit=50;setResults(true);syncFilters();updateResults();if(filters.field)loadSearchDirectory();};
+  $('#country').onchange=ev=>{filters.country=ev.target.value;clusterIds=null;resultsLimit=50;setResults(true);updateResults();if(filters.country)map?.focusCountry(activeCatalogue().filter(p=>sameCountry(p.country,filters.country)));};
   $('#sort').onchange=ev=>{filters.sort=ev.target.value;resultsLimit=50;updateResults();};
   $('#catalogue-mode').onchange=ev=>setCatalogueMode(ev.target.value);
   if($('#fit'))$('#fit').onchange=ev=>{filters.fit=ev.target.value;clusterIds=null;setResults(true);updateResults();};
@@ -113,11 +140,13 @@ function syncFilters(){
   $('#sort option[value=deadline]').hidden=directory;
   $('#sort option[value=title]').hidden=directory;
   $('#sort option[value=title]').disabled=directory;
-  $('#sort').disabled=directory;
+  $('#sort option[value=relevance]').hidden=!filters.query.trim();
+  $('#sort option[value=relevance]').disabled=!filters.query.trim();
+  $('#sort').disabled=false;
   $('#sort option[value=name]').textContent=directory?'Institution A–Z':'University A–Z';
   $('#sort').value=filters.sort;
-  $('#search').placeholder=directory?'Search institutions':'Search programmes';
-  $('#search').setAttribute('aria-label',directory?'Search institutions':'Search programmes');
+  $('#search').placeholder='Search programmes or institutions';
+  $('#search').setAttribute('aria-label','Search programmes or institutions');
   $('.filter-trigger').setAttribute('aria-label',directory?'Filter institutions':'Filter programmes');
   $('#sort').setAttribute('aria-label',directory?'Sort institutions':'Sort programmes');
   $('#map-results').setAttribute('aria-label',directory?'Institution results':'Programme results');
@@ -153,8 +182,24 @@ function loadNextResults(){
   if(!list||!resultsOpen||page!=='explore'||$('#map-results').hidden||!list.clientHeight||resultsLimit>=resultsData.length)return;
   resultsObserver?.disconnect();$('#results-end')?.remove();
   const next=resultsData.slice(resultsLimit,resultsLimit+50);resultsLimit+=next.length;
-  list.insertAdjacentHTML('beforeend',next.map(p=>catalogueMode==='institutions'?institutionCard(p,icon):card(p)).join('')+resultsEnd());
+  list.insertAdjacentHTML('beforeend',next.map(resultCard).join('')+resultsEnd());
   resultsProgress();watchResultsEnd();
+}
+function resultCard(p){return catalogueMode==='institutions'?institutionCard(p,icon,searchContext().matching.get(p.id)||[]):card(p);}
+function searchSummary(){
+  const context=searchContext(),requested=!!(filters.query.trim()||filters.field),pending=!discovery&&requested;
+  document.querySelectorAll('[data-search-kind]').forEach(button=>{
+    const kind=button.dataset.searchKind,count=kind==='programmes'?context.programmes.length:discovery?context.institutions.length:pending?null:institutionManifest?.indexCount;
+    button.setAttribute('aria-pressed',kind===catalogueMode);
+    button.innerHTML=(kind==='programmes'?'Programmes':'Institutions')+`<span>${count==null?'…':count.toLocaleString('en')}</span>`;
+  });
+  const status=$('#search-status');status.hidden=true;
+  if(pending){status.hidden=false;status.innerHTML=directorySearchState==='error'?'Institution search could not load. <button data-action="retry-search-directory">Retry</button>':'Searching the institution directory…';}
+  else if(catalogueMode==='institutions'&&(filters.query.trim()||filters.field)){status.hidden=false;status.textContent='Matches use institution names and linked catalogue programmes. Programme coverage is partial.';}
+  else if(filters.query.trim()&&context.programmes.some(p=>matchProgramme(p,filters.query)?.fuzzy)){status.hidden=false;status.textContent='Includes close spelling matches. Check programme titles.';}
+  const suggestions=$('#related-searches'),topics=relatedTopics(filters.query);
+  suggestions.hidden=!topics.length;suggestions.innerHTML=topics.length?'<span>Related searches</span>'+topics.map(topic=>`<button data-related-query="${e(topic)}">${e(topic)}</button>`).join(''):'';
+  $('#field-scope').hidden=catalogueMode!=='institutions';
 }
 function updateResults(){
   const list=$('#results');if(!list)return;
@@ -167,8 +212,9 @@ function updateResults(){
   $('#result-count').textContent=`${resultsData.length.toLocaleString('en')} ${noun}${resultsData.length===1?'':'s'}`;
   $('#visible-count').textContent=$('#result-count').textContent;$('#map-results h2').textContent=directory?'Institutions':'Programmes';
   list.dataset.order=!directory&&filters.sort==='name'?'university':'programme';list.setAttribute('aria-label',directory?'Institution list':'Programme list');
-  list.innerHTML=resultsData.length?resultsData.slice(0,resultsLimit).map(p=>directory?institutionCard(p,icon):card(p)).join('')+resultsEnd():empty('A new direction?',`No ${noun}s match these filters. Broaden your search.`,'explore','Clear filters');
+  list.innerHTML=resultsData.length?resultsData.slice(0,resultsLimit).map(resultCard).join('')+resultsEnd():empty('A new direction?',directory?'No matching institutions in the available index. Programme coverage is partial; this does not establish that a field is unavailable.':`No ${noun}s match these filters. Broaden your search.`,'explore','Clear filters');
   list.scrollTo({top:scrollTop,behavior:'instant'});resultsProgress();watchResultsEnd();
+  searchSummary();
   if(!resultsData.length)$('#results [data-nav]').dataset.action='reset';map?.update(locations);
 }
 function renderShortlist(){const list=programs.filter(p=>storage.saved.includes(p.id));$('#workspace-screen').innerHTML=pageHead('YOUR WORKSPACE','My shortlist','Keep the programmes that spark your curiosity. Track your next step, one application at a time.',`<button class="button secondary" data-action="export-workspace">${icon('download')}Download Excel .xlsx</button>`)+`<div class="shortlist-grid">${list.length?list.map(p=>card(p,true)).join(''):empty('Start with a little curiosity.','Save programmes using the bookmark icon. Your notes, preparation checklist and application status stay in this browser.')}</div><p class="explorer-note">Saved in this browser. Excel includes your programme activity, notes and saved drafts. Recovery backups are available in Data & methodology.</p>`;}
@@ -214,7 +260,7 @@ function generateDraft(p,regenerate=true){
 function evidenceDisclosure(p){const labels={linked:'Source-linked',recorded:'Recorded · field source pending',unknown:'Not recorded',stale:'Source needs rechecking'};return `<details class="evidence-disclosure"><summary>Evidence by field</summary><table class="evidence-table"><thead><tr><th>Field</th><th>Evidence</th></tr></thead><tbody>${programmeEvidence(p).map(r=>`<tr><th scope="row">${e(r.label)}</th><td>${labels[r.status]}${r.source?`<a href="${e(r.source)}" target="_blank" rel="noopener noreferrer">Source · ${formatDate(r.checkedAt)} ↗</a>`:''}</td></tr>`).join('')}</tbody></table></details>`;}
 function renderSources(){
   const coverage=evidenceCoverage(programs),scope=catalogueSummary(programs);
-  const catalogues=`<section class="method-card catalogue-explanation"><h2>Two different catalogues</h2><table class="methodology-table"><tbody><tr><th scope="row">${programs.length} programme / specialisation records</th><td>${scope.programmeSources.toLocaleString('en')} records with programme-page sources and ${scope.registry.toLocaleString('en')} registry-backed degree identities. Admission evidence is partial; registry presence does not prove an available intake. Several records may belong to one institution; this is not a count of universities or a complete global programme list.</td></tr><tr><th scope="row">${institutionManifest?.indexCount.toLocaleString('en')||'Global'} institution records</th><td>Education-type identities from ROR: names, aliases, registry website links and approximate localities. A record does not establish a master's degree, accreditation, admission rules or supervisor availability.</td></tr></tbody></table><p>For example, Nazarbayev University is an institution. Its Political Science and International Relations MA is a programme. The directory helps you discover institutions whose programmes GradAtlas has not yet reviewed.</p><p>Both catalogues are shared research data. My profile, shortlist and personal notes belong to your separate browser-local workspace.</p></section>`;
+  const catalogues=`<section class="method-card catalogue-explanation"><h2>Two different catalogues</h2><p>Search links programme records to institution identities through explicit ROR IDs, unique names within a country or unambiguous source domains. Subject matches use linked catalogue programmes. Institution name matches and missing programme coverage do not establish degree availability. Related searches are optional; current intakes and admissions need separate checks.</p><table class="methodology-table"><tbody><tr><th scope="row">${programs.length} programme / specialisation records</th><td>${scope.programmeSources.toLocaleString('en')} records with programme-page sources and ${scope.registry.toLocaleString('en')} registry-backed degree identities. Admission evidence is partial; registry presence does not prove an available intake. Several records may belong to one institution; this is not a count of universities or a complete global programme list.</td></tr><tr><th scope="row">${institutionManifest?.indexCount.toLocaleString('en')||'Global'} institution records</th><td>Education-type identities from ROR: names, aliases, registry website links and approximate localities. A record does not establish a master's degree, accreditation, admission rules or supervisor availability.</td></tr></tbody></table><p>For example, Nazarbayev University is an institution. Its Political Science and International Relations MA is a programme. The directory helps you discover institutions whose programmes GradAtlas has not yet reviewed.</p><p>Both catalogues are shared research data. My profile, shortlist and personal notes belong to your separate browser-local workspace.</p></section>`;
   const registry=registryManifest?`<section class="method-card"><h2>Registered master's degrees · DUO RIO</h2><p>${scope.registry.toLocaleString('en')} Dutch degree identities from the official HO Opleidingsoverzicht snapshot dated ${e(registryManifest.snapshotDate)}. Active registration dates, recognised degree codes and institution mappings are checked; applications and teaching routes have not been individually reviewed.</p><p>Modes, languages and repeated offerings are grouped by provider and registered degree code. Joint degrees are represented once. Some registered degrees have no current offering in the snapshot. A registration is not an open intake, and the directory of institutions remains a separate catalogue.</p><p>Original international degree names are used where supplied; otherwise legal Dutch names remain. Subject groups are title-based discovery classifications. Coordinates use approximate ROR/GeoNames institution localities, which can differ from the teaching campus.</p><p>${e(registryManifest.attribution)}</p><p>Publisher licence: Creative Commons Attribution; no version was specified in the metadata. Preserve the publisher's <a href="${e(registryManifest.resolvedLicenceUrl)}" target="_blank" rel="noopener noreferrer">licence reference</a>, source credit and GradAtlas transformation notice. Do not relabel it CC0 or assume a particular CC BY version.</p><a class="source-link" href="${e(registryManifest.datasetUrl)}" target="_blank" rel="noopener noreferrer">DUO source dataset & metadata ↗</a><a class="source-link" href="data/programme-registry-manifest.json" download>Download registry provenance ↗</a></section>`:'';
   const reuse=`<details class="evidence-disclosure publication-terms"><summary>Data reuse and publication terms</summary><div class="reuse-body"><table class="methodology-table"><tbody><tr><th scope="row">ROR identity metadata</th><td><a href="https://ror.readme.io/docs/data-dump" target="_blank" rel="noopener noreferrer">CC0 1.0</a> permits copying, modification and redistribution, including commercial use. It does not grant trademark rights or institutional endorsement.</td></tr><tr><th scope="row">GeoNames locality data</th><td><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> permits sharing and adaptation, including commercial use. Keep provider credit, source/licence links and modification notices, and do not add restrictions on the licensed data or imply endorsement. Preserve any supplied notices. The directory export carries this provenance.</td></tr><tr><th scope="row">Programme information and source pages</th><td>GradAtlas records short factual information, original summaries and official links. Linked university pages, copied expressions, logos, photographs and external databases retain their own rights and terms. A source link or the software MIT licence does not grant blanket permission to copy those materials.</td></tr><tr><th scope="row">Map and software</th><td><a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth</a> boundaries are public domain. GradAtlas software uses MIT; MapLibre uses BSD-3-Clause and ExcelJS uses MIT. Preserve the applicable software licence notices when redistributing.</td></tr></tbody></table><p>Permission to reuse data is separate from its accuracy. Open licences provide no guarantee that a website, location, fee or admission rule is current or complete. An institution's inclusion does not imply a partnership with GradAtlas.</p><p>Institution downloads include records, source release, attribution, licence links, transformation notes and limitations in one JSON document. Keep this information with reused data. The source index checksum describes the published compact index, not the export wrapper.</p></div></details>`;
   const directory=institutionManifest?`<section class="method-card directory-method"><h2>Global institution directory</h2><p><strong>${institutionManifest.indexCount.toLocaleString('en')}</strong> active education-type ROR records across <strong>${institutionManifest.indexCountryCount}</strong> countries/territories. These are institution identity records; they do not establish master’s availability, accreditation or admissions eligibility. ROR is research-focused and is not an exhaustive university register. Separately identified organisations or campuses are not automatically deduplicated into one university.</p><p>Release ${e(institutionManifest.release)}, published ${e(institutionManifest.releasedAt)}. One point per ROR identifier, at its first valid GeoNames locality. Names, aliases, websites and countries come from this registry; websites have not all been checked for current availability. Locations are approximate cities or administrative areas.</p><p>Institution metadata: <a href="https://ror.org/" target="_blank" rel="noopener noreferrer">ROR</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">CC0 1.0</a>. Geographic data: <a href="https://www.geonames.org/" target="_blank" rel="noopener noreferrer">GeoNames</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Filtered and reformatted by GradAtlas; upstream legacy licence notes are retained in the manifest.</p><a class="source-link" href="${e(institutionManifest.recordUrl)}" target="_blank" rel="noopener noreferrer">Pinned ROR source release ↗</a><div class="privacy-actions"><button class="button secondary small" data-action="open-directory">Explore institution directory</button><a class="button secondary small" href="data/institution-manifest.json" download="gradatlas-institution-manifest.json">Download provenance manifest</a><button class="button secondary small" data-action="export-institutions">Download directory + licences</button></div><p class="workspace-hint">A pinned bulk import is checked for identifiers, source checksum, filter, coordinates and totals. New master’s programme facts require separate official-source evidence and review; no degree or grade rule is inferred from the directory.</p></section>`:'';
@@ -249,12 +295,15 @@ function toggleCompare(id,add){if(add&&storage.compare.length>=3){toast('Choose 
 document.addEventListener('click',async ev=>{
   if(!ev.target.closest('.floating-panel,[data-action="toggle-menu"],[data-action="toggle-filters"]'))setPopover('',false);
   const b=ev.target.closest('button,a[data-nav]');if(!b)return;
+  if(b.dataset.searchKind){$('#detail-dialog').close();setPopover('',false);await setCatalogueMode(b.dataset.searchKind);setResults(true);return;}
+  if(b.dataset.relatedQuery){filters.query=b.dataset.relatedQuery;filters.sort='relevance';clusterIds=null;syncFilters();setResults(true);loadSearchDirectory();return;}
+  if(b.dataset.action==='retry-search-directory'){directorySearchState='idle';loadSearchDirectory();return;}
   if(b.dataset.action==='toggle-menu'){setPopover('workspace-menu',$('#workspace-menu').hidden);return;}
   if(b.dataset.action==='toggle-filters'){setPopover('filter-panel',$('#filter-panel').hidden);return;}
   if(['browse','show-results'].includes(b.dataset.action)){clusterIds=null;setPopover('',false);resultsOpen=true;if(page==='explore')setResults(true);else location.hash='explore';return;}
   if(b.dataset.action==='map-help'){setPopover('',false);toast('Drag or use two fingers to move. Pinch or Ctrl + scroll to zoom. Shift + drag to rotate.');return;}
   if(b.dataset.action==='toggle-results'){setResults(!resultsOpen);return;}
-  if(b.dataset.action==='reset'){clusterIds=null;Object.assign(filters,{query:'',field:'',country:'',open:false,free:false,fit:''});syncFilters();updateResults();return;}
+  if(b.dataset.action==='reset'){clusterIds=null;Object.assign(filters,{query:'',field:'',country:'',open:false,free:false,fit:''});if(filters.sort==='relevance')filters.sort='name';syncFilters();updateResults();return;}
   if(b.dataset.nav){rememberStudio();setPopover('',false);if(b.dataset.nav==='explore'){resultsOpen=false;if(page==='explore')setResults(false);else location.hash='explore';}else location.hash=b.dataset.nav;return;}
   if(b.dataset.studioTab){rememberStudio();studioTab=b.dataset.studioTab;renderWorkspace();return;}
   if(b.dataset.institution){openInstitution(b.dataset.institution);return;}

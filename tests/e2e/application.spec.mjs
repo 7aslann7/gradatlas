@@ -73,6 +73,53 @@ test('country and field filters intersect and reset consistently', async ({page}
   await expect(page.locator('#country')).toHaveValue(''); await expect(page.locator('#field')).toHaveValue('');
 });
 
+test('one search finds Dutch Supply Chain programmes and their institutions without losing the query',async({page})=>{
+  await open(page);await browse(page);
+  await page.locator('#search').fill('supply chain netherlands');
+  await expect(page.locator('#result-count')).toHaveText('8 programmes');
+  await expect(page.locator('#sort')).toHaveValue('relevance');
+  await expect(page.getByRole('button',{name:'Search institutions',exact:true})).toContainText('7');
+  await page.getByRole('button',{name:'Search institutions',exact:true}).click();
+  await expect(page.locator('#result-count')).toHaveText('7 institutions');
+  await expect(page.locator('#search')).toHaveValue('supply chain netherlands');
+  await expect(page.locator('#results .institution-card')).toHaveCount(7);
+  await expect(page.locator('.institution-programmes').first()).toContainText('Supply Chain');
+  const selectedId=await page.locator('.institution-programmes [data-detail]').first().getAttribute('data-detail');
+  await page.locator('.institution-programmes [data-detail]').first().click();
+  await expect(page.locator('#detail-title')).toHaveText(programmes.find(p=>p.id===selectedId).title);
+  await page.getByRole('button',{name:'Close programme details',exact:true}).click();
+  await page.getByRole('button',{name:'Search programmes',exact:true}).click();
+  await expect(page.locator('#result-count')).toHaveText('8 programmes');
+});
+
+test('spelling variants, accents and related searches remain explicit and reset their list',async({page})=>{
+  await open(page);await browse(page);
+  await page.locator('#search').fill('suply chain');
+  await expect(page.locator('#result-count')).toHaveText('8 programmes');
+  await expect(page.locator('#search-status')).toContainText('close spelling');
+  await page.locator('#search').fill('tubingen');
+  await expect(page.locator('#results')).toContainText('University of Tübingen');
+  await page.locator('#search').fill('supply chain');
+  await expect(page.locator('#related-searches')).toContainText('Related searches');
+  await page.locator('#related-searches').getByRole('button',{name:'Logistics',exact:true}).click();
+  await expect(page.locator('#search')).toHaveValue('Logistics');
+  await expect(page.locator('#results .program-card').first()).toBeVisible();
+  await expect.poll(()=>page.locator('#results').evaluate(el=>el.scrollTop)).toBe(0);
+});
+
+test('institution field filters use linked catalogue programmes and keep country and subject across result types',async({page})=>{
+  await open(page);await page.getByRole('button',{name:'Filter programmes',exact:true}).click();
+  await page.locator('#country').selectOption('Netherlands');await page.locator('#field').selectOption('Engineering');
+  await page.getByRole('button',{name:/^Show .* programmes?$/}).click();
+  await page.getByRole('button',{name:'Search institutions',exact:true}).click();
+  await expect(page.locator('#search-status')).toContainText('coverage is partial');
+  await expect(page.locator('#results .institution-card').first()).toContainText('matching catalogue programme');
+  await expect(page.locator('#results .institution-card').filter({hasText:'Programme information not yet indexed'})).toHaveCount(0);
+  await page.getByRole('button',{name:'Filter institutions',exact:true}).click();
+  await expect(page.locator('#field')).toHaveValue('Engineering');await expect(page.locator('#country')).toHaveValue('Netherlands');
+  await expect(page.locator('#field-scope')).toBeVisible();
+});
+
 test('profile uses native grade scales, persists and explains local privacy', async ({page}) => {
   await open(page); await navigate(page, 'My profile');
   await expect(page.locator('#profile-dialog')).toContainText('GradAtlas does not upload these answers');
@@ -250,6 +297,14 @@ test('directory outage returns safely to programme mode', async ({page}) => {
   await expect(page.locator('#toast')).toContainText('Programme discovery remains available');
   await expect(page.locator('#catalogue-mode')).toHaveValue('programmes');
   await expect(page.locator('#catalogue-mode')).toBeEnabled();
+  await page.getByRole('button',{name:'Close filters',exact:true}).click();
+  await page.locator('#search').fill('supply chain netherlands');
+  await expect(page.locator('#result-count')).toHaveText('8 programmes');
+  await expect(page.locator('#search-status')).toContainText('could not load');
+  await page.unroute('**/data/institutions.json');
+  await page.locator('#search-status').getByRole('button',{name:'Retry',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Search institutions',exact:true})).toContainText('7');
+  await expect(page.locator('#search')).toHaveValue('supply chain netherlands');
 });
 
 test('map projection, zoom bounds and clustering stay stable when only list order changes', async ({page}) => {

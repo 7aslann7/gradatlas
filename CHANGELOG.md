@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.10.0 — 12 October 2026
+
+- Search programmes and institutions from one query, retain country/subject filters when switching result types, and show linked catalogue programmes on institution cards and details.
+- Join programmes through explicit ROR IDs, unique country/name identities or unique source-domain matches; leave unresolved/ambiguous institutions unlinked. Source records remain unchanged.
+- Add word-order independent search, accent normalisation, conservative one-edit spelling matches, explicit Best match ordering and separate related-topic suggestions.
+- Label partial programme coverage, distinguish institution name matches from known programme records, and provide directory retry without interrupting programme search.
+
 ## 0.9.2 — 12 October 2026
 
 - Load the next 50 list results automatically near the end, preserve existing cards and scrolling, and keep the visible loaded/total count.

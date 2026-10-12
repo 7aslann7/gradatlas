@@ -1,14 +1,24 @@
 import {escapeHTML as e,compareNames} from './core.js';
+import {matchInstitution,matchProgramme,sameCountry} from './search.js';
 
-export function filterInstitutions(records,filters) {
-  const query=(filters.query||'').trim().toLocaleLowerCase('en');
-  const list=records.filter(p=>(!filters.country||p.country===filters.country)&&(!query||[p.name,p.city,p.country,...p.names].join(' ').toLocaleLowerCase('en').includes(query)));
-  list.sort((a,b)=>compareNames(a.name,b.name)||compareNames(a.country,b.country)||compareNames(a.city,b.city)||(a.id<b.id?-1:a.id>b.id?1:0));
+export function filterInstitutions(records,filters,context) {
+  const scores=new Map();
+  const list=records.filter(p=>{
+    if(filters.country&&!sameCountry(p.country,filters.country))return false;
+    const linked=context?.matching.get(p.id)||[],direct=matchInstitution(p,filters.query);
+    if(context&&filters.field&&!linked.length)return false;
+    if(!direct&&!linked.length)return false;
+    scores.set(p.id,Math.max(direct?.score||0,...linked.map(p=>(matchProgramme(p,filters.query)?.score||0)+50)));
+    return true;
+  });
+  list.sort((a,b)=>(filters.sort==='relevance'?scores.get(b.id)-scores.get(a.id):0)||compareNames(a.name,b.name)||compareNames(a.country,b.country)||compareNames(a.city,b.city)||(a.id<b.id?-1:a.id>b.id?1:0));
   return list;
 }
 
-export function institutionCard(p,icon) {
-  return `<article class="program-card institution-card"><button class="title-button" data-institution="${p.id}">${e(p.name)}</button><p class="university-name">${e(p.city)}, ${e(p.country)}</p><p class="institution-scope">Institution directory · degree availability not verified</p><button class="card-link" data-institution="${p.id}">View institution ${icon('arrow')}</button></article>`;
+export function institutionCard(p,icon,linked=[]) {
+  const scope=linked.length?`${linked.length} matching catalogue programme${linked.length===1?'':'s'}`:'Programme information not yet indexed for this search';
+  const programmes=linked.length?`<div class="institution-programmes">${linked.slice(0,2).map(p=>`<button data-detail="${p.id}">${e(p.title)} ${icon('arrow')}</button>`).join('')}${linked.length>2?`<span>+${linked.length-2} more in institution details</span>`:''}</div>`:'';
+  return `<article class="program-card institution-card" data-institution-record="${p.id}"><button class="title-button" data-institution="${p.id}">${e(p.name)}</button><p class="university-name">${e(p.city)}, ${e(p.country)}</p><p class="institution-scope">${scope}</p>${programmes}<button class="card-link" data-institution="${p.id}">View institution ${icon('arrow')}</button></article>`;
 }
 
 export function institutionExport(records,manifest) {
@@ -24,7 +34,8 @@ export function institutionExport(records,manifest) {
   };
 }
 
-export function institutionDetail(p,manifest,icon) {
+export function institutionDetail(p,manifest,icon,linked=[]) {
   const website=p.website?`<a class="button" href="${e(p.website)}" target="_blank" rel="noopener noreferrer">Institution website · ROR link ${icon('external')}</a>`:'';
-  return `<header class="detail-header"><button class="dialog-close" data-close="detail" aria-label="Close institution details">${icon('close')}</button><h1 id="detail-title">${e(p.name)}</h1><p>${e(p.city)}, ${e(p.country)}</p></header><div class="detail-content"><div class="callout">Institution directory. This ROR record does not confirm accreditation, master's availability, current admissions or supervisor capacity.</div><h2>Explore the institution</h2><p>Look for postgraduate programmes, the relevant department and applicant-specific admissions instructions on the institution's website. This registry-provided website link has not been independently checked for current availability.</p>${website}<h2>Identity and location sources</h2><p>Active education-type record in the Research Organization Registry, snapshot ${e(manifest.release)} · ${e(manifest.releasedAt)}. ROR focuses on research-related organisations; this is not an exhaustive list of universities. Independently identified organisations and campuses can have separate records.</p><p>Coordinates identify an approximate GeoNames locality. They are not independently verified campus entrances; several institutions can share a city location.</p><a class="source-link" href="${e(p.ror)}" target="_blank" rel="noopener noreferrer">ROR identity record ${icon('external')}</a><a class="source-link" href="https://www.geonames.org/${p.geonamesId}/" target="_blank" rel="noopener noreferrer">GeoNames locality ${icon('external')}</a><a class="source-link" href="${e(manifest.recordUrl)}" target="_blank" rel="noopener noreferrer">Dataset release & licence ${icon('external')}</a></div>`;
+  const programmes=`<h2>Programmes in this catalogue</h2>${linked.length?`<p>${linked.length} linked programme${linked.length===1?'':'s'}. Registered identities and programme-page records retain their own evidence. Current admissions and intakes need separate review.</p><div class="institution-programmes detail-programmes">${linked.map(p=>`<button data-detail="${p.id}">${e(p.title)} ${icon('arrow')}</button>`).join('')}</div>`:'<p>Programme information not yet indexed. This does not mean the institution has no master’s programmes. Explore its official catalogue below.</p>'}`;
+  return `<header class="detail-header"><button class="dialog-close" data-close="detail" aria-label="Close institution details">${icon('close')}</button><h1 id="detail-title">${e(p.name)}</h1><p>${e(p.city)}, ${e(p.country)}</p></header><div class="detail-content"><div class="callout">Institution directory. This ROR record does not confirm accreditation, master's availability, current admissions or supervisor capacity.</div>${programmes}<h2>Explore the institution</h2><p>Look for postgraduate programmes, the relevant department and applicant-specific admissions instructions on the institution's website. This registry-provided website link has not been independently checked for current availability.</p>${website}<h2>Identity and location sources</h2><p>Active education-type record in the Research Organization Registry, snapshot ${e(manifest.release)} · ${e(manifest.releasedAt)}. ROR focuses on research-related organisations; this is not an exhaustive list of universities. Independently identified organisations and campuses can have separate records.</p><p>Coordinates identify an approximate GeoNames locality. They are not independently verified campus entrances; several institutions can share a city location.</p><a class="source-link" href="${e(p.ror)}" target="_blank" rel="noopener noreferrer">ROR identity record ${icon('external')}</a><a class="source-link" href="https://www.geonames.org/${p.geonamesId}/" target="_blank" rel="noopener noreferrer">GeoNames locality ${icon('external')}</a><a class="source-link" href="${e(manifest.recordUrl)}" target="_blank" rel="noopener noreferrer">Dataset release & licence ${icon('external')}</a></div>`;
 }

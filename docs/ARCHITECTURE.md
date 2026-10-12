@@ -49,3 +49,11 @@ Optional cloud workspaces require identity, per-user authorization, export/delet
 ## Deployment
 
 The primary public website is the GitHub Pages project site at `https://7aslann7.github.io/gradatlas/`. Runtime imports, assets and data requests use relative paths and support the project subdirectory. The `pages` CI job publishes `dist/` only after unit/data and all three browser jobs succeed on a push to `main`; pull requests cannot deploy. Sites also hosts a separate public origin using the account-specific `.openai/hosting.json` with `static.directory = dist`. Repository visibility and hosting audiences are independent settings. Browser-local workspaces do not sync across these origins.
+
+## Unified discovery search
+
+`search.js` normalises search text without changing source records. Cached token documents match all query words across title, institution, field, tags and location. Long words allow one edit or adjacent transposition; short acronyms require exact tokens. Best match scores emphasise titles, with stable name/ID ties. Related topics are buttons that replace the query only after selection, not silent synonym expansion.
+
+The institution directory loads lazily after a query/subject selection or explicit directory navigation. A cached local index links explicit ROR programme IDs first, then unique normalised institution names within a country, then a single unambiguous institution source domain within that country. Ambiguous domains/names and unresolved explicit ROR identities remain unlinked; joint programmes may link only the identifiable provider, so institution programme lists are not exhaustive. No source facts, admissions claims or profile data are uploaded.
+
+Programme matches are grouped by linked institution, allowing a subject query to find institutions whose names omit that subject. Direct institution-name/location matches can also appear, with an explicit missing programme-coverage label. Selecting a subject filter requires an associated catalogue programme carrying that facet; inferred registry facets retain their original evidence scope. An empty result never establishes degree absence. Cards show at most two programme links; institution details show all associated catalogue records. Directory-load failure leaves programme results available and exposes a retry.

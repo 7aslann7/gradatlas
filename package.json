@@ -1,6 +1,6 @@
 {
   "name": "gradatlas",
-  "version": "0.9.2",
+  "version": "0.10.0",
   "private": true,
   "type": "module",
   "description": "An open-source master's discovery and application workspace with official-source provenance.",
@@ -12,7 +12,7 @@
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check src/app.js && node --check src/core.js && node --check src/map.js && node --check src/experience.js && node --check src/map-input.js && node --check src/map-geometry.js && node --check src/studio.js && node --check src/evidence.js && node --check src/workspace-export.js && node --check src/catalogue.js && node --check src/comparison.js && node --check src/institutions.js && node scripts/validate-data.mjs",
+    "check": "node --check src/app.js && node --check src/search.js && node --check src/core.js && node --check src/map.js && node --check src/experience.js && node --check src/map-input.js && node --check src/map-geometry.js && node --check src/studio.js && node --check src/evidence.js && node --check src/workspace-export.js && node --check src/catalogue.js && node --check src/comparison.js && node --check src/institutions.js && node scripts/validate-data.mjs",
     "preview": "node scripts/serve.mjs dist",
     "test:e2e": "playwright test"
   },

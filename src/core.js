@@ -1,3 +1,4 @@
+import {matchProgramme,sameCountry} from './search.js';
 export const FIELDS = ['AI & Machine Learning', 'Architecture & Planning', 'Arts & Humanities', 'Business & Management', 'Computer Science', 'Cybersecurity', 'Economics & Finance', 'Education', 'Engineering', 'Environment', 'Law', 'Life Sciences', 'Medicine & Public Health', 'Physics & Mathematics', 'Public Policy', 'Quantum Computing', 'Social Sciences'];
 export const CHECKLIST = ['Check degree and course prerequisites', 'Confirm official grade equivalency', 'Prepare transcript and degree certificate', 'Check language tests and exemptions', 'Check whether a CV and programme-specific statement are required', 'Arrange references if required', 'Check fees, funding and visa costs', 'Verify deadline and submit on the official portal'];
 export function normalizeWorkspace(raw) {
@@ -88,14 +89,14 @@ export const compareNames=(a,b)=>nameCollator.compare(a||'',b||'');
 const universityOrder=(a,b)=>compareNames(a.university,b.university)||compareNames(a.title,b.title)||compareNames(a.country,b.country)||compareNames(a.city,b.city)||(a.id<b.id?-1:a.id>b.id?1:0);
 const programmeOrder=(a,b)=>compareNames(a.title,b.title)||universityOrder(a,b);
 export function filterPrograms(programs, filters, profile, now=todayKey()) {
-  const query = (filters.query||'').trim().toLocaleLowerCase('en');
-  let result=programs.filter(p=> (!query||[p.title,p.university,p.city,p.country,...p.fields,...p.tags].join(' ').toLocaleLowerCase('en').includes(query))
-    && (!filters.field||p.fields.includes(filters.field))
-    && (!filters.country||p.country===filters.country)
+  const scores=new Map();
+  let result=programs.filter(p=> {const match=matchProgramme(p,filters.query);if(!match)return false;scores.set(p.id,match.score);return (!filters.field||p.fields.includes(filters.field))
+    && (!filters.country||sameCountry(p.country,filters.country))
     && (!filters.open||applicationStatus(p,now).key==='open')
     && (!filters.free||p.tuition.free===true)
-    && (!filters.fit||assess(p,profile).key===filters.fit));
-  if(filters.sort==='name')result.sort(universityOrder);
+    && (!filters.fit||assess(p,profile).key===filters.fit);});
+  if(filters.sort==='relevance')result.sort((a,b)=>scores.get(b.id)-scores.get(a.id)||universityOrder(a,b));
+  else if(filters.sort==='name')result.sort(universityOrder);
   else if(filters.sort==='deadline'){const deadline=p=>p.window?.closes>=now?p.window.closes:'9999';result.sort((a,b)=>deadline(a).localeCompare(deadline(b))||programmeOrder(a,b));}
   else result.sort(programmeOrder);
   return result;

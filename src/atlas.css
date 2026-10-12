@@ -55,6 +55,20 @@ button:focus-visible,a:focus-visible{background-color:#dcebd3;color:#264b36}
 .institution-card .title-button{font-size:13px;line-height:1.6}
 .institution-scope{font-size:10px;color:var(--muted);line-height:1.7;margin:10px 0}
 .institution-card>.card-link{margin-top:5px;font-size:11px}
+.search-kinds{display:flex;gap:5px;margin:0 20px 12px;flex-shrink:0}
+.search-kinds button{display:flex;align-items:center;justify-content:center;gap:8px;flex:1;padding:9px 7px;border-radius:8px;font-size:11px;color:#71816c;background:#f4f6f0}
+.search-kinds button[aria-pressed=true]{background:#e4ebdf;color:#334437;font-weight:600}
+.search-kinds button span{font-size:10px;font-variant-numeric:tabular-nums;font-weight:400}
+.search-status{margin:0;padding:10px 23px;font-size:10px;line-height:1.6;color:#71816c;flex-shrink:0}
+.search-status button{text-decoration:underline;margin-left:5px;color:#334437}
+.related-searches{display:flex;align-items:center;flex-wrap:wrap;gap:5px;padding:9px 23px 12px;border-bottom:1px solid #e6ece1;flex-shrink:0}
+.related-searches>span{font-size:9px;color:#71816c;width:100%;margin-bottom:2px}
+.related-searches button{font-size:10px;line-height:1.5;padding:4px 7px;border:1px solid #dce5d4;border-radius:6px;color:#52634e}
+.institution-programmes{display:flex;flex-direction:column;gap:8px;margin:10px 0 14px}
+.institution-programmes button{display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;font-size:11px;line-height:1.5;color:#42573d}
+.institution-programmes .icon{width:12px;height:12px;flex-shrink:0}
+.institution-programmes>span{font-size:9px;color:#71816c}
+.detail-programmes button{font-size:13px;padding:10px 0;border-bottom:1px solid #e6ece1}
 .catalogue-scope{margin-top:10px;font-size:10px;line-height:1.6;padding:8px 12px;width:fit-content;max-width:100%;border-radius:9px;background:#ffffffeb;color:#3b6475;box-shadow:0 3px 12px #142d3b10}
 .directory-method{margin-bottom:24px}
 .source-row>div{max-width:45%;overflow-wrap:anywhere;text-align:right}

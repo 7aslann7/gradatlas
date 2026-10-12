@@ -35,7 +35,9 @@ Created and maintained by [@7aslann7](https://github.com/7aslann7). The [GradAtl
 - Country/territory labels use pinned Natural Earth label anchors and local fonts, with zoom-dependent sizing and collision handling in both map projections.
 - Drag and two-finger pan, pinch zoom, globe rotation, keyboard controls and visible zoom/compass buttons.
 - Native MapLibre circle layers and clustering keep locations attached to the map during motion; keyboard-accessible location controls, campus selection and reduced-motion support require no map API key or remote tiles.
-- Search reviewed programme records and clearly labelled registered degrees by programme, university, location and research keyword; filter by field, country, verified application availability and recorded tuition-free status.
+- One query searches programmes and institutions, with counted result-type controls and programme links on institution cards/details. Country and subject filters remain when switching result types; institution subject filters require linked catalogue programmes.
+- Word-order independent search supports accents, conservative spelling matches and optional related-topic suggestions. Best match ranking is available alongside explicit alphabetical order.
+- Search reviewed programme records and clearly labelled registered degrees by programme, university, location and research keyword; filter by field, country, recorded application availability and recorded tuition-free status. Unindexed programme coverage remains explicit.
 - Programme details with requirements, applicant-category notes, official links and last-review dates.
 - Profile reviews for recorded grade and IELTS thresholds. Different grade systems always require official equivalency; the app never predicts admission probability.
 - A compact right-hand comparison drawer for up to three programmes, with a formatted Excel `.xlsx` export and linked source sheet.
