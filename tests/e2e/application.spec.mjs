@@ -14,6 +14,10 @@ async function navigate(page, name) {
   await page.locator('#workspace-menu').getByRole('button', {name, exact: true}).click();
 }
 async function browse(page) {await navigate(page, 'Browse programmes');}
+async function findProgramme(page, programme) {
+  await page.locator('#search').fill(programme.university);
+  await expect(page.locator(`#results [data-detail="${programme.id}"]`).first()).toBeVisible();
+}
 async function workspace(page) {return page.evaluate(key => JSON.parse(localStorage.getItem(key)), KEY);}
 async function seed(page, state) {
   await page.addInitScript(({key, state}) => localStorage.setItem(key, JSON.stringify(state)), {key: KEY, state});
@@ -86,6 +90,7 @@ test('profile uses native grade scales, persists and explains local privacy', as
 
 test('shortlist tracking, checklist and escaped notes survive reload', async ({page}) => {
   await open(page); await browse(page);
+  await findProgramme(page, first);
   await page.locator(`[data-save="${first.id}"]`).first().click();
   await navigate(page, 'My shortlist');
   await expect(page.locator('.shortlist-drawer')).toBeVisible();
@@ -103,7 +108,11 @@ test('shortlist tracking, checklist and escaped notes survive reload', async ({p
 
 test('comparison enforces three selections and downloads a real sourced Excel table', async ({page}) => {
   await open(page); await browse(page);
-  for (const p of programmes.slice(0, 3)) await page.locator(`[data-compare="${p.id}"]`).check();
+  for (const p of programmes.slice(0, 3)) {
+    await findProgramme(page, p);
+    await page.locator(`[data-compare="${p.id}"]`).check();
+  }
+  await findProgramme(page, programmes[3]);
   await page.locator(`[data-compare="${programmes[3].id}"]`).click();
   await expect(page.locator(`[data-compare="${programmes[3].id}"]`)).not.toBeChecked();
   await navigate(page, 'Compare programmes');
@@ -181,7 +190,8 @@ test('backup export/import, cancellation, invalid files and local deletion prote
 
 test('blocked storage keeps a useful session and explains the limitation', async ({page}) => {
   await page.addInitScript(() => {Storage.prototype.getItem = Storage.prototype.setItem = () => {throw new DOMException('Storage blocked', 'SecurityError');};});
-  await open(page); await browse(page); await page.locator(`[data-save="${first.id}"]`).first().click();
+  await open(page); await browse(page); await findProgramme(page, first);
+  await page.locator(`[data-save="${first.id}"]`).first().click();
   await navigate(page, 'My shortlist'); await expect(page.locator('.shortlist-drawer')).toContainText(first.title);
   await navigate(page, 'My profile'); await expect(page.locator('#profile-dialog')).toContainText('Session only');
 });
@@ -204,6 +214,7 @@ test('map failure leaves programme discovery and requirements available', async 
   await page.addInitScript(() => {const original = HTMLCanvasElement.prototype.getContext; HTMLCanvasElement.prototype.getContext = function(type, ...args) {return /webgl/i.test(type) ? null : original.call(this, type, ...args);};});
   await open(page); await expect(page.locator('.map-error')).toBeVisible();
   await page.locator('.map-error').getByRole('button', {name: 'Browse programmes'}).click();
+  await findProgramme(page, first);
   await page.locator(`[data-detail="${first.id}"]`).first().click();
   await page.getByRole('tab', {name: 'Requirements', exact: true}).click();
   await expect(page.locator('#detail-content')).toContainText('Check the original information');
