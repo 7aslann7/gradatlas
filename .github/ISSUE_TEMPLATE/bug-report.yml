@@ -1,0 +1,27 @@
+name: Bug report
+description: Report a reproducible problem with GradAtlas.
+title: '[Bug] '
+body:
+  - type: markdown
+    attributes:
+      value: 'This report is public. Use synthetic examples and remove personal notes, grades, application IDs and private drafts from screenshots. Report security vulnerabilities through the private link below the issue templates.'
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: '1. Open the map...'
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, device and release
+      placeholder: 'Safari, macOS, live website'
+    validations:
+      required: true

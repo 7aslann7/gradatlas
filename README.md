@@ -2,7 +2,9 @@
 
 **Master’s programmes, mapped.**
 
-GradAtlas is a free master's discovery and application workspace, with an MIT-licensed source release planned. It brings official programme information, an interactive world map, comparisons and preparation tools into one calm interface.
+[**Open GradAtlas ↗**](https://7aslann7.github.io/gradatlas/) · [Report a data correction](https://github.com/7aslann7/gradatlas/issues/new?template=data-correction.yml) · [Suggest an improvement](https://github.com/7aslann7/gradatlas/issues/new?template=feature-request.yml)
+
+GradAtlas is a free, open-source master's discovery and application workspace, licensed under MIT. It brings official programme information, an interactive world map, comparisons and preparation tools into one calm interface.
 
 The current programme catalogue contains **1,489 degree and specialisation records across 88 countries/regions and 17 subject groups**: **358 records with reviewed programme-page sources**, plus **1,131 registered Dutch degree identities** imported from the official DUO RIO feed. Admissions coverage remains partial. A registry identity is not an individually reviewed admission route or currently available intake; none of these counts is a university ranking or an exhaustive world inventory.
 
@@ -22,7 +24,7 @@ Institution identity, programme identity and reviewed admission criteria are dif
 
 The production application uses semantic HTML, CSS and native JavaScript modules. MapLibre GL JS renders a local Natural Earth map with native geographic clusters; ExcelJS writes comparison workbooks locally. Node.js builds and validates the static site. Node's test runner covers business rules and data integrity; Playwright checks browser flows in GitHub Actions. A checksum-pinned Python importer prepares the ROR institution directory. No application database, paid map API key or applicant account is required.
 
-Created and maintained by [@7aslann7](https://github.com/7aslann7). The [GradAtlas website](https://gradatlas.decentcloud16.chatgpt.site/) is public. The official source repository is [7aslann7/gradatlas](https://github.com/7aslann7/gradatlas), currently private; publishing the source is a separate decision.
+Created and maintained by [@7aslann7](https://github.com/7aslann7). The [GradAtlas website](https://7aslann7.github.io/gradatlas/) and official source repository, [7aslann7/gradatlas](https://github.com/7aslann7/gradatlas), are public. Data corrections, bug reports and proposals can be submitted through [GitHub Issues](https://github.com/7aslann7/gradatlas/issues/new/choose).
 
 ## What works today
 
@@ -111,7 +113,7 @@ The website can help organise research. The university's official process determ
 ## Current limits
 
 - ROR and DUO importers use attributed, checksum-pinned snapshots. They prepare bounded identity data; there is no scheduled source refresh or automatic admission-rule extraction. Current applicant-specific rules still need separate review.
-- No global faculty directory, supervisor availability tracking, public reviews or community submission service yet.
+- No global faculty directory, supervisor availability tracking or public applicant reviews yet. GitHub corrections require maintainer review; there is no automatic community-data publishing service.
 - No application submission, acceptance probabilities, automatic GPA conversion or email delivery.
 - Many records have partial admissions information. Check the notes and official sources for your category.
 - A local profile's degree label provides context; course-level eligibility is still reviewed manually.
@@ -120,6 +122,6 @@ See [workspace privacy](docs/WORKSPACE_PRIVACY.md), [catalogue coverage](docs/CA
 
 ## GitHub and release
 
-The GitHub repository starts private. The included CI workflow validates catalogue records, runs unit tests, builds the site and executes desktop Chromium, desktop WebKit and mobile Chromium end-to-end tests. See [testing and release verification](docs/TESTING.md). The website can be published publicly while this source repository stays private; these are separate settings. Remove account-specific hosting configuration in `.openai/hosting.json` when forking for an independent host; replace it with your own Site identity if using Sites.
+The website and GitHub repository are public. The included CI workflow validates catalogue records, runs unit tests, builds the site and executes desktop Chromium, desktop WebKit and mobile Chromium end-to-end tests. A successful push to `main` then publishes `dist/` to GitHub Pages; pull requests cannot deploy. The official website is `https://7aslann7.github.io/gradatlas/`. All runtime asset paths support this project subdirectory. See [testing and release verification](docs/TESTING.md) and the [launch copy and outreach plan](docs/LAUNCH.md). Repository visibility and hosting audience are separate settings. Remove account-specific hosting configuration in `.openai/hosting.json` when forking for an independent host; replace it with your own Site identity if using Sites. The original Sites preview remains a separate hosting origin.
 
 Project code is licensed under MIT. MapLibre retains BSD-3-Clause and ExcelJS retains MIT. ROR metadata and GeoNames locality data retain their separate CC0 and attribution terms; see [third-party notices](THIRD_PARTY_NOTICES.md). Original university content and referenced pages retain their own ownership and terms. Do not contribute copied university pages, personal applicant records or unpublished contact details.

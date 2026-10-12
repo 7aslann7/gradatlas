@@ -20,6 +20,6 @@ Register the provider, licence, attribution, allowed scope, source schema and im
 
 ## Corrections and reports
 
-Include reproducible evidence and avoid personal transcripts, addresses, application IDs or private correspondence in public reports. Once the public GitHub repository is available, use its correction and bug templates. Currently the source is prepared for that workflow; no public issue endpoint is embedded in the private preview.
+Use the public [correction, bug and feature templates](https://github.com/7aslann7/gradatlas/issues/new/choose). Include reproducible evidence and avoid personal transcripts, addresses, application IDs or private correspondence in public reports. Admission-data proposals are reviewed before publication. Security vulnerabilities belong in the [private reporting channel](https://github.com/7aslann7/gradatlas/security/advisories/new), as described in [SECURITY.md](SECURITY.md).
 
 Maintainers review contributions for scope, provenance, accessibility, licence compatibility and factual accuracy. Project identity and the official service are separate from permitted software forks.

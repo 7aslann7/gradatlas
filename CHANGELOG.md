@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.9.1 — 12 October 2026
+
+- Published the MIT-licensed GitHub source with a prominent website link, public correction/bug/feature templates and private vulnerability reporting.
+- Added source and feedback links to Data & methodology and canonical/social metadata for the official website.
+- Prepared English launch copy and documented domain migration, evidence limits and community outreach.
+- Added the free GitHub Pages project URL and a deployment job gated by unit/data and all three browser checks on `main` pushes.
+
 ## 0.9.0 — 12 October 2026
 
 - Added formatted workspace Excel exports for shortlist and studio, including profile, programme activity, preparation, full notes, saved enquiries and source attribution.

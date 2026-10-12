@@ -25,7 +25,7 @@ The app itself has no runtime npm dependency. MapLibre and ExcelJS are vendored;
 - End-to-end tests use Chromium desktop, WebKit desktop and Android-sized Chromium. They cover search/pagination, filters, details, optional local profiles, shortlist/tracking, notes/checklists, three-programme comparisons, actual `.xlsx`/text/JSON downloads, editable enquiry drafts, local draft reload, preparation guides, backup validation/confirmation and deletion in isolated test workspaces.
 - Failure scenarios cover blocked/corrupt storage, an unavailable programme catalogue, unavailable institution data and absent WebGL. Map tests verify projection switching, finite zoom bounds and unchanged source revisions when only list order changes. Keyboard and viewport checks cover navigation and responsive overflow.
 
-Tests use fresh browser contexts and synthetic applicant data. They never submit an application or send an enquiry. Failures retain screenshots, Playwright traces and HTML reports in private CI artifacts for seven days. Do not add real applicant information to fixtures or reports.
+Tests use fresh browser contexts and synthetic applicant data. They never submit an application or send an enquiry. Failures retain screenshots, Playwright traces and HTML reports in CI artifacts for seven days. Repository visibility also affects who can access CI evidence; never add real applicant information to fixtures or reports.
 
 ## Release gate
 

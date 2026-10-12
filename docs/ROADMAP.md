@@ -9,7 +9,7 @@
 - Optional browser-local profile, shortlist, comparisons, notes and preparation steps.
 - Application Studio preparation plans, locally saved editable enquiries, placeholder review and eight scoped official university guides.
 - Version 2 private workspace backups, backward-compatible imports and a portable static build.
-- Private GitHub source, correction templates, pinned ROR/DUO adapters, source-reproduction tests and desktop/mobile browser CI.
+- Public GitHub source, correction/bug/feature templates, pinned ROR/DUO adapters, source-reproduction tests and desktop/mobile browser CI.
 
 ## Next: a maintained catalogue
 
@@ -23,7 +23,7 @@ Exit criterion: applicants can build a shortlist and see what is supported, what
 
 ## Then: public pilot and contribution workflow
 
-The v0.9 website is public; its GitHub source repository remains private. The English contributor guide and data correction template are prepared for a later source release. Test the product with applicants from different degree backgrounds, countries and accessibility needs. Add a public correction route with the affected field and an official source before wider community outreach. Moderate submissions before publication; separate applicant experiences from institutional rules.
+The website and MIT-licensed GitHub source repository are public. The English contributor guide and public issue templates support source-based corrections, bug reports and feature proposals. Test the product with applicants from different degree backgrounds, countries and accessibility needs. Moderate submissions before publication; separate applicant experiences from institutional rules. Establish a regular admission-data review cycle as outreach grows.
 
 Confirm repository and site visibility as a release decision. Keep applicant workspaces out of source control. Free discovery and preparation should remain available without a profile or paid tier.
 

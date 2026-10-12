@@ -2,7 +2,7 @@
 
 Do not post applicant information, credentials or private browser backups in an issue.
 
-For this private repository, report security concerns in a private repository issue visible only to authorized collaborators. Before making the repository public, enable GitHub private vulnerability reporting and replace this route with its verified private reporting link. A public repository issue is not an appropriate disclosure channel for an unpatched vulnerability or personal data.
+Use [GitHub private vulnerability reporting](https://github.com/7aslann7/gradatlas/security/advisories/new) to report security concerns to the maintainers. Private vulnerability reporting is enabled for this public repository. A public repository issue is not an appropriate disclosure channel for an unpatched vulnerability or personal data.
 
 GradAtlas is a static application. Profiles, notes, saved drafts and backups are browser-local. It has no application submission API, account-sync endpoint, bulk-email delivery or analytics integration. Hosting access is separate from workspace storage. Anyone sharing a browser profile and origin can access the same local workspace.
 

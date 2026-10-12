@@ -44,4 +44,4 @@ Optional cloud workspaces require identity, per-user authorization, export/delet
 
 ## Deployment
 
-Sites hosting uses the account-specific `.openai/hosting.json` with `static.directory = dist`. The v0.9 website release is public; the GitHub source repository remains private. These access settings are independent. The static build is also portable to GitHub Pages and other static hosts; configure an appropriate base path if publishing below a subdirectory.
+The primary public website is the GitHub Pages project site at `https://7aslann7.github.io/gradatlas/`. Runtime imports, assets and data requests use relative paths and support the project subdirectory. The `pages` CI job publishes `dist/` only after unit/data and all three browser jobs succeed on a push to `main`; pull requests cannot deploy. Sites also hosts a separate public origin using the account-specific `.openai/hosting.json` with `static.directory = dist`. Repository visibility and hosting audiences are independent settings. Browser-local workspaces do not sync across these origins.
