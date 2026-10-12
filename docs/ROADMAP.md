@@ -1,20 +1,21 @@
 # Development roadmap
 
-## Implemented through v0.7
+## Implemented through v0.8
 
 - A restrained interactive globe and full-screen flat map, native geographic clusters, viewport zoom/pan limits, trackpad/touch controls and keyboard-accessible location actions.
-- A 251-record, 88-destination catalogue across 17 subject groups, with field-specific evidence, explicit unknowns and targeted audits of dates, grade thresholds, language proof and tuition.
+- A 1,489-record, 88-destination catalogue across 17 subject groups: 358 programme-page records and 1,131 clearly labelled DUO registered identities, with field-specific evidence, explicit unknowns and targeted audits of dates, grade thresholds, language proof and tuition.
 - A pinned, licensed ROR directory of 30,174 active education institutions across 223 countries/territories, with reproducible checksum-verified import, approximate locality caveats, search and on-demand loading.
 - Right-hand shortlist/comparison drawers, stable map input across list sorting and formatted local Excel exports.
 - Optional browser-local profile, shortlist, comparisons, notes and preparation steps.
 - Application Studio preparation plans, locally saved editable enquiries, placeholder review and eight scoped official university guides.
 - Version 2 private workspace backups, backward-compatible imports and a portable static build.
+- Private GitHub source, correction templates, pinned ROR/DUO adapters, source-reproduction tests and desktop/mobile browser CI.
 
 ## Next: a maintained catalogue
 
 Move from hand-reviewed JSON to separate university, programme, intake, applicant category, requirement, fee and evidence entities. Keep current stable IDs and the static catalogue export. Do not treat campus count, programme count and specialisation count as interchangeable.
 
-The institution index import is implemented. The next programme source adapter should begin with permitted structured official sources and an internal review queue; historical offers must not be promoted as current admissions. See [catalogue pipeline](CATALOGUE_PIPELINE.md). Fetching should produce a review proposal rather than directly replace published requirements. Attach a reviewed source, timestamp, applicant scope and cycle to every mutable fact. Detect broken links and changed source content, then route changes to maintainers. Preserve a correction history and expose stale or unavailable evidence to visitors.
+The institution index and DUO registered-degree adapter are implemented. Further programme source adapters should begin with permitted structured official sources and an internal review queue; historical offers must not be promoted as current admissions. See [catalogue pipeline](CATALOGUE_PIPELINE.md). Fetching should produce a review proposal rather than directly replace published requirements. Attach a reviewed source, timestamp, applicant scope and cycle to every mutable fact. Detect broken links and changed source content, then route changes to maintainers. Preserve a correction history and expose stale or unavailable evidence to visitors.
 
 Prioritise exact cutoff times, international-degree recognition, prerequisite courses and credit requirements, current tuition categories and programme-specific documents. Keep unavailable facts unknown. Link checking confirms availability of a page, not correctness of its admissions contents.
 
@@ -22,7 +23,7 @@ Exit criterion: applicants can build a shortlist and see what is supported, what
 
 ## Then: public pilot and contribution workflow
 
-Publish an English contributor guide and reviewed dataset changes through a private GitHub repository before opening it. Test the product with applicants from different degree backgrounds, countries and accessibility needs. Give users a way to submit a correction with the affected field and an official source. Moderate submissions before publication; separate applicant experiences from institutional rules.
+The English contributor guide, data correction template and private GitHub repository are prepared. Review public-release settings before opening them. Test the product with applicants from different degree backgrounds, countries and accessibility needs. Give users a way to submit a correction with the affected field and an official source. Moderate submissions before publication; separate applicant experiences from institutional rules.
 
 Confirm repository and site visibility as a release decision. Keep applicant workspaces out of source control. Free discovery and preparation should remain available without a profile or paid tier.
 
