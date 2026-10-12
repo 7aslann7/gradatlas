@@ -15,7 +15,8 @@ const defaults=()=>({profile:null,saved:[],compare:[],tracking:{},notes:{},tasks
 let persistent=true,recoveredWorkspace=false,storage=defaults();
 try {const raw=localStorage.getItem(KEY);if(raw){try{storage=normalizeWorkspace(JSON.parse(raw));}catch{storage=defaults();recoveredWorkspace=true;}}}catch{persistent=false;}
 let programs=[],institutions=[],institutionManifest=null,registryManifest=null,institutionPromise=null,catalogueMode='programmes',resultsLimit=50,modeRevision=0,page='explore',map=null,resultsOpen=false,clusterIds=null,detailId=null,detailTab='overview',draft=null,guidance=[],studioId=null,studioTab='preparation';
-const filters={query:'',field:'',country:'',open:false,free:false,fit:'',sort:'curated'};
+const filters={query:'',field:'',country:'',open:false,free:false,fit:'',sort:'name'};
+let resultsData=[],resultsKey='',resultsObserver=null;
 const names={welcome:'Welcome to GradAtlas',explore:'Explore programmes',shortlist:'My shortlist',compare:'Compare programmes',workspace:'Application studio',sources:'Data & methodology'};
 const labels={explore:['globe','Map'],shortlist:['bookmark','My shortlist'],compare:['compare','Compare programmes'],workspace:['mail','Application studio'],sources:['shield','Data & methodology']};
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(storage));persistent=true;return true;}catch{if(persistent)toast('Browser storage is unavailable. Changes will last for this session.');persistent=false;return false;}}
@@ -57,7 +58,7 @@ function renderPage(rebuild=false){
   }
   tray();
 }
-function setResults(open){if(open&&$('#filter-panel')&&!$('#filter-panel').hidden)return;if(!open)clusterIds=null;resultsOpen=open;const drawer=$('#map-results');if(!drawer)return;drawer.hidden=!open;document.body.classList.toggle('results-open',open);const button=$('.browse-button');button?.setAttribute('aria-expanded',open);if(open)updateResults();}
+function setResults(open){if(open&&$('#filter-panel')&&!$('#filter-panel').hidden)return;if(!open){clusterIds=null;resultsObserver?.disconnect();}resultsOpen=open;const drawer=$('#map-results');if(!drawer)return;drawer.hidden=!open;document.body.classList.toggle('results-open',open);const button=$('.browse-button');button?.setAttribute('aria-expanded',open);if(open)updateResults();}
 const activeCatalogue=()=>catalogueMode==='institutions'?institutions:programs;
 const filteredLocations=()=>catalogueMode==='institutions'?filterInstitutions(institutions,filters):filterPrograms(programs,filters,storage.profile);
 async function loadInstitutionIndex(){
@@ -74,7 +75,7 @@ async function setCatalogueMode(mode){
     }
     if(revision!==modeRevision)return;
     catalogueMode=mode;clusterIds=null;resultsLimit=50;
-    Object.assign(filters,{query:'',country:'',field:'',open:false,free:false,fit:'',sort:'curated'});
+    Object.assign(filters,{query:'',country:'',field:'',open:false,free:false,fit:'',sort:'name'});
     $('#country').innerHTML='<option value="">All countries & regions</option>'+[...new Set(activeCatalogue().map(p=>p.country))].sort().map(country=>`<option>${e(country)}</option>`).join('');
     syncFilters();updateResults();
   }catch{syncFilters();toast('The directory could not load. Programme discovery remains available.');}
@@ -86,7 +87,9 @@ function openInstitution(id){
   if(page==='explore')map?.focus(p);d.querySelector('.dialog-close').focus({preventScroll:true});
 }
 function renderExplore(){
+  resultsObserver?.disconnect();resultsKey='';
   $('#screen').innerHTML=atlasTemplate(programs,filters,storage.profile,icon);
+  $('#results').addEventListener('scroll',()=>{const list=$('#results');if(list.scrollTop+list.clientHeight>=list.scrollHeight-120)loadNextResults();},{passive:true});
   $('#search').addEventListener('focus',()=>{clusterIds=null;setPopover('',false);$('#detail-dialog').close();setResults(true);});
   $('#search').addEventListener('input',ev=>{filters.query=ev.target.value;clusterIds=null;resultsLimit=50;setResults(true);updateResults();});
   $('#field').onchange=ev=>{filters.field=ev.target.value;clusterIds=null;resultsLimit=50;setResults(true);syncFilters();updateResults();};
@@ -107,6 +110,10 @@ function syncFilters(){
   $('#directory-explanation').textContent='ROR education institutions. Master’s availability and admission rules require separate verification.';
   $('#profile-review-field').hidden=directory||!storage.profile;
   $('#sort option[value=deadline]').disabled=directory;
+  $('#sort option[value=deadline]').hidden=directory;
+  $('#sort option[value=title]').hidden=directory;
+  $('#sort option[value=title]').disabled=directory;
+  $('#sort').disabled=directory;
   $('#sort option[value=name]').textContent=directory?'Institution A–Z':'University A–Z';
   $('#sort').value=filters.sort;
   $('#search').placeholder=directory?'Search institutions':'Search programmes';
@@ -129,7 +136,41 @@ function syncFilters(){
   document.querySelectorAll('[data-filter]').forEach(b=>{const on=filters[b.dataset.filter];b.classList.toggle('active',on);b.setAttribute('aria-pressed',on);});
   document.querySelectorAll('[data-quick]').forEach(b=>{const on=filters.field===b.dataset.quick;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on);});
 }
-function updateResults(){if(!$('#results'))return;const directory=catalogueMode==='institutions',noun=directory?'institution':'programme';const active=filters.field||filters.country||filters.open||filters.free||filters.fit;$('.filter-indicator').hidden=!active;const locations=filteredLocations(),result=clusterIds?locations.filter(p=>clusterIds.has(p.id)):locations;$('#result-count').innerHTML=`${result.length.toLocaleString('en')} ${noun}${result.length===1?'':'s'}`;$('#visible-count').textContent=`${result.length.toLocaleString('en')} ${noun}${result.length===1?'':'s'}`;$('#map-results h2').textContent=directory?'Institutions':'Programmes';$('#results').innerHTML=result.length?result.slice(0,resultsLimit).map(p=>directory?institutionCard(p,icon):card(p)).join(''):empty('A new direction?',`No ${noun}s match these filters. Broaden your search.`,'explore','Clear filters');const more=$('.results-pagination');more.hidden=result.length<=resultsLimit;more.querySelector('button').textContent=`Show next ${Math.min(50,result.length-resultsLimit)} · ${Math.min(resultsLimit,result.length).toLocaleString('en')} of ${result.length.toLocaleString('en')}`;if(!result.length)$('#results [data-nav]').dataset.action='reset';map?.update(locations);}
+function resultsProgress(){
+  const shown=Math.min(resultsLimit,resultsData.length),noun=catalogueMode==='institutions'?'institutions':'programmes';
+  $('.results-pagination').hidden=!resultsData.length;
+  $('#results-progress').textContent=`${shown.toLocaleString('en')} of ${resultsData.length.toLocaleString('en')} ${noun}`;
+}
+function watchResultsEnd(){
+  resultsObserver?.disconnect();const list=$('#results'),end=$('#results-end');
+  if(!end||!('IntersectionObserver' in window))return;
+  resultsObserver=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting&&entry.target===$('#results-end')))loadNextResults();},{root:list,rootMargin:'0px 0px 120px 0px'});
+  resultsObserver.observe(end);
+}
+function resultsEnd(){return resultsLimit<resultsData.length?'<div id="results-end" class="results-sentinel" aria-hidden="true"></div>':'';}
+function loadNextResults(){
+  const list=$('#results');
+  if(!list||!resultsOpen||page!=='explore'||$('#map-results').hidden||!list.clientHeight||resultsLimit>=resultsData.length)return;
+  resultsObserver?.disconnect();$('#results-end')?.remove();
+  const next=resultsData.slice(resultsLimit,resultsLimit+50);resultsLimit+=next.length;
+  list.insertAdjacentHTML('beforeend',next.map(p=>catalogueMode==='institutions'?institutionCard(p,icon):card(p)).join('')+resultsEnd());
+  resultsProgress();watchResultsEnd();
+}
+function updateResults(){
+  const list=$('#results');if(!list)return;
+  const directory=catalogueMode==='institutions',noun=directory?'institution':'programme';
+  const active=filters.field||filters.country||filters.open||filters.free||filters.fit;$('.filter-indicator').hidden=!active;
+  const locations=filteredLocations();resultsData=clusterIds?locations.filter(p=>clusterIds.has(p.id)):locations;
+  const key=JSON.stringify([catalogueMode,filters,clusterIds?[...clusterIds].sort():null,filters.fit?storage.profile:null]),reset=key!==resultsKey;
+  if(reset){resultsLimit=50;resultsKey=key;}
+  const scrollTop=reset?0:list.scrollTop;resultsObserver?.disconnect();
+  $('#result-count').textContent=`${resultsData.length.toLocaleString('en')} ${noun}${resultsData.length===1?'':'s'}`;
+  $('#visible-count').textContent=$('#result-count').textContent;$('#map-results h2').textContent=directory?'Institutions':'Programmes';
+  list.dataset.order=!directory&&filters.sort==='name'?'university':'programme';list.setAttribute('aria-label',directory?'Institution list':'Programme list');
+  list.innerHTML=resultsData.length?resultsData.slice(0,resultsLimit).map(p=>directory?institutionCard(p,icon):card(p)).join('')+resultsEnd():empty('A new direction?',`No ${noun}s match these filters. Broaden your search.`,'explore','Clear filters');
+  list.scrollTo({top:scrollTop,behavior:'instant'});resultsProgress();watchResultsEnd();
+  if(!resultsData.length)$('#results [data-nav]').dataset.action='reset';map?.update(locations);
+}
 function renderShortlist(){const list=programs.filter(p=>storage.saved.includes(p.id));$('#workspace-screen').innerHTML=pageHead('YOUR WORKSPACE','My shortlist','Keep the programmes that spark your curiosity. Track your next step, one application at a time.',`<button class="button secondary" data-action="export-workspace">${icon('download')}Download Excel .xlsx</button>`)+`<div class="shortlist-grid">${list.length?list.map(p=>card(p,true)).join(''):empty('Start with a little curiosity.','Save programmes using the bookmark icon. Your notes, preparation checklist and application status stay in this browser.')}</div><p class="explorer-note">Saved in this browser. Excel includes your programme activity, notes and saved drafts. Recovery backups are available in Data & methodology.</p>`;}
 function renderCompare(){
   const list=storage.compare.map(id=>programs.find(p=>p.id===id)).filter(Boolean);
@@ -218,7 +259,6 @@ document.addEventListener('click',async ev=>{
   if(b.dataset.studioTab){rememberStudio();studioTab=b.dataset.studioTab;renderWorkspace();return;}
   if(b.dataset.institution){openInstitution(b.dataset.institution);return;}
   if(b.dataset.action==='open-directory'){location.hash='explore';await setCatalogueMode('institutions');setResults(true);return;}
-  if(b.dataset.action==='load-more'){resultsLimit+=50;updateResults();return;}
   if(b.dataset.detail){openDetail(b.dataset.detail,b.dataset.tab);return;}
   if(b.dataset.save){toggleSave(b.dataset.save);return;}
   if(b.dataset.filter){setResults(true);filters[b.dataset.filter]=!filters[b.dataset.filter];syncFilters();updateResults();return;}

@@ -41,6 +41,8 @@ GradAtlas locally serves MapLibre GL JS **6.14.0**, including its WebGL renderer
 
 `src/assets/countries.geojson` contains simplified Natural Earth country boundaries from the datasets/geo-countries distribution. Coordinates are rounded to four decimal places, small rings are omitted, and consecutive close points are reduced for browser rendering. This asset is for geographic discovery, not precise navigation or boundary adjudication.
 
+`src/assets/country-labels.geojson` contains English names, label ranks and publisher-provided anchor points from Natural Earth's `ne_50m_admin_0_countries` dataset. The exact upstream revision, source and asset checksums, import date and transformation are retained in `data-sources/natural-earth-labels.json`. Country/territory labels use the same Natural Earth public-domain terms. MapLibre renders them with installed local fonts; no glyph CDN or additional font file is distributed. These geographic names do not establish programme availability.
+
 - Dataset: https://github.com/datasets/geo-countries
 - Public-domain terms: https://www.naturalearthdata.com/about/terms-of-use/
 

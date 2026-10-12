@@ -26,9 +26,28 @@ async function downloaded(page, click) {
 
 test('search, pagination and empty results remain usable without a profile', async ({page}) => {
   await open(page); await browse(page);
+  await expect(page.locator('#sort')).toHaveValue('name');
   await expect(page.locator('#results .program-card')).toHaveCount(50);
-  await page.getByRole('button', {name: /Show next 50/}).click();
+  await expect(page.locator('#results-progress')).toHaveText(`50 of ${programmes.length.toLocaleString('en')} programmes`);
+  await expect(page.getByRole('button',{name:/Show next/})).toHaveCount(0);
+  const originalCard=await page.locator('#results .program-card').first().elementHandle();
+  const list=page.locator('#results');
+  await list.evaluate(el=>{el.scrollTop=el.scrollHeight;});
   await expect(page.locator('#results .program-card')).toHaveCount(100);
+  expect(await originalCard.evaluate(el=>el.isConnected)).toBe(true);
+  await list.focus();await page.keyboard.press('End');
+  await expect(page.locator('#results .program-card')).toHaveCount(150);
+  await expect(page.locator('#results-progress')).toHaveText(`150 of ${programmes.length.toLocaleString('en')} programmes`);
+  await page.locator('#sort').selectOption('title');
+  await expect(page.locator('#results .program-card')).toHaveCount(50);
+  await expect.poll(()=>list.evaluate(el=>el.scrollTop)).toBe(0);
+  await expect(list).toHaveAttribute('data-order','programme');
+  await page.locator('#sort').selectOption('name');
+  await expect(list).toHaveAttribute('data-order','university');
+  const firstCard=page.locator('#results .program-card').first();
+  await expect(firstCard.locator('.university-name')).toHaveText('Aalto University');
+  const universityBox=await firstCard.locator('.university-name').boundingBox(),programmeBox=await firstCard.locator('.title-button').boundingBox();
+  expect(universityBox.y).toBeLessThan(programmeBox.y);
   await page.locator('#search').fill('impossibleprogramme12345');
   await expect(page.locator('#result-count')).toHaveText('0 programmes');
   await page.getByRole('button', {name: 'Clear filters', exact: true}).click();
@@ -226,16 +245,19 @@ test('map projection, zoom bounds and clustering stay stable when only list orde
   const errors = []; page.on('pageerror', error => errors.push(error.message));
   await open(page); await expect(page.locator('.map-canvas')).toHaveClass(/map-ready/);
   const canvas = page.locator('.map-canvas');
+  await expect.poll(async()=>Number(await canvas.getAttribute('data-country-label-count'))).toBeGreaterThan(0);
   await page.getByRole('button', {name: 'Show flat map', exact: true}).click();
   await expect(canvas).toHaveAttribute('data-projection', 'mercator');
   await browse(page); const revision = await canvas.getAttribute('data-data-revision');
   await page.locator('#sort').selectOption('name'); await expect(canvas).toHaveAttribute('data-data-revision', revision);
+  await page.locator('#sort').selectOption('title'); await expect(canvas).toHaveAttribute('data-data-revision', revision);
   await page.locator('#sort').selectOption('deadline'); await expect(canvas).toHaveAttribute('data-data-revision', revision);
   await page.getByRole('button', {name: 'Close programme list'}).click();
   for (let i = 0; i < 10 && await page.getByRole('button', {name: 'Zoom out', exact: true}).isEnabled(); i++) await page.getByRole('button', {name: 'Zoom out', exact: true}).click();
   await expect.poll(async () => Number(await canvas.getAttribute('data-zoom')) - Number(await canvas.getAttribute('data-min-zoom'))).toBeLessThan(0.02);
   await page.getByRole('button', {name: 'Show 3D globe', exact: true}).click();
   await expect(canvas).toHaveAttribute('data-projection', 'globe'); expect(errors).toEqual([]);
+  await expect.poll(async()=>Number(await canvas.getAttribute('data-country-label-count'))).toBeGreaterThan(0);
 });
 
 test('keyboard navigation and compact layouts expose visible usable controls', async ({page}, testInfo) => {

@@ -83,6 +83,10 @@ export function assess(p, profile) {
   details.push('Degree recognition, prerequisite courses, supporting documents and selection remain subject to university review.');
   return {key:gap?'gap':'review',label:gap?'Recorded requirement gap':'Individual review needed',details};
 }
+const nameCollator=new Intl.Collator('en',{sensitivity:'base',numeric:true,ignorePunctuation:true});
+export const compareNames=(a,b)=>nameCollator.compare(a||'',b||'');
+const universityOrder=(a,b)=>compareNames(a.university,b.university)||compareNames(a.title,b.title)||compareNames(a.country,b.country)||compareNames(a.city,b.city)||(a.id<b.id?-1:a.id>b.id?1:0);
+const programmeOrder=(a,b)=>compareNames(a.title,b.title)||universityOrder(a,b);
 export function filterPrograms(programs, filters, profile, now=todayKey()) {
   const query = (filters.query||'').trim().toLocaleLowerCase('en');
   let result=programs.filter(p=> (!query||[p.title,p.university,p.city,p.country,...p.fields,...p.tags].join(' ').toLocaleLowerCase('en').includes(query))
@@ -91,8 +95,9 @@ export function filterPrograms(programs, filters, profile, now=todayKey()) {
     && (!filters.open||applicationStatus(p,now).key==='open')
     && (!filters.free||p.tuition.free===true)
     && (!filters.fit||assess(p,profile).key===filters.fit));
-  if(filters.sort==='name') result.sort((a,b)=>a.university.localeCompare(b.university));
-  if(filters.sort==='deadline') {const deadline=p=>p.window?.closes>=now?p.window.closes:'9999';result.sort((a,b)=>deadline(a).localeCompare(deadline(b)));}
+  if(filters.sort==='name')result.sort(universityOrder);
+  else if(filters.sort==='deadline'){const deadline=p=>p.window?.closes>=now?p.window.closes:'9999';result.sort((a,b)=>deadline(a).localeCompare(deadline(b))||programmeOrder(a,b));}
+  else result.sort(programmeOrder);
   return result;
 }
 export function makeEmail(p, fields) {

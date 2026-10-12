@@ -8,7 +8,7 @@ const globeIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 
 export async function createMap(container,programmes,onSelect,onCluster) {
   const canvas=container.querySelector('.map-canvas'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  let items=stableLocations(programmes),selected=null,destroyed=false,gesture=null,projection='globe',globeCamera=null,revision=0,dataKey=null;
+  let items=stableLocations(programmes),selected=null,destroyed=false,gesture=null,projection='globe',globeCamera=null,revision=0,dataKey=null,labelZoom=-1;
   const initialZoom=()=>Math.max(.4,Math.log2(Math.min(canvas.clientWidth,canvas.clientHeight)*.88*Math.PI/512));
   const points=()=>({type:'FeatureCollection',features:items.map(p=>({type:'Feature',id:p.id,properties:{id:p.id,title:p.title||p.name,university:p.university||p.name,kind:p.kind||'programme',selected:p.id===selected?1:0},geometry:{type:'Point',coordinates:[p.lon,p.lat]}}))});
   const map=new Map({
@@ -16,15 +16,16 @@ export async function createMap(container,programmes,onSelect,onCluster) {
     attributionControl:false,scrollZoom:false,touchZoomRotate:true,touchPitch:false,dragRotate:true,keyboard:true,renderWorldCopies:false,fadeDuration:0,canvasContextAttributes:{antialias:true},
     style:{version:8,projection:{type:'globe'},
       sky:{'sky-color':'#142d3b','horizon-color':'#cce4ee','sky-horizon-blend':0,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,.3,5,.3,7,0]},
-      sources:{ocean:{type:'geojson',data:oceanSurface()},countries:{type:'geojson',data:new URL('./assets/countries.geojson',import.meta.url).href},programmes:{type:'geojson',data:points(),cluster:true,clusterRadius:50,clusterMaxZoom:9,clusterProperties:{selected_count:['+',['get','selected']],institution_count:['+',['case',['==',['get','kind'],'institution'],1,0]]}}},
+      sources:{ocean:{type:'geojson',data:oceanSurface()},countries:{type:'geojson',data:new URL('./assets/countries.geojson',import.meta.url).href},'country-labels':{type:'geojson',data:new URL('./assets/country-labels.geojson',import.meta.url).href},programmes:{type:'geojson',data:points(),cluster:true,clusterRadius:50,clusterMaxZoom:9,clusterProperties:{selected_count:['+',['get','selected']],institution_count:['+',['case',['==',['get','kind'],'institution'],1,0]]}}},
       layers:[
         {id:'flat-water',type:'background',layout:{visibility:'none'},paint:{'background-color':'#c4dce7'}},
         {id:'water',type:'fill',source:'ocean',paint:{'fill-color':'#c4dce7','fill-antialias':false}},
         {id:'land',type:'fill',source:'countries',paint:{'fill-color':'#e4eada'}},
         {id:'catalogue-countries',type:'fill',source:'countries',filter:['in','name',''],paint:{'fill-color':'#cbdcbc'}},
         {id:'borders',type:'line',source:'countries',paint:{'line-color':'#f5f7ed','line-width':.8}},
+        {id:'country-names',type:'symbol',source:'country-labels',filter:['<=',['get','minZoom'],Math.floor(initialZoom()*2)/2],layout:{'text-field':['get','name'],'text-font':['Arial','Helvetica','sans-serif'],'text-size':['interpolate',['linear'],['zoom'],0,10,3,12,6,14],'text-max-width':9,'text-letter-spacing':.025,'text-padding':7,'symbol-sort-key':['get','rank'],'text-allow-overlap':false,'text-ignore-placement':false},paint:{'text-color':'#52634e','text-halo-color':'#f5f7ed','text-halo-width':1.2,'text-halo-blur':.3}},
         {id:'programme-clusters',type:'circle',source:'programmes',filter:['has','point_count'],paint:{'circle-color':['case',['>', ['get','selected_count'],0],'#b78150',['>',['get','institution_count'],0],'#3b6475','#365a46'],'circle-radius':16,'circle-stroke-width':2,'circle-stroke-color':'#fffdf4'}},
-        {id:'programme-counts',type:'symbol',source:'programmes',filter:['has','point_count'],layout:{'icon-image':['concat','count-',['to-string',['get','point_count']]],'icon-size':.5,'icon-allow-overlap':true,'icon-ignore-placement':true}},
+        {id:'programme-counts',type:'symbol',source:'programmes',filter:['has','point_count'],layout:{'icon-image':['concat','count-',['to-string',['get','point_count']]],'icon-size':.5,'icon-allow-overlap':true,'icon-ignore-placement':false}},
         {id:'programme-points',type:'circle',source:'programmes',filter:['!',['has','point_count']],paint:{'circle-color':['case',['==',['get','selected'],1],'#b78150',['==',['get','kind'],'institution'],'#3b6475','#365a46'],'circle-radius':['case',['==',['get','selected'],1],8,6],'circle-stroke-width':2,'circle-stroke-color':'#fffdf4'}}
       ]}
   });
@@ -34,6 +35,8 @@ export async function createMap(container,programmes,onSelect,onCluster) {
   const tooltip=new Popup({closeButton:false,closeOnClick:false,offset:18,className:'map-tooltip'});
   function cameraState(){
     if(destroyed)return;const center=map.getCenter();
+    const labelLevel=Math.floor(map.getZoom()*2)/2;
+    if(labelLevel!==labelZoom&&map.getLayer('country-names')){labelZoom=labelLevel;map.setFilter('country-names',['<=',['get','minZoom'],labelLevel]);}
     Object.assign(canvas.dataset,{zoom:map.getZoom().toFixed(3),minZoom:map.getMinZoom().toFixed(3),center:`${center.lng.toFixed(3)},${center.lat.toFixed(3)}`,bearing:map.getBearing().toFixed(2),projection});
     container.querySelector('.compass').style.transform=`rotate(${-map.getBearing()}deg)`;
     container.querySelector('[data-map="minus"]').disabled=map.getZoom()<=map.getMinZoom()+.001;
@@ -67,6 +70,7 @@ export async function createMap(container,programmes,onSelect,onCluster) {
   }
   function accessibleLocations(){
     if(destroyed||!map.getLayer('programme-points'))return;
+    canvas.dataset.countryLabelCount=new Set(map.queryRenderedFeatures({layers:['country-names']}).map(f=>f.properties.name)).size;
     const unique=new Set(),center=map.getCenter(),rad=Math.PI/180;accessible.replaceChildren();
     for(const f of map.queryRenderedFeatures({layers:['programme-clusters','programme-points']})){
       const key=f.properties.cluster?'c'+f.properties.cluster_id:f.properties.id;if(unique.has(key))continue;unique.add(key);
@@ -111,7 +115,7 @@ export async function createMap(container,programmes,onSelect,onCluster) {
   container.querySelector('[data-map="minus"]').onclick=()=>move({zoom:Math.max(map.getMinZoom(),map.getZoom()-1)});
   container.querySelector('[data-map="north"]').onclick=()=>move({bearing:0});container.querySelector('[data-map="home"]').onclick=home;
   map.on('move',cameraState);map.on('rotate',()=>setFlatBounds());map.on('movestart',()=>tooltip.remove());map.on('idle',accessibleLocations);
-  map.on('load',()=>{update(items);projectionButton.disabled=false;canvas.classList.add('map-ready');});cameraState();
+  map.on('load',()=>{update(items);cameraState();projectionButton.disabled=false;canvas.classList.add('map-ready');});cameraState();
   const resize=new ResizeObserver(()=>{map.resize();setFlatBounds(true);});resize.observe(canvas);
   return {update,focus(p){selected=p.id;update(items);move({center:[p.lon,p.lat],zoom:Math.max(3,map.getZoom()),offset:innerWidth>900?[-150,0]:[0,-80]});},focusCountry(list){if(!list.length)return;if(list.length===1){move({center:[list[0].lon,list[0].lat],zoom:4});return;}map.fitBounds([[Math.min(...list.map(p=>p.lon)),Math.min(...list.map(p=>p.lat))],[Math.max(...list.map(p=>p.lon)),Math.max(...list.map(p=>p.lat))]],{padding:120,maxZoom:5,duration:reduced.matches?0:600});},destroy(){destroyed=true;resize.disconnect();tooltip.remove();accessible.remove();canvas.removeEventListener('wheel',wheel);canvas.removeEventListener('gesturestart',gestureStart);canvas.removeEventListener('gesturechange',gestureChange);canvas.removeEventListener('gestureend',gestureEnd);map.remove();}};
 }

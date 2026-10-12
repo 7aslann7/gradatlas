@@ -31,6 +31,8 @@ Created and maintained by [@7aslann7](https://github.com/7aslann7). The [GradAtl
 - A full-screen, directly interactive globe with distinct ocean, land and backdrop colours, one search bar and a small menu.
 - A single control switches to a full-screen flat map and restores the previous globe camera. Viewport-aware zoom and pan limits prevent shrinking the map into empty space.
 - Filters, programme lists, details and application tools open only when requested.
+- Programme browsing starts in University A–Z order, with university names first. Programme A–Z and recorded-deadline orders are also available. Scrolling near the end appends the next 50 results and retains a loaded/total count.
+- Country/territory labels use pinned Natural Earth label anchors and local fonts, with zoom-dependent sizing and collision handling in both map projections.
 - Drag and two-finger pan, pinch zoom, globe rotation, keyboard controls and visible zoom/compass buttons.
 - Native MapLibre circle layers and clustering keep locations attached to the map during motion; keyboard-accessible location controls, campus selection and reduced-motion support require no map API key or remote tiles.
 - Search reviewed programme records and clearly labelled registered degrees by programme, university, location and research keyword; filter by field, country, verified application availability and recorded tuition-free status.

@@ -1,9 +1,9 @@
-import {escapeHTML as e} from './core.js';
+import {escapeHTML as e,compareNames} from './core.js';
 
 export function filterInstitutions(records,filters) {
   const query=(filters.query||'').trim().toLocaleLowerCase('en');
   const list=records.filter(p=>(!filters.country||p.country===filters.country)&&(!query||[p.name,p.city,p.country,...p.names].join(' ').toLocaleLowerCase('en').includes(query)));
-  if(filters.sort==='name')list.sort((a,b)=>a.name.localeCompare(b.name));
+  list.sort((a,b)=>compareNames(a.name,b.name)||compareNames(a.country,b.country)||compareNames(a.city,b.city)||(a.id<b.id?-1:a.id>b.id?1:0));
   return list;
 }
 

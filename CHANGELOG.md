@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.9.2 — 12 October 2026
+
+- Load the next 50 list results automatically near the end, preserve existing cards and scrolling, and keep the visible loaded/total count.
+- Replace catalogue insertion order with default University A–Z and an explicit Programme A–Z option. University sorting gives the institution name visual priority; alphabetical and deadline ties are deterministic.
+- Add country/territory names using pinned Natural Earth label anchors, local fonts, zoom sizing and collision-aware placement on both globe and flat views.
+
 ## 0.9.1 — 12 October 2026
 
 - Published the MIT-licensed GitHub source with a prominent website link, public correction/bug/feature templates and private vulnerability reporting.

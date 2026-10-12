@@ -79,3 +79,19 @@ test('deadline sorting prioritises remaining windows over closed cycles',()=>{
   assert.deepEqual(list.slice(0,2).map(p=>p.id),['earlier','later']);
   assert.deepEqual(new Set(list.slice(2).map(p=>p.id)),new Set(['expired','undated']));
 });
+test('programme and university ordering use their named fields, natural numbers and stable ties',()=>{
+  const sample=[
+    {...p,id:'z',title:'Zoology',university:'École 10'},
+    {...p,id:'c',title:'Chemistry',university:'Aalto University'},
+    {...p,id:'b',title:'Biology',university:'Ecole 2'},
+    {...p,id:'a2',title:'Astronomy',university:'école 2'},
+    {...p,id:'a1',title:'Astronomy',university:'Ecole 2'}
+  ];
+  const original=sample.map(p=>p.id);
+  assert.deepEqual(filterPrograms(sample,{sort:'name'},null).map(p=>p.id),['c','a1','a2','b','z']);
+  assert.deepEqual(filterPrograms(sample,{sort:'title'},null).map(p=>p.id),['a1','a2','b','c','z']);
+  assert.deepEqual(filterPrograms([...sample].reverse(),{sort:'name'},null).map(p=>p.id),['c','a1','a2','b','z']);
+  assert.deepEqual(sample.map(p=>p.id),original);
+  const punctuation=[{...sample[4],id:'a1'},{...sample[4],id:'a-1'}];
+  assert.deepEqual(filterPrograms(punctuation,{sort:'name'},null).map(p=>p.id),['a-1','a1']);
+});

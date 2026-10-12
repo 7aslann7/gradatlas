@@ -51,7 +51,7 @@ button:focus-visible,a:focus-visible{background-color:#dcebd3;color:#264b36}
 @media(max-width:700px){.workspace-sheet.workspace-drawer{left:16px;right:16px;width:auto;padding:23px 20px}.workspace-drawer .comparison-table{min-width:var(--table-width)}.side-panel-mode .map-toolbar,.side-panel-mode .map-controls{visibility:hidden}.workspace-drawer .page-header h1{font-size:23px}}
 @media(prefers-reduced-motion:reduce){.workspace-sheet.workspace-drawer{animation:none}}
 .results-pagination{border-top:1px solid var(--line);padding:14px 23px;flex-shrink:0;background:#fbfcf8}
-.results-pagination button{font-size:11px}
+.results-pagination{font-size:11px;color:#6e7f62}.results-sentinel{height:1px;flex-shrink:0}.results-drawer .program-list[data-order=university] .card-title{display:flex;flex-direction:column}.results-drawer .program-list[data-order=university] .university-name{order:-1;font-size:13px;font-weight:600;color:#334437;line-height:1.55;margin:0 0 4px}.results-drawer .program-list[data-order=university] .title-button{font-size:11px;font-weight:500;color:#6e7f62}
 .institution-card .title-button{font-size:13px;line-height:1.6}
 .institution-scope{font-size:10px;color:var(--muted);line-height:1.7;margin:10px 0}
 .institution-card>.card-link{margin-top:5px;font-size:11px}
