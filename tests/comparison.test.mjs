@@ -22,3 +22,12 @@ test('untrusted text remains text, and empty or oversized comparisons are reject
   assert.equal(typeof workbook.getWorksheet('Comparison').getCell('B5').value,'string');
   await assert.rejects(comparisonWorkbook([],null));await assert.rejects(comparisonWorkbook(programmes.slice(0,4),null));
 });
+test('registry Excel exports require and preserve publisher and locality attribution',async()=>{
+  const registry=programmes.find(p=>p.registry);
+  await assert.rejects(comparisonWorkbook([registry],null),/attribution/);
+  const source=JSON.parse(await readFile(new URL('../src/data/programme-registry-manifest.json',import.meta.url),'utf8'));
+  const locations=JSON.parse(await readFile(new URL('../src/data/institution-manifest.json',import.meta.url),'utf8'));
+  const buffer=await comparisonWorkbook([registry],null,{registry:source,locations}),workbook=new globalThis.ExcelJS.Workbook();await workbook.xlsx.load(buffer);
+  assert.equal(workbook.getWorksheet('Reuse & methodology').getCell('B4').value,source.attribution);
+  assert.match(workbook.getWorksheet('Reuse & methodology').getCell('B7').value,/by\/4.0/);
+});

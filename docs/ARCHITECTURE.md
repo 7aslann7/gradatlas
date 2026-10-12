@@ -10,7 +10,7 @@ The first edition uses browser-native JavaScript modules and static assets. No s
 
 Programme and institution locations use a clustered GeoJSON source and native circle/symbol layers. Count glyphs are generated locally through MapLibre's missing-image resolver. No moving HTML marker overlays are used. Input is sorted by stable ID independently of list order. A source fingerprint avoids resetting clusters for unchanged membership or sorting, and symbol fading is disabled to avoid transient duplicate count labels. An offscreen button group provides keyboard equivalents for visible map features. Cluster activation retrieves original programme IDs, chooses coincident campuses or expands the geographic cluster, and discards responses from a replaced source revision. Studio and methodology sheets make the map stage inert while open. Shortlist and comparison use right-hand drawers, retaining map access and shifting map controls outside the drawer.
 
-`studio.js` renders progressive Preparation, Enquiry and Official Guides tabs. `evidence.js` distinguishes linked, recorded, missing and stale field evidence. Neither a generic programme citation nor an HTTP response establishes every admissions fact.
+`catalogue.js` separates programme-page records from licensed registry identities, selects accurately labelled external routes and builds provenance-carrying catalogue downloads. `studio.js` renders progressive Preparation, Enquiry and Official Guides tabs. `evidence.js` distinguishes linked, recorded, missing and stale field evidence. Neither a generic programme citation nor an HTTP response establishes every admissions fact.
 
 `experience.js` renders the search, hidden filters and hidden results. The default view opens directly on the map; the legacy welcome route aliases it. Workspace routes open a panel over the existing map, preserving its camera when returning. Personal data continues to use the original local-storage schema. The build copies the source into `dist/`; hosting serves that directory. WebGL initialisation failure leaves the search/list workflow available.
 
@@ -29,6 +29,10 @@ Workspace storage can fail due to browser privacy settings or quota. The applica
 - Preferred thresholds do not become required thresholds.
 - An IELTS overall comparison does not establish component-score, exemption or degree eligibility.
 - Missing numeric data results in individual review, not a guessed pass or failure.
+
+## Tests
+
+The development-only Playwright suite runs against the static production build in GitHub Actions, across Chromium desktop, WebKit desktop and mobile Chromium. Node tests verify business rules, map constraints, workbook contents and provenance. CI artifacts retain synthetic failure evidence. See [testing](TESTING.md).
 
 ## Expansion path
 

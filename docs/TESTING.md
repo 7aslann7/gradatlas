@@ -4,7 +4,7 @@ GradAtlas tests behaviour and data consistency. Passing tests do not certify uni
 
 ## Reproduce
 
-Node.js 20 or newer is required; CI uses Node.js 22. Install the pinned test dependencies:
+Node.js 20 or newer and Python 3 are required for the full test suite; CI uses Node.js 22. Install the pinned test dependencies:
 
 ```sh
 npm ci
@@ -21,7 +21,7 @@ The app itself has no runtime npm dependency. MapLibre and ExcelJS are vendored;
 
 - Unit tests cover original grading scales and preferences, language caveats, date boundaries, search/filter intersections, workspace normalization and backup versions, enquiry placeholders, field provenance, map geometry/gesture routing and stable clustering inputs.
 - Excel tests read the generated workbook and verify actual values, source hyperlinks, frozen labels and formula-safe text.
-- Data validation checks stable unique IDs, duplicate identities, coordinates, dates, required provenance, supported field values and pinned ROR source/index checksums. It cannot replace a human review of an admission rule.
+- Data validation checks stable unique IDs, duplicate identities, coordinates, dates, required provenance, supported field values and pinned ROR source/index checksums. The DUO test reproduces the published identities from the attributed, checksum-pinned compressed CSV. It cannot replace a human review of an admission rule.
 - End-to-end tests use Chromium desktop, WebKit desktop and Android-sized Chromium. They cover search/pagination, filters, details, optional local profiles, shortlist/tracking, notes/checklists, three-programme comparisons, actual `.xlsx`/text/JSON downloads, editable enquiry drafts, local draft reload, preparation guides, backup validation/confirmation and deletion in isolated test workspaces.
 - Failure scenarios cover blocked/corrupt storage, an unavailable programme catalogue, unavailable institution data and absent WebGL. Map tests verify projection switching, finite zoom bounds and unchanged source revisions when only list order changes. Keyboard and viewport checks cover navigation and responsive overflow.
 

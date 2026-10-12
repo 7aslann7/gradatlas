@@ -15,8 +15,9 @@ export function comparisonRows(profile) {
   ];
 }
 
-export async function comparisonWorkbook(programmes,profile) {
+export async function comparisonWorkbook(programmes,profile,provenance={}) {
   if(!programmes.length||programmes.length>3)throw Error('Select one to three programmes.');
+  if(programmes.some(p=>p.registry)&&(!provenance.registry?.attribution||!provenance.locations?.licenses?.geonames))throw Error('Registry attribution unavailable. Reload before exporting.');
   // The browser bundle is loaded only on export; no applicant data leaves the device.
   await import('./vendor/exceljs/exceljs.min.js');
   const workbook=new globalThis.ExcelJS.Workbook();
@@ -59,6 +60,11 @@ export async function comparisonWorkbook(programmes,profile) {
   });
   sourceRow.getCell(1).font={name:'Calibri',size:11,bold:true,color:{argb:'FF52684D'}};sourceRow.getCell(1).fill={type:'pattern',pattern:'solid',fgColor:{argb:'FFEAF1E4'}};sourceRow.getCell(1).alignment={vertical:'middle',wrapText:true};
   sources.autoFilter={from:'A4',to:`E${sources.rowCount}`};
+  const method=workbook.addWorksheet('Reuse & methodology',{views:[{showGridLines:false}]});
+  method.columns=[{width:27},{width:100}];
+  const notices=[['Purpose','Research aid only. Double-check current official instructions, applicant category, dates, fees and links. Passing tests and a source link do not guarantee factual accuracy.'],['Evidence scope','Programme-page records and registry-backed degree identities have different evidence. Registration does not establish an available intake or admission eligibility.'],['Source rights','Referenced university pages retain their own rights. The GradAtlas software MIT licence does not relicense external pages or datasets.']];
+  if(programmes.some(p=>p.registry))notices.push(['DUO RIO attribution',provenance.registry.attribution],['DUO licence',provenance.registry.resolvedLicenceUrl+' · Creative Commons Attribution; publisher version unspecified. Keep source credit and transformation notices.'],['Location attribution',provenance.locations.attribution],['GeoNames licence',provenance.locations.licenses.geonames.url+' · CC BY 4.0. Approximate institution localities, not verified teaching campuses.']);
+  notices.forEach(([label,text])=>{const row=method.addRow([label,text]);row.height=heightFor([text],100);row.eachCell((cell,col)=>{cell.font={name:'Calibri',size:11,bold:col===1,color:{argb:'FF334437'}};cell.alignment={wrapText:true,vertical:'top'};cell.fill={type:'pattern',pattern:'solid',fgColor:{argb:col===1?'FFEAF1E4':'FFFFFFFF'}};});});
   sheet.pageSetup.printTitlesRow='1:5';sheet.pageSetup.printTitlesColumn='A:A';
   return workbook.xlsx.writeBuffer();
 }

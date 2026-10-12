@@ -1,0 +1,431 @@
+{
+  "snapshotDate": "2026-10-12",
+  "publisher": "DUO RIO",
+  "sourceUrl": "https://onderwijsdata.duo.nl/dataset/7c0686f4-b5c2-418e-8e44-7be0057d8084/resource/ffffa7ad-e6a2-4ba7-9fc2-a09df4128555/download/ho_opleidingsoverzicht.csv",
+  "datasetUrl": "https://onderwijsdata.duo.nl/datasets/ho_opleidingsoverzicht",
+  "metadataSourceUrl": "https://onderwijsdata.duo.nl/api/3/action/package_show?id=ho_opleidingsoverzicht",
+  "metadataModified": "2026-10-12T02:36:36.727879",
+  "resourceModified": "2026-10-12T02:35:35.077783",
+  "licenceId": "cc-by",
+  "licenceName": "Creative Commons Attribution",
+  "licenceVersion": "Publisher did not specify",
+  "publisherLicenceUrl": "http://www.opendefinition.org/licenses/cc-by",
+  "resolvedLicenceUrl": "https://opendefinition.org/licenses/cc-by/",
+  "attribution": "Source: DUO, Registratie Instellingen en Opleidingen (RIO), HO Opleidingsoverzicht, snapshot updated 12 October 2026. GradAtlas filtered and grouped the source records; DUO does not endorse this reuse.",
+  "csvSha256": "079fc3bd5ee702cb71f11d63e6e1c900daa6fd72b0deae51f4eea8410da2d53d",
+  "csvSizeBytes": 3965724,
+  "csvRowCount": 6861,
+  "rawMasterRowCount": 2751,
+  "eligibleIdentityGroups": 1175,
+  "proposedRecordCount": 1131,
+  "proposedInstitutionCount": 50,
+  "proposalSha256": "bde04952e54b341a1887bad09be91c10be644b0767d2b3169afe622bf8becf52",
+  "proposalSizeBytes": 6098374,
+  "filterCounts": {
+    "no_recognised_code_rows": 59,
+    "future_or_ended_rows": 27
+  },
+  "excluded": [
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B448",
+      "degreeIds": [
+        "66981"
+      ],
+      "title": "Artificial Intelligence",
+      "existingId": "groningen-ai"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B448",
+      "degreeIds": [
+        "60364"
+      ],
+      "title": "Computing Science",
+      "existingId": "groningen-computing-science"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B449",
+      "degreeIds": [
+        "66981"
+      ],
+      "title": "Artificial Intelligence",
+      "existingId": "utrecht-ai"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B451",
+      "degreeIds": [
+        "60810"
+      ],
+      "title": "Environmental Sciences",
+      "existingId": "wur-environment"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B473",
+      "degreeIds": [
+        "66981"
+      ],
+      "title": "Artificial Intelligence",
+      "existingId": "uva-ai"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B473",
+      "degreeIds": [
+        "60274"
+      ],
+      "title": "Quantum Computer Science",
+      "existingId": "uva-quantum-cs"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B473",
+      "degreeIds": [
+        "60227"
+      ],
+      "title": "Security and Network Engineering",
+      "existingId": "uva-security-network"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B473",
+      "degreeIds": [
+        "60228"
+      ],
+      "title": "Software Engineering",
+      "existingId": "uva-software-engineering"
+    },
+    {
+      "reason": "Joint degree already represented",
+      "boardId": "107B477",
+      "degreeId": "49512",
+      "title": "Sustainability Transitions (joint degree)"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B481",
+      "degreeIds": [
+        "65018"
+      ],
+      "title": "Data Science in Business and Entrepreneurship (joint degree)",
+      "existingId": "jads-data-science-business-entrepreneurship"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B482",
+      "degreeIds": [
+        "66981"
+      ],
+      "title": "Artificial Intelligence",
+      "existingId": "vu-ai"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B482",
+      "degreeIds": [
+        "65014"
+      ],
+      "title": "Computer Science (joint degree)",
+      "existingId": "uva-vu-cs"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B482",
+      "degreeIds": [
+        "60255"
+      ],
+      "title": "Information Sciences",
+      "existingId": "vu-information-sciences"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B523",
+      "degreeIds": [
+        "60024"
+      ],
+      "title": "Philosophy of Science, Technology and Society",
+      "existingId": "twente-philosophy-science-technology-society"
+    },
+    {
+      "reason": "Joint degree already represented",
+      "boardId": "107B549",
+      "degreeId": "49512",
+      "title": "Sustainability Transitions (joint degree)"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B578",
+      "degreeIds": [
+        "60300"
+      ],
+      "title": "Computer Science",
+      "existingId": "leiden-cs"
+    },
+    {
+      "reason": "Joint degree already represented",
+      "boardId": "107B585",
+      "degreeId": "49511",
+      "title": "Human Capital Innovation (joint degree)"
+    },
+    {
+      "reason": "Joint degree already represented",
+      "boardId": "107B585",
+      "degreeId": "49512",
+      "title": "Sustainability Transitions (joint degree)"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B605",
+      "degreeIds": [
+        "60300"
+      ],
+      "title": "Computer Science",
+      "existingId": "delft-computer-science"
+    },
+    {
+      "reason": "Existing or independently reviewed pending degree identity",
+      "boardId": "107B605",
+      "degreeIds": [
+        "65029"
+      ],
+      "title": "Quantum Information Science & Technology (joint degree)",
+      "existingId": "delft-leiden-quantum"
+    }
+  ],
+  "held": [
+    {
+      "reason": "Institution mapping needs review",
+      "boardId": "107B593",
+      "degreeId": "70243",
+      "title": "Leiderschap in Onderwijstransities",
+      "institution": "Stichting Thomas More Hogeschool"
+    }
+  ],
+  "mergedIdenticalNames": [
+    {
+      "boardId": "100B379",
+      "title": "Physiotherapy",
+      "degreeIds": [
+        "70046",
+        "70175"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B448",
+      "title": "International Relations",
+      "degreeIds": [
+        "60734",
+        "60819"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B448",
+      "title": "Philosophy",
+      "degreeIds": [
+        "60822",
+        "60823"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B449",
+      "title": "Global Challenges for Sustainability (joint degree)",
+      "degreeIds": [
+        "65025",
+        "65032"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B449",
+      "title": "Translation Studies",
+      "degreeIds": [
+        "66061",
+        "69350"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B471",
+      "title": "International Executive Master of Finance and Control",
+      "degreeIds": [
+        "75023",
+        "75138"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B473",
+      "title": "Arts & Culture",
+      "degreeIds": [
+        "60087",
+        "60828"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B473",
+      "title": "Business Administration",
+      "degreeIds": [
+        "60644",
+        "75017"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B473",
+      "title": "Dutch Studies",
+      "degreeIds": [
+        "60849",
+        "60850"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B473",
+      "title": "Heritage Studies",
+      "degreeIds": [
+        "60835",
+        "60836"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B473",
+      "title": "Linguistics",
+      "degreeIds": [
+        "60815",
+        "60816"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B473",
+      "title": "Media Studies",
+      "degreeIds": [
+        "60830",
+        "60831"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B473",
+      "title": "Philosophy",
+      "degreeIds": [
+        "60822",
+        "60823"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B482",
+      "title": "Business Administration",
+      "degreeIds": [
+        "60644",
+        "75017"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B482",
+      "title": "Marketing",
+      "degreeIds": [
+        "60048",
+        "75134"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B482",
+      "title": "Theology & Religious Studies",
+      "degreeIds": [
+        "60824",
+        "60825"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B484",
+      "title": "Business Administration",
+      "degreeIds": [
+        "60644",
+        "75104"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B484",
+      "title": "Philosophy",
+      "degreeIds": [
+        "60822",
+        "60823"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B484",
+      "title": "Tax Law",
+      "degreeIds": [
+        "66827",
+        "75107"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B576",
+      "title": "Global Executive MBA",
+      "degreeIds": [
+        "75046",
+        "75171"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B578",
+      "title": "Asian Studies",
+      "degreeIds": [
+        "60839",
+        "60840"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B578",
+      "title": "Philosophy",
+      "degreeIds": [
+        "60822",
+        "60823"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    },
+    {
+      "boardId": "107B585",
+      "title": "Polymer Engineering (joint degree)",
+      "degreeIds": [
+        "49508",
+        "70178"
+      ],
+      "reason": "Identically named registrations; distinct routes or replacement relationship not individually reviewed"
+    }
+  ],
+  "projection": "MASTER + OPLEIDING; current registration and offering dates where supplied; recognised 5-digit code and NVAO/OCW; board+registered degree grouping, then identically named registrations grouped conservatively with all degree codes retained; named joint degrees deduplicated across boards. Parent degree names retained, variants excluded. No individual admission review.",
+  "coordinateProvider": "GeoNames via ROR",
+  "coordinateLicence": "CC-BY-4.0",
+  "coordinateLicenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "coordinateScope": "Institution city/locality only; not independently reviewed campus coordinates",
+  "existingCatalogueRecordCount": 304,
+  "institutionIndexSha256": "816d9106affb0b527fe468364e82b80f3a144eef3303e143cd09851a42c84578",
+  "existingCatalogueSha256": "881e70841c19e5169c920bf897ab14bb7022d03747f3d5d0c03f2e4bf6b56b3d",
+  "metadataSha256": "c4bb2a6701c1aa81e939ee5161bad328e8cb9c5901d566c291baa9747afb4ac4",
+  "importerSha256": "836bf76e90f6df75cc793feff664ad2f86947dc7e9330c0f10eaf494cb3204e2",
+  "compressedSnapshot": "data-sources/duo-rio-2026-10-12.csv.gz",
+  "compressedSha256": "bdef2c04d47fbac19bc24b667df4fa9c6e32a70d140f6036f09d0542f8f1b688",
+  "publishedRegistryCount": 1131,
+  "publishedRegistrySha256": "5a5c855e54f4f6da2eded4265fe7bb707c43f972c1cdee74b59913d683930af0",
+  "publishedHashScope": "JSON.stringify of registry-only records in published catalogue order; not the full catalogue, CSV, proposal file or export envelope."
+}

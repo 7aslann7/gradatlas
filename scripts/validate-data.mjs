@@ -38,8 +38,25 @@ for(const p of data){
   if(p.ielts!=null){assert.ok(Number.isFinite(p.ielts)&&p.ielts>0&&p.ielts<=9,`${context}: invalid IELTS score`);assert.ok(p.ieltsSource&&sourced(p.ieltsSource),`${context}: language source absent from provenance`);}
   if(p.contact){assert.ok(nonempty(p.contact.name)&&sourced(p.contact.source),`${context}: professional contact provenance required`);assert.match(p.contact.email,/^[^\s@]+@[^\s@]+\.[^\s@]+$/,`${context}: invalid contact email`);}
   if(p.research){assert.ok(nonempty(p.research.label),`${context}: research label required`);url(p.research.url);assert.ok(sourced(p.research.url),`${context}: research link absent from provenance`);}
+  if(p.registry){
+    const r=p.registry;assert.equal(r.provider,'DUO RIO');assert.equal(r.award,'MASTER');
+    assert.match(r.degreeId,/^\d{5}$/);assert.match(r.institutionId,/^\d{3}B\d{3}$/);
+    assert.ok(date(r.snapshotDate)&&r.snapshotDate===p.checkedAt);url(r.sourceUrl);url(r.licenceUrl);
+    assert.ok(sourced(r.sourceUrl)&&nonempty(r.scope)&&nonempty(p.dataNote));
+    assert.ok(Array.isArray(r.degreeIds)&&r.degreeIds.includes(r.degreeId)&&r.degreeIds.every(id=>/^\d{5}$/.test(id)));
+    assert.ok(Array.isArray(r.programmeUrls)&&r.programmeUrls.every(nonempty));
+    assert.equal(r.location?.licenceUrl,'https://creativecommons.org/licenses/by/4.0/');assert.ok(sourced(r.location?.sourceUrl));url(r.location.licenceUrl);
+    assert.equal(p.duration,'Not verified');assert.equal(p.mode,'Not verified');
+    assert.ok(!p.window&&!p.gpa&&!p.ielts&&!p.contact&&!p.tuition.source&&!p.tuition.free,'Registry admission claims require separate promotion and review');
+  }
 }
 console.log(`Validated ${data.length} source-backed records across ${new Set(data.map(p=>p.country)).size} countries/regions and ${new Set(data.flatMap(p=>p.fields)).size} subject groups.`);
+const registryRows=data.filter(p=>p.registry),registryManifest=JSON.parse(await readFile('src/data/programme-registry-manifest.json','utf8'));
+assert.equal(registryRows.length,registryManifest.publishedRegistryCount);
+assert.equal(createHash('sha256').update(JSON.stringify(registryRows)).digest('hex'),registryManifest.publishedRegistrySha256,'Registry records differ from the reviewed import');
+assert.ok(nonempty(registryManifest.attribution)&&nonempty(registryManifest.publishedHashScope));
+for(const p of registryRows){assert.equal(p.registry.snapshotDate,registryManifest.snapshotDate);assert.equal(p.registry.sourceUrl,registryManifest.sourceUrl);assert.equal(p.registry.licenceUrl,registryManifest.resolvedLicenceUrl);}
+console.log(`Evidence scopes: ${data.length-registryRows.length} programme-page records, ${registryRows.length} registry identities with admissions unreviewed.`);
 const guidance=JSON.parse(await readFile('src/data/guidance.json','utf8'));
 assert.ok(Array.isArray(guidance)&&guidance.length,'Official guidance required');
 assert.equal(new Set(guidance.map(g=>g.id)).size,guidance.length,'Duplicate guidance ID');

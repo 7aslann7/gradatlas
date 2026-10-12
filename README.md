@@ -4,7 +4,7 @@
 
 GradAtlas is a free, open-source master's discovery and application workspace. It brings official programme information, an interactive world map, comparisons and preparation tools into one calm interface.
 
-The current catalogue contains **251 source-backed programme and specialisation records across 88 countries and regions and 17 subject groups**. The global catalogue covers computing, engineering, business, law, health, life sciences, education, social sciences and humanities alongside the original Germany/Netherlands focus. It remains a curated discovery catalogue, with partial admissions information explicitly labelled; it is not an exhaustive global directory or a university ranking.
+The current programme catalogue contains **1,489 degree and specialisation records across 88 countries/regions and 17 subject groups**: **358 records with reviewed programme-page sources**, plus **1,131 registered Dutch degree identities** imported from the official DUO RIO feed. Admissions coverage remains partial. A registry identity is not an individually reviewed admission route or currently available intake; none of these counts is a university ranking or an exhaustive world inventory.
 
 A separate, licensed institution directory indexes **30,174 active education-type ROR records across 223 countries/territories**. It supports broader discovery without claiming that all indexed institutions offer a verified master’s programme. Identity and approximate GeoNames locality information are distinct from programme and admissions evidence.
 
@@ -31,7 +31,7 @@ Created and maintained by [@7aslann7](https://github.com/7aslann7). The official
 - Filters, programme lists, details and application tools open only when requested.
 - Drag and two-finger pan, pinch zoom, globe rotation, keyboard controls and visible zoom/compass buttons.
 - Native MapLibre circle layers and clustering keep locations attached to the map during motion; keyboard-accessible location controls, campus selection and reduced-motion support require no map API key or remote tiles.
-- Search by programme, university, location and research keyword; filter by field, country, verified application availability and recorded tuition-free status.
+- Search reviewed programme records and clearly labelled registered degrees by programme, university, location and research keyword; filter by field, country, verified application availability and recorded tuition-free status.
 - Programme details with requirements, applicant-category notes, official links and last-review dates.
 - Profile reviews for recorded grade and IELTS thresholds. Different grade systems always require official equivalency; the app never predicts admission probability.
 - A compact right-hand comparison drawer for up to three programmes, with a formatted Excel `.xlsx` export and linked source sheet.
@@ -44,7 +44,7 @@ Created and maintained by [@7aslann7](https://github.com/7aslann7). The official
 
 ## Run locally
 
-Requires Node.js 20 or later. MapLibre GL JS 6.14.0 and ExcelJS 4.4.0 are vendored locally; the application needs no runtime package installation. The test suite uses a pinned development dependency.
+Requires Node.js 20 or later. Python 3 is needed for the data importer reproducibility test. MapLibre GL JS 6.14.0 and ExcelJS 4.4.0 are vendored locally; the application needs no runtime package installation. The test suite uses a pinned development dependency.
 
 ```sh
 npm run dev
@@ -82,12 +82,14 @@ src/
   evidence.js         Field provenance, missing information and coverage
   institutions.js     Registry discovery, filtering and evidence limits
   comparison.js       Shared comparison rows and local Excel exports
+  catalogue.js        Evidence scopes, labelled routes and attributed exports
   map-geometry.js     Ocean surface, viewport limits and circular longitude geometry
   experience.js       Minimal map-interface templates
   atlas.css           Map workspace, panels and restrained transitions
   vendor/maplibre/    Locally served MapLibre renderer, worker and licence
   vendor/exceljs/     On-demand Excel writer and MIT licence
-  data/programs.json  Curated programme catalogue
+  data/programs.json  Programme-page and labelled registry catalogue
+  data/programme-registry-manifest.json  DUO source, licence and checksums
   data/institutions.json  Pinned ROR identity/locality index
   data/institution-manifest.json  Source, licence and import checksums
   assets/countries.geojson  Simplified Natural Earth country boundaries
@@ -98,7 +100,7 @@ docs/                 Product, architecture and data policy
 
 ## Trust and privacy
 
-Every catalogue record has official sources and a review date. Unknown fees, admissions criteria and dates are visibly unknown. Recurring annual dates are shown as guidance rather than converted into an assumed application cycle. Records older than 90 days need rechecking. Deadline reminders are all-day reminders, not institutional cutoff times.
+Every catalogue record has official provenance and a source-review or registry-snapshot date. Unknown fees, admissions criteria and dates are visibly unknown. Recurring annual dates are shown as guidance rather than converted into an assumed application cycle. Records older than 90 days need rechecking. Deadline reminders are all-day reminders, not institutional cutoff times.
 
 The workspace is stored in this browser's local storage. It does not sync across devices or origins. Export a backup before changing devices or clearing browser data. Enquiry edits remain in memory until the user saves a local copy or downloads it. Saved drafts are included in private workspace backups; no application server receives profile fields, notes or drafts. A shared browser profile on the same origin uses the same local workspace, irrespective of hosting login. The application includes no analytics, login, paid features or bulk mailing. Google Fonts may be requested for typography; map, renderer, worker and catalogue assets are served locally. WebGL is required for the map; the programme list remains available when it cannot initialise.
 
@@ -106,7 +108,7 @@ The website can help organise research. The university's official process determ
 
 ## Current limits
 
-- No automatic programme ingestion or scheduled source refresh. The ROR institution importer is implemented and uses a reviewed, pinned release; admissions facts still need separate review.
+- ROR and DUO importers use attributed, checksum-pinned snapshots. They prepare bounded identity data; there is no scheduled source refresh or automatic admission-rule extraction. Current applicant-specific rules still need separate review.
 - No global faculty directory, supervisor availability tracking, public reviews or community submission service yet.
 - No application submission, acceptance probabilities, automatic GPA conversion or email delivery.
 - Many records have partial admissions information. Check the notes and official sources for your category.

@@ -225,7 +225,7 @@ test('map projection, zoom bounds and clustering stay stable when only list orde
   await page.locator('#sort').selectOption('name'); await expect(canvas).toHaveAttribute('data-data-revision', revision);
   await page.locator('#sort').selectOption('deadline'); await expect(canvas).toHaveAttribute('data-data-revision', revision);
   await page.getByRole('button', {name: 'Close programme list'}).click();
-  for (let i = 0; i < 10; i++) await page.getByRole('button', {name: 'Zoom out', exact: true}).click();
+  for (let i = 0; i < 10 && await page.getByRole('button', {name: 'Zoom out', exact: true}).isEnabled(); i++) await page.getByRole('button', {name: 'Zoom out', exact: true}).click();
   await expect.poll(async () => Number(await canvas.getAttribute('data-zoom')) - Number(await canvas.getAttribute('data-min-zoom'))).toBeLessThan(0.02);
   await page.getByRole('button', {name: 'Show 3D globe', exact: true}).click();
   await expect(canvas).toHaveAttribute('data-projection', 'globe'); expect(errors).toEqual([]);
@@ -243,4 +243,32 @@ test('keyboard navigation and compact layouts expose visible usable controls', a
   expect(box.width).toBeLessThan(testInfo.project.use.viewport.width);
   await page.getByRole('button', {name: 'Back to the map'}).click();
   await expect(page.locator('.workspace-sheet')).toHaveCount(0);
+});
+
+test('registry records expose unreviewed scope and an institution route, not a false programme-page claim', async ({page}) => {
+  const p = programmes.find(p => p.registry && !p.registry.programmeUrls.length);
+  expect(p).toBeTruthy();
+  await open(page); await page.locator('#search').fill(p.title + ' ' + p.university);
+  await expect(page.locator('#results')).toContainText('Registry identity · admissions unreviewed');
+  await page.locator(`[data-detail="${p.id}"]`).first().click();
+  await expect(page.locator('#detail-dialog')).toContainText('Registry-backed degree identity');
+  await expect(page.locator('#detail-dialog')).toContainText('No individual programme page or admissions review');
+  await expect(page.locator('#detail-dialog').getByRole('link', {name: 'Find programmes at institution'})).toHaveAttribute('href', new URL(p.registry.institutionWebsite).href);
+  await expect(page.locator('#detail-dialog').getByRole('link', {name: 'Official programme page', exact: true})).toHaveCount(0);
+});
+
+test('catalogue and registry comparisons carry attribution and exclude personal workspace data', async ({page}) => {
+  const p = programmes.find(p => p.registry);
+  await seed(page, {...empty(), compare: [first.id, p.id], notes: {[first.id]: 'PRIVATE_QA_NOTE'}});
+  await open(page, '#sources');
+  const catalogue = await downloaded(page, () => page.getByRole('button', {name: 'Download programme catalogue'}).click());
+  const data = JSON.parse(catalogue.bytes.toString());
+  expect(data.format).toBe('gradatlas-programme-catalogue'); expect(data.records.length).toBe(programmes.length);
+  expect(data.sources.duo.attribution).toContain('DUO'); expect(data.sources.locations.licenses.geonames.url).toContain('/by/4.0/');
+  expect(catalogue.bytes.toString()).not.toContain('PRIVATE_QA_NOTE');
+  await navigate(page, 'Compare programmes');
+  const file = await downloaded(page, () => page.getByRole('button', {name: 'Download Excel .xlsx'}).click());
+  const workbook = new globalThis.ExcelJS.Workbook(); await workbook.xlsx.load(file.bytes);
+  const method = workbook.getWorksheet('Reuse & methodology');
+  expect(method.getCell('A4').value).toBe('DUO RIO attribution'); expect(method.getCell('B4').value).toContain('DUO');
 });
