@@ -88,6 +88,8 @@ test('one search finds Dutch Supply Chain programmes and their institutions with
   await page.locator('.institution-programmes [data-detail]').first().click();
   await expect(page.locator('#detail-title')).toHaveText(programmes.find(p=>p.id===selectedId).title);
   await page.getByRole('button',{name:'Close programme details',exact:true}).click();
+  // Compact layouts close the results drawer while a programme detail is open.
+  await page.locator('#search').focus();
   await page.getByRole('button',{name:'Search programmes',exact:true}).click();
   await expect(page.locator('#result-count')).toHaveText('8 programmes');
 });
