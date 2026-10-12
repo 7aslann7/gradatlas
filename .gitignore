@@ -9,3 +9,5 @@ dist/
 coverage/
 .sites/
 .openai/local*
+playwright-report/
+test-results/

@@ -8,6 +8,22 @@ The current catalogue contains **251 source-backed programme and specialisation 
 
 A separate, licensed institution directory indexes **30,174 active education-type ROR records across 223 countries/territories**. It supports broader discovery without claiming that all indexed institutions offer a verified master’s programme. Identity and approximate GeoNames locality information are distinct from programme and admissions evidence.
 
+## The problem
+
+Master's research is scattered across programme pages, regulations, application portals and faculty websites. Students repeatedly rebuild their own spreadsheets and risk treating an old deadline, a foreign grade scale or an institution's existence as proof of eligibility. GradAtlas brings discovery and preparation together while leaving the admission decision with the university.
+
+## Our approach
+
+Start on a map, narrow by subject and country, compare a small shortlist, then follow the official programme's own process. Keep evidence next to each fact; show unknown information rather than guessing. Preserve applicant categories and original grading systems. Profiles, notes and editable enquiries stay in the student's browser, and the core service remains free.
+
+Institution identity, programme identity and reviewed admission criteria are different levels of evidence. GradAtlas is a research aid: always double-check current information, links and instructions before applying. Neither a source link nor a passing software test guarantees unchanged rules.
+
+## Technologies
+
+The production application uses semantic HTML, CSS and native JavaScript modules. MapLibre GL JS renders a local Natural Earth map with native geographic clusters; ExcelJS writes comparison workbooks locally. Node.js builds and validates the static site. Node's test runner covers business rules and data integrity; Playwright checks browser flows in GitHub Actions. A checksum-pinned Python importer prepares the ROR institution directory. No application database, paid map API key or applicant account is required.
+
+Created and maintained by [@7aslann7](https://github.com/7aslann7). The official source repository is [7aslann7/gradatlas](https://github.com/7aslann7/gradatlas), currently private; public release is a separate decision.
+
 ## What works today
 
 - A full-screen, directly interactive globe with distinct ocean, land and backdrop colours, one search bar and a small menu.
@@ -28,7 +44,7 @@ A separate, licensed institution directory indexes **30,174 active education-typ
 
 ## Run locally
 
-Requires Node.js 20 or later. MapLibre GL JS 6.14.0 and ExcelJS 4.4.0 are vendored locally; there is no package installation step.
+Requires Node.js 20 or later. MapLibre GL JS 6.14.0 and ExcelJS 4.4.0 are vendored locally; the application needs no runtime package installation. The test suite uses a pinned development dependency.
 
 ```sh
 npm run dev
@@ -41,6 +57,7 @@ PORT=4174 npm run dev
 ```
 
 ```sh
+npm ci
 npm run check
 npm test
 npm run build
@@ -99,6 +116,6 @@ See [workspace privacy](docs/WORKSPACE_PRIVACY.md), [catalogue coverage](docs/CA
 
 ## GitHub and release
 
-The source is prepared for a private GitHub repository followed by a public release. The included CI workflow validates catalogue records, runs tests and builds the site. Remove account-specific hosting configuration in `.openai/hosting.json` when forking for an independent host; replace it with your own Site identity if using Sites.
+The GitHub repository starts private. The included CI workflow validates catalogue records, runs unit tests, builds the site and executes desktop Chromium, desktop WebKit and mobile Chromium end-to-end tests. See [testing and release verification](docs/TESTING.md). A public repository and public hosting audience must be enabled deliberately; they are separate settings. Remove account-specific hosting configuration in `.openai/hosting.json` when forking for an independent host; replace it with your own Site identity if using Sites.
 
 Project code is licensed under MIT. MapLibre retains BSD-3-Clause and ExcelJS retains MIT. ROR metadata and GeoNames locality data retain their separate CC0 and attribution terms; see [third-party notices](THIRD_PARTY_NOTICES.md). Original university content and referenced pages retain their own ownership and terms. Do not contribute copied university pages, personal applicant records or unpublished contact details.

@@ -1,0 +1,31 @@
+name: Programme data correction
+description: Suggest a correction with an official source.
+title: '[Data] '
+body:
+  - type: input
+    id: programme
+    attributes:
+      label: Programme ID or university and degree
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Recorded fact and proposed correction
+      description: Include the year and applicant category. Do not include your private application data.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source URL
+      description: Prefer the programme regulation, university page or government registry.
+    validations:
+      required: true
+  - type: input
+    id: checked
+    attributes:
+      label: Date you checked the source
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true

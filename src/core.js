@@ -27,6 +27,22 @@ export function normalizeWorkspace(raw) {
 export function escapeHTML(value = '') {
   return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
+export function parseWorkspaceBackup(text, validIds) {
+  if (typeof text !== 'string' || new TextEncoder().encode(text).length > 2e6) throw Error('Backup too large');
+  const backup = JSON.parse(text);
+  if (!backup || ![1, 2].includes(backup.version)) throw Error('Invalid backup version');
+  const workspace = normalizeWorkspace(backup.workspace);
+  const ids = new Set(validIds);
+  for (const field of ['saved', 'compare']) workspace[field] = workspace[field].filter(id => ids.has(id));
+  for (const field of ['tracking', 'notes', 'tasks', 'drafts']) workspace[field] = Object.fromEntries(Object.entries(workspace[field]).filter(([id]) => ids.has(id)));
+  return workspace;
+}
+export function draftMatches(saved, draft) {
+  if (!saved || !draft) return false;
+  const fields = draft.fields || {};
+  if (saved.subject !== draft.subject || saved.body !== draft.body || saved.purpose !== (fields.purpose || 'admissions') || saved.recipientEmail !== (fields.recipientEmail || '')) return false;
+  return ['name', 'recipient', 'recipientEmail', 'degree', 'interest', 'question'].every(field => (saved.fields?.[field] || '') === (fields[field] || ''));
+}
 export function todayKey(now = new Date()) {
   return new Intl.DateTimeFormat('en-CA', {timeZone:'Europe/Istanbul',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);
 }
