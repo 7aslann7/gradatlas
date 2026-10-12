@@ -58,3 +58,11 @@ button:focus-visible,a:focus-visible{background-color:#dcebd3;color:#264b36}
 .catalogue-scope{margin-top:10px;font-size:10px;line-height:1.6;padding:8px 12px;width:fit-content;max-width:100%;border-radius:9px;background:#ffffffeb;color:#3b6475;box-shadow:0 3px 12px #142d3b10}
 .directory-method{margin-bottom:24px}
 .source-row>div{max-width:45%;overflow-wrap:anywhere;text-align:right}
+.catalogue-explanation{margin-bottom:24px}
+.methodology-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:12px;line-height:1.8}
+.methodology-table th,.methodology-table td{padding:15px 13px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.methodology-table th{width:27%;font-weight:600;color:#52684d;background:#f2f6ed}
+.methodology-table td{color:#66775e}
+.reuse-body{padding:0 20px 18px;background:#fff}
+.reuse-body p{font-size:12px;line-height:1.8;margin:15px 0;color:#66775e}
+@media(max-width:700px){.methodology-table{font-size:11px}.methodology-table th{width:34%}.methodology-table th,.methodology-table td{padding:12px 9px}.reuse-body{padding:0 10px 12px}}

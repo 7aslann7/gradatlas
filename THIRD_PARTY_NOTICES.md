@@ -16,7 +16,7 @@ The separate institution index is derived from **ROR v2.14, 6 October 2026**, fi
 - GeoNames geographic data: CC BY 4.0, https://www.geonames.org/about.html and https://creativecommons.org/licenses/by/4.0/
 - ROR's schema documentation also retains a legacy CC BY 3.0 reference. The provenance manifest preserves this discrepancy and provider attribution.
 
-Visible attribution credits ROR and GeoNames on the directory map and explains their licences in Data & methodology. These third-party data rights are separate from GradAtlas's software MIT licence. Source websites, institutional names, marks and logos do not acquire an MIT licence through inclusion of a link.
+Visible attribution credits ROR and GeoNames on the directory map and explains their licences in Data & methodology. Directory exports carry the same attribution, source release, licence links and transformation/accuracy notes alongside the records; see [data reuse](docs/DATA_REUSE.md). These third-party data rights are separate from GradAtlas's software MIT licence. Source websites, institutional names, marks and logos do not acquire an MIT licence through inclusion of a link.
 
 ## MapLibre GL JS
 

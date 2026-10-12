@@ -95,7 +95,7 @@ The website can help organise research. The university's official process determ
 - Many records have partial admissions information. Check the notes and official sources for your category.
 - A local profile's degree label provides context; course-level eligibility is still reviewed manually.
 
-See [workspace privacy](docs/WORKSPACE_PRIVACY.md), [catalogue coverage](docs/CATALOGUE_COVERAGE.md), [catalogue pipeline](docs/CATALOGUE_PIPELINE.md), [ownership and launch plan](docs/OWNERSHIP_AND_LAUNCH.md), [the roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [data policy](docs/DATA_POLICY.md) and [contribution guide](CONTRIBUTING.md).
+See [workspace privacy](docs/WORKSPACE_PRIVACY.md), [catalogue coverage](docs/CATALOGUE_COVERAGE.md), [data reuse and publication](docs/DATA_REUSE.md), [catalogue pipeline](docs/CATALOGUE_PIPELINE.md), [ownership and launch plan](docs/OWNERSHIP_AND_LAUNCH.md), [the roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [data policy](docs/DATA_POLICY.md) and [contribution guide](CONTRIBUTING.md).
 
 ## GitHub and release
 

@@ -48,6 +48,10 @@ console.log(`Validated ${guidance.length} scoped official application guides.`);
 const indexFile=await readFile('src/data/institutions.json');
 const institutions=JSON.parse(indexFile),manifest=JSON.parse(await readFile('src/data/institution-manifest.json','utf8'));
 assert.equal(createHash('sha256').update(indexFile).digest('hex'),manifest.indexSha256,'Institution index differs from its import manifest');
+assert.equal(indexFile.byteLength,manifest.indexSizeBytes,'Published index byte count differs from its manifest');
+assert.equal(manifest.metadataLicense,'CC0-1.0');assert.equal(manifest.locationLicense,'CC-BY-4.0');
+assert.ok(nonempty(manifest.attribution)&&nonempty(manifest.projection));
+for(const id of ['ror','geonames']){assert.ok(manifest.licenses?.[id],`${id}: missing reuse licence`);url(manifest.licenses[id].url);url(manifest.licenses[id].source);}
 assert.equal(institutions.length,manifest.indexCount);
 assert.equal(new Set(institutions.map(p=>p.id)).size,institutions.length,'Duplicate institution ID');
 assert.equal(new Set(institutions.map(p=>p.countryCode)).size,manifest.indexCountryCount);

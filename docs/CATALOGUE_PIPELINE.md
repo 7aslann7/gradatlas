@@ -33,4 +33,6 @@ The next candidate source is the French ministry's licensed MonMaster dataset. I
 
 Publish counts of distinct degrees, separately counted specialisations, countries and currently evidenced admission fields. Every promoted record needs an actual master's qualification, institution identity, official programme URL and review date. Each fee, deadline, grade and language fact needs its own source and applicant scope. Missing fields remain visible, and no personal acceptance probability is derived from historical cohorts.
 
+The public directory download wraps `records` and `source` together with attribution, licence links and limitations. The compact raw array remains an internal map asset; see [data reuse](DATA_REUSE.md).
+
 The review queue, programme source adapters and scheduled evidence maintenance remain to be implemented. The ROR index importer and its validation are implemented. These are different milestones.

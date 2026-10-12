@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.1 — 12 October 2026
+
+- Clarified institution identity versus programme/specialisation records, research-focused registry coverage and private visitor workspaces in Data & methodology.
+- Added component-specific reuse terms, commercial-use conditions, provenance/accuracy distinctions and no-endorsement scope.
+- Included attribution, licence links and source metadata with directory downloads; preserved the map's raw index format.
+- Removed obsolete intermediate projection statistics from the source definition/manifest and validated the published index size and licence metadata.
+- Labelled registry-provided institution website links without claiming independent availability verification.
+
 ## 0.7.0 — 12 October 2026
 
 - Replaced broad shortlist/comparison sheets with compact right-hand drawers and retained map access.
