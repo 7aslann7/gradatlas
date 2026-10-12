@@ -6,6 +6,8 @@ GradAtlas is a free, open-source master's discovery and application workspace. I
 
 The current catalogue contains **251 source-backed programme and specialisation records across 88 countries and regions and 17 subject groups**. The global catalogue covers computing, engineering, business, law, health, life sciences, education, social sciences and humanities alongside the original Germany/Netherlands focus. It remains a curated discovery catalogue, with partial admissions information explicitly labelled; it is not an exhaustive global directory or a university ranking.
 
+A separate, licensed institution directory indexes **30,174 active education-type ROR records across 223 countries/territories**. It supports broader discovery without claiming that all indexed institutions offer a verified master’s programme. Identity and approximate GeoNames locality information are distinct from programme and admissions evidence.
+
 ## What works today
 
 - A full-screen, directly interactive globe with distinct ocean, land and backdrop colours, one search bar and a small menu.
@@ -16,8 +18,8 @@ The current catalogue contains **251 source-backed programme and specialisation 
 - Search by programme, university, location and research keyword; filter by field, country, verified application availability and recorded tuition-free status.
 - Programme details with requirements, applicant-category notes, official links and last-review dates.
 - Profile reviews for recorded grade and IELTS thresholds. Different grade systems always require official equivalency; the app never predicts admission probability.
-- Side-by-side comparison of up to three programmes and a downloadable comparison.
-- Personal shortlist, application status, notes and preparation checklist.
+- A compact right-hand comparison drawer for up to three programmes, with a formatted Excel `.xlsx` export and linked source sheet.
+- A compact right-hand shortlist drawer, application status, notes and preparation checklist.
 - An application studio with preparation prompts, notes, downloadable plans, scoped official university guides and editable admissions/research enquiries.
 - Explicit local draft saving, placeholder checks, copy/download tools and user-selected email-app opening.
 - Calendar deadline reminders for recorded application windows.
@@ -26,7 +28,7 @@ The current catalogue contains **251 source-backed programme and specialisation 
 
 ## Run locally
 
-Requires Node.js 20 or later. MapLibre GL JS 6.14.0 is vendored locally; there is no package installation step.
+Requires Node.js 20 or later. MapLibre GL JS 6.14.0 and ExcelJS 4.4.0 are vendored locally; there is no package installation step.
 
 ```sh
 npm run dev
@@ -47,7 +49,7 @@ npm run preview
 
 The production build is a static `dist/` directory. It can be hosted by any static host that serves JavaScript modules and JSON. `scripts/serve.mjs` is a loopback-only development server, not a production server.
 
-The default route and `#explore` open directly on the map. The legacy `#welcome` route also opens the map. Shortlist, comparison, studio and methodology routes open a workspace panel over the map.
+The default route and `#explore` open directly on the map. The legacy `#welcome` route also opens the map. Shortlist and comparison open right-hand drawers while the map remains usable. Studio and methodology keep their broader workspace layout.
 
 ## Structure
 
@@ -61,11 +63,16 @@ src/
   map-input.js        Trackpad/pinch routing and Safari gesture math
   studio.js           Preparation, enquiry and official-guidance templates
   evidence.js         Field provenance, missing information and coverage
+  institutions.js     Registry discovery, filtering and evidence limits
+  comparison.js       Shared comparison rows and local Excel exports
   map-geometry.js     Ocean surface, viewport limits and circular longitude geometry
   experience.js       Minimal map-interface templates
   atlas.css           Map workspace, panels and restrained transitions
   vendor/maplibre/    Locally served MapLibre renderer, worker and licence
+  vendor/exceljs/     On-demand Excel writer and MIT licence
   data/programs.json  Curated programme catalogue
+  data/institutions.json  Pinned ROR identity/locality index
+  data/institution-manifest.json  Source, licence and import checksums
   assets/countries.geojson  Simplified Natural Earth country boundaries
 scripts/              Build, development server and data validation
 tests/                Requirement, date, search and export regression tests
@@ -82,16 +89,16 @@ The website can help organise research. The university's official process determ
 
 ## Current limits
 
-- No automated ingestion or scheduled source refresh; the initial review date is 12 October 2026.
+- No automatic programme ingestion or scheduled source refresh. The ROR institution importer is implemented and uses a reviewed, pinned release; admissions facts still need separate review.
 - No global faculty directory, supervisor availability tracking, public reviews or community submission service yet.
 - No application submission, acceptance probabilities, automatic GPA conversion or email delivery.
 - Many records have partial admissions information. Check the notes and official sources for your category.
 - A local profile's degree label provides context; course-level eligibility is still reviewed manually.
 
-See [workspace privacy](docs/WORKSPACE_PRIVACY.md), [catalogue coverage](docs/CATALOGUE_COVERAGE.md), [the roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [data policy](docs/DATA_POLICY.md) and [contribution guide](CONTRIBUTING.md).
+See [workspace privacy](docs/WORKSPACE_PRIVACY.md), [catalogue coverage](docs/CATALOGUE_COVERAGE.md), [catalogue pipeline](docs/CATALOGUE_PIPELINE.md), [ownership and launch plan](docs/OWNERSHIP_AND_LAUNCH.md), [the roadmap](docs/ROADMAP.md), [architecture](docs/ARCHITECTURE.md), [data policy](docs/DATA_POLICY.md) and [contribution guide](CONTRIBUTING.md).
 
 ## GitHub and release
 
 The source is prepared for a private GitHub repository followed by a public release. The included CI workflow validates catalogue records, runs tests and builds the site. Remove account-specific hosting configuration in `.openai/hosting.json` when forking for an independent host; replace it with your own Site identity if using Sites.
 
-Project code is licensed under MIT. MapLibre retains its BSD-3-Clause licence; see [third-party notices](THIRD_PARTY_NOTICES.md). Original university content and referenced pages retain their own ownership and terms. Do not contribute copied university pages, personal applicant records or unpublished contact details.
+Project code is licensed under MIT. MapLibre retains BSD-3-Clause and ExcelJS retains MIT. ROR metadata and GeoNames locality data retain their separate CC0 and attribution terms; see [third-party notices](THIRD_PARTY_NOTICES.md). Original university content and referenced pages retain their own ownership and terms. Do not contribute copied university pages, personal applicant records or unpublished contact details.

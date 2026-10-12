@@ -1,27 +1,25 @@
 # Contributing to GradAtlas
 
-GradAtlas should be useful without a subscription or account. Contributions should make information easier to find, easier to understand and easier to verify.
+GradAtlas is a free discovery and preparation tool. Contributions should improve reliable coverage and a simple, accessible interface.
 
-## Programme records
+## Software
 
-1. Find the official programme and admission pages. Third-party aggregators and student discussions can suggest leads, but cannot establish a formal requirement.
-2. Add a stable ID and short original summary to `src/data/programs.json`.
-3. Record the review date, official URLs and the applicant category for each date or fee.
-4. Keep an unknown value unknown. Use `window: null` when a current cycle is not verified. Put recurring guidance in `scheduleNote`.
-5. Use a numeric grade rule only for a published requirement. Include its source, grading scale, direction and whether it is required or preferred. Never invent a cross-country conversion.
-6. Add only published professional contacts. Include the page where the contact was found. A contact does not establish supervisor availability.
-7. Run the data check, tests and build. Explain the sources and information limits in your pull request.
+Explain the problem, expected behaviour and relevant verification in a pull request. Run `npm run check`, `npm test` and `npm run build`. Test changed interactions at desktop and mobile widths. Keep applicant workspaces, credentials, downloaded private backups and personal application details out of the repository.
 
-## Code changes
+Unless explicitly agreed otherwise, software contributions are submitted under this repository's MIT licence. Contributors retain their applicable rights; submission does not assign copyright to a maintainer. Preserve third-party notices and identify new dependencies and their licences. There is no copyright-assignment or CLA process currently in place.
 
-Keep business rules in `src/core.js`, UI state in `src/app.js` and geography interactions in `src/map.js`. Test meaningful requirement, date and persistence behavior. Verify desktop and phone layouts after UI changes. Keep keyboard navigation and reduced-motion preferences working.
+## Programme facts
 
-## Community content
+Use the exact official institution source. Supply the programme or specialisation ID, affected field, proposed value, source URL, review date, intake and applicant category where applicable. Keep the original grade scale and distinguish thresholds from preferences and alternative routes. A directory entry, ranking or forum post does not verify a master's degree or admission rule.
 
-Public reviews and programme submissions are planned, not currently available. When implemented, experiences must be separated from formal requirements and moderated for spam, personal information, conflicts of interest and abusive content. Do not add invented ratings or synthetic student testimonials.
+Human review is required before a proposal changes published admission facts. Unknown information remains unknown. Do not move dates to a later year, invent faculty availability or guess email addresses. See [data policy](docs/DATA_POLICY.md).
 
-## Reporting corrections
+## Bulk sources
 
-Provide the programme ID, field to correct, official source, relevant applicant category and date of review. Do not include your passport, transcript, personal email or private admissions correspondence in a public issue.
+Register the provider, licence, attribution, allowed scope, source schema and immutable release before importing. Keep institution, degree, specialisation, campus and intake counts distinct. Preserve source IDs and review ambiguous duplicates. The ROR import uses a pinned, checksum-verified snapshot; see [catalogue pipeline](docs/CATALOGUE_PIPELINE.md). A new source must not be merged under MIT just because its pages are publicly visible.
 
-Use the subject groups exported from `src/core.js`, canonical delivery modes (`On campus`, `Online`, `Hybrid`, `Not verified`) and stable programme IDs. A specialisation must be named explicitly. Include the exact applicant category with every dated window, and `ieltsSource` for newly recorded numeric language thresholds. Every contact and research URL must appear in the record’s official source list.
+## Corrections and reports
+
+Include reproducible evidence and avoid personal transcripts, addresses, application IDs or private correspondence in public reports. Once the public GitHub repository is available, use its correction and bug templates. Currently the source is prepared for that workflow; no public issue endpoint is embedded in the private preview.
+
+Maintainers review contributions for scope, provenance, accessibility, licence compatibility and factual accuracy. Project identity and the official service are separate from permitted software forks.

@@ -1,6 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {clusterCenter,minimumFlatZoom,flatViewportCamera} from '../src/map-geometry.js';
+import {clusterCenter,minimumFlatZoom,flatViewportCamera,stableLocations} from '../src/map-geometry.js';
+
+test('list sorting does not change geographic clustering input or mutate the catalogue',()=>{
+  const catalogue=[{id:'z',lon:8,lat:49},{id:'a',lon:9,lat:50}];
+  assert.deepEqual(stableLocations(catalogue),stableLocations([...catalogue].reverse()));
+  assert.equal(catalogue[0].id,'z');
+});
 
 test('a Pacific cluster crossing the date line stays in the Pacific',()=>{
   const [lon,lat]=clusterCenter([{lon:179,lat:20},{lon:-179,lat:22}]);

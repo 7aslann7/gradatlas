@@ -1,9 +1,11 @@
 # Development roadmap
 
-## Implemented through v0.6
+## Implemented through v0.7
 
 - A restrained interactive globe and full-screen flat map, native geographic clusters, viewport zoom/pan limits, trackpad/touch controls and keyboard-accessible location actions.
 - A 251-record, 88-destination catalogue across 17 subject groups, with field-specific evidence, explicit unknowns and targeted audits of dates, grade thresholds, language proof and tuition.
+- A pinned, licensed ROR directory of 30,174 active education institutions across 223 countries/territories, with reproducible checksum-verified import, approximate locality caveats, search and on-demand loading.
+- Right-hand shortlist/comparison drawers, stable map input across list sorting and formatted local Excel exports.
 - Optional browser-local profile, shortlist, comparisons, notes and preparation steps.
 - Application Studio preparation plans, locally saved editable enquiries, placeholder review and eight scoped official university guides.
 - Version 2 private workspace backups, backward-compatible imports and a portable static build.
@@ -12,7 +14,7 @@
 
 Move from hand-reviewed JSON to separate university, programme, intake, applicant category, requirement, fee and evidence entities. Keep current stable IDs and the static catalogue export. Do not treat campus count, programme count and specialisation count as interchangeable.
 
-Start with permitted structured official sources. Fetching should produce a review proposal rather than directly replace published requirements. Attach a reviewed source, timestamp, applicant scope and cycle to every mutable fact. Detect broken links and changed source content, then route changes to maintainers. Preserve a correction history and expose stale or unavailable evidence to visitors.
+The institution index import is implemented. The next programme source adapter should begin with permitted structured official sources and an internal review queue; historical offers must not be promoted as current admissions. See [catalogue pipeline](CATALOGUE_PIPELINE.md). Fetching should produce a review proposal rather than directly replace published requirements. Attach a reviewed source, timestamp, applicant scope and cycle to every mutable fact. Detect broken links and changed source content, then route changes to maintainers. Preserve a correction history and expose stale or unavailable evidence to visitors.
 
 Prioritise exact cutoff times, international-degree recognition, prerequisite courses and credit requirements, current tuition categories and programme-specific documents. Keep unavailable facts unknown. Link checking confirms availability of a page, not correctness of its admissions contents.
 

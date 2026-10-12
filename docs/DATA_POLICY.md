@@ -28,4 +28,6 @@ Record only official professional contacts. Do not guess email patterns or infer
 
 ## Geographic data
 
+The ROR institution directory is a separate identity/locality layer. It filters a pinned, checksum-verified release to active education-type records and preserves ROR IDs, names/aliases, registry website links and approximate GeoNames locations. This category can include schools, subdivisions and research-linked education bodies; no accreditation, university status or master's availability is inferred. Metadata is CC0, with GeoNames geographic attribution retained separately. Importing a registry does not reverify every website or introduce programme facts. See `CATALOGUE_PIPELINE.md` and `THIRD_PARTY_NOTICES.md`.
+
 The base map is a simplified rendering of Natural Earth boundaries, distributed by [datasets/geo-countries](https://github.com/datasets/geo-countries). Locations are approximate programme or campus locations. The map is a discovery aid and is not intended to adjudicate disputed boundaries.

@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.7.0 — 12 October 2026
+
+- Replaced broad shortlist/comparison sheets with compact right-hand drawers and retained map access.
+- Removed orange focus outlines; kept quiet keyboard control feedback and normal input borders.
+- Renamed “Curated order” to “Catalogue order”, isolated native clustering from list sorting, and skipped unchanged map source updates.
+- Added formatted local Excel comparisons with frozen labels, shared screen/export facts and a linked Sources sheet.
+- Added a separate 30,174-record ROR education institution directory across 223 countries/territories, lazy loading, aliases, native clusters and paged results. Registry identity does not imply verified degrees or admissions.
+- Added a pinned, checksum-verified ROR importer, public provenance manifest, source/licence disclosure and broader methodology sources.
+- Clarified admissions versus supervisor enquiries, contribution rights, dataset scope and the public-release plan.
+
 ## 0.2.0 — 12 October 2026
 
 - Replaced the dashboard-led opening with an animated geographic globe and a calm welcome screen.

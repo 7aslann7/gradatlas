@@ -1,3 +1,8 @@
+// Clustering must use stable input order, independently of list sorting.
+export function stableLocations(records) {
+  return [...records].sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0);
+}
+
 // Average longitudes on a circle so a cluster spanning the date line stays there.
 export function clusterCenter(points) {
   const rad=Math.PI/180;

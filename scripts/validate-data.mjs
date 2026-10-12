@@ -1,4 +1,5 @@
 import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {FIELDS,todayKey} from '../src/core.js';
 const data=JSON.parse(await readFile('src/data/programs.json','utf8'));
@@ -44,3 +45,18 @@ assert.ok(Array.isArray(guidance)&&guidance.length,'Official guidance required')
 assert.equal(new Set(guidance.map(g=>g.id)).size,guidance.length,'Duplicate guidance ID');
 for(const g of guidance){for(const field of ['id','title','summary','scope'])assert.ok(nonempty(g[field]),`Guidance ${g.id}: missing ${field}`);url(g.url);}
 console.log(`Validated ${guidance.length} scoped official application guides.`);
+const indexFile=await readFile('src/data/institutions.json');
+const institutions=JSON.parse(indexFile),manifest=JSON.parse(await readFile('src/data/institution-manifest.json','utf8'));
+assert.equal(createHash('sha256').update(indexFile).digest('hex'),manifest.indexSha256,'Institution index differs from its import manifest');
+assert.equal(institutions.length,manifest.indexCount);
+assert.equal(new Set(institutions.map(p=>p.id)).size,institutions.length,'Duplicate institution ID');
+assert.equal(new Set(institutions.map(p=>p.countryCode)).size,manifest.indexCountryCount);
+for(const p of institutions){
+  assert.equal(p.kind,'institution');assert.match(p.id,/^ror-0[a-z0-9]{8}$/);assert.equal(p.ror,'https://ror.org/'+p.id.slice(4));
+  for(const field of ['name','city','country','countryCode'])assert.ok(nonempty(p[field]),`${p.id}: missing ${field}`);
+  assert.ok(Array.isArray(p.names)&&p.names.every(nonempty));
+  assert.ok(Number.isFinite(p.lat)&&Math.abs(p.lat)<=90&&Number.isFinite(p.lon)&&Math.abs(p.lon)<=180,`${p.id}: invalid locality`);
+  assert.ok(Number.isInteger(p.geonamesId)&&p.geonamesId>0);
+  if(p.website){const u=new URL(p.website);assert.ok(['https:','http:'].includes(u.protocol)&&!u.username&&!u.password);}
+}
+console.log(`Validated ${institutions.length.toLocaleString('en')} ROR institution records across ${manifest.indexCountryCount} countries/territories, with matching import checksum.`);

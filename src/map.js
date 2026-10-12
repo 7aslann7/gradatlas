@@ -1,6 +1,6 @@
 import {Map,Popup,LngLat,setWorkerUrl} from './vendor/maplibre/maplibre-gl.mjs';
 import {wheelIntent,gestureCamera} from './map-input.js';
-import {clusterCenter,minimumFlatZoom,flatViewportCamera,oceanSurface} from './map-geometry.js';
+import {clusterCenter,minimumFlatZoom,flatViewportCamera,oceanSurface,stableLocations} from './map-geometry.js';
 setWorkerUrl(new URL('./vendor/maplibre/maplibre-gl-worker.mjs',import.meta.url).href);
 const ALIASES={'Türkiye':'Turkey','United States':'United States of America','Hong Kong':'Hong Kong S.A.R.','Tanzania':'United Republic of Tanzania','Serbia':'Republic of Serbia'};
 const flatIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2V5Z" stroke-linejoin="round"/><path d="M9 3v16M15 5v16"/></svg>';
@@ -8,24 +8,24 @@ const globeIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 
 export async function createMap(container,programmes,onSelect,onCluster) {
   const canvas=container.querySelector('.map-canvas'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  let items=programmes,selected=null,destroyed=false,gesture=null,projection='globe',globeCamera=null,revision=0;
+  let items=stableLocations(programmes),selected=null,destroyed=false,gesture=null,projection='globe',globeCamera=null,revision=0,dataKey=null;
   const initialZoom=()=>Math.max(.4,Math.log2(Math.min(canvas.clientWidth,canvas.clientHeight)*.88*Math.PI/512));
-  const points=()=>({type:'FeatureCollection',features:items.map(p=>({type:'Feature',id:p.id,properties:{id:p.id,title:p.title,university:p.university,selected:p.id===selected?1:0},geometry:{type:'Point',coordinates:[p.lon,p.lat]}}))});
+  const points=()=>({type:'FeatureCollection',features:items.map(p=>({type:'Feature',id:p.id,properties:{id:p.id,title:p.title||p.name,university:p.university||p.name,kind:p.kind||'programme',selected:p.id===selected?1:0},geometry:{type:'Point',coordinates:[p.lon,p.lat]}}))});
   const map=new Map({
     container:canvas,center:[15,22],zoom:initialZoom(),minZoom:.4,maxZoom:12,maxPitch:0,
     attributionControl:false,scrollZoom:false,touchZoomRotate:true,touchPitch:false,dragRotate:true,keyboard:true,renderWorldCopies:false,fadeDuration:0,canvasContextAttributes:{antialias:true},
     style:{version:8,projection:{type:'globe'},
       sky:{'sky-color':'#142d3b','horizon-color':'#cce4ee','sky-horizon-blend':0,'atmosphere-blend':['interpolate',['linear'],['zoom'],0,.3,5,.3,7,0]},
-      sources:{ocean:{type:'geojson',data:oceanSurface()},countries:{type:'geojson',data:new URL('./assets/countries.geojson',import.meta.url).href},programmes:{type:'geojson',data:points(),cluster:true,clusterRadius:50,clusterMaxZoom:9,clusterProperties:{selected_count:['+',['get','selected']]}}},
+      sources:{ocean:{type:'geojson',data:oceanSurface()},countries:{type:'geojson',data:new URL('./assets/countries.geojson',import.meta.url).href},programmes:{type:'geojson',data:points(),cluster:true,clusterRadius:50,clusterMaxZoom:9,clusterProperties:{selected_count:['+',['get','selected']],institution_count:['+',['case',['==',['get','kind'],'institution'],1,0]]}}},
       layers:[
         {id:'flat-water',type:'background',layout:{visibility:'none'},paint:{'background-color':'#c4dce7'}},
         {id:'water',type:'fill',source:'ocean',paint:{'fill-color':'#c4dce7','fill-antialias':false}},
         {id:'land',type:'fill',source:'countries',paint:{'fill-color':'#e4eada'}},
         {id:'catalogue-countries',type:'fill',source:'countries',filter:['in','name',''],paint:{'fill-color':'#cbdcbc'}},
         {id:'borders',type:'line',source:'countries',paint:{'line-color':'#f5f7ed','line-width':.8}},
-        {id:'programme-clusters',type:'circle',source:'programmes',filter:['has','point_count'],paint:{'circle-color':['case',['>', ['get','selected_count'],0],'#b78150','#365a46'],'circle-radius':16,'circle-stroke-width':2,'circle-stroke-color':'#fffdf4'}},
+        {id:'programme-clusters',type:'circle',source:'programmes',filter:['has','point_count'],paint:{'circle-color':['case',['>', ['get','selected_count'],0],'#b78150',['>',['get','institution_count'],0],'#3b6475','#365a46'],'circle-radius':16,'circle-stroke-width':2,'circle-stroke-color':'#fffdf4'}},
         {id:'programme-counts',type:'symbol',source:'programmes',filter:['has','point_count'],layout:{'icon-image':['concat','count-',['to-string',['get','point_count']]],'icon-size':.5,'icon-allow-overlap':true,'icon-ignore-placement':true}},
-        {id:'programme-points',type:'circle',source:'programmes',filter:['!',['has','point_count']],paint:{'circle-color':['case',['==',['get','selected'],1],'#b78150','#365a46'],'circle-radius':['case',['==',['get','selected'],1],8,6],'circle-stroke-width':2,'circle-stroke-color':'#fffdf4'}}
+        {id:'programme-points',type:'circle',source:'programmes',filter:['!',['has','point_count']],paint:{'circle-color':['case',['==',['get','selected'],1],'#b78150',['==',['get','kind'],'institution'],'#3b6475','#365a46'],'circle-radius':['case',['==',['get','selected'],1],8,6],'circle-stroke-width':2,'circle-stroke-color':'#fffdf4'}}
       ]}
   });
   map.getCanvas().setAttribute('aria-label','World map. Drag or use two fingers to move. Pinch to zoom. Shift and drag to rotate. Programme locations are also keyboard accessible, or use Browse programmes from the menu.');
@@ -43,7 +43,9 @@ export async function createMap(container,programmes,onSelect,onCluster) {
   function setFlatBounds(adjustOverview=false){if(projection!=='mercator')return;const previous=map.getMinZoom(),overview=Math.abs(map.getZoom()-previous)<.01,min=minimumFlatZoom(canvas.clientWidth,canvas.clientHeight,map.getBearing());if(Math.abs(previous-min)>.001){map.setMinZoom(min);if(adjustOverview&&overview)map.jumpTo({zoom:min});}cameraState();}
   function home(){move({center:[15,22],zoom:projection==='globe'?initialZoom():minimumFlatZoom(canvas.clientWidth,canvas.clientHeight),bearing:0});}
   function update(list){
-    items=list;revision++;tooltip.remove();
+    const stable=stableLocations(list),key=stable.map(p=>p.id).join('|')+';'+selected;
+    if(key===dataKey)return;
+    items=stable;accessible.replaceChildren();accessible.setAttribute('aria-label',items[0]?.kind==='institution'?'Visible institution locations':'Visible programme locations');dataKey=key;revision++;canvas.dataset.dataRevision=revision;tooltip.remove();
     if(map.getLayer('catalogue-countries'))map.setFilter('catalogue-countries',['in','name',...new Set(items.map(p=>ALIASES[p.country]||p.country)),'']);
     map.getSource('programmes')?.setData(points());
   }
@@ -72,18 +74,18 @@ export async function createMap(container,programmes,onSelect,onCluster) {
       if(projection==='globe'&&map.getZoom()<5&&Math.sin(lat*rad)*Math.sin(center.lat*rad)+Math.cos(lat*rad)*Math.cos(center.lat*rad)*Math.cos((lon-center.lng)*rad)<.02)continue;
       const xy=map.project([lon,lat]);if(xy.x<0||xy.y<0||xy.x>canvas.clientWidth||xy.y>canvas.clientHeight)continue;
       const button=document.createElement('button');button.type='button';button.className='map-accessible-pin';button.dataset.count=f.properties.point_count||1;
-      button.textContent=f.properties.cluster?`Explore ${f.properties.point_count} programmes in this area`:`View ${f.properties.title} at ${f.properties.university}`;
-      button.onclick=()=>activate(f);accessible.append(button);
+      const noun=items[0]?.kind==='institution'?'institutions':'programmes';button.textContent=f.properties.cluster?`Explore ${f.properties.point_count} ${noun} in this area`:f.properties.kind==='institution'?`View institution: ${f.properties.title}`:`View ${f.properties.title} at ${f.properties.university}`;
+      button.dataset.longitude=lon;button.dataset.latitude=lat;button.onclick=()=>activate(f);accessible.append(button);
     }
   }
   // Count labels are generated locally; no glyph service or moving HTML markers are needed.
   map.setMissingStyleImageResolver(id=>{
     if(!/^count-\d+$/.test(id)||map.hasImage(id))return;const count=id.slice(6),label=document.createElement('canvas');label.width=label.height=64;
-    const context=label.getContext('2d');context.fillStyle='#fff';context.font=`600 ${count.length>2?22:25}px Arial`;context.textAlign='center';context.textBaseline='middle';context.fillText(count,32,33);map.addImage(id,context.getImageData(0,0,64,64));
+    const context=label.getContext('2d');context.fillStyle='#fff';context.font=`600 ${count.length>4?17:count.length>2?22:25}px Arial`;context.textAlign='center';context.textBaseline='middle';context.fillText(count,32,33);map.addImage(id,context.getImageData(0,0,64,64));
   });
   for(const layer of ['programme-clusters','programme-points']){
     map.on('click',layer,event=>activate(event.features?.[0]));
-    map.on('mouseenter',layer,event=>{const f=event.features?.[0];if(!f)return;map.getCanvas().style.cursor='pointer';tooltip.setLngLat(f.geometry.coordinates).setText(f.properties.cluster?`${f.properties.point_count} programmes · select to explore`:f.properties.university).addTo(map);});
+    map.on('mouseenter',layer,event=>{const f=event.features?.[0];if(!f)return;map.getCanvas().style.cursor='pointer';const noun=items[0]?.kind==='institution'?'institutions':'programmes';tooltip.setLngLat(f.geometry.coordinates).setText(f.properties.cluster?`${f.properties.point_count} ${noun} · select to explore`:f.properties.university).addTo(map);});
     map.on('mouseleave',layer,()=>{map.getCanvas().style.cursor='';tooltip.remove();});
   }
   const bounds=()=>({minZoom:map.getMinZoom(),maxZoom:map.getMaxZoom()});

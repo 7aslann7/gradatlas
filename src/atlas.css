@@ -15,3 +15,46 @@
 @media(prefers-reduced-motion:reduce){.map-canvas.map-ready canvas,.floating-panel,.results-drawer,.detail-dialog,.workspace-sheet{animation:none}.pin-dot,.pin-label,.compass{transition:none}}
 
 .map-location-links{position:absolute;inset:0;pointer-events:none;z-index:22}.map-accessible-pin{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.map-accessible-pin:focus-visible{top:90px;left:24px;width:auto;height:auto;max-width:calc(100% - 48px);padding:12px 16px;clip-path:none;white-space:normal;background:#fff;border-radius:10px;font-size:12px;pointer-events:auto;box-shadow:0 5px 25px #142d3b30}.map-tooltip .maplibregl-popup-content{padding:9px 12px;border-radius:8px;font:11px/1.5 Manrope,sans-serif;color:#334437;box-shadow:0 4px 20px #142d3b18}.map-tooltip{pointer-events:none}
+
+/* Pointer focus keeps the normal field appearance; keyboard controls use a quiet fill. */
+input:focus,select:focus,textarea:focus{outline:none;box-shadow:none}
+button:focus-visible,a:focus-visible{background-color:#dcebd3;color:#264b36}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{background:#fbfcf9}
+.atlas-search input:focus{background:transparent}
+.filter-panel .form-field select:focus{background:#f8faf5}
+.side-panel-mode .map-toolbar{visibility:visible;width:min(445px,calc(100% - 490px))}
+.comparison-panel-mode .map-toolbar{width:min(445px,calc(100% - 700px));min-width:220px}
+.workspace-sheet.workspace-drawer{left:auto;width:410px;padding:27px 24px;background:#fbfcf8;animation:drawer-appear .24s ease}
+.workspace-sheet.compare-drawer{width:min(630px,calc(100% - 320px))}
+.workspace-drawer .page-header h1{font-size:24px}
+.workspace-drawer .page-header-row{display:block;padding-right:32px}
+.workspace-drawer .page-header-row>.button{margin-top:16px;font-size:11px}
+.workspace-drawer .shortlist-grid{grid-template-columns:1fr;gap:14px}
+.workspace-drawer .program-card{padding:21px;animation:none;box-shadow:none}
+.workspace-drawer .program-card:hover{transform:none}
+.workspace-drawer .uni-mark{width:35px;height:35px;font-size:10px}
+.workspace-drawer .title-button{font-size:15px}
+.workspace-drawer .title-button>span{display:none}
+.workspace-drawer .empty-state{padding:35px 18px}
+.workspace-drawer .empty-state h2{font-size:20px}
+.workspace-drawer .comparison-table{min-width:var(--table-width);font-size:11px}
+.workspace-drawer .comparison-table th,.workspace-drawer .comparison-table td{padding:16px 14px;font-size:11px;overflow-wrap:anywhere}
+.workspace-drawer .comparison-table th:first-child{position:sticky;left:0;width:140px;z-index:1;background:#f3f7ee}
+.comparison-hint{font-size:10px;color:var(--muted);margin:0 0 12px}
+.workspace-drawer .comparison-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.workspace-drawer .comparison-bottom>span{font-size:11px}
+.side-panel-mode .compare-tray{left:24px;transform:none;max-width:calc(100% - 480px)}
+.side-panel-mode .map-controls{right:458px}
+.comparison-panel-mode .map-controls{right:calc(min(630px,calc(100% - 320px)) + 48px)}
+@keyframes drawer-appear{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:1000px){.side-panel-mode .map-toolbar{width:calc(100% - 490px);min-width:220px}.side-panel-mode .compare-tray{display:none}}
+@media(max-width:700px){.workspace-sheet.workspace-drawer{left:16px;right:16px;width:auto;padding:23px 20px}.workspace-drawer .comparison-table{min-width:var(--table-width)}.side-panel-mode .map-toolbar,.side-panel-mode .map-controls{visibility:hidden}.workspace-drawer .page-header h1{font-size:23px}}
+@media(prefers-reduced-motion:reduce){.workspace-sheet.workspace-drawer{animation:none}}
+.results-pagination{border-top:1px solid var(--line);padding:14px 23px;flex-shrink:0;background:#fbfcf8}
+.results-pagination button{font-size:11px}
+.institution-card .title-button{font-size:13px;line-height:1.6}
+.institution-scope{font-size:10px;color:var(--muted);line-height:1.7;margin:10px 0}
+.institution-card>.card-link{margin-top:5px;font-size:11px}
+.catalogue-scope{margin-top:10px;font-size:10px;line-height:1.6;padding:8px 12px;width:fit-content;max-width:100%;border-radius:9px;background:#ffffffeb;color:#3b6475;box-shadow:0 3px 12px #142d3b10}
+.directory-method{margin-bottom:24px}
+.source-row>div{max-width:45%;overflow-wrap:anywhere;text-align:right}
