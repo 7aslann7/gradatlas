@@ -54,7 +54,7 @@ function renderExplore(){
   $('#search').addEventListener('focus',()=>{clusterIds=null;setPopover('',false);$('#detail-dialog').close();setResults(true);});
   $('#search').addEventListener('input',ev=>{filters.query=ev.target.value;clusterIds=null;setResults(true);updateResults();});
   $('#field').onchange=ev=>{filters.field=ev.target.value;clusterIds=null;setResults(true);syncFilters();updateResults();};
-  $('#country').onchange=ev=>{filters.country=ev.target.value;clusterIds=null;setResults(true);updateResults();if(filters.country)map?.focusCountry(filterPrograms(programs,filters,storage.profile));};
+  $('#country').onchange=ev=>{filters.country=ev.target.value;clusterIds=null;setResults(true);updateResults();if(filters.country)map?.focusCountry(programs.filter(p=>p.country===filters.country));};
   $('#sort').onchange=ev=>{filters.sort=ev.target.value;updateResults();};
   if($('#fit'))$('#fit').onchange=ev=>{filters.fit=ev.target.value;clusterIds=null;setResults(true);updateResults();};
   syncFilters();updateResults();setResults(resultsOpen&&page==='explore');

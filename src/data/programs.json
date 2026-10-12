@@ -4528,5 +4528,4620 @@
     "ieltsSource": "https://www.ssh.nu.edu.kz/mscphysics",
     "scheduleNote": "The school page provides month-level 2027–28 guidance: grant applications October–February and fee-paying routes October/November–July or August, depending on applicant category. Exact dates must be checked.",
     "dataNote": "Month ranges do not establish precise opening or closing dates, so no live application window is assigned. Fees and scholarships depend on applicant category and need confirmation."
+  },
+  {
+    "id": "andes-economics-peg",
+    "title": "Economics — PEG (Master’s)",
+    "university": "Universidad de los Andes",
+    "country": "Colombia",
+    "city": "Bogotá",
+    "lat": 4.602,
+    "lon": -74.065,
+    "fields": [
+      "Economics & Finance"
+    ],
+    "tags": [
+      "Economic theory",
+      "Quantitative analysis",
+      "Research"
+    ],
+    "summary": "Develop economic theory and quantitative research skills through an advanced economics degree in Bogotá.",
+    "gradeNote": "Prior university grades are reviewed alongside motivation and experience; the programme does not publish a universal numeric cutoff on the reviewed admission page.",
+    "requirements": [
+      "Undergraduate diploma and transcripts; a separate extension route exists for students awaiting graduation",
+      "CV, motivation and financing statement, and two academic recommendations; Economics alumni have an exemption",
+      "The committee may assign preliminary courses before the advanced cycle"
+    ],
+    "sources": [
+      {
+        "label": "Degree, duration and delivery",
+        "url": "https://www.uniandes.edu.co/es/programas/maestria-en-economia"
+      },
+      {
+        "label": "Programme application and selection criteria",
+        "url": "https://economia.uniandes.edu.co/es/programas/maestria-en-economia-peg/proceso-de-admisiones-peg"
+      }
+    ],
+    "duration": "3 semesters",
+    "language": "Not verified",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-07-27",
+      "closes": "2026-11-18",
+      "source": "https://www.uniandes.edu.co/es/programas/maestria-en-economia",
+      "category": "Regular master’s applicants · January 2027"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Teaching language is not explicitly stated in the reviewed Spanish programme page. The main degree page supports the dated window; a lower admission-page paragraph contains an inconsistent year."
+  },
+  {
+    "id": "andes-architecture-marq",
+    "title": "Architecture — MARQ (Master’s)",
+    "university": "Universidad de los Andes",
+    "country": "Colombia",
+    "city": "Bogotá",
+    "lat": 4.603,
+    "lon": -74.066,
+    "fields": [
+      "Architecture & Planning"
+    ],
+    "tags": [
+      "Architectural research",
+      "Cities",
+      "Interdisciplinary design"
+    ],
+    "summary": "Investigate architectural and urban questions through research, interdisciplinary study and a master’s project.",
+    "gradeNote": "Selection evaluates the applicant’s background, research proposal and interview; no universal numeric grade cutoff was verified.",
+    "requirements": [
+      "Research-interest statement aligned with programme themes",
+      "CV and academic or professional recommendations; specified alumni exemptions apply",
+      "Research presentation and admission interview; an English graduation requirement is separate from teaching language"
+    ],
+    "sources": [
+      {
+        "label": "Degree registration, delivery and current admission call",
+        "url": "https://arqdis.uniandes.edu.co/posgrado/informacion/admisiones-marq/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "Not verified",
+    "mode": "Hybrid",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-07-27",
+      "closes": "2026-11-18",
+      "source": "https://arqdis.uniandes.edu.co/posgrado/informacion/admisiones-marq/",
+      "category": "Architecture master’s applicants · January 2027"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Teaching language and precise language-test thresholds were not verified. The programme publishes hybrid delivery and 36 credits."
+  },
+  {
+    "id": "pucp-civil-engineering",
+    "title": "Civil Engineering (Master’s)",
+    "university": "Pontificia Universidad Católica del Perú",
+    "country": "Peru",
+    "city": "Lima",
+    "lat": -12.069,
+    "lon": -77.08,
+    "fields": [
+      "Engineering"
+    ],
+    "tags": [
+      "Structures",
+      "Geotechnics",
+      "Natural risks"
+    ],
+    "summary": "Study civil-engineering research across structural engineering, geotechnics and natural-risk analysis.",
+    "gradeNote": "The current programme admission process evaluates the academic file and interview; no numeric minimum GPA was verified.",
+    "requirements": [
+      "Bachelor’s degree with the documented recognition or legalization route appropriate to the awarding country",
+      "Academic application documents and interview",
+      "Mandatory ECAP academic-competencies evaluation is an indicator in the admission process"
+    ],
+    "sources": [
+      {
+        "label": "Degree, duration, campus delivery and contact",
+        "url": "https://posgrado.pucp.edu.pe/maestria/ingenieria-civil/"
+      },
+      {
+        "label": "Current programme admission requirements",
+        "url": "https://posgrado.pucp.edu.pe/maestria/ingenieria-civil/admision/"
+      }
+    ],
+    "duration": "2 years · 4 semesters",
+    "language": "Not verified",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Graduate programme information",
+      "email": "posgrado-informes@pucp.edu.pe",
+      "source": "https://posgrado.pucp.edu.pe/maestria/ingenieria-civil/"
+    },
+    "research": null,
+    "scheduleNote": "The programme advertises classes starting 22 March 2027. A complete dated application opening and closing pair was not verified.",
+    "dataNote": "Teaching language is not explicitly stated in the reviewed Spanish programme page. The intermediate postgraduate diplomas are separate from the completed master’s degree."
+  },
+  {
+    "id": "pucp-education-management",
+    "title": "Education — Educational Management (Master’s)",
+    "university": "Pontificia Universidad Católica del Perú",
+    "country": "Peru",
+    "city": "Lima",
+    "lat": -12.069,
+    "lon": -77.08,
+    "fields": [
+      "Education"
+    ],
+    "tags": [
+      "Educational management",
+      "School improvement",
+      "Research"
+    ],
+    "summary": "Explore educational management and research through the full master’s pathway, including its additional academic cycle.",
+    "gradeNote": "The academic file and interview each carry 50 points in the current selection rubric; this is not a converted GPA threshold.",
+    "requirements": [
+      "Bachelor’s diploma and country-appropriate legalization or recognition documents",
+      "CV, identity document and admission interview",
+      "Complete the compulsory ECAP competencies evaluation"
+    ],
+    "sources": [
+      {
+        "label": "Full master’s degree, duration and distance delivery",
+        "url": "https://posgrado.pucp.edu.pe/maestria/educacion/"
+      },
+      {
+        "label": "2027 admission process and evaluation rubric",
+        "url": "https://posgrado.pucp.edu.pe/maestria/educacion/admision/"
+      }
+    ],
+    "duration": "2 years · 5 academic semesters",
+    "language": "Not verified",
+    "mode": "Online",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Graduate programme information",
+      "email": "posgrado-informes@pucp.edu.pe",
+      "source": "https://posgrado.pucp.edu.pe/maestria/educacion/"
+    },
+    "research": null,
+    "scheduleNote": "The current call is for 2027-1, with classes advertised for 22 March 2027. No complete application window is assigned.",
+    "dataNote": "Teaching language is not explicitly stated in the reviewed page. The first-year postgraduate diploma is not the completed master’s award."
+  },
+  {
+    "id": "usfq-public-health",
+    "title": "Public Health — Environmental and Occupational Health (MPH)",
+    "university": "Universidad San Francisco de Quito",
+    "country": "Ecuador",
+    "city": "Quito",
+    "lat": -0.196,
+    "lon": -78.436,
+    "fields": [
+      "Medicine & Public Health",
+      "Environment"
+    ],
+    "tags": [
+      "Occupational health",
+      "Environmental health",
+      "One Health"
+    ],
+    "summary": "Combine public-health study with environmental and occupational health in a mix of virtual classes and campus sessions.",
+    "gradeNote": "No numeric admission grade threshold was verified. Relevant qualifications and professional fit are assessed.",
+    "requirements": [
+      "Health-related degree registered with SENESCYT; selected other One Health backgrounds may be considered",
+      "CV, motivation, identity documents and interview",
+      "English A2 evidence through an accepted test or certificate; one year of professional experience is valued, not stated as mandatory"
+    ],
+    "sources": [
+      {
+        "label": "Degree, duration, admission requirements and contact",
+        "url": "https://www.usfq.edu.ec/es/posgrados/maestria-en-salud-publica-mph"
+      }
+    ],
+    "duration": "18 months",
+    "language": "Not verified",
+    "mode": "Hybrid",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Graduate admissions",
+      "email": "posgrados@usfq.edu.ec",
+      "source": "https://www.usfq.edu.ec/es/posgrados/maestria-en-salud-publica-mph"
+    },
+    "research": null,
+    "dataNote": "The published 2025–26 application dates have passed. A new cycle, current fees and teaching language need confirmation; the English A2 condition does not establish English-medium delivery."
+  },
+  {
+    "id": "usfq-clinical-psychology",
+    "title": "Clinical Psychology — Psychotherapy (Master’s)",
+    "university": "Universidad San Francisco de Quito",
+    "country": "Ecuador",
+    "city": "Quito",
+    "lat": -0.196,
+    "lon": -78.436,
+    "fields": [
+      "Social Sciences",
+      "Medicine & Public Health"
+    ],
+    "tags": [
+      "Psychotherapy",
+      "Clinical assessment",
+      "Supervised practice"
+    ],
+    "summary": "Develop evidence-based assessment and psychotherapy skills, with adult or child and adolescent pathways and supervised clinical practice.",
+    "gradeNote": "No numeric admission GPA threshold is published in the reviewed programme requirements.",
+    "requirements": [
+      "SENESCYT-registered qualification in general or clinical psychology, or postgraduate medical specialization in psychiatry",
+      "Identity documents and application",
+      "English certificate at CEFR A1 or above, no older than two years; no numeric IELTS cutoff is given"
+    ],
+    "sources": [
+      {
+        "label": "Official master’s award, structure, hybrid delivery and admissions",
+        "url": "https://www.usfq.edu.ec/es/oferta-academica/maestrias-profesionales/maestria-en-psicologia-clinica"
+      }
+    ],
+    "duration": "2 ordinary academic periods + 1 extraordinary period",
+    "language": "Not verified",
+    "mode": "Hybrid",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Graduate admissions",
+      "email": "posgrados@usfq.edu.ec",
+      "source": "https://www.usfq.edu.ec/es/oferta-academica/maestrias-profesionales/maestria-en-psicologia-clinica"
+    },
+    "research": null,
+    "dataNote": "The page defines duration in academic periods, so this is not converted into months. Teaching language, current tuition and a fully dated application cycle need confirmation."
+  },
+  {
+    "id": "ucr-biology",
+    "title": "Biology (Academic Master’s)",
+    "university": "Universidad de Costa Rica",
+    "country": "Costa Rica",
+    "city": "San José",
+    "lat": 9.936,
+    "lon": -84.051,
+    "fields": [
+      "Life Sciences",
+      "Environment"
+    ],
+    "tags": [
+      "Biological research",
+      "Ecology",
+      "Thesis"
+    ],
+    "summary": "Build an individual biology research plan with an adviser, advanced coursework and an examined thesis.",
+    "gradeNote": "The programme requires a weighted average of at least 7.5 or its institution-assessed equivalent; no foreign GPA conversion is provided.",
+    "requirements": [
+      "University diplomas and complete official grades",
+      "Adviser support letter and three references",
+      "At least half-time availability; foreign documents require specified legalization"
+    ],
+    "sources": [
+      {
+        "label": "Degree and research structure",
+        "url": "https://sep.biologia.ucr.ac.cr/maestria-academica-en-biologia/"
+      },
+      {
+        "label": "Official graduate entry criteria",
+        "url": "https://sep.biologia.ucr.ac.cr/graduate-admission-requirements/"
+      }
+    ],
+    "duration": "Designed for 2 years full-time",
+    "language": "Not verified",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Biology graduate programme",
+      "email": "posgrado.biologia@ucr.ac.cr",
+      "source": "https://sep.biologia.ucr.ac.cr/maestria-academica-en-biologia/"
+    },
+    "research": null,
+    "dataNote": "Teaching language and delivery format need confirmation. The degree does not itself guarantee registration with Costa Rica’s professional biology body."
+  },
+  {
+    "id": "ucr-genetics-molecular-biology",
+    "title": "Biology — Genetics and Molecular Biology (Academic Master’s)",
+    "university": "Universidad de Costa Rica",
+    "country": "Costa Rica",
+    "city": "San José",
+    "lat": 9.936,
+    "lon": -84.051,
+    "fields": [
+      "Life Sciences"
+    ],
+    "tags": [
+      "Genetics",
+      "Molecular biology",
+      "Human genetics"
+    ],
+    "summary": "Pursue supervised genetics and molecular-biology research, including a possible human-genetics focus.",
+    "gradeNote": "The shared graduate entry rules specify weighted average 7.5 or its recognized equivalent.",
+    "requirements": [
+      "Relevant university records",
+      "Adviser commitment and three references",
+      "Full-time availability and legalized foreign credentials"
+    ],
+    "sources": [
+      {
+        "label": "Separate academic degree and duration",
+        "url": "https://sep.biologia.ucr.ac.cr/maestria-academica-en-biologia-con-enfasis-en-genetica-y-biologia-molecular/"
+      },
+      {
+        "label": "Shared official admission requirements",
+        "url": "https://sep.biologia.ucr.ac.cr/graduate-admission-requirements/"
+      }
+    ],
+    "duration": "2 years full-time",
+    "language": "Not verified",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Biology graduate programme",
+      "email": "posgrado.biologia@ucr.ac.cr",
+      "source": "https://sep.biologia.ucr.ac.cr/maestria-academica-en-biologia-con-enfasis-en-genetica-y-biologia-molecular/"
+    },
+    "research": null,
+    "dataNote": "Teaching language and delivery format need confirmation. This separate award does not guarantee professional biology registration."
+  },
+  {
+    "id": "ucr-bioinformatics-systems-biology",
+    "title": "Bioinformatics and Systems Biology (Academic Master’s)",
+    "university": "Universidad de Costa Rica",
+    "country": "Costa Rica",
+    "city": "San José",
+    "lat": 9.936,
+    "lon": -84.051,
+    "fields": [
+      "Computer Science",
+      "Life Sciences"
+    ],
+    "tags": [
+      "Bioinformatics",
+      "Genomics",
+      "Systems biology"
+    ],
+    "summary": "Connect computing and molecular biology to genomic, proteomic and cellular-network analysis.",
+    "gradeNote": "The programme publishes a weighted average of at least 8.0/10.0 or equivalent. Admissions assesses equivalency.",
+    "requirements": [
+      "Bachelor’s or licenciatura in exact or natural sciences, health, engineering, computing or a related field",
+      "Interview, three recommendations and a placement exam in cellular/molecular biology, genetics, biochemistry and physiology",
+      "Basic written and spoken English"
+    ],
+    "sources": [
+      {
+        "label": "Official master’s scope, research and entry requirements",
+        "url": "https://www.movimientohumano.sep.ucr.ac.cr/posgrado-ciencias-biomedicas/maestria-bioinformatica-biologia-sistemas"
+      }
+    ],
+    "duration": "Not verified",
+    "language": "Not verified",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Biomedical sciences graduate programme",
+      "email": "posgrado.biomedicas@ucr.ac.cr",
+      "source": "https://www.movimientohumano.sep.ucr.ac.cr/posgrado-ciencias-biomedicas/maestria-bioinformatica-biologia-sistemas"
+    },
+    "research": null,
+    "dataNote": "Admission and degree scope are verified. Duration, teaching language, delivery format, fees and current application dates need confirmation."
+  },
+  {
+    "id": "udelar-physics",
+    "title": "Physics — PEDECIBA (Master’s)",
+    "university": "Universidad de la República",
+    "country": "Uruguay",
+    "city": "Montevideo",
+    "lat": -34.884,
+    "lon": -56.118,
+    "fields": [
+      "Physics & Mathematics"
+    ],
+    "tags": [
+      "Physics",
+      "Astronomy",
+      "Research thesis"
+    ],
+    "summary": "Undertake advanced physics or astronomy courses and a supervised thesis under the PEDECIBA graduate framework.",
+    "gradeNote": "Admission depends on physics preparation judged equivalent to Udelar’s licenciatura; no numeric universal GPA cutoff was verified.",
+    "requirements": [
+      "Physics licenciatura or an equivalent physics background accepted by the programme",
+      "Individual course and thesis plan under graduate supervision",
+      "Thesis examination and the prescribed advanced coursework"
+    ],
+    "sources": [
+      {
+        "label": "Official degree descriptor, entry rules and duration",
+        "url": "https://cap.posgrados.udelar.edu.uy/fpdf/posgradoPDF.php?idPosgrado=48&idServicio=4"
+      }
+    ],
+    "duration": "2 academic years",
+    "language": "Not verified",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The descriptor was reviewed by the university in May 2025. Teaching language, delivery format, current intake dates and ancillary costs need confirmation."
+  },
+  {
+    "id": "udelar-university-teaching",
+    "title": "University Teaching (Master’s)",
+    "university": "Universidad de la República",
+    "country": "Uruguay",
+    "city": "Montevideo",
+    "lat": -34.905,
+    "lon": -56.19,
+    "fields": [
+      "Education"
+    ],
+    "tags": [
+      "Higher education",
+      "Teaching research",
+      "Education policy"
+    ],
+    "summary": "Investigate higher-education policy, university teaching and learning through a flexible research curriculum.",
+    "gradeNote": "Selection considers disciplinary education and teaching history; no numeric GPA threshold is given in the reviewed cohort call.",
+    "requirements": [
+      "Active teaching role at tertiary level",
+      "Research-topic proposal aligned with programme research lines",
+      "Academic CV, degree records and proof of teaching appointments; an interview may be requested"
+    ],
+    "sources": [
+      {
+        "label": "Official 2026–27 degree cohort, entry conditions and duration",
+        "url": "https://www.cse.udelar.edu.uy/2025/08/22/maestria-en-ensenanza-universitaria-proxima-apertura/"
+      }
+    ],
+    "duration": "2 academic years · 100 credits",
+    "language": "Not verified",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The cited cohort admitted applicants in September–November 2025 and starts in 2026. No future application cycle is inferred. Teaching language and delivery format are not explicitly stated."
+  },
+  {
+    "id": "nile-architecture-msc",
+    "title": "Architecture (MSc)",
+    "university": "Nile University of Nigeria",
+    "country": "Nigeria",
+    "city": "Abuja",
+    "lat": 9.01,
+    "lon": 7.416,
+    "fields": [
+      "Architecture & Planning"
+    ],
+    "tags": [
+      "Sustainable design",
+      "Architectural research",
+      "BIM"
+    ],
+    "summary": "Combine architectural design, research and sustainable-building methods with an independently supervised dissertation.",
+    "gradeNote": "Normally Second-Class Lower or the stated equivalent 3.0/5.0. A relevant PGD with 3.0/5.0 may support the specified Third-Class route.",
+    "requirements": [
+      "BSc, BTech or BArch in architecture from a recognized institution",
+      "Five qualifying school-level credits including English and mathematics",
+      "Applicable NYSC completion or exemption documentation"
+    ],
+    "sources": [
+      {
+        "label": "Official MSc title, duration and detailed entry requirements",
+        "url": "https://nileuniversity.edu.ng/courses/m-sc-architecture/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "Not verified",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Studio, laboratory and field learning are described; an online route is not stated for this degree. English proficiency thresholds, teaching language and application dates need confirmation."
+  },
+  {
+    "id": "makerere-public-health-nutrition",
+    "title": "Public Health Nutrition (Master’s)",
+    "university": "Makerere University",
+    "country": "Uganda",
+    "city": "Kampala",
+    "lat": 0.333,
+    "lon": 32.568,
+    "fields": [
+      "Medicine & Public Health",
+      "Life Sciences"
+    ],
+    "tags": [
+      "Public-health nutrition",
+      "Nutrition interventions",
+      "Population health"
+    ],
+    "summary": "Prepare for nutrition leadership and population-health interventions through public-health nutrition training.",
+    "gradeNote": "The reviewed degree page specifies eligible disciplines and experience, without a numeric admission GPA minimum.",
+    "requirements": [
+      "Recognized degree in medicine, nursing or biological sciences such as nutrition, food science, agriculture or veterinary science",
+      "At least two years of field experience after the bachelor’s degree"
+    ],
+    "sources": [
+      {
+        "label": "Current official programme admission criteria and contact",
+        "url": "https://sph.mak.ac.ug/program-post/master-of-public-health-nutrition-mphn/"
+      },
+      {
+        "label": "School-hosted curriculum duration",
+        "url": "https://test.musph.ac.ug/master-of-public-health-nutrition-mphn/"
+      }
+    ],
+    "duration": "Not verified · older curriculum lists 22 months",
+    "language": "Not verified",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Programme enquiries",
+      "email": "info.chbs@musph.ac.ug",
+      "source": "https://sph.mak.ac.ug/program-post/master-of-public-health-nutrition-mphn/"
+    },
+    "research": null,
+    "dataNote": "Duration comes from a school-hosted test-site copy; confirm the current curriculum before applying. The live programme page verifies the degree and entry conditions. Teaching language and delivery format remain unverified."
+  },
+  {
+    "id": "udsm-development-studies",
+    "title": "Development Studies (MA)",
+    "university": "University of Dar es Salaam",
+    "country": "Tanzania",
+    "city": "Dar es Salaam",
+    "lat": -6.777,
+    "lon": 39.205,
+    "fields": [
+      "Social Sciences",
+      "Public Policy"
+    ],
+    "tags": [
+      "Development studies",
+      "Dissertation",
+      "Social research"
+    ],
+    "summary": "Study development through a coursework phase followed by an independent research dissertation.",
+    "gradeNote": "The current programme page leaves its entry-requirements section blank; a programme-specific grade rule was not verified.",
+    "requirements": [
+      "Confirm current qualifying degrees and admission criteria directly with postgraduate admissions",
+      "The published structure requires successful coursework completion before dissertation study"
+    ],
+    "sources": [
+      {
+        "label": "Official master’s degree and coursework duration",
+        "url": "https://www.udsm.ac.tz/programme/master-arts-development-studies"
+      }
+    ],
+    "duration": "18 months · coursework and dissertation",
+    "language": "Not verified",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Degree scope and duration are verified; admissions, teaching language, delivery format and current fees need further confirmation. Requirements from the different Development Evaluation degree are not applied here."
+  },
+  {
+    "id": "rwanda-data-science-mining",
+    "title": "Data Science — Data Mining (MSc)",
+    "university": "University of Rwanda",
+    "country": "Rwanda",
+    "city": "Kigali",
+    "lat": -1.97,
+    "lon": 30.06,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Data mining",
+      "Quantitative research",
+      "Dissertation"
+    ],
+    "summary": "Develop data-science expertise through coursework and a research dissertation at the African Centre of Excellence in Data Science.",
+    "gradeNote": "The university’s published college entry document specifies an Upper Second-Class bachelor’s in a quantitative or computing discipline. Confirm the latest cohort rules.",
+    "requirements": [
+      "Relevant bachelor’s preparation in mathematics, statistics, economics, computing or related disciplines",
+      "Current cohort documentation and English-proficiency conditions must be confirmed with the centre"
+    ],
+    "sources": [
+      {
+        "label": "Official college programme and entry criteria",
+        "url": "https://ur.ac.rw/documents/academics/PG-Entry-Requirements/Entry%20requirements%20CBE.pdf"
+      },
+      {
+        "label": "Current centre and 2026–27 application-call link",
+        "url": "https://aceds.ur.ac.rw/index.php/"
+      },
+      {
+        "label": "Current call hosted through the official centre",
+        "url": "https://drive.google.com/file/d/1Jf9x7A_fpwrTfqZbIsMUcdywz9vByQvH/view?usp=sharing"
+      }
+    ],
+    "duration": "2 years full-time",
+    "language": "Not verified",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The current centre links a 2026–27 call whose PDF could not be inspected. Entry details come from the published college document; the older 2021 call’s alternative lower-class route is not treated as current. Teaching language and precise format need confirmation."
+  },
+  {
+    "id": "jimma-general-public-health",
+    "title": "General Public Health (MPH)",
+    "university": "Jimma University",
+    "country": "Ethiopia",
+    "city": "Jimma",
+    "lat": 7.673,
+    "lon": 36.835,
+    "fields": [
+      "Medicine & Public Health"
+    ],
+    "tags": [
+      "Epidemiology",
+      "Public-health leadership",
+      "Independent research"
+    ],
+    "summary": "Combine public-health methods and independent research to support population-health practice and health-service leadership.",
+    "gradeNote": "The page’s 3.0 CGPA condition is a graduation rule; it is not presented as an admission GPA minimum.",
+    "requirements": [
+      "Medical degree or bachelor’s in a health-related or specified allied discipline",
+      "At least two years of service in a relevant field",
+      "University entrance examination, sponsorship evidence and employer/academic recommendations"
+    ],
+    "sources": [
+      {
+        "label": "Official degree, duration and admission criteria",
+        "url": "https://ju.edu.et/health-institute/2-mph-in-general-public-health-regular-summer-weekend-and-extension%EF%BF%BC/"
+      }
+    ],
+    "duration": "2 years · 5 semesters including summer",
+    "language": "Not verified",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The department lists regular, summer, weekend and extension routes; confirm the duration for the chosen route. Teaching language and current fees were not verified."
+  },
+  {
+    "id": "jimma-environmental-science",
+    "title": "Environmental Science and Technology (MSc)",
+    "university": "Jimma University",
+    "country": "Ethiopia",
+    "city": "Jimma",
+    "lat": 7.673,
+    "lon": 36.835,
+    "fields": [
+      "Environment",
+      "Engineering"
+    ],
+    "tags": [
+      "Pollution control",
+      "Water treatment",
+      "Ecological engineering"
+    ],
+    "summary": "Study pollution prevention, water and waste treatment, environmental assessment and ecological engineering through a research-led MSc.",
+    "gradeNote": "No numeric admission grade threshold was verified in the programme’s listed entry conditions.",
+    "requirements": [
+      "Bachelor’s in environmental health/science, environmental engineering, biology, chemistry, agricultural engineering or civil engineering",
+      "Pass the university’s entrance examination",
+      "Complete the supervised thesis and prescribed courses"
+    ],
+    "sources": [
+      {
+        "label": "Official master’s scope, entry conditions and duration",
+        "url": "https://ju.edu.et/health-institute/msc-in-environmental-science-and-technology%EF%BF%BC/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "Not verified",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The programme allows an additional year for an unfinished thesis under its regulations. Teaching language, delivery format and current dates/fees need confirmation."
+  },
+  {
+    "id": "aui-international-studies-diplomacy",
+    "title": "International Studies and Diplomacy (MA)",
+    "university": "Al Akhawayn University",
+    "country": "Morocco",
+    "city": "Ifrane",
+    "lat": 33.54,
+    "lon": -5.105,
+    "fields": [
+      "Social Sciences",
+      "Public Policy"
+    ],
+    "tags": [
+      "International relations",
+      "Diplomacy",
+      "Political analysis"
+    ],
+    "summary": "Develop international-affairs analysis and diplomatic-policy skills through interdisciplinary study in an English-medium university.",
+    "gradeNote": "The programme publishes bachelor’s GPA 3.0 or equivalent; the university assesses equivalency and no external conversion is supplied.",
+    "requirements": [
+      "Bachelor’s degree; applicant interviews may be required",
+      "Two recommendations, including at least one university instructor, plus an essay and CV",
+      "Non-native English applicants without an English-medium degree need TOEFL 550 or accepted equivalent; Moroccan students have an Arabic-proficiency condition"
+    ],
+    "sources": [
+      {
+        "label": "Current degree, language, duration and grade/language conditions",
+        "url": "https://aui.ma/master-of-arts-in-international-studies-diplomacy"
+      },
+      {
+        "label": "Official graduate application documents",
+        "url": "https://my.aui.ma/ics/admissions/graduate_applicants.jnz"
+      }
+    ],
+    "duration": "1 calendar year · longer with foundation courses",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The programme states a paper-based TOEFL threshold without a numeric IELTS equivalent. Current intake dates and fees need confirmation."
+  },
+  {
+    "id": "smu-part-time-mba-ai",
+    "title": "Business Administration — AI Focus (Part-Time MBA)",
+    "university": "South Mediterranean University — Mediterranean School of Business",
+    "country": "Tunisia",
+    "city": "Tunis",
+    "lat": 36.848,
+    "lon": 10.27,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "AI in management",
+      "Strategy",
+      "Leadership"
+    ],
+    "summary": "Study management, strategy and the application of artificial intelligence to business while continuing professional work.",
+    "gradeNote": "No numeric admission GPA cutoff was verified. The programme is aimed at experienced professionals.",
+    "requirements": [
+      "Bachelor’s degree or equivalent, from any academic background",
+      "At least three years of professional experience",
+      "Application documents and admission interview"
+    ],
+    "sources": [
+      {
+        "label": "Current official MBA offering",
+        "url": "https://www.smu.tn/msb/programs/programs/part-time-mba"
+      },
+      {
+        "label": "Official programme requirements and two-year structure",
+        "url": "https://www.smu.tn/storage/app/media/Catalogues/Programs/Part-Time/DEPLIANT_MBA_281223_V3.pdf"
+      },
+      {
+        "label": "Official language and degree brochure",
+        "url": "https://programs.smu.tn/downloader.php?doc=MSB_2024.pdf"
+      }
+    ],
+    "duration": "2 years part-time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The current page gives month/day schedule guidance without a year; the older brochure lists a different seasonal start. No dated application window is inferred. AI is a business focus, not a standalone computing degree."
+  },
+  {
+    "id": "mauritius-financial-economics",
+    "title": "Financial Economics (MSc)",
+    "university": "University of Mauritius",
+    "country": "Mauritius",
+    "city": "Réduit",
+    "lat": -20.233,
+    "lon": 57.497,
+    "fields": [
+      "Economics & Finance"
+    ],
+    "tags": [
+      "Financial markets",
+      "International finance",
+      "Applied economics"
+    ],
+    "summary": "Study financial economics and its applications to financial institutions, firms and public decision-making.",
+    "gradeNote": "Current admission grades were not verified. The older public programme specification should not be used as a current admission guarantee.",
+    "requirements": [
+      "Confirm the current SH506 qualifying degree and graduate-entry criteria with admissions",
+      "The programme is explicitly offered as a full MSc in the 2026–27 list"
+    ],
+    "sources": [
+      {
+        "label": "Current 2026–27 programme and duration",
+        "url": "https://www.uom.ac.mu/fssh/index.php/progdes/postgraddes"
+      },
+      {
+        "label": "Official archived subject and programme description",
+        "url": "https://www.uom.ac.mu/images/files/programmes/FSSH/YR2013/Postgraduate/PDF/SH506.pdf"
+      },
+      {
+        "label": "University international-student language context",
+        "url": "https://www.uom.ac.mu/index.php/life-in-mauritius"
+      }
+    ],
+    "duration": "2 years part-time",
+    "language": "English",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The current full catalogue is restricted to staff and registered students; the public linked abridged PDF could not be inspected. Subject description is supported by an archived official specification. Specific current entry conditions and delivery format remain unverified."
+  },
+  {
+    "id": "botswana-public-health-medicine",
+    "title": "Medicine — Public Health Medicine (MMed)",
+    "university": "University of Botswana",
+    "country": "Botswana",
+    "city": "Gaborone",
+    "lat": -24.663,
+    "lon": 25.932,
+    "fields": [
+      "Medicine & Public Health"
+    ],
+    "tags": [
+      "Specialist medical training",
+      "Clinical rotations",
+      "Public-health medicine"
+    ],
+    "summary": "Train as a specialist physician through public-health medicine study, district rotations and a research dissertation.",
+    "gradeNote": "Selection combines academic qualifications, clinical experience and interview results; no universal numeric GPA rule was verified.",
+    "requirements": [
+      "Recognized first degree in medicine or equivalent",
+      "At least two years of clinical practice, including twelve months of approved supervised internship",
+      "CV, motivation statement, certified medical qualifications and transcripts, and three professional references; sponsorship conditions apply"
+    ],
+    "sources": [
+      {
+        "label": "Official MMed specializations, admission criteria and four-year structure",
+        "url": "https://www.ub.bw/programmes/medicine/master-medicine-mmed"
+      }
+    ],
+    "duration": "4 years full-time",
+    "language": "Not verified",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "This is postgraduate specialist training for qualified doctors. Preference is given to Botswana citizens; non-citizens with sponsorship may be considered. Rotations can involve partner health facilities, and teaching language needs confirmation."
+  },
+  {
+    "id": "ucad-territorial-governance",
+    "title": "Territorial Governance and Public Policies (Master’s)",
+    "university": "Université Cheikh Anta Diop — IGTDL",
+    "country": "Senegal",
+    "city": "Dakar",
+    "lat": 14.688,
+    "lon": -17.464,
+    "fields": [
+      "Public Policy",
+      "Environment"
+    ],
+    "tags": [
+      "Local governance",
+      "Public services",
+      "Environmental risk"
+    ],
+    "summary": "Study local public-policy design and evaluation, with public-services or environmental-governance and risk-management pathways.",
+    "gradeNote": "The official admission page requires a compatible licence or an accepted equivalent; no numeric threshold was verified.",
+    "requirements": [
+      "Compatible licence degree or a title accepted through equivalence",
+      "Programme includes applied projects, professional placements and a final master’s dissertation"
+    ],
+    "sources": [
+      {
+        "label": "Current degree, pathways and duration",
+        "url": "https://igtdl.ucad.sn/?q=article/master-1"
+      },
+      {
+        "label": "Official master’s entry route",
+        "url": "https://igtdl.ucad.sn/?q=article/admission-et-inscription"
+      }
+    ],
+    "duration": "2 years · 4 semesters · 120 ECTS",
+    "language": "Not verified",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The admission page uses an earlier programme acronym; confirm current cohort procedures. Teaching language, online/in-person format, fees and application dates remain unverified."
+  },
+  {
+    "id": "uw-data-science",
+    "title": "Data Science (MS)",
+    "university": "University of Washington",
+    "country": "United States",
+    "city": "Seattle",
+    "lat": 47.655,
+    "lon": -122.305,
+    "fields": [
+      "Computer Science",
+      "AI & Machine Learning"
+    ],
+    "tags": [
+      "Machine learning",
+      "Data ethics",
+      "Industry capstone"
+    ],
+    "summary": "Combine computing, statistics and machine learning with responsible data practice and a collaborative capstone.",
+    "gradeNote": "The normal 3.0/4.0 criterion concerns the last two years of graded full-time study; exceptional otherwise-strong candidates may be considered.",
+    "requirements": [
+      "Qualifying bachelor’s degree and documented computing/mathematics prerequisite skills",
+      "Two recommendations, short essays, CV and transcripts; GRE/GMAT scores are not accepted",
+      "Accepted English-medium education evidence or IELTS 7.5/other approved test route"
+    ],
+    "sources": [
+      {
+        "label": "Degree, duration and campus delivery",
+        "url": "https://www.washington.edu/datasciencemasters/"
+      },
+      {
+        "label": "Official admission and programme-specific English requirements",
+        "url": "https://www.washington.edu/datasciencemasters/admission-requirements/"
+      }
+    ],
+    "duration": "1.5 years full-time · 2.5 years part-time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7.5,
+    "contact": null,
+    "research": null,
+    "ieltsSource": "https://www.washington.edu/datasciencemasters/admission-requirements/",
+    "scheduleNote": "Autumn 2027 applications are advertised to open in mid-October. No precise opening date is stated, so no application window is assigned."
+  },
+  {
+    "id": "nyu-urban-planning",
+    "title": "Urban Planning (MUP)",
+    "university": "New York University",
+    "country": "United States",
+    "city": "New York",
+    "lat": 40.729,
+    "lon": -73.998,
+    "fields": [
+      "Architecture & Planning",
+      "Public Policy"
+    ],
+    "tags": [
+      "Urban economics",
+      "Spatial analysis",
+      "Community planning"
+    ],
+    "summary": "Explore urban planning through public-service, spatial-analysis and policy methods, with city/community or international-development specializations.",
+    "gradeNote": "The programme reviews quantitative and qualitative academic aptitude; no numeric admission GPA minimum was verified.",
+    "requirements": [
+      "Applicants from varied academic backgrounds are considered",
+      "Transcripts, two recommendations, essays and CV",
+      "Two years of relevant experience are preferred, not required; less-experienced entrants complete a professional-experience requirement"
+    ],
+    "sources": [
+      {
+        "label": "Official degree, admission expectations and specializations",
+        "url": "https://wagner.nyu.edu/education/degrees/master-urban-planning"
+      },
+      {
+        "label": "Official duration and admissions FAQ",
+        "url": "https://wagner.nyu.edu/admissions/faqs"
+      }
+    ],
+    "duration": "From 2 years full-time · typically 3–4 years part-time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The reviewed programme page includes older fee examples, which are not recorded as current tuition. Numeric English-test requirements and current dates need confirmation."
+  },
+  {
+    "id": "mit-master-finance",
+    "title": "Finance (MFin)",
+    "university": "Massachusetts Institute of Technology",
+    "country": "United States",
+    "city": "Cambridge",
+    "lat": 42.36,
+    "lon": -71.088,
+    "fields": [
+      "Economics & Finance"
+    ],
+    "tags": [
+      "Quantitative finance",
+      "Action learning",
+      "Financial markets"
+    ],
+    "summary": "Study finance through quantitative analysis and applied projects in a residential programme with standard and accelerated routes.",
+    "gradeNote": "MIT Sloan explicitly publishes no minimum GPA for this programme. Academic and personal achievement are reviewed together.",
+    "requirements": [
+      "Four-year undergraduate degree or accepted international three-year equivalent by enrolment",
+      "Quantitative preparation is beneficial; Python proficiency is expected before matriculation",
+      "Recommendations and interview with quantitative and behavioural components; GMAT/GRE is optional",
+      "TOEFL and IELTS scores are not accepted; English ability is assessed at interview"
+    ],
+    "sources": [
+      {
+        "label": "Official programme duration and detailed entry FAQ",
+        "url": "https://mitsloan.mit.edu/mfin/admissions/common-questions"
+      }
+    ],
+    "duration": "18 months · 12-month accelerated option",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "MFin admissions",
+      "email": "mfinadmissions.mitsloan@mit.edu",
+      "source": "https://mitsloan.mit.edu/mfin/admissions/common-questions"
+    },
+    "research": null
+  },
+  {
+    "id": "cmu-software-engineering",
+    "title": "Software Engineering (MSE)",
+    "university": "Carnegie Mellon University",
+    "country": "United States",
+    "city": "Pittsburgh",
+    "lat": 40.444,
+    "lon": -79.944,
+    "fields": [
+      "Computer Science",
+      "Engineering"
+    ],
+    "tags": [
+      "Software architecture",
+      "Studio project",
+      "Software systems"
+    ],
+    "summary": "Develop advanced software-engineering skills through a programme combining technical study, team practice and a studio project.",
+    "gradeNote": "The current eligibility section requires cumulative QPA higher than 2.5. Applications are assessed holistically; no foreign-grade conversion is supplied.",
+    "requirements": [
+      "Strong computing or related preparation; alternative backgrounds should demonstrate algorithms, data structures and discrete mathematics",
+      "Software-engineering experience is recommended, not a mandatory minimum",
+      "Application documents and coding assessment; GRE is optional",
+      "Relevant visa applicants who are non-native English speakers need TOEFL, IELTS or Duolingo; prior English-medium education does not automatically waive testing"
+    ],
+    "sources": [
+      {
+        "label": "Current MSE degree and programme length",
+        "url": "https://mse.s3d.cmu.edu/applicants/mse-as/index.html"
+      },
+      {
+        "label": "Current 2027 admission requirements and contact",
+        "url": "https://mse.s3d.cmu.edu/applicants/mse-as/apply.html"
+      }
+    ],
+    "duration": "20 or 24 months",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-09-09",
+      "closes": "2026-12-09",
+      "source": "https://mse.s3d.cmu.edu/applicants/mse-as/apply.html",
+      "category": "On-campus MSE applicants · Autumn 2027"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "MSE admissions",
+      "email": "mse-applications@andrew.cmu.edu",
+      "source": "https://mse.s3d.cmu.edu/applicants/mse-as/apply.html"
+    },
+    "research": null,
+    "scheduleNote": "The application deadline is 9 December 2026 at 3 p.m. US Eastern time. Invited coding assessments are due 17 December 2026.",
+    "dataNote": "This record follows the revised programme for autumn 2027 applicants. Older 16-month descriptions and the distinct online/certificate routes are not used."
+  },
+  {
+    "id": "uchicago-public-policy",
+    "title": "Public Policy (MPP)",
+    "university": "University of Chicago",
+    "country": "United States",
+    "city": "Chicago",
+    "lat": 41.785,
+    "lon": -87.597,
+    "fields": [
+      "Public Policy",
+      "Economics & Finance"
+    ],
+    "tags": [
+      "Policy analysis",
+      "Economics",
+      "Data methods"
+    ],
+    "summary": "Develop economic, statistical and analytical tools for evaluating public-policy decisions.",
+    "gradeNote": "Harris states that applications are not automatically eliminated on GPA or test score alone; no admission-probability estimate is implied.",
+    "requirements": [
+      "Transcripts, personal essays, CV and three listed recommenders; at least two letters must arrive within the specified review period",
+      "GRE or a documented qualifying waiver; permitted substitutions follow current rules",
+      "TOEFL or IELTS unless the university’s English-proficiency exemption applies"
+    ],
+    "sources": [
+      {
+        "label": "Official MPP degree and duration",
+        "url": "https://harris.uchicago.edu/academics/degrees/master-public-policy-mpp"
+      },
+      {
+        "label": "Programme requirements, GRE rules and contact",
+        "url": "https://harris.uchicago.edu/admissions/requirements-and-deadlines"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Harris admissions",
+      "email": "harrisadmissions@uchicago.edu",
+      "source": "https://harris.uchicago.edu/admissions/requirements-and-deadlines"
+    },
+    "research": null,
+    "dataNote": "GRE is not universally optional: applicants need a test or an eligible waiver. Numeric English-test thresholds and a complete dated application window need confirmation."
+  },
+  {
+    "id": "mcgill-neuroscience",
+    "title": "Neuroscience (MSc, Thesis)",
+    "university": "McGill University",
+    "country": "Canada",
+    "city": "Montréal",
+    "lat": 45.505,
+    "lon": -73.577,
+    "fields": [
+      "Life Sciences",
+      "Medicine & Public Health"
+    ],
+    "tags": [
+      "Neuroscience",
+      "Laboratory research",
+      "Thesis"
+    ],
+    "summary": "Undertake supervised neuroscience research, spanning cellular, systems, behavioural and computational approaches.",
+    "gradeNote": "The graduate programme listing gives an eligible bachelor’s degree with 3.0/4.0 minimum. Programme-specific academic review also applies.",
+    "requirements": [
+      "Eligible bachelor’s degree and English-proficiency evidence",
+      "Laboratory experience and confirmation of an IPN thesis supervisor",
+      "Programme-specific application documents and research preparation"
+    ],
+    "sources": [
+      {
+        "label": "Official master’s title, admission baseline and contact",
+        "url": "https://www.mcgill.ca/gradapplicants/program/neuroscience-msc"
+      },
+      {
+        "label": "Thesis structure, supervisor condition and duration limit",
+        "url": "https://www.mcgill.ca/ipn/prospective/admission-requirements/admissions-msc"
+      }
+    ],
+    "duration": "Maximum 3 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Neuroscience graduate admissions",
+      "email": "ipn.admissions@mcgill.ca",
+      "source": "https://www.mcgill.ca/gradapplicants/program/neuroscience-msc"
+    },
+    "research": null,
+    "scheduleNote": "The university lists recurring fall and winter intake deadlines without a year; confirm the application portal for the intended cohort.",
+    "dataNote": "The published three-year figure is a maximum, not a promised typical completion time. Funding terms, current fees and numeric language thresholds need confirmation."
+  },
+  {
+    "id": "waterloo-applied-mathematics",
+    "title": "Applied Mathematics (MMath)",
+    "university": "University of Waterloo",
+    "country": "Canada",
+    "city": "Waterloo",
+    "lat": 43.472,
+    "lon": -80.544,
+    "fields": [
+      "Physics & Mathematics"
+    ],
+    "tags": [
+      "Mathematical physics",
+      "Scientific computation",
+      "Dynamical systems"
+    ],
+    "summary": "Pursue applied-mathematics research in areas including scientific computation, mathematical physics, biological mathematics and dynamical systems.",
+    "gradeNote": "The programme states an overall 78% undergraduate average or institution-assessed equivalent; no foreign GPA conversion is supplied.",
+    "requirements": [
+      "Four-year honours bachelor’s in mathematics, or science/engineering with strong mathematics preparation",
+      "CV, statement of interest, transcripts and three normally academic references",
+      "Establishing contact with a potential supervisor is strongly advised",
+      "IELTS 7.0 overall, writing and speaking 6.5, or the accepted alternative"
+    ],
+    "sources": [
+      {
+        "label": "Current degree, duration, research areas and admission rules",
+        "url": "https://uwaterloo.ca/future-graduate-students/programs/by-faculty/math/applied-mathematics-master-math-mmath"
+      }
+    ],
+    "duration": "24 months full-time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7,
+    "contact": {
+      "name": "Applied Mathematics graduate enquiries",
+      "email": "amgrad@uwaterloo.ca",
+      "source": "https://uwaterloo.ca/future-graduate-students/programs/by-faculty/math/applied-mathematics-master-math-mmath"
+    },
+    "research": null,
+    "ieltsSource": "https://uwaterloo.ca/future-graduate-students/programs/by-faculty/math/applied-mathematics-master-math-mmath",
+    "scheduleNote": "Published recurring deadlines are 15 January, 1 June and 1 October for the corresponding September, January and May intakes; verify the applicable year."
+  },
+  {
+    "id": "calgary-planning",
+    "title": "Planning (MPlan)",
+    "university": "University of Calgary",
+    "country": "Canada",
+    "city": "Calgary",
+    "lat": 51.078,
+    "lon": -114.135,
+    "fields": [
+      "Architecture & Planning"
+    ],
+    "tags": [
+      "Planning studios",
+      "Sustainable communities",
+      "Professional planning"
+    ],
+    "summary": "Study community and city planning through design studios, technical courses and projects involving real clients.",
+    "gradeNote": "Minimum 3.0/4.0 applies to the final two undergraduate years, defined as at least 20 courses or 60 units; it is not an overall-GPA conversion.",
+    "requirements": [
+      "Recognized four-year baccalaureate or equivalent",
+      "Digital portfolio, CV and statement of interest in the prescribed application package",
+      "Three references, at least two academic",
+      "Meet the programme’s current English-proficiency rules; no supervisor is required"
+    ],
+    "sources": [
+      {
+        "label": "Degree, professional accreditation, duration and admission criteria",
+        "url": "https://grad.ucalgary.ca/future-students/graduate/discover-opportunities/explore-programs/planning-mplan-course"
+      }
+    ],
+    "duration": "2 years full-time · maximum 6 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Planning graduate programme administrator",
+      "email": "admissions@sapl.ucalgary.ca",
+      "source": "https://grad.ucalgary.ca/future-students/graduate/discover-opportunities/explore-programs/planning-mplan-course"
+    },
+    "research": null,
+    "scheduleNote": "The degree page lists a recurring 31 January deadline for September entry. Confirm the intended application year.",
+    "dataNote": "Numeric English-test thresholds must be checked in the current academic calendar linked by the programme."
+  },
+  {
+    "id": "iima-mba-pgp",
+    "title": "MBA — Post Graduate Programme in Management",
+    "university": "Indian Institute of Management Ahmedabad",
+    "country": "India",
+    "city": "Ahmedabad",
+    "lat": 23.031,
+    "lon": 72.537,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "Management",
+      "Residential MBA",
+      "Case method"
+    ],
+    "summary": "A two-year residential MBA combining general management study with applied decision-making for graduates from varied disciplines.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Recognised undergraduate qualification; choose the applicable domestic, overseas Indian or foreign-national route",
+      "CAT for domestic applicants; GMAT for overseas Indian and foreign-national applicants",
+      "Shortlisted applicants complete analytical writing and a personal interview"
+    ],
+    "sources": [
+      {
+        "label": "Official MBA degree overview",
+        "url": "https://www.iima.ac.in/academics/mba"
+      },
+      {
+        "label": "Official admissions and applicant routes",
+        "url": "https://www.iima.ac.in/academics/mba/admissions"
+      }
+    ],
+    "duration": "2 years",
+    "language": "Not verified",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "PGP admissions office",
+      "email": "admission@iima.ac.in",
+      "source": "https://www.iima.ac.in/academics/mba/admissions"
+    },
+    "research": null,
+    "scheduleNote": "CAT-2026 guidance is linked; foreign-national and overseas routes have separate rules. Exact programme application window not recorded.",
+    "dataNote": "The official overview confirms an MBA degree despite the PGP name. Teaching language and route-specific grade thresholds were not explicitly verified. Approximate Vastrapur campus coordinates."
+  },
+  {
+    "id": "iitmadras-msc-mathematics",
+    "title": "MSc Mathematics",
+    "university": "Indian Institute of Technology Madras",
+    "country": "India",
+    "city": "Chennai",
+    "lat": 12.991,
+    "lon": 80.233,
+    "fields": [
+      "Physics & Mathematics"
+    ],
+    "tags": [
+      "Pure mathematics",
+      "Applied mathematics",
+      "Four semesters"
+    ],
+    "summary": "A four-semester mathematics degree covering core mathematical subjects before electives and seminar work.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Recognised science or engineering undergraduate qualification with relevant preparation for the international route",
+      "Degree documents, transcript, passport, CV and statement of purpose; additional department documents may apply",
+      "Department selection may include a test or interview; confirm the direct-admission or scholarship route"
+    ],
+    "sources": [
+      {
+        "label": "Official international MSc programmes and eligibility",
+        "url": "https://ge.iitm.ac.in/programs/student-inbound/msc"
+      },
+      {
+        "label": "Official mathematics curriculum",
+        "url": "https://math.iitm.ac.in/program-msc-new.php"
+      },
+      {
+        "label": "Official institute teaching-language policy",
+        "url": "https://www.iitm.ac.in/academics/overview"
+      }
+    ],
+    "duration": "2 years · 4 semesters",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "International programmes normally commence in July. No exact current application window recorded.",
+    "dataNote": "International MSc guidance mixes scholarship instructions with general FAQs; confirm whether an ICCR application applies to the chosen route. The enrolled-student thesis CGPA rule is not an admission cutoff. Approximate campus coordinates."
+  },
+  {
+    "id": "iitmadras-mtech-civil-structural",
+    "title": "MTech Civil Engineering — Structural Engineering",
+    "university": "Indian Institute of Technology Madras",
+    "country": "India",
+    "city": "Chennai",
+    "lat": 12.991,
+    "lon": 80.233,
+    "fields": [
+      "Engineering"
+    ],
+    "tags": [
+      "Structural engineering",
+      "Civil engineering",
+      "Research project"
+    ],
+    "summary": "A civil engineering master's specialisation in structural engineering within a four-semester technical degree.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Relevant four-year engineering bachelor's degree, four-year honours science degree, or qualifying five-year science preparation under international guidance",
+      "Academic documents, statement of purpose and recommendation letters; department selection may add tests or interviews",
+      "Demonstrate sufficient English proficiency and confirm the applicable direct or scholarship application route"
+    ],
+    "sources": [
+      {
+        "label": "Official international MTech specialisations and requirements",
+        "url": "https://ge.iitm.ac.in/programs/student-inbound/mtech"
+      },
+      {
+        "label": "Official civil engineering department",
+        "url": "https://civil.iitm.ac.in/"
+      }
+    ],
+    "duration": "2 years · 4 semesters",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "International admissions team",
+      "email": "intl.admissions@ge.iitm.ac.in",
+      "source": "https://ge.iitm.ac.in/programs/student-inbound/mtech"
+    },
+    "research": null,
+    "scheduleNote": "International MTech programmes generally begin in July. Programme availability may vary by academic year.",
+    "dataNote": "One structural-engineering specialisation record; other civil tracks are not separate duplicate records here. Scholarship-specific ICCR instructions need route confirmation. Approximate campus coordinates."
+  },
+  {
+    "id": "lums-mba",
+    "title": "Master of Business Administration",
+    "university": "Lahore University of Management Sciences",
+    "country": "Pakistan",
+    "city": "Lahore",
+    "lat": 31.469,
+    "lon": 74.409,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "Case method",
+      "Experiential learning",
+      "Entrepreneurship"
+    ],
+    "summary": "A two-year MBA using business cases, industry analysis, venture development and a consultancy project.",
+    "gradeNote": "The programme FAQ states no minimum CGPA. Academic history, tests and the full application are still assessed.",
+    "requirements": [
+      "At least 16 years of education leading to an HEC-recognised qualification; shorter bachelor's degrees need HEC equivalence",
+      "For Fall 2027: GMAT, GRE, LGAT or HAT-II; the listed HAT minimum is 50",
+      "Two references and a complete application; shortlisted candidates may be interviewed",
+      "One to two years of work experience is preferred, rather than mandatory"
+    ],
+    "sources": [
+      {
+        "label": "Official MBA structure, Fall 2027 admissions and fees",
+        "url": "https://lums.edu.pk/programmes/mba"
+      }
+    ],
+    "duration": "2 years",
+    "language": "Not verified",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "FY 2026–27 Year 1 tuition: PKR 1,957,600 · other charges extra",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Fall 2027 applications activate during October 2026; deadline 6 April 2027 at 17:00 PKT. An exact opening day is not published here, so no dated window is recorded.",
+    "dataNote": "Current entry guidance is labelled Fall 2027, while the displayed fee table covers Year 1 in FY 2026–27. Teaching language was not explicitly verified. Approximate DHA campus coordinates."
+  },
+  {
+    "id": "brac-mph",
+    "title": "Master of Public Health",
+    "university": "BRAC University — James P Grant School of Public Health",
+    "country": "Bangladesh",
+    "city": "Dhaka",
+    "lat": 23.78,
+    "lon": 90.404,
+    "fields": [
+      "Medicine & Public Health"
+    ],
+    "tags": [
+      "Community health",
+      "Field learning",
+      "Internship"
+    ],
+    "summary": "An intensive public health degree combining coursework with an internship and thesis, with an emphasis on communities and applied practice.",
+    "gradeNote": "International applicant guidance lists a bachelor's CGPA of 2.50/4.00 in its local qualification context. Foreign equivalence requires university review.",
+    "requirements": [
+      "Relevant bachelor's preparation in health, life sciences, social sciences, business or another accepted discipline",
+      "Demonstrate English proficiency; a current numeric test threshold was not verified",
+      "Confirm programme selection and document requirements with the public health school"
+    ],
+    "sources": [
+      {
+        "label": "Official MPH programme",
+        "url": "https://bracjpgsph.org/education/master-of-public-health"
+      },
+      {
+        "label": "Official 18-month curriculum",
+        "url": "https://www.bracjpgsph.org/mph-curriculum"
+      },
+      {
+        "label": "Official international postgraduate eligibility",
+        "url": "https://www.bracu.ac.bd/pg-international-applicant"
+      },
+      {
+        "label": "Official university teaching language",
+        "url": "https://www.bracu.ac.bd/about/about-brac-university"
+      }
+    ],
+    "duration": "18 months · full-time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "The curriculum describes a January start. Current opening and closing dates not recorded.",
+    "dataNote": "The 18-month route includes a year of coursework and six months of internship/thesis. Approximate Mohakhali school coordinates; confirm the location of specific teaching activities."
+  },
+  {
+    "id": "brac-mds",
+    "title": "Master of Development Studies",
+    "university": "BRAC University",
+    "country": "Bangladesh",
+    "city": "Dhaka",
+    "lat": 23.774,
+    "lon": 90.425,
+    "fields": [
+      "Social Sciences",
+      "Public Policy"
+    ],
+    "tags": [
+      "Development",
+      "Governance",
+      "Research methods"
+    ],
+    "summary": "A development studies degree examining poverty, gender, sustainability and governance, with research methods and a dissertation option.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "A recognised four-year bachelor's or equivalent 16-year education in an accepted discipline",
+      "Complete the written admission assessment and viva described by the institute",
+      "Provide university application documents; verify international qualification equivalence and English evidence"
+    ],
+    "sources": [
+      {
+        "label": "Official MDS degree and curriculum",
+        "url": "https://www.bracu.ac.bd/avilable-program/master-development-studies-mds"
+      },
+      {
+        "label": "Official institute admissions",
+        "url": "https://bigd.bracu.ac.bd/academics/admission-and-fees/"
+      },
+      {
+        "label": "Official international postgraduate eligibility",
+        "url": "https://www.bracu.ac.bd/pg-international-applicant"
+      },
+      {
+        "label": "Official university teaching language",
+        "url": "https://www.bracu.ac.bd/about/about-brac-university"
+      }
+    ],
+    "duration": "2 years · 45 credits",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Current application dates not verified; consult the official admissions page.",
+    "dataNote": "Written assessment includes analytical and English-related tasks; no comparable GPA or current IELTS threshold recorded. Approximate BRAC University Merul Badda campus coordinates; confirm the programme's teaching venue."
+  },
+  {
+    "id": "itb-general-management-mba-bandung",
+    "title": "General Management MBA",
+    "university": "Institut Teknologi Bandung",
+    "country": "Indonesia",
+    "city": "Bandung",
+    "lat": -6.888,
+    "lon": 107.61,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "Early career",
+      "Leadership",
+      "Digital business"
+    ],
+    "summary": "An MBA for recent graduates and early-career professionals, combining management fundamentals, practical business exercises and a final project.",
+    "gradeNote": "No universal numeric GPA comparison recorded. The admission page distinguishes foreign-applicant aptitude-test requirements by original GPA.",
+    "requirements": [
+      "Bachelor's or recognised applied-bachelor qualification under the university's eligibility rules",
+      "Meet the applicable TPA/UPDA aptitude-test requirement; confirm the foreign-applicant route",
+      "ELPT 90 or IELTS 5.5; eligible overseas English-taught graduates can provide instruction-language evidence",
+      "Complete the application and any invited proposal discussion/interview"
+    ],
+    "sources": [
+      {
+        "label": "Official General Management MBA curriculum and delivery",
+        "url": "https://www.sbm.itb.ac.id/academic-programs/mba/bandung-campus/general-management-mba-bdg-campus/"
+      },
+      {
+        "label": "Official January 2027 admissions and dates",
+        "url": "https://www.sbm.itb.ac.id/academic-programs/mba/admission/"
+      }
+    ],
+    "duration": "18 months · 3 regular semesters + 1 short semester",
+    "language": "Not verified",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-10-06",
+      "closes": "2026-10-26",
+      "source": "https://www.sbm.itb.ac.id/academic-programs/mba/admission/",
+      "category": "January 2027 MBA intake · Batch 2 · Bandung/Jakarta"
+    },
+    "gpa": null,
+    "ielts": 5.5,
+    "ieltsSource": "https://www.sbm.itb.ac.id/academic-programs/mba/admission/",
+    "contact": {
+      "name": "MBA Bandung admissions",
+      "email": "admission@sbm-itb.ac.id",
+      "source": "https://www.sbm.itb.ac.id/academic-programs/mba/admission/"
+    },
+    "research": null,
+    "scheduleNote": "Batch 2 closes 26 October 2026 at 15:00 local time. Batch 3 is advertised for 3 November–2 December 2026.",
+    "dataNote": "Offline teaching is explicit; teaching language is not. This record covers the Bandung General Management route, not separate partner double degrees. Posted fee intake labels conflict with admissions labels, so fees are left unverified. Approximate Gelap Nyawang campus coordinates."
+  },
+  {
+    "id": "um-data-science",
+    "title": "Master of Data Science",
+    "university": "Universiti Malaya",
+    "country": "Malaysia",
+    "city": "Kuala Lumpur",
+    "lat": 3.12,
+    "lon": 101.655,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Data analytics",
+      "Machine learning",
+      "Research project"
+    ],
+    "summary": "A coursework master's covering programming, data mining, machine learning and big-data management, followed by a research project.",
+    "gradeNote": "May 2026 programme-specific rules list honours CGPA 3.30 for science and 3.50 for accepted non-science streams. These are local qualification rules, not converted GPA cutoffs.",
+    "requirements": [
+      "Honours bachelor's preparation meeting the programme-specific science or accepted non-science criteria",
+      "Accepted non-science areas include business/economics, statistics/mathematics and accounting/finance",
+      "IELTS Academic 6.0 or an accepted alternative"
+    ],
+    "sources": [
+      {
+        "label": "Official current degree, specific requirements and fees",
+        "url": "https://study.um.edu.my/master-of-data-science-coursework"
+      }
+    ],
+    "duration": "2 semesters + 1 special semester · full-time",
+    "language": "Not verified",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Published international tuition: RM 41,700 · 6% SST extra",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6,
+    "ieltsSource": "https://study.um.edu.my/master-of-data-science-coursework",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "October and March intakes are listed, subject to programme availability; exact application dates not recorded.",
+    "dataNote": "Higher programme-specific grade rules take precedence over the page's generic university entry section. Teaching language was not explicitly confirmed. Published fee has no intake year attached. Approximate main campus coordinates."
+  },
+  {
+    "id": "um-public-health",
+    "title": "Master of Public Health",
+    "university": "Universiti Malaya",
+    "country": "Malaysia",
+    "city": "Kuala Lumpur",
+    "lat": 3.12,
+    "lon": 101.655,
+    "fields": [
+      "Medicine & Public Health"
+    ],
+    "tags": [
+      "Epidemiology",
+      "Biostatistics",
+      "Health systems"
+    ],
+    "summary": "A public health coursework degree combining epidemiology, biostatistics, management and a research project.",
+    "gradeNote": "Programme-specific CGPA routes combine grades with work experience and additional criteria. International equivalence requires faculty review.",
+    "requirements": [
+      "Medicine, dentistry, allied-health or accepted public-health-related bachelor's preparation",
+      "Relevant post-degree experience: at least one year for higher grade bands; lower bands require additional experience and criteria",
+      "Pass the required interview and meet the applicable academic route",
+      "IELTS Academic 6.0 or accepted alternative"
+    ],
+    "sources": [
+      {
+        "label": "Official current MPH requirements and fee schedule",
+        "url": "https://study.um.edu.my/master-public-health-coursework"
+      },
+      {
+        "label": "Official MPH teaching language and structure",
+        "url": "https://spm.um.edu.my/academic/mph/"
+      }
+    ],
+    "duration": "2 semesters + 1 special semester · full-time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Published international tuition: RM 31,100 · 6% SST extra",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6,
+    "ieltsSource": "https://study.um.edu.my/master-public-health-coursework",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "October and March intakes are listed, subject to availability; current exact dates not recorded.",
+    "dataNote": "Specific entry rules are more detailed than the generic university CGPA section. No single comparable GPA cutoff is encoded. Published fee has no intake year attached. Approximate campus coordinates."
+  },
+  {
+    "id": "usm-linguistics-english-ma",
+    "title": "MA Linguistics and English Language Studies",
+    "university": "Universiti Sains Malaysia",
+    "country": "Malaysia",
+    "city": "George Town",
+    "lat": 5.356,
+    "lon": 100.302,
+    "fields": [
+      "Arts & Humanities"
+    ],
+    "tags": [
+      "Linguistics",
+      "English studies",
+      "Dissertation"
+    ],
+    "summary": "A mixed-mode master's combining linguistics and English-language coursework with a dissertation.",
+    "gradeNote": "The admission page lists related-degree CGPA 2.75/4.00, with conditional lower-grade routes. These are institutional grading rules, not foreign GPA conversions.",
+    "requirements": [
+      "Relevant bachelor's qualification assessed by the school",
+      "Applicants in lower CGPA bands need the additional achievements or experience listed by the university",
+      "Provide English proficiency evidence; verify the school-specific score before applying"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, admission routes and duration",
+        "url": "https://admission.usm.my/postgraduate/programmes?catid=52&id=259&view=article"
+      }
+    ],
+    "duration": "2–4 semesters full-time · 4–8 semesters part-time",
+    "language": "Not verified",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "April and October intakes are listed. Exact current application window not recorded.",
+    "dataNote": "Teaching language was not explicitly stated. A copied computer-science paragraph and a warning that English scores vary appear on the page, so neither is encoded as a definitive entry rule. Approximate main-campus coordinates."
+  },
+  {
+    "id": "ait-environmental-engineering-management",
+    "title": "Environmental Engineering and Management — MSc/MEng",
+    "university": "Asian Institute of Technology",
+    "country": "Thailand",
+    "city": "Pathum Thani",
+    "lat": 14.079,
+    "lon": 100.613,
+    "fields": [
+      "Engineering",
+      "Environment"
+    ],
+    "tags": [
+      "Pollution control",
+      "Water treatment",
+      "Environmental biotechnology"
+    ],
+    "summary": "A 48-credit environmental engineering master's offering coursework with either a thesis or a research study, covering pollution, treatment and resource management.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Relevant science or engineering undergraduate preparation; other backgrounds are considered individually",
+      "Strong undergraduate academic record and accepted English proficiency evidence",
+      "Confirm whether the MSc or MEng award and thesis or research-study route fits the application"
+    ],
+    "sources": [
+      {
+        "label": "Official environmental engineering master's curriculum",
+        "url": "https://ait.ac.th/program/environmental-engineering-and-management/"
+      },
+      {
+        "label": "Official master's duration and English requirements FAQ",
+        "url": "https://ait.ac.th/admissions/frequently-asked-questions/"
+      },
+      {
+        "label": "Official admissions eligibility",
+        "url": "https://ait.ac.th/eligibility/"
+      }
+    ],
+    "duration": "22–24 months · regular two-year route",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "January and August intakes are described; verify availability and category-specific dates.",
+    "dataNote": "The 2.75 figure on the programme page is an enrolled-student degree requirement, not an admission cutoff. English requirements include conditional routes, so no single IELTS threshold is encoded. Approximate campus coordinates."
+  },
+  {
+    "id": "ait-professional-esam",
+    "title": "Professional Master's in Environmental and Social Sustainability Assessment and Management",
+    "university": "Asian Institute of Technology",
+    "country": "Thailand",
+    "city": "Pathum Thani",
+    "lat": 14.079,
+    "lon": 100.613,
+    "fields": [
+      "Environment",
+      "Public Policy"
+    ],
+    "tags": [
+      "Impact assessment",
+      "Sustainability management",
+      "Professional degree"
+    ],
+    "summary": "A professional master's using work-based cases to study environmental and social impact assessment, stakeholder participation and sustainability management.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "A relevant undergraduate qualification of at least three years",
+      "Normally three years of work experience; relevant experience during the bachelor's may be considered",
+      "IELTS 5.0 or equivalent; confirm any bridging requirement and the current delivery arrangement"
+    ],
+    "sources": [
+      {
+        "label": "Official professional master's, admission requirements and language",
+        "url": "https://dds.ait.ac.th/one-year-professional-master-in-environmental-and-social-sustainability-assessment-and-management-esam/"
+      }
+    ],
+    "duration": "1 year normally · extension up to 2 years",
+    "language": "English",
+    "mode": "Not verified",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 5,
+    "ieltsSource": "https://dds.ait.ac.th/one-year-professional-master-in-environmental-and-social-sustainability-assessment-and-management-esam/",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Current cohort dates and availability need programme confirmation.",
+    "dataNote": "The page describes hybrid teaching in a pandemic-specific FAQ and an introductory-batch discount. Current delivery mode and current fees are therefore left unverified. Approximate AIT campus coordinates."
+  },
+  {
+    "id": "chula-international-development-ma",
+    "title": "MA International Development Studies",
+    "university": "Chulalongkorn University",
+    "country": "Thailand",
+    "city": "Bangkok",
+    "lat": 13.736,
+    "lon": 100.535,
+    "fields": [
+      "Social Sciences",
+      "Public Policy"
+    ],
+    "tags": [
+      "Development studies",
+      "Asia-Pacific",
+      "Thesis"
+    ],
+    "summary": "A one-year development studies degree organised across three trimesters, combining development theory, policy, research methods and a thesis.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Bachelor's qualification under the programme's admissions route; confirm current academic-grade criteria",
+      "English proficiency evidence; the 2026 student guide lists IELTS 6.0, with exemption or compensatory-course routes",
+      "Complete registration in both the graduate-school and faculty admission systems"
+    ],
+    "sources": [
+      {
+        "label": "Official university degree listing",
+        "url": "https://www.chula.ac.th/en/programs/25440011100854/"
+      },
+      {
+        "label": "Official master's curriculum and duration",
+        "url": "https://www.maids-chula.org/masterprogram"
+      },
+      {
+        "label": "Official 2026 application dates",
+        "url": "https://www.maids-chula.org/application-new"
+      },
+      {
+        "label": "Official 2026 English evidence guidance",
+        "url": "https://www.maids-chula.org/new-students-guide-new"
+      },
+      {
+        "label": "Official current campus delivery and eligibility FAQ",
+        "url": "https://www.maids-chula.org/faqs-new"
+      }
+    ],
+    "duration": "1 year · 3 trimesters",
+    "language": "Not verified",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-02-01",
+      "closes": "2026-04-05",
+      "source": "https://www.maids-chula.org/application-new",
+      "category": "Academic year 2026 MAIDS–GRID admissions · published closed cycle"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "MAIDS programme admissions",
+      "email": "application.maids@gmail.com",
+      "source": "https://www.maids-chula.org/application-new"
+    },
+    "research": null,
+    "scheduleNote": "The published 2026 admission window is closed. No 2027 window is inferred.",
+    "dataNote": "This is the one-year campus MA; optional Sophia dual degrees are separate routes. Teaching language is not explicitly verified on the reviewed pages. Current English evidence has exemption/compensatory-study routes. Published fee totals conflict with their breakdown. Approximate faculty coordinates."
+  },
+  {
+    "id": "usth-advanced-materials-nanotechnology",
+    "title": "Master in Advanced Materials Science and Nanotechnology",
+    "university": "University of Science and Technology of Hanoi",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "lat": 21.047,
+    "lon": 105.8,
+    "fields": [
+      "Physics & Mathematics",
+      "Engineering"
+    ],
+    "tags": [
+      "Materials science",
+      "Nanotechnology",
+      "Laboratory internship"
+    ],
+    "summary": "An English-taught materials master's bringing together physics, chemistry and nanotechnology, including a substantial internship.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Relevant bachelor's qualification completed, or expected before enrolment, under the master's academic regulations",
+      "Programme review of academic preparation and English proficiency",
+      "Verify the current selection procedure and any required English preparation"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, degree partnership and language",
+        "url": "https://admission.usth.edu.vn/master-in-advanced-materials-science-and-nanotechnology-amsn-382/"
+      },
+      {
+        "label": "Official master's academic regulations",
+        "url": "https://usth.edu.vn/en/wp-content/uploads/sites/2/2023/03/240326_master-academic-policies_v2024.pdf"
+      }
+    ],
+    "duration": "2 years · 120 ECTS",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Current application dates not verified; consult the official admissions page.",
+    "dataNote": "One record covers the USTH/French-partner degree arrangement. A French internship opportunity is selective, not guaranteed. No current comparable GPA or IELTS cutoff recorded. Approximate Hoang Quoc Viet campus coordinates."
+  },
+  {
+    "id": "vju-public-policy",
+    "title": "Master of Public Policy",
+    "university": "VNU Vietnam Japan University",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "lat": 21.016,
+    "lon": 105.767,
+    "fields": [
+      "Public Policy",
+      "Social Sciences"
+    ],
+    "tags": [
+      "Policy analysis",
+      "Sustainability",
+      "Quantitative methods"
+    ],
+    "summary": "A public policy master's combining policy analysis, economics, quantitative tools and a thesis, with a sustainability focus.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Relevant undergraduate qualification; current equivalence and grade rules require confirmation",
+      "Programme assessment of academic preparation and language evidence",
+      "Consult the current Vietnamese admission announcement for documents and interviews"
+    ],
+    "sources": [
+      {
+        "label": "Official programme curriculum",
+        "url": "https://vju.vnu.edu.vn/en/academics/post-graduate/masters-program-in-public-policy/"
+      },
+      {
+        "label": "Official current graduate programme and language listing",
+        "url": "https://vju.vnu.edu.vn/tuyensinhcaohoc/"
+      }
+    ],
+    "duration": "2 years · 24 months",
+    "language": "Vietnamese and English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Use the current Vietnamese-language graduate admission announcement; exact dates not encoded.",
+    "dataNote": "The current listing states Vietnamese and English; older English programme text describes an English-only route and 2023 entry rules. Historical GPA and IELTS values are not presented as current cutoffs. Approximate My Dinh teaching-site coordinates."
+  },
+  {
+    "id": "vju-climate-change-development",
+    "title": "Master of Climate Change and Development",
+    "university": "VNU Vietnam Japan University",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "lat": 21.016,
+    "lon": 105.767,
+    "fields": [
+      "Environment",
+      "Social Sciences"
+    ],
+    "tags": [
+      "Climate change",
+      "Sustainable development",
+      "Thesis"
+    ],
+    "summary": "A climate change and development master's with an English thesis and selected Vietnamese/Japanese language courses.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Current eligible undergraduate backgrounds and grade requirements need programme confirmation",
+      "Confirm the required English evidence and any Vietnamese-language preparation",
+      "Follow the current graduate admission notice for selection and supporting documents"
+    ],
+    "sources": [
+      {
+        "label": "Official current degree, duration and language listing",
+        "url": "https://vju.vnu.edu.vn/tuyensinhcaohoc/"
+      },
+      {
+        "label": "Official English-language graduate programme explanation",
+        "url": "https://vju.vnu.edu.vn/en/tuyensinhcaohoc/"
+      }
+    ],
+    "duration": "2 years · full-time",
+    "language": "English; selected courses in Vietnamese/Japanese",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Current opening and closing dates not encoded.",
+    "dataNote": "The current Vietnamese landing page confirms the degree and delivery; the English landing page is labelled 2024. English is used for the thesis, but philosophy and Japanese courses have other teaching languages. Detailed current entry rules are unverified. Approximate My Dinh coordinates."
+  },
+  {
+    "id": "aim-international-mba",
+    "title": "International Master in Business Administration",
+    "university": "Asian Institute of Management",
+    "country": "Philippines",
+    "city": "Makati",
+    "lat": 14.554,
+    "lon": 121.017,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "International MBA",
+      "Full-time",
+      "Leadership"
+    ],
+    "summary": "A full-time MBA delivered over four terms, using business cases and applied management study in an international cohort.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Bachelor's degree or equivalent in any discipline",
+      "At least two years of professional work experience",
+      "Strong spoken and written English, academic documents, CV and professional reference",
+      "Accepted aptitude-test evidence or eligible alternative, followed by the admissions assessment/interview"
+    ],
+    "sources": [
+      {
+        "label": "Official International MBA programme and January 2027 intake",
+        "url": "https://aim.edu/programs/international-master-in-business-administration-imba/"
+      },
+      {
+        "label": "Official MBA eligibility and assessment",
+        "url": "https://aim.edu/imba-admissions/"
+      },
+      {
+        "label": "Official January 2027 fees",
+        "url": "https://aim.edu/imba-fees-and-financing/"
+      }
+    ],
+    "duration": "12 months · 4 terms",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "January 2027 programme fee: US$31,000",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "January 2027 international deadline: 30 November 2026; Philippine applicants: 31 December 2026. Exact opening date not verified, so no dated window is recorded.",
+    "dataNote": "The programme/fee pages describe January 2027 while the admissions page retains January 2026 date labels; only stable eligibility criteria are taken from the latter. Approximate Makati campus coordinates."
+  },
+  {
+    "id": "ntu-global-mba",
+    "title": "Global MBA",
+    "university": "National Taiwan University",
+    "country": "Taiwan",
+    "city": "Taipei",
+    "lat": 25.013,
+    "lon": 121.539,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "Global management",
+      "Thesis",
+      "Professional experience"
+    ],
+    "summary": "An English-taught MBA combining core business courses, electives and a master's thesis, with optional international exchanges.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Recognised bachelor's degree",
+      "At least two years of full-time professional experience",
+      "Fluent English with supporting evidence; no numeric English-test minimum recorded",
+      "Application essays, CV and references; GMAT/GRE evidence is recommended rather than universally required"
+    ],
+    "sources": [
+      {
+        "label": "Official programme duration, language and degree structure",
+        "url": "https://management.ntu.edu.tw/en/gmba2/facts_figures/program_details"
+      },
+      {
+        "label": "Official admission requirements",
+        "url": "https://management.ntu.edu.tw/en/gmba2/applying/requirements_and_components"
+      },
+      {
+        "label": "Official international applicant route",
+        "url": "https://management.ntu.edu.tw/en/gmba2/applying/application_procedure_for_international"
+      }
+    ],
+    "duration": "2 years on average · options within 1–4 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Published total tuition: TWD 550,000 · confirm current intake",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Global MBA programme office",
+      "email": "ntugmba@ntu.edu.tw",
+      "source": "https://management.ntu.edu.tw/en/gmba2/facts_figures/program_details"
+    },
+    "research": null,
+    "scheduleNote": "Current application dates not verified; consult the official admissions page.",
+    "dataNote": "Taiwan is recorded as a study destination. Applicant nationality/status determines the admissions route. Optional partner degrees are not duplicated as separate entries. Approximate College of Management coordinates."
+  },
+  {
+    "id": "nthu-teaching-chinese-ma",
+    "title": "MA Teaching Chinese as a Second Language",
+    "university": "National Tsing Hua University",
+    "country": "Taiwan",
+    "city": "Hsinchu",
+    "lat": 24.795,
+    "lon": 120.993,
+    "fields": [
+      "Education",
+      "Arts & Humanities"
+    ],
+    "tags": [
+      "Chinese language education",
+      "Teaching practicum",
+      "Thesis"
+    ],
+    "summary": "An intercollegiate master's in Chinese-language teaching, combining coursework, teaching practice and a thesis.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Current international entry qualifications and document requirements need programme-office confirmation",
+      "Chinese-language readiness is important because most courses are taught in Chinese",
+      "The degree regulations include teaching practice, research publication and a thesis; these are graduation requirements"
+    ],
+    "sources": [
+      {
+        "label": "Official MA study duration, teaching language and degree rules",
+        "url": "https://ims.site.nthu.edu.tw/p/450-1227-245894%2Cc0.php?Lang=zh-tw"
+      },
+      {
+        "label": "Official teaching-Chinese programme introduction",
+        "url": "https://tcsl.site.nthu.edu.tw/p/412-1216-11868.php?Lang=zh-tw"
+      },
+      {
+        "label": "Official current intercollegiate master's programme and admissions notices",
+        "url": "https://ims.site.nthu.edu.tw/index.php"
+      }
+    ],
+    "duration": "2–4 years",
+    "language": "Primarily Chinese",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Current application dates not verified; consult the official admissions page.",
+    "dataNote": "The degree rules apply to students enrolled from academic year 2023 onward. TOCFL C1 is listed as a foreign-student graduation requirement, not an admission threshold. Current entry rules remain unverified. Approximate Hsinchu campus coordinates."
+  },
+  {
+    "id": "squ-marine-science-fisheries",
+    "title": "MSc Marine Science and Fisheries",
+    "university": "Sultan Qaboos University",
+    "country": "Oman",
+    "city": "Muscat",
+    "lat": 23.59,
+    "lon": 58.165,
+    "fields": [
+      "Life Sciences",
+      "Environment"
+    ],
+    "tags": [
+      "Marine science",
+      "Fisheries",
+      "Aquaculture"
+    ],
+    "summary": "A marine-science master's with coursework and a thesis, connected to fisheries, aquaculture and marine conservation research.",
+    "gradeNote": "Listed entry routes include CGPA 2.75/4.00, a 2.50–2.74 route with two years of work, and a related postgraduate-diploma route. Equivalence requires university review.",
+    "requirements": [
+      "Relevant marine-science or accepted related bachelor's qualification",
+      "Meet the applicable grade/experience or postgraduate-diploma route; bridging courses may apply",
+      "IELTS 6.0 for the direct English route, or 5.5 with the specified language course after admission",
+      "Selection interview; employment/study-release documents depend on applicant status"
+    ],
+    "sources": [
+      {
+        "label": "Official master's routes, duration, language and admissions",
+        "url": "https://www.squ.edu.om/ps/ar-om/programs/colleges/msc-in-marine-science-and-fisheries"
+      },
+      {
+        "label": "Official marine-science department research scope",
+        "url": "https://www.squ.edu.om/agriculture/Academic-Department/Marine-Science-and-Fisheries/Description"
+      }
+    ],
+    "duration": "2 years full-time · 3 years part-time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Wenresti Gallardo — programme coordinator",
+      "email": "gallardo@squ.edu.om",
+      "source": "https://www.squ.edu.om/ps/ar-om/programs/colleges/msc-in-marine-science-and-fisheries"
+    },
+    "research": {
+      "label": "Marine science and fisheries department",
+      "url": "https://www.squ.edu.om/agriculture/Academic-Department/Marine-Science-and-Fisheries/Description"
+    },
+    "scheduleNote": "Current application dates not verified; consult the official admissions page.",
+    "dataNote": "This record covers coursework plus thesis. A separate shorter thesis-only route has additional prior-study conditions. Conditional English admission is supported, so no hard IELTS filter is encoded. Approximate Al Khoud campus coordinates."
+  },
+  {
+    "id": "squ-natural-resource-economics",
+    "title": "MSc Natural Resource Economics",
+    "university": "Sultan Qaboos University",
+    "country": "Oman",
+    "city": "Muscat",
+    "lat": 23.59,
+    "lon": 58.165,
+    "fields": [
+      "Economics & Finance",
+      "Environment"
+    ],
+    "tags": [
+      "Resource economics",
+      "Water policy",
+      "Fisheries economics"
+    ],
+    "summary": "A thesis-based economics degree applying economic theory and analytical methods to food, water, fisheries and other natural-resource sectors.",
+    "gradeNote": "Entry includes CGPA 2.75/4.00, or 2.50–2.74 with two years of work, or an eligible related postgraduate diploma. Original qualifications need university equivalence review.",
+    "requirements": [
+      "Natural-resource science, economics, or an accepted related science/engineering bachelor's degree",
+      "Meet the relevant grade/experience route; bridging courses may be required",
+      "IELTS 6.0 directly, or 5.5 plus the specified first-semester language course",
+      "Interview and any employment/study-release documents applicable to the candidate"
+    ],
+    "sources": [
+      {
+        "label": "Official master's duration, language, requirements and coordinator",
+        "url": "https://www.squ.edu.om/ps/en-us/programs/colleges/articleid/768/msc-in-natural-resource-economics"
+      },
+      {
+        "label": "Official natural-resource economics curriculum and research",
+        "url": "https://www.squ.edu.om/agriculture/Academic-Programs/PG-Programs/Master-of-Science"
+      }
+    ],
+    "duration": "2 years full-time · 3 years part-time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Ibtisam Al Abri — programme coordinator",
+      "email": "ialabri@squ.edu.om",
+      "source": "https://www.squ.edu.om/ps/en-us/programs/colleges/articleid/768/msc-in-natural-resource-economics"
+    },
+    "research": {
+      "label": "Natural-resource economics study and research areas",
+      "url": "https://www.squ.edu.om/agriculture/Academic-Programs/PG-Programs/Master-of-Science"
+    },
+    "scheduleNote": "Current application dates not verified; consult the official admissions page.",
+    "dataNote": "The 3.00 enrolled-student coursework requirement is not an admission cutoff. Conditional English admission means no single IELTS filter is encoded. Approximate Al Khoud campus coordinates."
+  },
+  {
+    "id": "gutech-wu-mba",
+    "title": "GUtech–WU MBA",
+    "university": "German University of Technology in Oman / WU Vienna",
+    "country": "Oman",
+    "city": "Halban",
+    "lat": 23.623,
+    "lon": 58.093,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "Double degree",
+      "Working professionals",
+      "Monthly campus blocks"
+    ],
+    "summary": "An 18-month professional MBA awarding degrees from GUtech and WU Vienna, with monthly campus blocks and a master's thesis.",
+    "gradeNote": "The MBA-specific entry section lists GPA 2.50/4.00, with exceptional cases between 2.00 and 2.50. Foreign equivalence requires confirmation.",
+    "requirements": [
+      "Recognised bachelor's degree; a separate experienced-diploma route is also described",
+      "Three years of relevant work experience",
+      "IELTS 6.0, TOEFL iBT 76 or equivalent English evidence",
+      "Selection interview, CV, academic documents and two references"
+    ],
+    "sources": [
+      {
+        "label": "Official MBA overview, structure and specific entry requirements",
+        "url": "https://www.gutech.edu.om/gutech-wu-master-in-business-administration/"
+      }
+    ],
+    "duration": "18 months",
+    "language": "Not verified",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6,
+    "ieltsSource": "https://www.gutech.edu.om/gutech-wu-master-in-business-administration/",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Monthly campus blocks run Thursday–Sunday. Exact current cohort application dates not verified.",
+    "dataNote": "The page's later FAQ contains copied computer-science content; only MBA-specific overview, structure and entry sections are used. English teaching medium and any online component need confirmation. Approximate Halban campus coordinates."
+  },
+  {
+    "id": "aum-mba-kuwait",
+    "title": "Master of Business Administration",
+    "university": "American University of the Middle East",
+    "country": "Kuwait",
+    "city": "Egaila",
+    "lat": 29.179,
+    "lon": 48.106,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "Management",
+      "HEC Montréal partnership",
+      "Capstone"
+    ],
+    "summary": "A two-year English-taught MBA delivered on the AUM campus, with selected courses taught jointly with HEC Montréal faculty.",
+    "gradeNote": "The admissions page lists GPA 2.67 or equivalent without defining a universally comparable foreign scale. Kuwait qualification equivalence is required.",
+    "requirements": [
+      "Recognised bachelor's degree and Kuwait Ministry of Higher Education equivalence where required",
+      "Professional work experience and employment evidence",
+      "IELTS Academic 6.5, TOEFL 79, accepted AUM assessment, or eligible AUM-graduate route",
+      "CV, application essay, identity/work-status documents and panel interview"
+    ],
+    "sources": [
+      {
+        "label": "Official MBA award arrangement and English campus delivery",
+        "url": "https://www.aum.edu.kw/english/academics/graduate-programs/masters-of-business-administration-mba"
+      },
+      {
+        "label": "Official two-year MBA curriculum",
+        "url": "https://www.aum.edu.kw/english/academics/graduate-programs/masters-of-business-administration-mba/academic-journey"
+      },
+      {
+        "label": "Official MBA admissions requirements",
+        "url": "https://www.aum.edu.kw/english/admission/graduate-admission/require"
+      }
+    ],
+    "duration": "2 years · 8 modules",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://www.aum.edu.kw/english/admission/graduate-admission/require",
+    "contact": {
+      "name": "MBA admissions office",
+      "email": "MBA.Admissions@aum.edu.kw",
+      "source": "https://www.aum.edu.kw/english/admission/graduate-admission/require"
+    },
+    "research": null,
+    "scheduleNote": "Current application dates not verified; consult the official admissions page.",
+    "dataNote": "The partner qualification is an HEC Montréal graduate diploma, not a second MBA. Applicants must confirm Kuwaiti residency/work-permit and equivalence requirements. Approximate Egaila campus coordinates."
+  },
+  {
+    "id": "bahrain-architecture-master",
+    "title": "Master of Architecture",
+    "university": "University of Bahrain",
+    "country": "Bahrain",
+    "city": "Sakhir",
+    "lat": 26.05,
+    "lon": 50.509,
+    "fields": [
+      "Architecture & Planning"
+    ],
+    "tags": [
+      "Built environment",
+      "Design research",
+      "Thesis"
+    ],
+    "summary": "A 33-credit architecture master's combining built-environment study, design research and a thesis.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Bachelor's preparation in architecture, interior design or environmental architecture under the central programme listing",
+      "Meet university postgraduate admission and qualification-recognition requirements",
+      "IELTS 5.5 is listed in the central catalogue; confirm exemption or alternative routes"
+    ],
+    "sources": [
+      {
+        "label": "Official architecture master's duration, language and curriculum",
+        "url": "https://engineering.uob.edu.bh/graduate/master-of-architecture/"
+      },
+      {
+        "label": "Official current postgraduate programme qualifications and fees",
+        "url": "https://www.uob.edu.bh/study/postgraduate-programs/"
+      }
+    ],
+    "duration": "1.5–4 years · minimum 3 semesters",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Reem Abbas Sultan — programme coordinator",
+      "email": "rsultan@uob.edu.bh",
+      "source": "https://engineering.uob.edu.bh/graduate/master-of-architecture/"
+    },
+    "research": null,
+    "scheduleNote": "Current application dates not verified; consult the official admissions page.",
+    "dataNote": "The college programme text and central catalogue explicitly identify M.Arch; the page's browser title retains an older MSc label. English-route conditions need confirmation, so no hard numeric filter is encoded. Approximate Sakhir campus coordinates."
+  },
+  {
+    "id": "bahrain-environment-sustainable-development",
+    "title": "Master in Environment and Sustainable Development",
+    "university": "University of Bahrain",
+    "country": "Bahrain",
+    "city": "Sakhir",
+    "lat": 26.05,
+    "lon": 50.509,
+    "fields": [
+      "Environment",
+      "Public Policy"
+    ],
+    "tags": [
+      "Environmental management",
+      "Climate",
+      "Thesis"
+    ],
+    "summary": "A 36-credit environmental master's joining science, economics, law and research methods before electives and a thesis.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Bachelor's degree in any specialisation under the current central programme listing",
+      "Meet the university's postgraduate admission and qualification-recognition rules",
+      "IELTS 5.5 is listed centrally; confirm alternative evidence or exemption rules"
+    ],
+    "sources": [
+      {
+        "label": "Official environmental master's overview",
+        "url": "https://science.uob.edu.bh/graduate/master-in-environment-and-sustainable-development/"
+      },
+      {
+        "label": "Official 2025 programme plan, language and four-semester sequence",
+        "url": "https://science.uob.edu.bh/wp-content/uploads/sites/5/2026/05/MSc_ESD_2025_21Dec2025.pdf"
+      },
+      {
+        "label": "Official current postgraduate qualification requirements",
+        "url": "https://www.uob.edu.bh/study/postgraduate-programs/"
+      }
+    ],
+    "duration": "2-year study plan · 4 semesters",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Current application dates not verified; consult the official admissions page.",
+    "dataNote": "Duration is the published curriculum sequence, not a verified statutory maximum. General admissions conditions and English-route exceptions need confirmation. Approximate Sakhir campus coordinates."
+  },
+  {
+    "id": "wiut-applied-economics",
+    "title": "MSc Applied Economics",
+    "university": "Westminster International University in Tashkent",
+    "country": "Uzbekistan",
+    "city": "Tashkent",
+    "lat": 41.303,
+    "lon": 69.283,
+    "fields": [
+      "Economics & Finance"
+    ],
+    "tags": [
+      "Econometrics",
+      "Policy evaluation",
+      "Dissertation"
+    ],
+    "summary": "An applied economics degree developing quantitative analysis through microeconomics, macroeconomics, econometrics and an empirical dissertation.",
+    "gradeNote": "Normally a recognised degree at UK lower-second-class honours (2:2) level or equivalent. No conversion to another GPA scale is recorded.",
+    "requirements": [
+      "Normally a recognised undergraduate degree at 2:2 level or equivalent in any subject; relevant professional alternatives may be assessed",
+      "IELTS 6.5 overall with writing 6.0, accepted alternatives, an English-taught degree or the specified preparatory-language route",
+      "Submit the university application and required qualification evidence"
+    ],
+    "sources": [
+      {
+        "label": "Official MSc degree, entry rules and on-campus duration",
+        "url": "https://www.wiut.uz/applied-economics"
+      },
+      {
+        "label": "Official university English teaching-language statement",
+        "url": "https://wiut.uz/home"
+      }
+    ],
+    "duration": "1 year full-time · 2 years part-time",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "ieltsSource": "https://www.wiut.uz/applied-economics",
+    "contact": null,
+    "research": null,
+    "scheduleNote": "September start is listed annually; current exact application opening and closing dates not recorded.",
+    "dataNote": "The degree is validated by the University of Westminster and delivered in Tashkent. IELTS alternatives and the writing subscore matter. Approximate Istiqbol Street campus coordinates."
+  },
+  {
+    "id": "iset-tsu-economics-ma",
+    "title": "MA Economics",
+    "university": "Tbilisi State University — International School of Economics at TSU",
+    "country": "Georgia",
+    "city": "Tbilisi",
+    "lat": 41.708,
+    "lon": 44.784,
+    "fields": [
+      "Economics & Finance"
+    ],
+    "tags": [
+      "Quantitative economics",
+      "Econometrics",
+      "Master's project"
+    ],
+    "summary": "A two-year English-taught economics degree with mathematical and econometric foundations followed by advanced study and a master's research project.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Recognised undergraduate qualification; follow the international or domestic route appropriate to citizenship/status",
+      "International candidates provide academic documents, motivation and B2 English evidence",
+      "International selection includes an online mathematics assessment and interview"
+    ],
+    "sources": [
+      {
+        "label": "Official TSU English-language master's listing",
+        "url": "https://tsu.ge/en/foreign-relations/page/Foreign-Language-Programs---Master-Level"
+      },
+      {
+        "label": "Official MA student handbook",
+        "url": "https://iset.ge/wp-content/uploads/2025/05/MA_Student-Handbook.pdf"
+      },
+      {
+        "label": "Official current applicant routes and selection",
+        "url": "https://iset.ge/master-in-economics-admission-process/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "ISET MA admissions",
+      "email": "AdmissionsMA@iset.ge",
+      "source": "https://iset.ge/master-in-economics-admission-process/"
+    },
+    "research": null,
+    "scheduleNote": "The published 2026 international application deadline was 20 July 2026. Domestic dates differ. No 2027 window is inferred.",
+    "dataNote": "B2 English examples include a range of test scores, so no single IELTS minimum is encoded. An exact international opening date was not verified. Approximate Zandukeli Street teaching-site coordinates."
+  },
+  {
+    "id": "aua-computer-information-science",
+    "title": "MS Computer and Information Science",
+    "university": "American University of Armenia",
+    "country": "Armenia",
+    "city": "Yerevan",
+    "lat": 40.193,
+    "lon": 44.504,
+    "fields": [
+      "Computer Science"
+    ],
+    "tags": [
+      "Computing",
+      "Capstone",
+      "Theory and practice"
+    ],
+    "summary": "A two-year computing master's blending theoretical and practical study with electives and a capstone project.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Recognised undergraduate qualification; international credentials require the stated recognition checks",
+      "English test evidence, approved waiver or university assessment",
+      "GRE/GMAT quantitative evidence, approved internal assessment or eligible waiver",
+      "CV and two references; programme review may require preparatory courses"
+    ],
+    "sources": [
+      {
+        "label": "Official computing degree overview",
+        "url": "https://cse.aua.am/cis/"
+      },
+      {
+        "label": "Official current graduate programme duration",
+        "url": "https://admissions.aua.am/graduate/graduate-academic-programs/"
+      },
+      {
+        "label": "Official graduate application requirements",
+        "url": "https://admissions.aua.am/graduate/application-requirements/"
+      },
+      {
+        "label": "Official graduate English language and campus-delivery FAQ",
+        "url": "https://admissions.aua.am/graduate/frequently-asked-questions/"
+      }
+    ],
+    "duration": "2 years · 48 credits",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Current application dates not verified; consult the official admissions page.",
+    "dataNote": "GPA values in the application table relate to test-waiver eligibility, not universal entry cutoffs. International/diaspora applicants also need final national-platform approval. Current test targets and deadlines must be checked. Approximate Baghramyan campus coordinates."
+  },
+  {
+    "id": "aua-teaching-english-ma",
+    "title": "MA Teaching English as a Foreign Language",
+    "university": "American University of Armenia",
+    "country": "Armenia",
+    "city": "Yerevan",
+    "lat": 40.193,
+    "lon": 44.504,
+    "fields": [
+      "Education",
+      "Arts & Humanities"
+    ],
+    "tags": [
+      "Language teaching",
+      "Curriculum",
+      "Assessment"
+    ],
+    "summary": "A language-teaching master's covering classroom and online instruction, curriculum design, assessment and education research.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Recognised undergraduate qualification and academic documents",
+      "Accepted English proficiency evidence, approved waiver or AUA assessment",
+      "CV and two references; no graduate standardised aptitude test is required for this programme"
+    ],
+    "sources": [
+      {
+        "label": "Official TEFL master's programme",
+        "url": "https://tefl.aua.am/matefl/"
+      },
+      {
+        "label": "Official current duration and credits",
+        "url": "https://admissions.aua.am/graduate/graduate-academic-programs/"
+      },
+      {
+        "label": "Official graduate application requirements",
+        "url": "https://admissions.aua.am/graduate/application-requirements/"
+      },
+      {
+        "label": "Official graduate English teaching-language FAQ",
+        "url": "https://admissions.aua.am/graduate/frequently-asked-questions/"
+      }
+    ],
+    "duration": "1.5 years · 37–39 credits depending on background",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Current application dates not verified; consult the official admissions page.",
+    "dataNote": "The current admissions overview states 1.5 years; older event pages describe a two-year route. Credit requirements depend on a linguistics background. International recognition/national approval rules apply. Approximate Baghramyan campus coordinates."
+  },
+  {
+    "id": "aua-economics-ms-dilijan",
+    "title": "MS Economics",
+    "university": "American University of Armenia",
+    "country": "Armenia",
+    "city": "Dilijan",
+    "lat": 40.745,
+    "lon": 44.862,
+    "fields": [
+      "Economics & Finance"
+    ],
+    "tags": [
+      "Econometrics",
+      "Data analysis",
+      "Central banking"
+    ],
+    "summary": "A one-year economics master's with theoretical, empirical and data-analysis training, based in Dilijan in partnership with Armenia's central bank.",
+    "gradeNote": "No comparable numeric GPA cutoff recorded; the university evaluates the original qualifications.",
+    "requirements": [
+      "Recognised undergraduate qualification and academic documents; preparatory study may be assigned",
+      "Accepted English evidence, approved waiver or AUA assessment",
+      "GRE/GMAT quantitative evidence, approved internal assessment or eligible waiver",
+      "CV and two recommendation letters"
+    ],
+    "sources": [
+      {
+        "label": "Official economics programme and Dilijan location",
+        "url": "https://cbe.aua.am/ms-economics/"
+      },
+      {
+        "label": "Official current degree duration and preparatory study",
+        "url": "https://admissions.aua.am/graduate/graduate-academic-programs/"
+      },
+      {
+        "label": "Official graduate application requirements",
+        "url": "https://admissions.aua.am/graduate/application-requirements/"
+      },
+      {
+        "label": "Official English-language graduate delivery",
+        "url": "https://admissions.aua.am/graduate/frequently-asked-questions/"
+      }
+    ],
+    "duration": "1 year · preparatory courses may be additional",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Current tuition not verified",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "scheduleNote": "Current application dates not verified; consult the official admissions page.",
+    "dataNote": "The main programme is in Dilijan; assigned summer preparation can take place in Yerevan. Test-waiver GPA criteria are not general entry cutoffs. International qualification recognition and national approval apply. Approximate Dilijan centre coordinates."
+  },
+  {
+    "id": "porto-management",
+    "title": "Management",
+    "university": "University of Porto",
+    "country": "Portugal",
+    "city": "Porto",
+    "lat": 41.178,
+    "lon": -8.596,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "Management",
+      "Corporate strategy",
+      "International study"
+    ],
+    "summary": "A management master’s with flexible electives across finance, operations, marketing and people management, followed by a dissertation, project or internship.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A management, economics or related bachelor’s; final-year students and recent graduates are the intended audience",
+      "Fluent English and availability for full-time daytime study",
+      "Professional experience is not a prerequisite; follow the programme’s applicant instructions"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://programmes.fep.up.pt/masters/management/"
+      },
+      {
+        "label": "Official 2026/27 duration, language & fee categories",
+        "url": "https://www.up.pt/portal/en/fep/fep/1081/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "€5,000 / year · international category, 2026/27",
+      "free": false,
+      "source": "https://www.up.pt/portal/en/fep/fep/1081/"
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "National/EU/EEA and CPLP fee categories differ. Exact current selection documents and application periods need checking."
+  },
+  {
+    "id": "ghent-environment-technology",
+    "title": "Environmental Science and Technology",
+    "university": "Ghent University",
+    "country": "Belgium",
+    "city": "Ghent",
+    "lat": 51.054,
+    "lon": 3.723,
+    "fields": [
+      "Environment",
+      "Engineering"
+    ],
+    "tags": [
+      "Environmental technology",
+      "Resource recovery",
+      "Urban environment"
+    ],
+    "summary": "An environmental-science and technology MSc addressing pollution, ecosystems and sustainable resource use, with specialised study and dissertation research.",
+    "gradeNote": "Good overall bachelor’s results, at least a second-class equivalent and preferably higher, are expected. Foreign equivalency requires review.",
+    "requirements": [
+      "A university bachelor’s lasting at least three years with good overall results, normally at least second class or equivalent",
+      "Foreign degrees require programme-board, faculty and university approval",
+      "IELTS Academic 6.5 overall with at least 6.0 in all components, or accepted proof",
+      "Medium-of-instruction exemptions depend on nationality and previous study; confirm subject prerequisites"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://studiekiezer.ugent.be/2026/master-of-science-in-environmental-science-and-technology-en/informeerje"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "contact": null,
+    "research": null,
+    "dataNote": "Programme scope and core entry criteria reviewed. Current fees, applicant-specific deadlines and detailed certificate rules require the official pages.",
+    "ieltsSource": "https://studiekiezer.ugent.be/2026/master-of-science-in-environmental-science-and-technology-en/informeerje"
+  },
+  {
+    "id": "vienna-data-science",
+    "title": "Data Science",
+    "university": "University of Vienna",
+    "country": "Austria",
+    "city": "Vienna",
+    "lat": 48.219,
+    "lon": 16.362,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science",
+      "Physics & Mathematics"
+    ],
+    "tags": [
+      "Statistical learning",
+      "Data analysis",
+      "Interdisciplinary"
+    ],
+    "summary": "An interdisciplinary Data Science MSc combining algorithmic, mathematical and statistical methods, large-data processing and applications across disciplines.",
+    "gradeNote": "The programme’s admission FAQ explicitly states that there is no minimum GPA. Background suitability and the selection procedure still apply.",
+    "requirements": [
+      "A qualifying bachelor’s with background suitable for the programme’s access requirements",
+      "Participate in the annual selection procedure and use the required motivation template",
+      "English at least CEFR B2; consult accepted proof and the current Master Access Guide"
+    ],
+    "sources": [
+      {
+        "label": "Official MSc structure, duration & contact",
+        "url": "https://datascience.univie.ac.at/masters/master-data-science/"
+      },
+      {
+        "label": "Programme admission FAQ",
+        "url": "https://datascience.univie.ac.at/masters/master-data-science/admission-data-science/"
+      },
+      {
+        "label": "Current programme & selection overview",
+        "url": "https://studieren.univie.ac.at/en/find-your-degree-programme/masters-programmes/data-science-masters-programme"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Data Science master’s programme office",
+      "email": "masters.datascience@univie.ac.at",
+      "source": "https://datascience.univie.ac.at/masters/master-data-science/"
+    },
+    "research": null,
+    "dataNote": "Detailed eligible-degree and subject-credit requirements should be checked in the current Master Access Guide. No GPA cutoff is invented from selection competition.",
+    "scheduleNote": "The current overview says the 2027/28 application deadline is to be announced. The previous 2026/27 selection period has closed."
+  },
+  {
+    "id": "charles-ai",
+    "title": "Computer Science · Artificial Intelligence",
+    "university": "Charles University",
+    "country": "Czechia",
+    "city": "Prague",
+    "lat": 50.071,
+    "lon": 14.428,
+    "fields": [
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Intelligent systems",
+      "Robotics",
+      "Formal methods"
+    ],
+    "summary": "An Artificial Intelligence MSc covering formal foundations and applications in data analysis, automated problem solving and robotics.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A bachelor’s or equivalent qualification and documented relevant academic background",
+      "Calculus, linear algebra, discrete mathematics, probability, logic, programming, algorithms and computer organisation",
+      "For 2027/28, complete the CS take-home assignment with at least 70% of available points",
+      "IELTS 7.0 or other accepted English proof; recognition and authorised transcripts also apply"
+    ],
+    "sources": [
+      {
+        "label": "Official English MSc programmes & duration",
+        "url": "https://www.mff.cuni.cz/en/admissions/programmes"
+      },
+      {
+        "label": "Official 2027/28 master’s entry requirements",
+        "url": "https://www.mff.cuni.cz/en/admissions/admission-requirements-for-master-s-programmes-in-english/2027-2028"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7,
+    "contact": {
+      "name": "Master’s admissions contact",
+      "email": "veronika.kazimourova@matfyz.cuni.cz",
+      "source": "https://www.mff.cuni.cz/en/admissions/admission-requirements-for-master-s-programmes-in-english/2027-2028"
+    },
+    "research": null,
+    "dataNote": "The assignment score is an admissions assessment, not a GPA requirement. Programme qualification, English, duration and 2027/28 core admissions reviewed; fees need checking.",
+    "ieltsSource": "https://www.mff.cuni.cz/en/admissions/admission-requirements-for-master-s-programmes-in-english/2027-2028",
+    "scheduleNote": "2027/28: application deadline 30 April 2027; CS take-home assignment deadline 31 May. Supporting documents have separate delivery deadlines. The application opening date is unrecorded."
+  },
+  {
+    "id": "copenhagen-global-development",
+    "title": "Global Development",
+    "university": "University of Copenhagen",
+    "country": "Denmark",
+    "city": "Copenhagen",
+    "lat": 55.687,
+    "lon": 12.575,
+    "fields": [
+      "Social Sciences",
+      "Public Policy"
+    ],
+    "tags": [
+      "Development studies",
+      "Field research",
+      "Global inequality"
+    ],
+    "summary": "A Global Development MSc combining social-science analysis, research methods, interdisciplinary fieldwork and a second-year specialisation and thesis.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A relevant social, environmental or health-science bachelor’s equivalent to the listed qualifying degrees",
+      "International degrees must include at least 15 ECTS qualitative and/or quantitative methods",
+      "Meet the Danish English B requirement",
+      "Transcript, self-assessment, academic-relevance description, CV and language evidence"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.ku.dk/studies/masters/global-development"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Qualifying disciplines and degree equivalency are programme-specific. A non-listed degree is not automatically eligible. Fees, accepted English-test scores and current deadline category need checking."
+  },
+  {
+    "id": "ntnu-sustainable-architecture",
+    "title": "Sustainable Architecture",
+    "university": "Norwegian University of Science and Technology",
+    "country": "Norway",
+    "city": "Trondheim",
+    "lat": 63.419,
+    "lon": 10.404,
+    "fields": [
+      "Architecture & Planning",
+      "Environment"
+    ],
+    "tags": [
+      "Building sustainability",
+      "Energy design",
+      "Climate adaptation"
+    ],
+    "summary": "An architecture master’s developing design strategies that reduce buildings’ environmental impact through interdisciplinary project work and lifecycle thinking.",
+    "gradeNote": "NTNU normally requires at least grade C on its applicable scale and performs its own international-grade assessment. No conversion is applied by this catalogue.",
+    "requirements": [
+      "A three-year bachelor’s in architecture, engineering or urban planning; related fields may be considered",
+      "Normally at least 30 ECTS architectural design or building construction",
+      "Meet NTNU’s English proof and academic-standing requirements",
+      "Apply under the category appropriate to citizenship and previous degree; funding documents may be required"
+    ],
+    "sources": [
+      {
+        "label": "Official programme, duration & language",
+        "url": "https://www.ntnu.edu/studies/mssusarc/sustainable-architecture"
+      },
+      {
+        "label": "Official subject prerequisites & applicant categories",
+        "url": "https://www.ntnu.edu/studies/mssusarc/admission"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The programme page states that non-EU/EEA/Swiss tuition applies. Confirm the applicable current fee and English proof; some relevant non-standard degrees require coordinator review.",
+    "scheduleNote": "Recurring category deadlines: 1 December non-EU/non-EEA, 1 March EU/EEA/Swiss, 15 April Norwegian/Nordic. Verify the exact intake and category."
+  },
+  {
+    "id": "tartu-digital-governance",
+    "title": "Politics and Governance in the Digital Age",
+    "university": "University of Tartu",
+    "country": "Estonia",
+    "city": "Tartu",
+    "lat": 58.377,
+    "lon": 26.719,
+    "fields": [
+      "Social Sciences",
+      "Public Policy"
+    ],
+    "tags": [
+      "Digital democracy",
+      "E-governance",
+      "Political institutions"
+    ],
+    "summary": "An MA connecting political institutions, elections and policy with digital governance, democratic innovation and research methods.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A bachelor’s or equivalent qualification and country-specific document evidence",
+      "Accepted English-language proof",
+      "Programme-specific motivation letter and online admission interview",
+      "Submit through the official application system with certified degree records"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://ut.ee/en/curriculum/politics-and-governance-digital-age"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "€4,800 / year · non-EU/EEA/Swiss category",
+      "free": false,
+      "source": "https://ut.ee/en/curriculum/politics-and-governance-digital-age"
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The current title is Politics and Governance in the Digital Age. Programme and previously published core admissions reviewed; the 2027 admissions update is pending. EU/EEA/Swiss and permanent-resident tuition exemptions differ.",
+    "scheduleNote": "The page states that 2027 intake deadlines and entrance requirements will be added by the end of December. Do not use the prior intake’s interview dates."
+  },
+  {
+    "id": "riga-cybersecurity-engineering",
+    "title": "Cybersecurity Engineering",
+    "university": "Riga Technical University",
+    "country": "Latvia",
+    "city": "Riga",
+    "lat": 56.943,
+    "lon": 24.08,
+    "fields": [
+      "Cybersecurity",
+      "Computer Science",
+      "Engineering"
+    ],
+    "tags": [
+      "Security engineering",
+      "Network defence",
+      "Security policy"
+    ],
+    "summary": "An academic cybersecurity engineering master’s covering organisational security policy, system protection and research in contemporary security technologies.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "First-cycle education in cyber security, IT, CS, computer systems, electrical science or a comparable subject",
+      "Pass the entrance examination",
+      "English proficiency at least CEFR B2"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.rtu.lv/en/studies/all-study-programmes/open/cybersecurity-engineering?id=180"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The current HTML programme and its downloadable PDF display different fee amounts; confirm the official fee for the intended intake. Exact exam format, accepted language certificates and dates need checking."
+  },
+  {
+    "id": "vilnius-molecular-biology",
+    "title": "Molecular Biology",
+    "university": "Vilnius University",
+    "country": "Lithuania",
+    "city": "Vilnius",
+    "lat": 54.723,
+    "lon": 25.336,
+    "fields": [
+      "Life Sciences"
+    ],
+    "tags": [
+      "Molecular biology",
+      "Cell biology",
+      "Biotechnology"
+    ],
+    "summary": "A Molecular Biology master’s preparing students to evaluate biological evidence and undertake research in molecular life sciences and related technologies.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A bachelor’s in molecular biology, biochemistry, cell biology, genetics, microbiology, biotechnology or an accepted equivalent",
+      "IELTS Academic 6.5 or accepted English evidence at CEFR B2",
+      "A motivation letter and country-specific qualification documents"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.vu.lt/en/studies/master-studies/molecular-biology"
+      },
+      {
+        "label": "Official programme list · qualification & duration",
+        "url": "https://www.vu.lt/site_files/EN_Translation_Kopija_IIPprogramusarasasirkainos_2025metams-tvirtinimui0206.pdf"
+      }
+    ],
+    "duration": "1.5 years · 90 ECTS",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "contact": null,
+    "research": null,
+    "dataNote": "The English route is recorded; the official list also describes Lithuanian/English delivery. Current fee, intake dates and detailed document verification should be confirmed.",
+    "ieltsSource": "https://www.vu.lt/en/studies/master-studies/molecular-biology"
+  },
+  {
+    "id": "elte-psychology",
+    "title": "Psychology · MA",
+    "university": "Eötvös Loránd University",
+    "country": "Hungary",
+    "city": "Budapest",
+    "lat": 47.504,
+    "lon": 19.061,
+    "fields": [
+      "Social Sciences"
+    ],
+    "tags": [
+      "Psychology",
+      "Cognitive research",
+      "Research methods"
+    ],
+    "summary": "A Psychology MA with specialised psychological training and research preparation, offered through an English route in Budapest.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A Psychology bachelor’s; related psychology-science degrees receive individual credit review",
+      "Related-degree applicants need at least 100 ECTS in specified psychology subjects",
+      "The English route requires advanced English proof; consult the current applicant route",
+      "Submit the required psychology reference work and complete the programme’s admission procedure"
+    ],
+    "sources": [
+      {
+        "label": "Official programme duration & English route",
+        "url": "https://www.ppk.elte.hu/mesterkepzesek/pszichologia-ma"
+      },
+      {
+        "label": "International Psychology MA admissions",
+        "url": "https://ppkold.elte.hu/psychology_ma_admissions_"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "This record concerns the English Budapest route. The Hungarian programme page specifies C1; exact accepted certificates, route-specific fees and the next intake need confirmation. Clinical professional recognition must be assessed separately."
+  },
+  {
+    "id": "athens-international-eu-law",
+    "title": "International and European Law · LL.M.",
+    "university": "National and Kapodistrian University of Athens",
+    "country": "Greece",
+    "city": "Athens",
+    "lat": 37.983,
+    "lon": 23.734,
+    "fields": [
+      "Law"
+    ],
+    "tags": [
+      "Public international law",
+      "European Union law",
+      "Legal research"
+    ],
+    "summary": "An intensive English LL.M. offering international-law and European-Union-law study, combining taught courses with a dissertation.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A law degree; related disciplines may be admitted by the steering committee",
+      "English at least CEFR C1",
+      "Selection considers degree relevance, academic record and the programme’s required application documents"
+    ],
+    "sources": [
+      {
+        "label": "Official LL.M. programme & contact",
+        "url": "https://llm-inteurl.law.uoa.gr/"
+      },
+      {
+        "label": "Official study guide · duration & entry requirements",
+        "url": "https://llm-inteurl.law.uoa.gr/fileadmin/depts/law.uoa.gr/llm-IntEurL/uploads/Study_Guide/25-26_ODIGOS_SPOYDON_EN_.pdf"
+      }
+    ],
+    "duration": "1 academic year · 2 semesters",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "International and European Law LL.M. office",
+      "email": "llm-inteurl@law.uoa.gr",
+      "source": "https://llm-inteurl.law.uoa.gr/"
+    },
+    "research": null,
+    "dataNote": "Programme existence and language are current; core entry criteria and duration were reviewed in the 2025/26 guide. Consult the latest call for current fees, documents and dates."
+  },
+  {
+    "id": "ubb-econometrics-statistics",
+    "title": "Econometrics and Applied Statistics",
+    "university": "Babeș-Bolyai University",
+    "country": "Romania",
+    "city": "Cluj-Napoca",
+    "lat": 46.774,
+    "lon": 23.621,
+    "fields": [
+      "Economics & Finance",
+      "Physics & Mathematics"
+    ],
+    "tags": [
+      "Econometric modelling",
+      "Applied statistics",
+      "Economic forecasting"
+    ],
+    "summary": "A Romanian-taught master’s applying statistical and econometric models to economic data, forecasting and evidence-based decisions.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A qualifying first-cycle degree under the faculty’s master’s admission rules",
+      "Prepare the programme-specific case study used for admission",
+      "Check the current foreign-degree recognition and Romanian-language route"
+    ],
+    "sources": [
+      {
+        "label": "Official programme curriculum",
+        "url": "https://econ.ubbcluj.ro/programe/esa/curriculum.php"
+      },
+      {
+        "label": "Official master’s study plan · language & duration",
+        "url": "https://econ.ubbcluj.ro/planuri_invatamant/master/planuri_master_2023_2024/ESA%20Econometrie%20si%20statistica%20aplicata%202023-2024.pdf"
+      },
+      {
+        "label": "2026 faculty and programme admission procedure",
+        "url": "https://econ.ubbcluj.ro/admitere/2026/septembrie/master-regulament-admitere.php"
+      }
+    ],
+    "duration": "2 years",
+    "language": "Romanian",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "This programme is not an English-taught economics route. Degree, four-semester study plan and 2026 case-study admission verified. Exact language-proof rules, fees and future-cycle dates need review."
+  },
+  {
+    "id": "ljubljana-money-finance",
+    "title": "Money and Finance",
+    "university": "University of Ljubljana",
+    "country": "Slovenia",
+    "city": "Ljubljana",
+    "lat": 46.074,
+    "lon": 14.514,
+    "fields": [
+      "Economics & Finance"
+    ],
+    "tags": [
+      "Monetary economics",
+      "Financial analysis",
+      "Economic modelling"
+    ],
+    "summary": "An English MSc in financial economics, covering monetary policy, asset pricing, risk and quantitative economic analysis.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A relevant first-cycle degree of at least 180 ECTS or accepted equivalent",
+      "Applicants from other fields need 12 ECTS additional study obligations",
+      "Required preparation can include Microeconomics 1 and Introduction to Business before enrolment",
+      "Check the current application and language-document requirements"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.ef.uni-lj.si/en/study/masters-programmes/money-and-finance"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Vasja Rant · programme coordinator",
+      "email": "vasja.rant@ef.uni-lj.si",
+      "source": "https://www.ef.uni-lj.si/en/study/masters-programmes/money-and-finance"
+    },
+    "research": null,
+    "dataNote": "Tuition exemption applies only to specified citizenship categories; a universal free-tuition flag is not recorded. Confirm applicant-specific fees and current dates rather than relying on the page’s undated June deadline."
+  },
+  {
+    "id": "zagreb-management",
+    "title": "Business · Management",
+    "university": "University of Zagreb",
+    "country": "Croatia",
+    "city": "Zagreb",
+    "lat": 45.818,
+    "lon": 16.019,
+    "fields": [
+      "Business & Management"
+    ],
+    "tags": [
+      "Management",
+      "Organisations",
+      "Business strategy"
+    ],
+    "summary": "An English graduate management degree studying the management of companies, public bodies and nonprofit organisations.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A four-year economics or business undergraduate degree worth 240 ECTS",
+      "Foreign university diplomas must receive academic recognition",
+      "Submit the programme’s application documents and recognised transcripts; check current English-proof rules"
+    ],
+    "sources": [
+      {
+        "label": "Official Management master’s programme",
+        "url": "https://www.efzg.unizg.hr/default.aspx?id=23598"
+      },
+      {
+        "label": "Official international master’s entry procedure",
+        "url": "https://www.efzg.unizg.hr/UserDocsImages/Dokumenti/APPLICATION%20PROCEDURE%20FOR%20INTERNATIONAL%20STUDENTS.pdf?vel=170455"
+      }
+    ],
+    "duration": "1 year · 60 ECTS",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The 240-ECTS economics/business prerequisite is material; a three-year degree is not automatically eligible. Exact current fees, language evidence and admission periods need checking."
+  },
+  {
+    "id": "reykjavik-sustainable-energy",
+    "title": "Sustainable Energy Science",
+    "university": "Reykjavík University",
+    "country": "Iceland",
+    "city": "Reykjavík",
+    "lat": 64.123,
+    "lon": -21.927,
+    "fields": [
+      "Environment",
+      "Engineering"
+    ],
+    "tags": [
+      "Renewable energy",
+      "Geothermal energy",
+      "Energy systems"
+    ],
+    "summary": "An interdisciplinary MSc studying sustainable energy technologies alongside environmental, economic and societal systems, with thesis research.",
+    "gradeNote": "The programme normally expects 7.0 on Iceland’s 1–10 scale or an equivalent record. This country-specific interpretation is retained as text, without automatic conversion.",
+    "requirements": [
+      "A bachelor’s in a suitable scientific, environmental, quantitative or related field",
+      "Normally 6 ECTS mathematics and 6 ECTS statistics or equivalent quantitative preparation",
+      "Submit transcript, CV, references and prerequisite information",
+      "Accepted English proof where required; possible additional coursework is assessed individually"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.ru.is/en/departments/de/sustainable-energy-science-msc"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The Science MSc and Engineering MSc are separate degrees. This record covers Science. Confirm exact current fee and cycle-specific dates; quantitative equivalency is assessed individually.",
+    "scheduleNote": "The page lists October 2026 opening, January 31 non-EU/EEA and April 30 EU/EEA deadlines. An exact fully dated opening and closing window is not recorded."
+  },
+  {
+    "id": "belgrade-cultural-policy",
+    "title": "Cultural Policy and Management · MA",
+    "university": "University of Arts in Belgrade",
+    "country": "Serbia",
+    "city": "Belgrade",
+    "lat": 44.818,
+    "lon": 20.451,
+    "fields": [
+      "Arts & Humanities",
+      "Public Policy",
+      "Business & Management"
+    ],
+    "tags": [
+      "Cultural policy",
+      "Arts management",
+      "Intercultural mediation"
+    ],
+    "summary": "An English MA in cultural policy and management with project work, research, a compulsory internship and a thesis.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A 240-ECTS university degree in social sciences, humanities or arts",
+      "Fluent English; relevant professional experience is strongly preferred",
+      "CV, motivation statement and qualification documents",
+      "Complete the programme’s online interview/questionnaire procedure"
+    ],
+    "sources": [
+      {
+        "label": "Official programme & admissions",
+        "url": "https://www.arts.bg.ac.rs/en/studies/degrees-in-english/cultural-policy-and-management-interculturalism-and-mediation-in-the-balkans/"
+      }
+    ],
+    "duration": "1 year · 2 semesters, 60 ECTS",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "The 2026 page contains inconsistent August/September round wording, and the listed final application deadline has passed. Confirm future admission rounds and the applicable tuition category."
+  },
+  {
+    "id": "manchester-advanced-cs",
+    "title": "Advanced Computer Science MSc",
+    "university": "University of Manchester",
+    "country": "United Kingdom",
+    "city": "Manchester",
+    "lat": 53.467,
+    "lon": -2.234,
+    "fields": [
+      "Computer Science"
+    ],
+    "tags": [
+      "Advanced Computing",
+      "Programming",
+      "Research Project"
+    ],
+    "summary": "An advanced computing degree for computer science graduates, combining specialist taught units with an individual research project.",
+    "gradeNote": "The normal published academic profile is a UK first-class degree. International equivalencies vary by institution and country; this is not a universal percentage or GPA threshold.",
+    "requirements": [
+      "A computer science degree with at least 50% computer science content and strong programming or software development preparation.",
+      "The published profile normally expects a UK first-class degree or an institution-specific international equivalent.",
+      "IELTS 7.0 overall with at least 6.5 in each component, or another accepted qualification."
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.manchester.ac.uk/study/masters/courses/list//21573/msc-advanced-computer-science/"
+      }
+    ],
+    "duration": "1 year",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "£41,400 international tuition · 2027 entry",
+      "free": false,
+      "source": "https://www.manchester.ac.uk/study/masters/courses/list//21573/msc-advanced-computer-science/"
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 7,
+    "contact": {
+      "name": "Postgraduate Taught Admissions",
+      "email": "pgt.compsci@manchester.ac.uk",
+      "source": "https://www.manchester.ac.uk/study/masters/courses/list//21573/msc-advanced-computer-science/"
+    },
+    "research": null,
+    "dataNote": "2027 entry page reviewed. Staged application deadlines do not establish a fully dated opening window; availability can change after each stage.",
+    "ieltsSource": "https://www.manchester.ac.uk/study/masters/courses/list//21573/msc-advanced-computer-science/"
+  },
+  {
+    "id": "edinburgh-design-informatics",
+    "title": "Design Informatics MSc",
+    "university": "University of Edinburgh",
+    "country": "United Kingdom",
+    "city": "Edinburgh",
+    "lat": 55.944,
+    "lon": -3.187,
+    "fields": [
+      "Computer Science",
+      "Arts & Humanities"
+    ],
+    "tags": [
+      "Interaction Design",
+      "Data-driven Design",
+      "Creative Computing"
+    ],
+    "summary": "A degree at the intersection of computing and design, developing interactive experiences and services through practical projects and a dissertation.",
+    "gradeNote": "The published entry profile is a UK 2:1 or equivalent. Where the prior degree includes a final project, the published requirements specify a B grade or higher in that project.",
+    "requirements": [
+      "A UK 2:1 degree or equivalent in a listed discipline such as computing, engineering, physics, psychology, philosophy, linguistics or neuroscience.",
+      "Demonstrable programming experience in a language such as Python, Java, C++, R or MATLAB.",
+      "Submit a statement connecting your programming experience and interest in design; check the current English-language requirements."
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://study.ed.ac.uk/programmes/postgraduate-taught/803-design-informatics"
+      },
+      {
+        "label": "Official published entry requirements",
+        "url": "https://study.ed.ac.uk/postgraduate/degrees?id=803&r=site%2Fview"
+      },
+      {
+        "label": "Official 2026/27 programme handbook",
+        "url": "https://informatics.ed.ac.uk/taught-students/msc-students/taught-msc-handbook-202627/degree-programmes-and-courses/design"
+      }
+    ],
+    "duration": "1 year",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Programme and 2026/27 handbook verified. Academic entry details use the university's published 2026/27 page; confirm the next intake and its language-certificate rules."
+  },
+  {
+    "id": "glasgow-education-policy",
+    "title": "Education, Public Policy & Equity MSc",
+    "university": "University of Glasgow",
+    "country": "United Kingdom",
+    "city": "Glasgow",
+    "lat": 55.872,
+    "lon": -4.289,
+    "fields": [
+      "Education",
+      "Public Policy",
+      "Social Sciences"
+    ],
+    "tags": [
+      "Education Policy",
+      "Social Justice",
+      "Policy Research"
+    ],
+    "summary": "An interdisciplinary programme examining how education systems and public policy shape equity, supported by qualitative and quantitative research methods.",
+    "gradeNote": "The normal academic requirement is a UK 2:2 honours degree or equivalent. The university describes routes for relevant experience or applicants outside the standard profile.",
+    "requirements": [
+      "A UK 2:2 honours degree or equivalent in education, social sciences, business, law, public administration or a related subject.",
+      "Other backgrounds or lower academic results may be considered with relevant experience and the specified statement and CV.",
+      "IELTS 6.5 overall with no component below 6.0, or an accepted alternative."
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.gla.ac.uk/postgraduate/taught/educationpublicpolicyequity/"
+      }
+    ],
+    "duration": "1 year",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6.5,
+    "contact": {
+      "name": "Education, Public Policy & Equity programme team",
+      "email": "education-msceppe@glasgow.ac.uk",
+      "source": "https://www.gla.ac.uk/postgraduate/taught/educationpublicpolicyequity/"
+    },
+    "research": null,
+    "dataNote": "Programme scope and core entry criteria reviewed. Current fees, applicant-specific deadlines and detailed certificate rules require the official pages.",
+    "ieltsSource": "https://www.gla.ac.uk/postgraduate/taught/educationpublicpolicyequity/"
+  },
+  {
+    "id": "bristol-uwe-robotics",
+    "title": "Robotics MSc",
+    "university": "University of Bristol & University of the West of England",
+    "country": "United Kingdom",
+    "city": "Bristol",
+    "lat": 51.458,
+    "lon": -2.602,
+    "fields": [
+      "Engineering",
+      "AI & Machine Learning",
+      "Computer Science"
+    ],
+    "tags": [
+      "Robotics",
+      "Autonomous Systems",
+      "Applied Research"
+    ],
+    "summary": "A joint programme combining robotics engineering and intelligent systems, taught across Bristol and UWE with access to collaborative robotics research.",
+    "gradeNote": "The normal published requirement is a UK 2:1 or equivalent. The page describes specific circumstances in which applicants below that level may be considered.",
+    "requirements": [
+      "Normally a UK 2:1 degree or equivalent; applicants may come from any subject with the required programming preparation.",
+      "Evidence of programming through a degree unit or experience in languages such as C, C++, Java, Python or MATLAB.",
+      "Meet Bristol's English-language profile E and submit the requested programming statement or supporting evidence."
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.bristol.ac.uk/study/postgraduate/taught/msc-robotics/"
+      }
+    ],
+    "duration": "1 year",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "£37,900 overseas tuition · 2027 entry",
+      "free": false,
+      "source": "https://www.bristol.ac.uk/study/postgraduate/taught/msc-robotics/"
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Postgraduate admissions",
+      "email": "choosebristol-pg@bristol.ac.uk",
+      "source": "https://www.bristol.ac.uk/study/postgraduate/taught/msc-robotics/"
+    },
+    "research": null,
+    "dataNote": "2027 entry verified. Teaching uses Bristol and UWE campuses; the map point is approximate. Opening is given by month, so no fully dated application window is recorded."
+  },
+  {
+    "id": "sussex-development-economics",
+    "title": "Development Economics MSc",
+    "university": "University of Sussex",
+    "country": "United Kingdom",
+    "city": "Brighton",
+    "lat": 50.867,
+    "lon": -0.088,
+    "fields": [
+      "Economics & Finance",
+      "Public Policy"
+    ],
+    "tags": [
+      "Development Economics",
+      "Applied Economics",
+      "Policy Evaluation"
+    ],
+    "summary": "A programme in economic analysis of development, combining advanced economic tools with questions about growth, poverty and public policy.",
+    "gradeNote": "Normally a UK upper second-class honours degree or equivalent. International requirements are country-specific; no universal converted GPA is recorded.",
+    "requirements": [
+      "Normally a UK 2:1 honours degree or equivalent in economics.",
+      "Prior study must include intermediate microeconomics and macroeconomics; relevant professional qualifications or experience may also be considered.",
+      "IELTS 6.0 overall with at least 5.5 in each component, or an accepted alternative."
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.sussex.ac.uk/study/masters/courses/development-economics-msc"
+      }
+    ],
+    "duration": "1 year",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": 6,
+    "contact": null,
+    "research": null,
+    "dataNote": "September 2027 programme reviewed. Country-specific academic equivalencies, fees and exact application dates must be checked for the applicant's route.",
+    "ieltsSource": "https://www.sussex.ac.uk/study/masters/courses/development-economics-msc"
+  },
+  {
+    "id": "polimi-urban-planning",
+    "title": "Urban Planning and Policy Design MSc",
+    "university": "Politecnico di Milano",
+    "country": "Italy",
+    "city": "Milan",
+    "lat": 45.478,
+    "lon": 9.228,
+    "fields": [
+      "Architecture & Planning",
+      "Public Policy",
+      "Environment"
+    ],
+    "tags": [
+      "Urban Planning",
+      "Spatial Policy",
+      "Urban Transformation"
+    ],
+    "summary": "An English-taught planning degree connecting urban design, territorial analysis and public policy through studios and research.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A relevant first degree, including urban planning, architecture, engineering, geography, economics, social sciences, political science or environmental science.",
+      "Admission includes a review of the prior curriculum and academic preparation; other degrees are assessed individually.",
+      "Applicants with an architecture background must provide the requested portfolio; check the current English certification rules."
+    ],
+    "sources": [
+      {
+        "label": "Official 2026 programme details",
+        "url": "https://www.auic.polimi.it/en/education/laurea-magistrale-equivalent-to-master-of-science/details/1040-2026"
+      },
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/urban-planning-and-policy-design"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "2026 programme verified at the Milano Leonardo campus. The school identifies a first-semester intake; no applicant-category application window or numeric language threshold is recorded."
+  },
+  {
+    "id": "padua-sustainable-agriculture",
+    "title": "Sustainable Agriculture MSc",
+    "university": "University of Padua",
+    "country": "Italy",
+    "city": "Legnaro",
+    "lat": 45.344,
+    "lon": 11.956,
+    "fields": [
+      "Environment",
+      "Life Sciences"
+    ],
+    "tags": [
+      "Agricultural Systems",
+      "Food Security",
+      "Resource Management"
+    ],
+    "summary": "A master's programme addressing sustainable crop production and food security through agricultural research, technology and management of soil, water and other resources.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A bachelor's degree of at least three years with relevant agricultural or environmental science preparation.",
+      "Evidence of research-method skills and the ability to apply research to agricultural or environmental questions.",
+      "Follow the appropriate admission route for your qualification; foreign qualifications use a separate international procedure."
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.unipd.it/en/corsi-di-laurea/sustainable-agriculture"
+      },
+      {
+        "label": "Official international application course listing",
+        "url": "https://apply.unipd.it/courses/course/19-sustainable-agriculture?search=1683389"
+      },
+      {
+        "label": "Official 2026/27 school admissions",
+        "url": "https://www.unipd.it/en/ammissioni-av-magistrali"
+      },
+      {
+        "label": "Official 2026 degree listing",
+        "url": "https://www.dafnae.unipd.it/offerta-didattica/corsi-di-laurea-magistrale/?key=AV2881&ordinamento=2026&tipo=LM"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Current programme identity, English teaching, Legnaro location and two-year duration verified. The application listing provides core preparation requirements; current fees, deadlines and accepted English certificates need route-specific confirmation."
+  },
+  {
+    "id": "epfl-urban-systems",
+    "title": "Urban Systems MSc",
+    "university": "École Polytechnique Fédérale de Lausanne",
+    "country": "Switzerland",
+    "city": "Lausanne",
+    "lat": 46.519,
+    "lon": 6.566,
+    "fields": [
+      "Architecture & Planning",
+      "Environment",
+      "Engineering"
+    ],
+    "tags": [
+      "Urban Systems",
+      "Ecological Transition",
+      "Urban Infrastructure"
+    ],
+    "summary": "An interdisciplinary degree on urban transitions, combining infrastructure, environmental systems and methods for analysing mobility, wellbeing and governance.",
+    "gradeNote": "External applicants are expected to have excellent academic results. The official route does not provide a universal numerical cutoff in this record.",
+    "requirements": [
+      "Applicants from outside EPFL normally need a bachelor's degree in civil or environmental engineering with excellent academic results.",
+      "The programme also describes routes for EPFL architecture and related science or engineering graduates; these routes have distinct prerequisite reviews.",
+      "Additional engineering, computing or mathematics credits may be required; check the route that applies to your prior institution and degree."
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.epfl.ch/education/master/programs/urban-systems/"
+      },
+      {
+        "label": "Official school programme and duration",
+        "url": "https://www.epfl.ch/schools/enac/education/interdisciplinary-teaching/master-in-urban-systems/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English / French · can be completed in English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Two-year, 120 ECTS programme verified. Admission pathways differ for EPFL and external graduates. Language options permit an entirely English programme; certificate requirements, fees and dates are not recorded."
+  },
+  {
+    "id": "uab-english-studies",
+    "title": "English Studies: Linguistic, Literary and Sociocultural Perspectives MA",
+    "university": "Universitat Autònoma de Barcelona",
+    "country": "Spain",
+    "city": "Bellaterra",
+    "lat": 41.502,
+    "lon": 2.108,
+    "fields": [
+      "Arts & Humanities",
+      "Education"
+    ],
+    "tags": [
+      "English Studies",
+      "Linguistics",
+      "Literature"
+    ],
+    "summary": "An official university master's exploring English-language linguistics, literature and cultural perspectives, with research training and a final master's project.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A degree that permits access to postgraduate study; preferred backgrounds include English studies, modern languages, linguistics, literature, translation or suitable English education.",
+      "C1 English competence in all skills, demonstrated through an accepted certificate.",
+      "Selection considers the academic record, motivation and CV, references and relevant professional experience."
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.uab.cat/web/estudiar/official-master-s-degrees/general-information/-1096480962610.html?param1=1345898380617"
+      },
+      {
+        "label": "Official programme admission requirements",
+        "url": "https://www.uab.cat/web/estudiar/official-master-s-degrees/admission/admission-requirements-1096480963055.html?param1=1345898380617"
+      },
+      {
+        "label": "Official study plan",
+        "url": "https://www.uab.cat/web/estudiar/official-master-s-degrees/content/study-plans-and-timetables/-1096480963070.html?cid=1096480963070&d=Touch&pagename=UAB%2FPage%2FTemplatePageDetallMOUAB_F4&param1=1345898380617"
+      }
+    ],
+    "duration": "60 ECTS · see study plan",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "€66 per ECTS · non-EU without residence permit · 2026/27",
+      "free": false,
+      "source": "https://www.uab.cat/web/estudiar/official-master-s-degrees/general-information/-1096480962610.html?param1=1345898380617"
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "2026/27 official 60 ECTS, face-to-face, fully English master's verified. The calendar completion period is not separately asserted; review the study plan. Fees depend on residence and nationality, and the published pre-enrolment is closed."
+  },
+  {
+    "id": "nova-public-health",
+    "title": "Public Health MSc",
+    "university": "NOVA University Lisbon",
+    "country": "Portugal",
+    "city": "Lisbon",
+    "lat": 38.747,
+    "lon": -9.159,
+    "fields": [
+      "Medicine & Public Health",
+      "Public Policy"
+    ],
+    "tags": [
+      "Population Health",
+      "Health Systems",
+      "Health Policy"
+    ],
+    "summary": "A public health master's combining population-health methods and policy, with compulsory in-person teaching and online options for elective units.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A relevant degree, with the programme listing health, biological, engineering, economic, legal, social and education-related backgrounds.",
+      "Other degrees may be recognised as relevant by the programme coordinator.",
+      "Portuguese proficiency and the ability to read English academic material are required."
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.ensp.unl.pt/curso/mestrado-saude-publica/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "Portuguese",
+    "mode": "Hybrid",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Two-year hybrid structure verified; compulsory units are taught in person. The page lists international and national fee amounts without an unambiguous payment period, so no amount is recorded. Current 2026/27 applications are closed."
+  },
+  {
+    "id": "antwerp-epidemiology",
+    "title": "Epidemiology MSc",
+    "university": "University of Antwerp",
+    "country": "Belgium",
+    "city": "Antwerp",
+    "lat": 51.161,
+    "lon": 4.41,
+    "fields": [
+      "Medicine & Public Health",
+      "Life Sciences"
+    ],
+    "tags": [
+      "Epidemiology",
+      "Clinical Research",
+      "Health Statistics"
+    ],
+    "summary": "A research-oriented degree in population and clinical epidemiology, developing statistical and study-design skills for health research.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "An academic university bachelor's degree with suitable preparation, assessed according to the published subject and qualification rules.",
+      "Professional or technical bachelor's degrees listed by the university are not directly admissible without the specified additional qualification or pathway.",
+      "Provide the requested transcripts, course descriptions, CV, motivation, recommendation and English evidence; statistical and research-method preparation is reviewed."
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.uantwerpen.be/en/study/programmes/all-programmes/epidemiology/about-the-programme/"
+      },
+      {
+        "label": "Official academic entry requirements",
+        "url": "https://www.uantwerpen.be/en/study/programmes/all-programmes/epidemiology/admission-and-enrolment/admission-requirements/"
+      },
+      {
+        "label": "Official application and selection",
+        "url": "https://www.uantwerpen.be/en/study/programmes/all-programmes/epidemiology/admission-and-enrolment/application-and-selection/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Two-year full-time English programme at Campus Drie Eiken verified. Degree type matters: several professional bachelor's routes are not directly eligible. Fees, deadlines and numeric language-test requirements need applicant-specific review."
+  },
+  {
+    "id": "graz-english-american",
+    "title": "English Studies / American Studies MA",
+    "university": "University of Graz",
+    "country": "Austria",
+    "city": "Graz",
+    "lat": 47.078,
+    "lon": 15.448,
+    "fields": [
+      "Arts & Humanities"
+    ],
+    "tags": [
+      "Literary Studies",
+      "Linguistics",
+      "Cultural Studies"
+    ],
+    "summary": "An English-taught humanities degree deepening research in English and American literature, linguistics and culture.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A completed subject-relevant bachelor's degree.",
+      "Appropriate English competence and preparation in literary, cultural and linguistic theories and methods.",
+      "Graduates of relevant degrees from other universities must submit the university's formal admission application."
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://www.uni-graz.at/en/studies/master-programmes/english-studies-american-studies/"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Winter 2026/27 programme information verifies a four-semester, 120 ECTS English degree. Detailed equivalency checks, language certificates, fees and application dates require the admission process."
+  },
+  {
+    "id": "masaryk-energy-policy",
+    "title": "Energy Policy Studies MA",
+    "university": "Masaryk University",
+    "country": "Czechia",
+    "city": "Brno",
+    "lat": 49.198,
+    "lon": 16.603,
+    "fields": [
+      "Public Policy",
+      "Environment",
+      "Social Sciences"
+    ],
+    "tags": [
+      "Energy Politics",
+      "Climate Policy",
+      "Energy Security"
+    ],
+    "summary": "A social science master's analysing energy policy, security and climate-related decisions, with a standard single-degree route and a separate international double-degree option.",
+    "gradeNote": "Academic preparation, degree equivalency and the full application are assessed. No universal numerical GPA cutoff is recorded.",
+    "requirements": [
+      "A bachelor's qualification and the required diploma or current-degree confirmation, transcripts, CV and motivation documents.",
+      "An admission essay on an energy-policy topic and an online selection interview.",
+      "B2 English proof through an accepted route; verify the certificate or exemption that applies to you."
+    ],
+    "sources": [
+      {
+        "label": "Official current programme and application dates",
+        "url": "https://www.muni.cz/uchazeci/navazujici-magisterske-studium/nabidka-studia/23258-energy-policy-studies"
+      },
+      {
+        "label": "Official English programme catalogue",
+        "url": "https://is.muni.cz/program/23258/energy-policy-studies?lang=en"
+      },
+      {
+        "label": "Official programme application instructions",
+        "url": "https://eps.fss.muni.cz/prospective-students/how-to-apply"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": {
+      "opens": "2026-07-01",
+      "closes": "2026-10-31",
+      "category": "Spring 2027 · single-degree applicants",
+      "source": "https://www.muni.cz/uchazeci/navazujici-magisterske-studium/nabidka-studia/23258-energy-policy-studies"
+    },
+    "gpa": null,
+    "ielts": null,
+    "contact": {
+      "name": "Jan Osicka, programme study adviser",
+      "email": "osicka@mail.muni.cz",
+      "source": "https://eps.fss.muni.cz/prospective-students/how-to-apply"
+    },
+    "research": null,
+    "dataNote": "Current spring 2027 single-degree application dates, full-time English teaching and two-year duration verified. Official pages show different tuition amounts, so the amount is left unresolved. The Trento double-degree route has separate arrangements."
+  },
+  {
+    "id": "aarhus-physics",
+    "title": "Physics MSc",
+    "university": "Aarhus University",
+    "country": "Denmark",
+    "city": "Aarhus",
+    "lat": 56.168,
+    "lon": 10.199,
+    "fields": [
+      "Physics & Mathematics"
+    ],
+    "tags": [
+      "Quantum Physics",
+      "Astrophysics",
+      "Computational Physics"
+    ],
+    "summary": "An English-taught physics degree with advanced theoretical, experimental and computational pathways and a substantial research project.",
+    "gradeNote": "Selection considers overall and relevant-subject grades alongside the depth of qualifying coursework. No universal numerical GPA threshold is recorded.",
+    "requirements": [
+      "An international degree equivalent to a Danish 180 ECTS bachelor's qualification.",
+      "At least 60 ECTS in physics or astronomy covering the specified core topics, and at least 30 ECTS in mathematics and statistics.",
+      "Meet the university's English requirement; selection considers grades, subject preparation and additional relevant study."
+    ],
+    "sources": [
+      {
+        "label": "Official programme and admissions",
+        "url": "https://masters.au.dk/physics"
+      }
+    ],
+    "duration": "2 years",
+    "language": "English",
+    "mode": "On campus",
+    "checkedAt": "2026-10-12",
+    "tuition": {
+      "label": "Check official fee schedule",
+      "free": false
+    },
+    "window": null,
+    "gpa": null,
+    "ielts": null,
+    "contact": null,
+    "research": null,
+    "dataNote": "Current two-year, 120 ECTS English degree and specified subject-credit prerequisites verified. Physics preparation is essential; quantum topics are options within this physics degree. Fees and category-specific deadlines require further review."
   }
 ]

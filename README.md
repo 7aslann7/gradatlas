@@ -4,11 +4,12 @@
 
 GradAtlas is a free, open-source master's discovery and application workspace. It brings official programme information, an interactive world map, comparisons and preparation tools into one calm interface.
 
-The current catalogue contains **81 source-backed programme and specialisation records across 34 countries and regions and 17 subject groups**. This first global expansion covers computing, engineering, business, law, health, life sciences, education, social sciences and humanities alongside the original Germany/Netherlands focus. It remains a curated discovery catalogue, with partial admissions information explicitly labelled; it is not an exhaustive global directory or a university ranking.
+The current catalogue contains **171 source-backed programme and specialisation records across 80 countries and regions and 17 subject groups**. The global catalogue covers computing, engineering, business, law, health, life sciences, education, social sciences and humanities alongside the original Germany/Netherlands focus. It remains a curated discovery catalogue, with partial admissions information explicitly labelled; it is not an exhaustive global directory or a university ranking.
 
 ## What works today
 
-- A full-screen, directly interactive world map with one search bar and a small menu.
+- A full-screen, directly interactive globe with distinct ocean, land and backdrop colours, one search bar and a small menu.
+- A single control switches to a full-world map showing all continents and restores the previous globe camera.
 - Filters, programme lists, details and application tools open only when requested.
 - Drag and two-finger pan, pinch zoom, globe rotation, keyboard controls and visible zoom/compass buttons.
 - Local MapLibre rendering, programme clustering and selection between degrees at the same campus and reduced-motion support; no map API key or remote tiles.
@@ -57,6 +58,7 @@ src/
   core.js             Filtering, requirement review, validation and export logic
   map.js              Geographic rendering, animated camera and interaction
   map-input.js        Trackpad/pinch routing and Safari gesture math
+  map-geometry.js     Ocean surface and date-line-safe cluster centres
   experience.js       Minimal map-interface templates
   atlas.css           Map workspace, panels and restrained transitions
   vendor/maplibre/    Locally served MapLibre renderer, worker and licence

@@ -15,3 +15,8 @@ test('Safari pinch and rotation remain relative to the gesture-start camera',()=
   assert.deepEqual(gestureCamera({zoom:2,bearing:15},{scale:2,rotation:30}),{zoom:3,bearing:45});
   assert.deepEqual(gestureCamera({zoom:2,bearing:15},{scale:.5,rotation:-20}),{zoom:1,bearing:-5});
 });
+test('both pinch paths can zoom out far enough for a full world on a portrait screen',()=>{
+  const bounds={minZoom:-2,maxZoom:12};
+  assert.equal(wheelIntent({deltaY:150,deltaMode:0,ctrlKey:true},.5,bounds).zoom,-1);
+  assert.equal(gestureCamera({zoom:0,bearing:0},{scale:.5},bounds).zoom,-1);
+});
