@@ -23,7 +23,7 @@ Exit criterion: applicants can build a shortlist and see what is supported, what
 
 ## Then: public pilot and contribution workflow
 
-The English contributor guide, data correction template and private GitHub repository are prepared. Review public-release settings before opening them. Test the product with applicants from different degree backgrounds, countries and accessibility needs. Give users a way to submit a correction with the affected field and an official source. Moderate submissions before publication; separate applicant experiences from institutional rules.
+The v0.9 website is public; its GitHub source repository remains private. The English contributor guide and data correction template are prepared for a later source release. Test the product with applicants from different degree backgrounds, countries and accessibility needs. Add a public correction route with the affected field and an official source before wider community outreach. Moderate submissions before publication; separate applicant experiences from institutional rules.
 
 Confirm repository and site visibility as a release decision. Keep applicant workspaces out of source control. Free discovery and preparation should remain available without a profile or paid tier.
 

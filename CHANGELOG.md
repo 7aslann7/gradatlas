@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.9.0 — 12 October 2026
+
+- Added formatted workspace Excel exports for shortlist and studio, including profile, programme activity, preparation, full notes, saved enquiries and source attribution.
+- Kept app-restoration JSON under an explicitly labelled recovery backup in Data & methodology.
+- Clarified how grade scale, IELTS and degree/field affect profile review and draft preparation.
+- Removed the menu footer slogan and prepared public website access with private GitHub source.
+
 ## 0.8.0 — 12 October 2026
 
 - Added 107 programme-page records and 1,131 labelled DUO RIO degree identities: 1,489 programme/specialisation records across 88 countries/regions, separate from the ROR institution directory.

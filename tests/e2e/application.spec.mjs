@@ -142,7 +142,7 @@ test('preparation autosaves and official guides retain programme scope', async (
 test('backup export/import, cancellation, invalid files and local deletion protect state', async ({page}) => {
   const state = {...empty(), saved: [first.id], notes: {[first.id]: 'Retain this note'}};
   await seed(page, state); await open(page, '#sources');
-  const file = await downloaded(page, () => page.getByRole('button', {name: 'Export backup', exact: true}).click());
+  const file = await downloaded(page, () => page.getByRole('button', {name: 'Download recovery backup (.json)', exact: true}).click());
   expect(JSON.parse(file.bytes.toString()).workspace.notes[first.id]).toBe('Retain this note');
   await page.locator('#import-workspace').setInputFiles({name: 'bad.json', mimeType: 'application/json', buffer: Buffer.from('{')});
   await expect(page.locator('#toast')).toContainText('not a valid'); expect((await workspace(page)).saved).toEqual([first.id]);
@@ -278,4 +278,22 @@ test('catalogue and registry comparisons carry attribution and exclude personal 
   const workbook = new globalThis.ExcelJS.Workbook(); await workbook.xlsx.load(file.bytes);
   const method = workbook.getWorksheet('Reuse & methodology');
   expect(method.getCell('A4').value).toBe('DUO RIO attribution'); expect(method.getCell('B4').value).toContain('DUO');
+});
+
+
+test('shortlist exports a useful Excel workspace and the menu stays uncluttered', async ({page}) => {
+  const state={...empty(),profile:{degree:'Computer Engineering',gpa:'2.82',scale:'4',ielts:'6.5'},saved:[first.id],tasks:{[first.id]:[0,2]},notes:{[first.id]:'My application research'},tracking:{[first.id]:'Preparing'}};
+  await seed(page,state);await open(page,'#shortlist');
+  const file=await downloaded(page,()=>page.locator('.shortlist-drawer').getByRole('button',{name:'Download Excel .xlsx'}).click());
+  expect(file.name).toBe('gradatlas-workspace.xlsx');expect(file.bytes.subarray(0,2).toString()).toBe('PK');
+  const book=new globalThis.ExcelJS.Workbook();await book.xlsx.load(file.bytes);
+  expect(book.getWorksheet('Applications').getCell('A7').value).toBe(first.title);
+  expect(book.getWorksheet('Applications').getCell('G3').value).toBe(2.82);
+  expect(book.getWorksheet('Applications').getCell('E7').value).toBe('Preparing');
+  expect(book.getWorksheet('Applications').getCell('I7').value).toBe(.25);
+  expect(book.getWorksheet('Notes & drafts').getCell('E7').value).toBe('My application research');
+  await page.getByRole('button',{name:'Open menu',exact:true}).click();
+  await expect(page.locator('#workspace-menu')).not.toContainText('Free & open source');
+  await page.locator('#workspace-menu').getByRole('button',{name:'My profile · local',exact:true}).click();
+  await expect(page.locator('#profile-dialog')).toContainText('course prerequisites are not matched automatically');
 });

@@ -23,3 +23,9 @@ Hosting providers receive the page and asset requests needed to serve the applic
 Keep discovery free and profile creation optional. Before adding cross-device sync, provide an explicit account and opt-in choice, a preview of what will be synchronised, per-user access controls, export and deletion support, and a migration from the existing browser workspace. A user who chooses local-only storage should retain the same discovery and preparation features.
 
 Do not introduce central collection of applicant scores, documents, contact lists or enquiry contents merely because the site is public. Future user feedback and catalogue corrections should have their own minimal submission fields, review process and retention policy.
+
+## Readable exports and recovery
+
+Download workspace Excel creates a local `.xlsx` snapshot containing programme activity, profile, notes, preparation progress and explicitly saved enquiries. It makes research usable outside the app. Spreadsheet edits do not sync back into the browser workspace. Long notes and draft messages continue in numbered parts. Keep the export private when it contains personal material.
+
+The separately labelled recovery backup remains JSON because it restores the app state exactly. It is available only from Data & methodology. Preparation plans and individual enquiry downloads remain plain text.

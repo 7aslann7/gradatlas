@@ -2,7 +2,7 @@
 
 **Master’s programmes, mapped.**
 
-GradAtlas is a free, open-source master's discovery and application workspace. It brings official programme information, an interactive world map, comparisons and preparation tools into one calm interface.
+GradAtlas is a free master's discovery and application workspace, with an MIT-licensed source release planned. It brings official programme information, an interactive world map, comparisons and preparation tools into one calm interface.
 
 The current programme catalogue contains **1,489 degree and specialisation records across 88 countries/regions and 17 subject groups**: **358 records with reviewed programme-page sources**, plus **1,131 registered Dutch degree identities** imported from the official DUO RIO feed. Admissions coverage remains partial. A registry identity is not an individually reviewed admission route or currently available intake; none of these counts is a university ranking or an exhaustive world inventory.
 
@@ -22,7 +22,7 @@ Institution identity, programme identity and reviewed admission criteria are dif
 
 The production application uses semantic HTML, CSS and native JavaScript modules. MapLibre GL JS renders a local Natural Earth map with native geographic clusters; ExcelJS writes comparison workbooks locally. Node.js builds and validates the static site. Node's test runner covers business rules and data integrity; Playwright checks browser flows in GitHub Actions. A checksum-pinned Python importer prepares the ROR institution directory. No application database, paid map API key or applicant account is required.
 
-Created and maintained by [@7aslann7](https://github.com/7aslann7). The official source repository is [7aslann7/gradatlas](https://github.com/7aslann7/gradatlas), currently private; public release is a separate decision.
+Created and maintained by [@7aslann7](https://github.com/7aslann7). The [GradAtlas website](https://gradatlas.decentcloud16.chatgpt.site/) is public. The official source repository is [7aslann7/gradatlas](https://github.com/7aslann7/gradatlas), currently private; publishing the source is a separate decision.
 
 ## What works today
 
@@ -39,7 +39,8 @@ Created and maintained by [@7aslann7](https://github.com/7aslann7). The official
 - An application studio with preparation prompts, notes, downloadable plans, scoped official university guides and editable admissions/research enquiries.
 - Explicit local draft saving, placeholder checks, copy/download tools and user-selected email-app opening.
 - Calendar deadline reminders for recorded application windows.
-- Version 2 workspace backups include saved drafts; version 1 backups remain compatible. Export, validated import and local deletion keep users in control.
+- Readable workspace Excel exports include programme activity, preparation progress, notes, explicitly saved enquiries and official sources.
+- Separate version 2 recovery backups include saved drafts; version 1 backups remain compatible. Export, validated import and local deletion keep users in control.
 - Responsive layouts, semantic controls, keyboard-operable details and reduced-motion support.
 
 ## Run locally
@@ -82,6 +83,7 @@ src/
   evidence.js         Field provenance, missing information and coverage
   institutions.js     Registry discovery, filtering and evidence limits
   comparison.js       Shared comparison rows and local Excel exports
+  workspace-export.js Readable local workspace Excel exports
   catalogue.js        Evidence scopes, labelled routes and attributed exports
   map-geometry.js     Ocean surface, viewport limits and circular longitude geometry
   experience.js       Minimal map-interface templates
@@ -118,6 +120,6 @@ See [workspace privacy](docs/WORKSPACE_PRIVACY.md), [catalogue coverage](docs/CA
 
 ## GitHub and release
 
-The GitHub repository starts private. The included CI workflow validates catalogue records, runs unit tests, builds the site and executes desktop Chromium, desktop WebKit and mobile Chromium end-to-end tests. See [testing and release verification](docs/TESTING.md). A public repository and public hosting audience must be enabled deliberately; they are separate settings. Remove account-specific hosting configuration in `.openai/hosting.json` when forking for an independent host; replace it with your own Site identity if using Sites.
+The GitHub repository starts private. The included CI workflow validates catalogue records, runs unit tests, builds the site and executes desktop Chromium, desktop WebKit and mobile Chromium end-to-end tests. See [testing and release verification](docs/TESTING.md). The website can be published publicly while this source repository stays private; these are separate settings. Remove account-specific hosting configuration in `.openai/hosting.json` when forking for an independent host; replace it with your own Site identity if using Sites.
 
 Project code is licensed under MIT. MapLibre retains BSD-3-Clause and ExcelJS retains MIT. ROR metadata and GeoNames locality data retain their separate CC0 and attribution terms; see [third-party notices](THIRD_PARTY_NOTICES.md). Original university content and referenced pages retain their own ownership and terms. Do not contribute copied university pages, personal applicant records or unpublished contact details.

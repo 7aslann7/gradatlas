@@ -44,4 +44,4 @@ Optional cloud workspaces require identity, per-user authorization, export/delet
 
 ## Deployment
 
-Sites hosting uses the account-specific `.openai/hosting.json` with `static.directory = dist`. The initial hosted preview is private. A public release and GitHub repository visibility should be explicit release decisions. The static build is also portable to GitHub Pages and other static hosts; configure an appropriate base path if publishing below a subdirectory.
+Sites hosting uses the account-specific `.openai/hosting.json` with `static.directory = dist`. The v0.9 website release is public; the GitHub source repository remains private. These access settings are independent. The static build is also portable to GitHub Pages and other static hosts; configure an appropriate base path if publishing below a subdirectory.
