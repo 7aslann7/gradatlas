@@ -7,6 +7,7 @@
 - Added accurate external-link labels and provenance-carrying programme downloads; registry comparisons carry reuse/attribution notes in Excel.
 - Added desktop Chromium, desktop WebKit and mobile Chromium browser suites in private GitHub CI, plus backup/draft/registry/import reproducibility regressions.
 - Fixed stale draft save labels after recipient/form changes, made catalogue failure retry reload the app, disabled premature startup navigation and reported corrupt local-workspace recovery.
+- Paginated methodology source disclosure on demand, avoiding thousands of hidden source nodes at startup.
 - Documented purpose, problem, approach, technologies, privacy, contribution/correction routes and release verification. Production catalogue JSON is compacted without changing facts or the pinned ROR index bytes.
 
 ## 0.7.1 — 12 October 2026

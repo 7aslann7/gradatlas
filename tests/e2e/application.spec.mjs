@@ -6,7 +6,7 @@ const KEY = 'gradatlas.workspace.v1';
 const first = programmes[0];
 const empty = () => ({profile: null, saved: [], compare: [], tracking: {}, notes: {}, tasks: {}, drafts: {}});
 async function open(page, route = '') {
-  await page.goto('/' + route);
+  await page.goto('/' + route, {waitUntil: 'domcontentloaded'});
   await expect(page.getByRole('button', {name: 'Open menu', exact: true})).toBeEnabled();
 }
 async function navigate(page, name) {
@@ -194,6 +194,13 @@ test('directory is distinct, lazy loaded and its export includes reuse terms', a
   let directoryRequests = 0; page.on('request', r => {if (r.url().endsWith('/data/institutions.json')) directoryRequests++;});
   await open(page, '#sources'); expect(directoryRequests).toBe(0);
   await expect(page.locator('.catalogue-explanation')).toContainText('does not establish a master');
+  await expect(page.locator('#programme-source-records .source-row')).toHaveCount(0);
+  await page.locator('#programme-sources summary').click();
+  await expect(page.locator('#programme-source-records .source-row')).toHaveCount(50);
+  await page.getByRole('button', {name: 'Show more source records'}).click();
+  await expect(page.locator('#programme-source-records .source-row')).toHaveCount(100);
+  await page.locator('#programme-sources summary').click();
+  await expect(page.locator('#programme-source-records .source-row')).toHaveCount(0);
   await page.getByRole('button', {name: 'Explore institution directory'}).click();
   await expect(page.locator('#result-count')).toContainText('institutions'); expect(directoryRequests).toBe(1);
   await expect(page.locator('#results .institution-card')).toHaveCount(50);
