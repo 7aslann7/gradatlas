@@ -8,7 +8,7 @@ const globeIcon='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 
 export async function createMap(container,programmes,onSelect,onCluster) {
   const canvas=container.querySelector('.map-canvas'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  let items=stableLocations(programmes),selected=null,destroyed=false,gesture=null,projection='globe',globeCamera=null,revision=0,dataKey=null,labelZoom=-1;
+  let items=stableLocations(programmes),selected=null,destroyed=false,gesture=null,screenTouches=0,projection='globe',globeCamera=null,revision=0,dataKey=null,labelZoom=-1;
   const initialZoom=()=>Math.max(.4,Math.log2(Math.min(canvas.clientWidth,canvas.clientHeight)*.88*Math.PI/512));
   const points=()=>({type:'FeatureCollection',features:items.map(p=>({type:'Feature',id:p.id,properties:{id:p.id,title:p.title||p.name,university:p.university||p.name,kind:p.kind||'programme',selected:p.id===selected?1:0},geometry:{type:'Point',coordinates:[p.lon,p.lat]}}))});
   const map=new Map({
@@ -29,7 +29,9 @@ export async function createMap(container,programmes,onSelect,onCluster) {
         {id:'programme-points',type:'circle',source:'programmes',filter:['!',['has','point_count']],paint:{'circle-color':['case',['==',['get','selected'],1],'#b78150',['==',['get','kind'],'institution'],'#3b6475','#365a46'],'circle-radius':['case',['==',['get','selected'],1],8,6],'circle-stroke-width':2,'circle-stroke-color':'#fffdf4'}}
       ]}
   });
-  map.getCanvas().setAttribute('aria-label','World map. Drag or use two fingers to move. Pinch to zoom. Shift and drag to rotate. Programme locations are also keyboard accessible, or use Browse programmes from the menu.');
+  // Touchscreen pinches zoom and pan without accidental bearing changes.
+  map.touchZoomRotate.disableRotation();
+  map.getCanvas().setAttribute('aria-label','World map. Drag or use two fingers to move. Pinch to zoom without rotating. Shift and drag to rotate. Programme locations are also keyboard accessible, or use Browse programmes from the menu.');
   const projectionButton=container.querySelector('[data-map="projection"]');projectionButton.disabled=true;
   const accessible=document.createElement('div');accessible.className='map-location-links';accessible.setAttribute('role','group');accessible.setAttribute('aria-label','Visible programme locations');container.append(accessible);
   const tooltip=new Popup({closeButton:false,closeOnClick:false,offset:18,className:'map-tooltip'});
@@ -94,10 +96,13 @@ export async function createMap(container,programmes,onSelect,onCluster) {
   }
   const bounds=()=>({minZoom:map.getMinZoom(),maxZoom:map.getMaxZoom()});
   const wheel=event=>{event.preventDefault();if(gesture)return;map.stop();const intent=wheelIntent(event,map.getZoom(),bounds());if(intent.type==='pan'){const center=map.unproject([canvas.clientWidth/2+intent.offset[0],canvas.clientHeight/2+intent.offset[1]]);map.jumpTo({center,zoom:map.getZoom()});}else{const rect=canvas.getBoundingClientRect();map.zoomTo(intent.zoom,{around:map.unproject([event.clientX-rect.left,event.clientY-rect.top]),duration:0});}};
-  const gestureStart=event=>{event.preventDefault();map.stop();gesture={zoom:map.getZoom(),bearing:map.getBearing()};};
-  const gestureChange=event=>{event.preventDefault();if(gesture)map.jumpTo(gestureCamera(gesture,event,bounds()));};
+  const touchState=event=>{screenTouches=event.touches.length;if(screenTouches)gesture=null;};
+  const gestureStart=event=>{event.preventDefault();if(screenTouches)return;map.stop();gesture={zoom:map.getZoom(),bearing:map.getBearing()};};
+  const gestureChange=event=>{event.preventDefault();if(gesture&&!screenTouches)map.jumpTo(gestureCamera(gesture,event,bounds()));};
   const gestureEnd=event=>{event.preventDefault();gesture=null;};
   canvas.addEventListener('wheel',wheel,{passive:false});canvas.addEventListener('gesturestart',gestureStart,{passive:false});canvas.addEventListener('gesturechange',gestureChange,{passive:false});canvas.addEventListener('gestureend',gestureEnd,{passive:false});
+  // iOS also emits GestureEvents for touch input; leave its zoom to MapLibre.
+  for(const type of ['touchstart','touchend','touchcancel'])canvas.addEventListener(type,touchState,{capture:true,passive:true});
   projectionButton.onclick=()=>{
     map.stop();tooltip.remove();
     if(projection==='globe'){
@@ -117,5 +122,5 @@ export async function createMap(container,programmes,onSelect,onCluster) {
   map.on('move',cameraState);map.on('rotate',()=>setFlatBounds());map.on('movestart',()=>tooltip.remove());map.on('idle',accessibleLocations);
   map.on('load',()=>{update(items);cameraState();projectionButton.disabled=false;canvas.classList.add('map-ready');});cameraState();
   const resize=new ResizeObserver(()=>{map.resize();setFlatBounds(true);});resize.observe(canvas);
-  return {update,focus(p){selected=p.id;update(items);move({center:[p.lon,p.lat],zoom:Math.max(3,map.getZoom()),offset:innerWidth>900?[-150,0]:[0,-80]});},focusCountry(list){if(!list.length)return;if(list.length===1){move({center:[list[0].lon,list[0].lat],zoom:4});return;}map.fitBounds([[Math.min(...list.map(p=>p.lon)),Math.min(...list.map(p=>p.lat))],[Math.max(...list.map(p=>p.lon)),Math.max(...list.map(p=>p.lat))]],{padding:120,maxZoom:5,duration:reduced.matches?0:600});},destroy(){destroyed=true;resize.disconnect();tooltip.remove();accessible.remove();canvas.removeEventListener('wheel',wheel);canvas.removeEventListener('gesturestart',gestureStart);canvas.removeEventListener('gesturechange',gestureChange);canvas.removeEventListener('gestureend',gestureEnd);map.remove();}};
+  return {update,focus(p){selected=p.id;update(items);move({center:[p.lon,p.lat],zoom:Math.max(3,map.getZoom()),offset:innerWidth>900?[-150,0]:[0,-80]});},focusCountry(list){if(!list.length)return;if(list.length===1){move({center:[list[0].lon,list[0].lat],zoom:4});return;}map.fitBounds([[Math.min(...list.map(p=>p.lon)),Math.min(...list.map(p=>p.lat))],[Math.max(...list.map(p=>p.lon)),Math.max(...list.map(p=>p.lat))]],{padding:120,maxZoom:5,duration:reduced.matches?0:600});},destroy(){destroyed=true;resize.disconnect();tooltip.remove();accessible.remove();canvas.removeEventListener('wheel',wheel);canvas.removeEventListener('gesturestart',gestureStart);canvas.removeEventListener('gesturechange',gestureChange);canvas.removeEventListener('gestureend',gestureEnd);for(const type of ['touchstart','touchend','touchcancel'])canvas.removeEventListener(type,touchState,true);map.remove();}};
 }

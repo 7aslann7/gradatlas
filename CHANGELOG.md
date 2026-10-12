@@ -3,6 +3,7 @@
 ## 0.10.1 — 12 October 2026
 
 - Make Safari's two-finger twist rotate visible geography in the finger direction, preserving pinch scale and gesture-start-relative angles.
+- Keep touchscreen pinch zoom independent from rotation in globe and flat views; route iOS touch gestures through MapLibre once, while preserving intentional desktop trackpad twist.
 - Use GitHub Pages as the single official address and redirect the original Sites prototype there.
 - Add Cloudflare Web Analytics only to the official GitHub Pages project. Exclude the old prototype, local previews, forks and unrelated GitHub project paths; disable automatic workspace route measurement.
 - Explain aggregate visitor/performance measurement in workspace privacy and methodology. Personal profiles, searches, notes and enquiry contents are not sent as custom events.

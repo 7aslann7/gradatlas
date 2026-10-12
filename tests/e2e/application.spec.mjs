@@ -349,6 +349,37 @@ test('two-finger twist follows the fingers without accumulating rotation or chan
   await expect(canvas).toHaveAttribute('data-bearing','20.00');
 });
 
+test('touchscreen pinch changes zoom without rotating, including Safari gesture events',async({page})=>{
+  await open(page);const canvas=page.locator('.map-canvas');await expect(canvas).toHaveClass(/map-ready/);
+  const surface=canvas.locator('canvas.maplibregl-canvas');
+  const touch=(type,span=30,tilt=0)=>surface.evaluate((element,values)=>{
+    const rect=element.getBoundingClientRect();
+    const touches=values.type==='touchend'?[]:[-1,1].map((sign,index)=>({identifier:index,target:element,
+      clientX:rect.left+rect.width/2+sign*values.span,clientY:rect.top+rect.height/2+sign*values.tilt}));
+    const event=new Event(values.type,{bubbles:true,cancelable:true});
+    Object.assign(event,{touches,targetTouches:touches,changedTouches:touches});element.dispatchEvent(event);
+  },{type,span,tilt});
+  for(const projection of ['globe','mercator']) {
+    if(projection==='mercator')await page.getByRole('button',{name:'Show flat map',exact:true}).click();
+    const bearing=await canvas.getAttribute('data-bearing'),zoom=Number(await canvas.getAttribute('data-zoom'));
+    await touch('touchstart');
+    await surface.evaluate(element=>{
+      for(const [type,scale,rotation] of [['gesturestart',1,0],['gesturechange',2,30]]){
+        const event=new Event(type,{bubbles:true,cancelable:true});Object.assign(event,{scale,rotation});element.dispatchEvent(event);
+      }
+    });
+    await expect(canvas).toHaveAttribute('data-bearing',bearing);
+    await touch('touchmove',45,10);await touch('touchmove',65,25);
+    await expect.poll(async()=>Number(await canvas.getAttribute('data-zoom'))).toBeGreaterThan(zoom+.1);
+    const closeZoom=Number(await canvas.getAttribute('data-zoom'));
+    await touch('touchmove',40,-15);await touch('touchmove',25,-10);
+    await expect.poll(async()=>Number(await canvas.getAttribute('data-zoom'))).toBeLessThan(closeZoom-.1);
+    await touch('touchend');
+    await surface.evaluate(element=>element.dispatchEvent(new Event('gestureend',{bubbles:true,cancelable:true})));
+    await expect(canvas).toHaveAttribute('data-bearing',bearing);
+  }
+});
+
 test('keyboard navigation and compact layouts expose visible usable controls', async ({page}, testInfo) => {
   await open(page); await page.keyboard.press('/'); await expect(page.locator('#search')).toBeFocused();
   await page.keyboard.press('Escape'); await expect(page.locator('#map-results')).not.toBeVisible();
