@@ -40,7 +40,7 @@ Created and maintained by [@7aslann7](https://github.com/7aslann7). The [GradAtl
 - Search reviewed programme records and clearly labelled registered degrees by programme, university, location and research keyword; filter by field, country, recorded application availability and recorded tuition-free status. Unindexed programme coverage remains explicit.
 - Programme details with requirements, applicant-category notes, official links and last-review dates.
 - Profile reviews for recorded grade and IELTS thresholds. Different grade systems always require official equivalency; the app never predicts admission probability.
-- A compact right-hand comparison drawer for up to three programmes, with a formatted Excel `.xlsx` export and linked source sheet.
+- A full-screen comparison workspace for up to six programmes, with sticky row labels and programme headings, a formatted Excel `.xlsx` export and linked source sheet.
 - A compact right-hand shortlist drawer, application status, notes and preparation checklist.
 - An application studio with preparation prompts, notes, downloadable plans, scoped official university guides and editable admissions/research enquiries.
 - Explicit local draft saving, placeholder checks, copy/download tools and user-selected email-app opening.

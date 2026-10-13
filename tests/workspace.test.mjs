@@ -1,7 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {parseWorkspaceBackup, draftMatches} from '../src/core.js';
+import {parseWorkspaceBackup, draftMatches,normalizeWorkspace,MAX_COMPARISON} from '../src/core.js';
 const empty = {profile: null, saved: [], compare: [], tracking: {}, notes: {}, tasks: {}, drafts: {}};
+test('six comparisons survive local reload and both recovery formats, with excess IDs capped', () => {
+  const ids=Array.from({length:MAX_COMPARISON+1},(_,i)=>'programme-'+i);
+  const raw={...empty,compare:[ids[0],...ids]};
+  assert.deepEqual(normalizeWorkspace(raw).compare,ids.slice(0,MAX_COMPARISON));
+  for(const version of [1,2])assert.deepEqual(parseWorkspaceBackup(JSON.stringify({version,workspace:raw}),ids).compare,ids.slice(0,MAX_COMPARISON));
+});
 test('both backup versions restore only current catalogue references', () => {
   for(const version of [1,2]) {
     const raw = {...empty, saved: ['kept','gone'], compare: ['gone'], notes: {kept:'My note',gone:'Old note'}, tracking: {gone:'Preparing'}, tasks:{gone:[0]}};

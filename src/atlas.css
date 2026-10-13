@@ -23,9 +23,7 @@ button:focus-visible,a:focus-visible{background-color:#dcebd3;color:#264b36}
 .atlas-search input:focus{background:transparent}
 .filter-panel .form-field select:focus{background:#f8faf5}
 .side-panel-mode .map-toolbar{visibility:visible;width:min(445px,calc(100% - 490px))}
-.comparison-panel-mode .map-toolbar{width:min(445px,calc(100% - 700px));min-width:220px}
 .workspace-sheet.workspace-drawer{left:auto;width:410px;padding:27px 24px;background:#fbfcf8;animation:drawer-appear .24s ease}
-.workspace-sheet.compare-drawer{width:min(630px,calc(100% - 320px))}
 .workspace-drawer .page-header h1{font-size:24px}
 .workspace-drawer .page-header-row{display:block;padding-right:32px}
 .workspace-drawer .page-header-row>.button{margin-top:16px;font-size:11px}
@@ -37,18 +35,12 @@ button:focus-visible,a:focus-visible{background-color:#dcebd3;color:#264b36}
 .workspace-drawer .title-button>span{display:none}
 .workspace-drawer .empty-state{padding:35px 18px}
 .workspace-drawer .empty-state h2{font-size:20px}
-.workspace-drawer .comparison-table{min-width:var(--table-width);font-size:11px}
-.workspace-drawer .comparison-table th,.workspace-drawer .comparison-table td{padding:16px 14px;font-size:11px;overflow-wrap:anywhere}
-.workspace-drawer .comparison-table th:first-child{position:sticky;left:0;width:140px;z-index:1;background:#f3f7ee}
 .comparison-hint{font-size:10px;color:var(--muted);margin:0 0 12px}
-.workspace-drawer .comparison-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
-.workspace-drawer .comparison-bottom>span{font-size:11px}
 .side-panel-mode .compare-tray{left:24px;transform:none;max-width:calc(100% - 480px)}
 .side-panel-mode .map-controls{right:458px}
-.comparison-panel-mode .map-controls{right:calc(min(630px,calc(100% - 320px)) + 48px)}
 @keyframes drawer-appear{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:translateX(0)}}
 @media(max-width:1000px){.side-panel-mode .map-toolbar{width:calc(100% - 490px);min-width:220px}.side-panel-mode .compare-tray{display:none}}
-@media(max-width:700px){.workspace-sheet.workspace-drawer{left:16px;right:16px;width:auto;padding:23px 20px}.workspace-drawer .comparison-table{min-width:var(--table-width)}.side-panel-mode .map-toolbar,.side-panel-mode .map-controls{visibility:hidden}.workspace-drawer .page-header h1{font-size:23px}}
+@media(max-width:700px){.workspace-sheet.workspace-drawer{left:16px;right:16px;width:auto;padding:23px 20px}.side-panel-mode .map-toolbar,.side-panel-mode .map-controls{visibility:hidden}.workspace-drawer .page-header h1{font-size:23px}}
 @media(prefers-reduced-motion:reduce){.workspace-sheet.workspace-drawer{animation:none}}
 .results-pagination{border-top:1px solid var(--line);padding:14px 23px;flex-shrink:0;background:#fbfcf8}
 .results-pagination{font-size:11px;color:#6e7f62}.results-sentinel{height:1px;flex-shrink:0}.results-drawer .program-list[data-order=university] .card-title{display:flex;flex-direction:column}.results-drawer .program-list[data-order=university] .university-name{order:-1;font-size:13px;font-weight:600;color:#334437;line-height:1.55;margin:0 0 4px}.results-drawer .program-list[data-order=university] .title-button{font-size:11px;font-weight:500;color:#6e7f62}
@@ -80,3 +72,57 @@ button:focus-visible,a:focus-visible{background-color:#dcebd3;color:#264b36}
 .reuse-body{padding:0 20px 18px;background:#fff}
 .reuse-body p{font-size:12px;line-height:1.8;margin:15px 0;color:#66775e}
 @media(max-width:700px){.methodology-table{font-size:11px}.methodology-table th{width:34%}.methodology-table th,.methodology-table td{padding:12px 9px}.reuse-body{padding:0 10px 12px}}
+
+/* The floating menu uses labelled rows at every size, including legacy mobile breakpoints. */
+.workspace-menu #navigation{display:flex;flex-direction:column;gap:2px;clear:none;padding:0}
+.workspace-menu .nav-item{display:flex;flex:none;flex-direction:row;justify-content:flex-start;width:100%;min-height:44px;text-align:left}
+.workspace-menu .nav-item .nav-label{display:block;flex:1;min-width:0}
+.workspace-menu .nav-item .nav-count{position:static;margin-left:auto;min-width:22px;padding:2px 5px;font-size:11px}
+@media(max-width:720px){.workspace-menu{width:min(300px,calc(100% - 32px))}.workspace-menu .nav-item{font-size:13px;padding:12px 10px}.workspace-menu .nav-item svg{width:19px;height:19px}}
+
+/* Comparison has its own full-screen workspace; only its table scrolls. */
+.comparison-panel-mode .menu-trigger{display:none}
+.workspace-sheet.comparison-workspace{inset:0;display:flex;flex-direction:column;padding:32px max(32px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(32px,env(safe-area-inset-left));padding-top:max(32px,env(safe-area-inset-top));border:0;border-radius:0;background:#fbfcf8;backdrop-filter:none;overflow:hidden;z-index:50}
+.comparison-workspace>.workspace-dismiss{position:absolute;top:max(24px,env(safe-area-inset-top));right:max(24px,env(safe-area-inset-right));width:40px;height:40px;margin:0;float:none}
+.comparison-workspace #workspace-screen{display:flex;flex-direction:column;flex:1;min-height:0;min-width:0}
+.comparison-workspace .page-header{flex-shrink:0;margin-bottom:18px;padding-right:52px}
+.comparison-workspace .page-header-row{flex-direction:row;align-items:center;flex-wrap:wrap;padding:0;gap:14px}
+.comparison-workspace .page-header>p{margin-top:10px}
+.comparison-actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px}
+.comparison-count{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.comparison-actions .text-link{font-size:12px;min-height:40px}
+.comparison-actions .button{min-height:40px}
+.comparison-workspace .comparison-hint{flex-shrink:0;line-height:1.5}
+.comparison-workspace .comparison-wrap{--comparison-label-width:140px;--comparison-programme-width:200px;flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;isolation:isolate}
+.comparison-workspace .comparison-table{min-width:calc(var(--comparison-label-width) + var(--comparison-programme-width) * var(--comparison-count))}
+.comparison-workspace .comparison-table th,.comparison-workspace .comparison-table td{padding:17px 16px;overflow-wrap:anywhere;font-size:12px}
+.comparison-workspace .comparison-table th:first-child{position:sticky;left:0;width:var(--comparison-label-width);z-index:1;background:#f3f7ee}
+.comparison-workspace .comparison-table thead th{position:sticky;top:0;z-index:2;background:#f5f8f0;box-shadow:0 1px 0 var(--line)}
+.comparison-workspace .comparison-table thead th:first-child{z-index:3;background:#eaf1e3}
+.comparison-workspace .comparison-table thead .text-link{display:inline-flex;align-items:center;min-height:40px;margin-top:5px}
+.comparison-workspace .comparison-bottom{flex-shrink:0;margin-top:16px;gap:12px}
+.comparison-workspace .comparison-bottom .button{min-height:44px;white-space:nowrap}
+.comparison-workspace .comparison-bottom>span{font-size:11px;line-height:1.6}
+.comparison-workspace .empty-state{overflow:auto;min-height:0}
+@media(max-width:700px){
+  .workspace-sheet.comparison-workspace{padding:18px max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));padding-top:max(18px,env(safe-area-inset-top))}
+  .comparison-workspace>.workspace-dismiss{top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right))}
+  .comparison-workspace .page-header{padding:0;margin-bottom:14px}
+  .comparison-workspace .page-header-row{flex-direction:column;align-items:flex-start;gap:12px}
+  .comparison-workspace .page-header h1{font-size:23px;padding-right:42px}
+  .comparison-workspace .page-header>p{font-size:11px;line-height:1.6}
+  .comparison-actions{width:100%;gap:12px}
+  .comparison-actions .button{margin-left:auto;font-size:11px}
+  .comparison-count,.comparison-actions .text-link{font-size:11px}
+  .comparison-workspace .comparison-wrap{--comparison-label-width:108px}
+  .comparison-workspace .comparison-table th,.comparison-workspace .comparison-table td{padding:13px 12px;font-size:11px}
+  .comparison-workspace .comparison-bottom{align-items:stretch;flex-direction:column;gap:8px;margin-top:12px}
+  .comparison-workspace .comparison-bottom>span{font-size:10px}
+}
+@media(max-height:500px){
+  .workspace-sheet.comparison-workspace{padding-top:max(12px,env(safe-area-inset-top));padding-bottom:max(12px,env(safe-area-inset-bottom))}
+  .comparison-workspace .page-header{margin-bottom:10px}
+  .comparison-workspace .page-header>p,.comparison-workspace .comparison-hint,.comparison-workspace .comparison-bottom>span{display:none}
+  .comparison-workspace .comparison-bottom{margin-top:8px}
+  .comparison-workspace .comparison-table th,.comparison-workspace .comparison-table td{padding-top:11px;padding-bottom:11px}
+}

@@ -1,4 +1,4 @@
-import {assess,formatDate} from './core.js';
+import {assess,formatDate,MAX_COMPARISON} from './core.js';
 
 // Shared content keeps the screen and downloadable workbook in agreement.
 export function comparisonRows(profile) {
@@ -16,7 +16,7 @@ export function comparisonRows(profile) {
 }
 
 export async function comparisonWorkbook(programmes,profile,provenance={}) {
-  if(!programmes.length||programmes.length>3)throw Error('Select one to three programmes.');
+  if(!programmes.length||programmes.length>MAX_COMPARISON)throw Error(`Select one to ${MAX_COMPARISON} programmes.`);
   if(programmes.some(p=>p.registry)&&(!provenance.registry?.attribution||!provenance.locations?.licenses?.geonames))throw Error('Registry attribution unavailable. Reload before exporting.');
   // The browser bundle is loaded only on export; no applicant data leaves the device.
   await import('./vendor/exceljs/exceljs.min.js');

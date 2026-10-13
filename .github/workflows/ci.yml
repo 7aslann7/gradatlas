@@ -25,7 +25,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        project: [desktop-chromium, desktop-webkit, mobile-chromium]
+        project: [desktop-chromium, desktop-webkit, mobile-chromium, mobile-webkit]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

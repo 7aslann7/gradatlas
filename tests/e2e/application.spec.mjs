@@ -155,24 +155,71 @@ test('shortlist tracking, checklist and escaped notes survive reload', async ({p
   expect((await workspace(page)).tracking[first.id]).toBe('Preparing');
 });
 
-test('comparison enforces three selections and downloads a real sourced Excel table', async ({page}) => {
+test('comparison keeps six selections across reload, fills the screen and exports every option', async ({page}) => {
   await open(page); await browse(page);
-  for (const p of programmes.slice(0, 3)) {
+  for (const p of programmes.slice(0, 6)) {
     await findProgramme(page, p);
     await page.locator(`[data-compare="${p.id}"]`).check();
   }
-  await findProgramme(page, programmes[3]);
-  await page.locator(`[data-compare="${programmes[3].id}"]`).click();
-  await expect(page.locator(`[data-compare="${programmes[3].id}"]`)).not.toBeChecked();
+  await findProgramme(page, programmes[6]);
+  await page.locator(`[data-compare="${programmes[6].id}"]`).click();
+  await expect(page.locator(`[data-compare="${programmes[6].id}"]`)).not.toBeChecked();
+  await expect(page.locator('#toast')).toContainText('up to 6 programmes');
   await navigate(page, 'Compare programmes');
-  await expect(page.locator('.comparison-table thead th')).toHaveCount(4);
+  await expect(page.locator('.comparison-table thead th')).toHaveCount(7);
+  await expect(page.locator('.comparison-count')).toHaveText('6 / 6 selected');
+  const dimensions=await page.locator('.comparison-workspace').evaluate(el=>({rect:el.getBoundingClientRect().toJSON(),width:innerWidth,height:innerHeight}));
+  expect(dimensions.rect.x).toBe(0);expect(dimensions.rect.y).toBe(0);
+  expect(dimensions.rect.width).toBe(dimensions.width);expect(dimensions.rect.height).toBe(dimensions.height);
+  await page.reload();await expect(page.getByRole('button',{name:'Add programmes',exact:true})).toBeVisible();
+  await expect(page.locator('.comparison-table thead th')).toHaveCount(7);
+  await page.locator('.comparison-wrap').evaluate(el=>{el.scrollLeft=el.scrollWidth;el.scrollTop=200;});
+  const tableState=await page.locator('.comparison-wrap').evaluate(el=>{
+    const rect=el.getBoundingClientRect(),label=el.querySelector('tbody th').getBoundingClientRect(),header=el.querySelector('thead th:last-child').getBoundingClientRect();
+    return {overflow:el.scrollWidth>el.clientWidth,labelX:label.x,headerY:header.y,x:rect.x,y:rect.y,lastVisible:header.x<rect.right};
+  });
+  expect(tableState.labelX).toBeCloseTo(tableState.x+1,0);
+  expect(tableState.headerY).toBeCloseTo(tableState.y+1,0);expect(tableState.lastVisible).toBe(true);
+  await expect(page.getByRole('button',{name:'Download Excel .xlsx',exact:true})).toBeInViewport();
   const file = await downloaded(page, () => page.getByRole('button', {name: 'Download Excel .xlsx'}).click());
   expect(file.name).toBe('gradatlas-comparison.xlsx'); expect(file.bytes.subarray(0, 2).toString()).toBe('PK');
   const workbook = new globalThis.ExcelJS.Workbook(); await workbook.xlsx.load(file.bytes);
   expect(workbook.getWorksheet('Comparison').getCell('B5').value).toBe(first.title + '\n' + first.university);
+  expect(workbook.getWorksheet('Comparison').getCell('G5').value).toBe(programmes[5].title+'\n'+programmes[5].university);
   expect(workbook.getWorksheet('Sources').getCell('D5').value.hyperlink).toBe(first.sources[0].url);
+  await page.setViewportSize({width:844,height:390});
+  expect((await page.locator('.comparison-wrap').boundingBox()).height).toBeGreaterThan(160);
+  await expect(page.getByRole('button',{name:'Download Excel .xlsx',exact:true})).toBeInViewport();
+  await page.locator('.comparison-wrap').evaluate(el=>{el.scrollLeft=0;});
   await page.locator(`[data-remove-compare="${first.id}"]`).click();
-  await expect(page.locator('.comparison-table thead th')).toHaveCount(3);
+  await expect(page.locator('.comparison-table thead th')).toHaveCount(6);
+  await page.getByRole('button',{name:'Add programmes',exact:true}).click();
+  await expect(page.locator('#map-results')).toBeVisible();await findProgramme(page,programmes[6]);
+  await page.locator(`[data-compare="${programmes[6].id}"]`).check();
+  expect((await workspace(page)).compare).toHaveLength(6);
+  await navigate(page,'Compare programmes');await page.getByRole('button',{name:'Clear all',exact:true}).click();
+  await expect(page.locator('.comparison-count')).toHaveText('0 / 6 selected');
+  await expect(page.getByRole('button',{name:'Browse programmes',exact:true})).toBeVisible();
+  await page.getByRole('button',{name:'Browse programmes',exact:true}).click();await expect(page.locator('#map-results')).toBeVisible();
+});
+
+test('floating menu keeps icons, full labels and selection counts in readable rows on phones',async({page})=>{
+  await seed(page,{...empty(),saved:[first.id],compare:programmes.slice(0,6).map(p=>p.id)});await open(page);
+  for(const width of [320,390,700,720]){
+    await page.setViewportSize({width,height:780});await page.getByRole('button',{name:'Open menu',exact:true}).click();
+    const menu=page.locator('#workspace-menu');await expect(menu).toBeInViewport();
+    for(const name of ['Browse programmes','Map','My shortlist','Compare programmes','Application studio','Data & methodology','My profile','Map controls']){
+      const button=menu.getByRole('button',{name,exact:true});await expect(button).toBeVisible();
+      const layout=await button.evaluate(el=>{
+        const icon=el.querySelector('svg').getBoundingClientRect(),label=el.querySelector('.nav-label')||el.querySelector('span'),text=label.getBoundingClientRect(),rect=el.getBoundingClientRect();
+        return {iconX:icon.x,textX:text.x,iconY:icon.y+icon.height/2,textY:text.y+text.height/2,height:rect.height,display:getComputedStyle(label).display};
+      });
+      expect(layout.display).not.toBe('none');expect(layout.textX).toBeGreaterThan(layout.iconX);
+      expect(Math.abs(layout.iconY-layout.textY)).toBeLessThan(3);expect(layout.height).toBeGreaterThanOrEqual(44);
+    }
+    await expect(menu.getByRole('button',{name:'Compare programmes',exact:true}).locator('.nav-count')).toHaveText('6');
+    await page.getByRole('button',{name:'Close menu',exact:true}).click();
+  }
 });
 
 test('studio drafts are editable, recipient changes are unsaved, and nothing sends automatically', async ({page}) => {

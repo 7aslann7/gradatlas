@@ -1,4 +1,5 @@
 import {matchProgramme,sameCountry} from './search.js';
+export const MAX_COMPARISON = 6;
 export const FIELDS = ['AI & Machine Learning', 'Architecture & Planning', 'Arts & Humanities', 'Business & Management', 'Computer Science', 'Cybersecurity', 'Economics & Finance', 'Education', 'Engineering', 'Environment', 'Law', 'Life Sciences', 'Medicine & Public Health', 'Physics & Mathematics', 'Public Policy', 'Quantum Computing', 'Social Sciences'];
 export const CHECKLIST = ['Check degree and course prerequisites', 'Confirm official grade equivalency', 'Prepare transcript and degree certificate', 'Check language tests and exemptions', 'Check whether a CV and programme-specific statement are required', 'Arrange references if required', 'Check fees, funding and visa costs', 'Verify deadline and submit on the official portal'];
 export function normalizeWorkspace(raw) {
@@ -23,7 +24,7 @@ export function normalizeWorkspace(raw) {
     if(v.fields!=null){dict(v.fields);for(const [field,limit] of Object.entries({name:100,recipient:100,recipientEmail:320,degree:250,interest:1000,question:1500})){if(v.fields[field]==null)continue;if(typeof v.fields[field]!=='string'||v.fields[field].length>limit)throw Error('Invalid draft field');fields[field]=v.fields[field];}}
     return [k,{subject:v.subject,body:v.body,purpose:v.purpose,recipientEmail:v.recipientEmail||'',fields}];
   }));
-  return {profile,saved:ids(raw.saved),compare:ids(raw.compare).slice(0,3),tracking,notes,tasks,drafts};
+  return {profile,saved:ids(raw.saved),compare:ids(raw.compare).slice(0,MAX_COMPARISON),tracking,notes,tasks,drafts};
 }
 export function escapeHTML(value = '') {
   return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

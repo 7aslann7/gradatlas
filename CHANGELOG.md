@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.10.2 — 13 October 2026
+
+- Keep the floating menu's icons, full labels and selection counts aligned in readable rows on mobile screens.
+- Open Compare programmes in a full-screen workspace with sticky programme headings and row labels, accessible scrolling and visible Excel export controls.
+- Increase the comparison limit to six across selection, browser persistence, recovery backups and sourced Excel exports. Add clear-all and add-programmes controls.
+- Include iPhone-sized WebKit in the required browser checks.
+
 ## 0.10.1 — 12 October 2026
 
 - Make Safari's two-finger twist rotate visible geography in the finger direction, preserving pinch scale and gesture-start-relative angles.
