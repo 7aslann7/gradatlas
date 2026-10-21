@@ -3,6 +3,25 @@ export function stableLocations(records) {
   return [...records].sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0);
 }
 
+// The comparison order is shared by the map numbers and comparison columns.
+// Co-located programmes stay at the recorded location rather than being displaced.
+export function comparisonLocations(records) {
+  const seen=new Set(),groups=new Map();
+  for(const p of records){
+    if(seen.has(p.id)||!Number.isFinite(p.lon)||!Number.isFinite(p.lat))continue;
+    seen.add(p.id);const number=seen.size,key=`${p.lon.toFixed(4)},${p.lat.toFixed(4)}`;
+    if(!groups.has(key))groups.set(key,{id:key,lon:p.lon,lat:p.lat,programmes:[],numbers:[]});
+    const group=groups.get(key);group.programmes.push(p);group.numbers.push(number);
+  }
+  return [...groups.values()].map(group=>({...group,label:group.numbers.length>3?`${group.numbers[0]}+${group.numbers.length-1}`:group.numbers.join('·')}));
+}
+
+export function locationBounds(records) {
+  if(!records.length)return null;
+  const longitudes=records.map(p=>p.lon),latitudes=records.map(p=>p.lat);
+  return [[Math.min(...longitudes),Math.min(...latitudes)],[Math.max(...longitudes),Math.max(...latitudes)]];
+}
+
 // Average longitudes on a circle so a cluster spanning the date line stays there.
 export function clusterCenter(points) {
   const rad=Math.PI/180;

@@ -33,6 +33,8 @@ Created and maintained by [@7aslann7](https://github.com/7aslann7). The [GradAtl
 - Filters, programme lists, details and application tools open only when requested.
 - Programme browsing starts in University A–Z order, with university names first. Programme A–Z and recorded-deadline orders are also available. Scrolling near the end appends the next 50 results and retains a loaded/total count.
 - Country/territory labels use pinned Natural Earth label anchors and local fonts, with zoom-dependent sizing and collision handling in both map projections.
+- Zooming in loads more detailed country outlines, regional boundaries, lakes and 7,342 city/town labels from local Natural Earth assets. Labels appear progressively; this is geographic context rather than street or campus navigation.
+- Select up to six programmes directly on the map or from programme cards/details. Large numbered pins remain visible across search filters. Co-located programmes share a marker; Show on map fits selected locations, and the compact selection list connects each number to its programme.
 - Drag and two-finger pan, pinch zoom, globe rotation, keyboard controls and visible zoom/compass buttons.
 - Native MapLibre circle layers and clustering keep locations attached to the map during motion; keyboard-accessible location controls, campus selection and reduced-motion support require no map API key or remote tiles.
 - One query searches programmes and institutions, with counted result-type controls and programme links on institution cards/details. Country and subject filters remain when switching result types; institution subject filters require linked catalogue programmes.
@@ -73,7 +75,7 @@ npm run preview
 
 The production build is a static `dist/` directory. It can be hosted by any static host that serves JavaScript modules and JSON. `scripts/serve.mjs` is a loopback-only development server, not a production server.
 
-The default route and `#explore` open directly on the map. The legacy `#welcome` route also opens the map. Shortlist and comparison open right-hand drawers while the map remains usable. Studio and methodology keep their broader workspace layout.
+The default route and `#explore` open directly on the map. The legacy `#welcome` route also opens the map. Shortlist opens a right-hand drawer. Comparison opens a full-screen table with a Show on map action that returns to selected locations. Studio and methodology keep their broader workspace layout.
 
 ## Structure
 

@@ -43,6 +43,8 @@ GradAtlas locally serves MapLibre GL JS **6.14.0**, including its WebGL renderer
 
 `src/assets/country-labels.geojson` contains English names, label ranks and publisher-provided anchor points from Natural Earth's `ne_50m_admin_0_countries` dataset. The exact upstream revision, source and asset checksums, import date and transformation are retained in `data-sources/natural-earth-labels.json`. Country/territory labels use the same Natural Earth public-domain terms. MapLibre renders them with installed local fonts; no glyph CDN or additional font file is distributed. These geographic names do not establish programme availability.
 
+The on-demand `detail-countries.geojson`, `region-boundaries.geojson`, `cities.geojson` and `lakes.geojson` assets use Natural Earth 10m cultural and 50m lake data. The source revision, original and transformed checksums, feature totals and simplification are in `data-sources/natural-earth-details.json`. `scripts/import-map-details.py` reproduces the compact layers from those source downloads. All are self-hosted; no visitor-facing tile service is used. Selected populated places and default de facto boundary representations provide geographic context, not legal boundary adjudication, exhaustive place coverage or campus/navigation accuracy.
+
 - Dataset: https://github.com/datasets/geo-countries
 - Public-domain terms: https://www.naturalearthdata.com/about/terms-of-use/
 

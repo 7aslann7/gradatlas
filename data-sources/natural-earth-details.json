@@ -1,0 +1,42 @@
+{
+  "publisher": "Natural Earth",
+  "sourceRevision": "ca96624a56bd078437bca8184e78163e5039ad19",
+  "licence": "Public domain",
+  "licenceUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+  "scope": "Simplified country outlines, first-level administrative boundaries, selected populated places and lakes. Context only; not campus, street or navigation data. Natural Earth default de facto boundary view.",
+  "transformations": "Retained geographic coordinates and English/source place names. Feature IDs combine publisher ID with source row to disambiguate duplicate upstream IDs. Omitted null geometries and unused properties; rounded to four decimals; Douglas-Peucker simplification at 0.008 degrees. Publisher min_zoom values bounded for gradual display; map collision placement may omit names.",
+  "assets": [
+    {
+      "path": "src/assets/detail-countries.geojson",
+      "featureCount": 258,
+      "bytes": 4112818,
+      "sha256": "2848b125d54c4099e3f37d8e16c2a0a8dfc86ad394a46cd1d7759b124ab864af",
+      "sourceSha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255",
+      "sourceUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_admin_0_countries.geojson"
+    },
+    {
+      "path": "src/assets/region-boundaries.geojson",
+      "featureCount": 10178,
+      "bytes": 4492509,
+      "sha256": "2161f4b7909c1c6a1cdca41822208163eebc75a45a1bc536958d95da2b8b67b7",
+      "sourceSha256": "1a1f30ccaaf4cc9c4bde34266f0b8cbb955d3a4cf254b756912255f2ec7c75b6",
+      "sourceUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_admin_1_states_provinces_lines.geojson"
+    },
+    {
+      "path": "src/assets/cities.geojson",
+      "featureCount": 7342,
+      "bytes": 1530605,
+      "sha256": "ff9adfa124d5e295bc0898a8d19fa110329c87b7488d519f5f5804bfdcdf0d9e",
+      "sourceSha256": "fd3fa867a320cbd5c5b6bb5bc550afeec2939fb2cef688e508007282a55ac42f",
+      "sourceUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_10m_populated_places_simple.geojson"
+    },
+    {
+      "path": "src/assets/lakes.geojson",
+      "featureCount": 412,
+      "bytes": 302729,
+      "sha256": "dd2a01646cbc4c300fb044ed0959e41afb276941d0e9612719f50e6df5e1620c",
+      "sourceSha256": "d350b75978b26fe839b797c2c529b2fb8f47fb3983c03f4964e36d5df9378a52",
+      "sourceUrl": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_lakes.geojson"
+    }
+  ]
+}
