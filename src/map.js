@@ -126,7 +126,7 @@ export async function createMap(container,programmes,onSelect,onCluster,options=
       const noun=items[0]?.kind==='institution'?'institutions':'programmes';button.textContent=f.properties.cluster?`Explore ${f.properties.point_count} ${noun} in this area`:f.properties.kind==='institution'?`View institution: ${f.properties.title}`:`View ${f.properties.title} at ${f.properties.university}`;
       if(f.source==='comparison'){const ids=JSON.parse(f.properties.ids),list=comparison.filter(p=>ids.includes(p.id));button.textContent=`Selected ${f.properties.label}: ${list.map(p=>p.university+' · '+p.title).join('; ')}`;button.dataset.selection=f.properties.label;}
       else if(selectionMode&&!f.properties.cluster&&f.properties.kind!=='institution')button.textContent=`Add to comparison: ${f.properties.title} at ${f.properties.university}`;
-      button.dataset.longitude=lon;button.dataset.latitude=lat;button.onclick=()=>activate(f);accessible.append(button);
+      button.dataset.longitude=lon;button.dataset.latitude=lat;button.dataset.screenX=xy.x;button.dataset.screenY=xy.y;button.onclick=()=>activate(f);accessible.append(button);
     }
   }
   // Count labels are generated locally; no glyph service or moving HTML markers are needed.

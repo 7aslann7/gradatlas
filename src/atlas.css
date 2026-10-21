@@ -81,7 +81,7 @@ button:focus-visible,a:focus-visible{background-color:#dcebd3;color:#264b36}
 @media(max-width:720px){.workspace-menu{width:min(300px,calc(100% - 32px))}.workspace-menu .nav-item{font-size:13px;padding:12px 10px}.workspace-menu .nav-item svg{width:19px;height:19px}}
 
 /* Comparison has its own full-screen workspace; only its table scrolls. */
-.map-selection-tools{position:absolute;right:22px;bottom:244px;z-index:3}
+.map-selection-tools{position:absolute;right:22px;top:90px;z-index:3}
 .map-selection-tools button{display:flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:0 13px;background:#fffffff5;border:1px solid #dbe3d4;border-radius:12px;color:#52684a;font-size:11px;box-shadow:0 3px 18px #34492c10}
 .map-selection-tools button[aria-pressed=true]{background:#f3e6d7;color:#885730;border-color:#c79d77}
 .map-selection-tools svg{width:17px;height:17px}
@@ -112,9 +112,9 @@ button:focus-visible,a:focus-visible{background-color:#dcebd3;color:#264b36}
 .side-panel-mode .map-selection-tools{right:458px}
 .workspace-mode:not(.side-panel-mode) .map-selection-tools,.workspace-mode .map-selection-hint{visibility:hidden}
 @media(max-width:700px){
-  .map-selection-tools{right:17px;bottom:242px}
+  .map-selection-tools{right:17px;top:78px}
   .map-selection-tools button{padding:0 10px;font-size:10px}
-  .map-selection-hint{top:78px;left:16px;max-width:calc(100% - 90px);padding:8px 11px;gap:9px;font-size:10px}
+  .map-selection-hint{top:78px;left:16px;max-width:calc(100% - 120px);padding:8px 11px;gap:9px;font-size:10px}
   .map-detail-status{left:16px;bottom:95px;font-size:10px}
   .atlas-mode .compare-tray{width:calc(100% - 104px);max-width:370px;left:16px;transform:none;bottom:28px;padding:6px 9px;gap:5px;justify-content:space-between}
   .selection-summary{font-size:10px;padding:0 2px;gap:4px}

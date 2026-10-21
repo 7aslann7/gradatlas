@@ -11,6 +11,8 @@ test('global selections fit a portrait overview and reset restores normal map li
   await page.getByRole('button',{name:'Show all selected programmes on the map',exact:true}).click();
   await expect(canvas).toHaveAttribute('data-projection','mercator');
   await expect.poll(async()=>Number(await canvas.getAttribute('data-visible-selection-count'))).toBe(3);
+  const blocked=await page.locator('.map-accessible-pin[data-selection]').evaluateAll(pins=>pins.some(pin=>{const el=document.elementFromPoint(Number(pin.dataset.screenX),Number(pin.dataset.screenY));return !!el?.closest('.map-selection-tools,.map-controls,.compare-tray,.map-toolbar,.menu-trigger');}));
+  expect(blocked).toBe(false);
   await page.screenshot({path:testInfo.outputPath('selected-world-map.png')});
   await page.getByRole('button',{name:'Reset map view',exact:true}).click();
   const normal=Math.log2(Math.max(page.viewportSize().width,page.viewportSize().height)/512);
