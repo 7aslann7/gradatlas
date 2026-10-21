@@ -84,7 +84,7 @@ export async function createMap(container,programmes,onSelect,onCluster,options=
     const stable=stableLocations(list),key=stable.map(p=>p.id).join('|')+';'+selected+';'+comparison.map(p=>p.id).join('|');
     if(key===dataKey)return;
     items=stable;accessible.replaceChildren();accessible.setAttribute('aria-label',items[0]?.kind==='institution'?'Visible institution locations':'Visible programme locations');dataKey=key;revision++;canvas.dataset.dataRevision=revision;tooltip.remove();
-    if(map.getLayer('catalogue-countries'))map.setFilter('catalogue-countries',['in','name',...new Set(items.map(p=>ALIASES[p.country]||p.country)),'']);
+    if(map.getLayer('catalogue-countries'))map.setFilter('catalogue-countries',['in','name',...new Set(items.flatMap(p=>[p.country,ALIASES[p.country]||p.country])),'']);
     map.getSource('programmes')?.setData(points());
   }
   async function activate(feature){
