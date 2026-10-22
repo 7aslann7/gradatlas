@@ -4,6 +4,7 @@
 
 - Replace the wide selection bar with a small, collapsed button on the left. Reopen the list at any time without clearing comparisons.
 - Keep selected-programme actions inside a scrollable card, separate collapse from explicit clearing, and leave programme detail actions unobstructed on phones.
+- Pin the browser-test runner to Ubuntu 24.04 and bound browser setup to five minutes, retaining all four required browser profiles before publication.
 
 ## 0.11.0 — 22 October 2026
 

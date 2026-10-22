@@ -21,7 +21,8 @@ jobs:
       - run: npm test
       - run: npm run build
   browser:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
@@ -33,7 +34,9 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium webkit
+      - name: Install browser runtime
+        timeout-minutes: 5
+        run: npx --no-install playwright install --with-deps chromium webkit
       - run: npm run build
       - run: npm run test:e2e -- --project=${{ matrix.project }}
       - uses: actions/upload-artifact@v4
