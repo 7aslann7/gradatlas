@@ -8,6 +8,7 @@ test('global selections fit a portrait overview and reset restores normal map li
   await expect(canvas).toHaveClass(/map-ready/);
   const expected=Math.max(.4,Math.log2(Math.min(page.viewportSize().width,page.viewportSize().height)*.88*Math.PI/512));
   await expect.poll(async()=>Number(await canvas.getAttribute('data-zoom'))).toBeCloseTo(expected,1);
+  await page.locator('.selection-summary').click();
   await page.getByRole('button',{name:'Show all selected programmes on the map',exact:true}).click();
   await expect(canvas).toHaveAttribute('data-projection','mercator');
   await expect.poll(async()=>Number(await canvas.getAttribute('data-visible-selection-count'))).toBe(3);

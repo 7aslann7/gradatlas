@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.11.1 — 22 October 2026
+
+- Replace the wide selection bar with a small, collapsed button on the left. Reopen the list at any time without clearing comparisons.
+- Keep selected-programme actions inside a scrollable card, separate collapse from explicit clearing, and leave programme detail actions unobstructed on phones.
+
+## 0.11.0 — 22 October 2026
+
+- Reveal attributed, locally hosted Natural Earth city labels, regional boundaries and more detailed geography as the map zooms in.
+- Select up to six programmes on the map, keep numbered locations visible across filters and fit global selections to a portrait overview.
+- Keep comparison order consistent for co-located programmes and preserve country highlights across map detail levels.
+
 ## 0.10.2 — 13 October 2026
 
 - Keep the floating menu's icons, full labels and selection counts aligned in readable rows on mobile screens.

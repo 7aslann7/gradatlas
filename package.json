@@ -1,6 +1,6 @@
 {
   "name": "gradatlas",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "private": true,
   "type": "module",
   "description": "An open-source master's discovery and application workspace with official-source provenance.",

@@ -39,6 +39,7 @@ test('selected pins persist through filters, co-locate honestly and link to comp
   await page.getByRole('searchbox').fill('no-such-programme-123456');
   await expect(page.locator('#result-count')).toHaveText('0 programmes');
   await expect(canvas).toHaveAttribute('data-selection-count',String(selected.length));
+  await page.locator('.selection-summary').click();
   await page.getByRole('button',{name:'Show all selected programmes on the map',exact:true}).click();
   await expect(page.locator('#map-results')).toBeHidden();
   await expect.poll(async()=>Number(await canvas.getAttribute('data-visible-selection-count'))).toBe(comparisonLocations(selected).length);
@@ -47,6 +48,7 @@ test('selected pins persist through filters, co-locate honestly and link to comp
   await expect(page.locator('.map-selection-row .selection-number')).toHaveText(selected.map((p,i)=>String(i+1)));
   await page.keyboard.press('Escape');
   await expect(page.locator('#map-selection-list')).toBeHidden();
+  await page.locator('.selection-summary').click();
   await page.locator('.compare-tray [data-nav=compare]').click();
   await expect(page.locator('.comparison-table thead .selection-number')).toHaveText(selected.map((p,i)=>String(i+1)));
   await page.getByRole('button',{name:'Show on map',exact:true}).click();
@@ -71,4 +73,46 @@ test('map selection toggles programmes and failed detail loading offers a usable
   await expect(page.locator('.compare-tray')).toHaveCount(0);
   await page.getByRole('button',{name:'Done',exact:true}).click();
   await expect(page.getByRole('button',{name:'Select programmes on the map',exact:true})).toHaveAttribute('aria-pressed','false');
+});
+
+test('selection dock stays compact, reopens without losing choices and leaves detail actions clear',async({page},testInfo)=>{
+  const choices=programmes.slice(0,6),ids=choices.map(p=>p.id);
+  await start(page,ids);
+  const summary=page.locator('.selection-summary'),panel=page.locator('#map-selection-list');
+  await expect(summary).toHaveAttribute('aria-expanded','false');
+  await expect(panel).toBeHidden();
+  const dock=await page.locator('.compare-tray').boundingBox();
+  expect(dock.width).toBeLessThan(160);expect(dock.height).toBeGreaterThanOrEqual(44);
+  expect(dock.x).toBeLessThanOrEqual(24);
+  for(const size of [{width:320,height:568},{width:390,height:844},{width:844,height:390}]){
+    await page.setViewportSize(size);
+    await summary.click();await expect(panel).toBeVisible();
+    const bounds=await panel.boundingBox();
+    expect(bounds.x).toBeGreaterThanOrEqual(0);expect(bounds.x+bounds.width).toBeLessThanOrEqual(size.width);
+    expect(bounds.y).toBeGreaterThanOrEqual(78);expect(bounds.y+bounds.height).toBeLessThan(size.height);
+    await expect(panel.getByRole('button',{name:'Compare',exact:true})).toBeInViewport();
+    await page.getByRole('button',{name:'Collapse selected programmes',exact:true}).click();
+    await expect(summary).toBeFocused();await expect(panel).toBeHidden();
+    expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).compare,KEY)).toEqual(ids);
+  }
+  await page.setViewportSize({width:390,height:844});
+  await summary.click();await page.getByRole('button',{name:'Zoom in',exact:true}).click();
+  await expect(panel).toBeHidden();
+  await summary.click();await page.screenshot({path:testInfo.outputPath('selection-panel-mobile.png')});
+  await panel.locator('[data-selection-focus]').first().click();
+  await expect(page.locator('#detail-dialog')).toBeVisible();await expect(summary).toBeHidden();
+  const toggle=page.locator('#detail-dialog [data-toggle-compare]');
+  await toggle.click();await expect(toggle).toHaveAttribute('aria-pressed','false');
+  await toggle.click();await expect(toggle).toHaveAttribute('aria-pressed','true');
+  await page.getByRole('button',{name:'Close programme details',exact:true}).click();
+  await expect(summary).toBeVisible();await expect(summary).toHaveAttribute('aria-expanded','false');
+  await summary.click();await expect(page.locator('.map-selection-row')).toHaveCount(6);
+  await panel.getByRole('button',{name:'Compare',exact:true}).click();
+  await expect(page.locator('.comparison-count')).toHaveText('6 / 6 selected');
+  await page.getByRole('button',{name:'Back to the map',exact:true}).click();
+  await expect(summary).toHaveAttribute('aria-expanded','false');
+  await page.reload();await expect(summary).toHaveAttribute('aria-expanded','false');
+  expect(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).compare.length,KEY)).toBe(6);
+  await expect(page.locator('.map-canvas')).toHaveClass(/map-ready/);
+  await page.screenshot({path:testInfo.outputPath('selection-dock-mobile.png')});
 });
